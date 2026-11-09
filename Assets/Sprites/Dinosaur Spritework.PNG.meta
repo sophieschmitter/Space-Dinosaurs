@@ -1,0 +1,1738 @@
+fileFormatVersion: 2
+guid: ecef99f68e41049d39dbcff46f062b56
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 7544742395190290092
+    second: Dinosaur Spritework_0
+  - first:
+      213: -2393372814759175114
+    second: Dinosaur Spritework_1
+  - first:
+      213: -6184466268601680510
+    second: Dinosaur Spritework_2
+  - first:
+      213: -5136297642952505022
+    second: Dinosaur Spritework_3
+  - first:
+      213: -4969804726445190891
+    second: Dinosaur Spritework_4
+  - first:
+      213: -3898441341499323358
+    second: Dinosaur Spritework_5
+  - first:
+      213: 1750369034029598884
+    second: Dinosaur Spritework_6
+  - first:
+      213: 280682830099039576
+    second: Dinosaur Spritework_7
+  - first:
+      213: -7365333512471651472
+    second: Dinosaur Spritework_8
+  - first:
+      213: 4166659597426761268
+    second: Dinosaur Spritework_9
+  - first:
+      213: -2634340034764312847
+    second: Dinosaur Spritework_10
+  - first:
+      213: -1798457824453525569
+    second: Dinosaur Spritework_11
+  - first:
+      213: -3142020843346880024
+    second: Dinosaur Spritework_12
+  - first:
+      213: 3080218941216313116
+    second: Dinosaur Spritework_13
+  - first:
+      213: 8501162559564040161
+    second: Dinosaur Spritework_14
+  - first:
+      213: -1627770304484707424
+    second: Dinosaur Spritework_15
+  - first:
+      213: -1036702837636294959
+    second: Dinosaur Spritework_16
+  - first:
+      213: -2771567899720553760
+    second: Dinosaur Spritework_17
+  - first:
+      213: -5983280089404406601
+    second: Dinosaur Spritework_18
+  - first:
+      213: 2889117677183718886
+    second: Dinosaur Spritework_19
+  - first:
+      213: 1185992976067425537
+    second: Dinosaur Spritework_20
+  - first:
+      213: -1154966785601689203
+    second: Dinosaur Spritework_21
+  - first:
+      213: 687457467218037627
+    second: Dinosaur Spritework_22
+  - first:
+      213: -27624075501599482
+    second: Dinosaur Spritework_23
+  - first:
+      213: -2923481748745947623
+    second: Dinosaur Spritework_24
+  - first:
+      213: 7189569937468368694
+    second: Dinosaur Spritework_25
+  - first:
+      213: 1765681108806313625
+    second: Dinosaur Spritework_26
+  - first:
+      213: -8208458715257067220
+    second: Dinosaur Spritework_27
+  - first:
+      213: -6368047972078625236
+    second: Dinosaur Spritework_28
+  - first:
+      213: 1689500506992861551
+    second: Dinosaur Spritework_29
+  - first:
+      213: 3746379146904169511
+    second: Dinosaur Spritework_30
+  - first:
+      213: -7391524382698930505
+    second: Dinosaur Spritework_31
+  - first:
+      213: -1582657365739013370
+    second: Dinosaur Spritework_32
+  - first:
+      213: 3203055448031859944
+    second: Dinosaur Spritework_33
+  - first:
+      213: 4009113664452970282
+    second: Dinosaur Spritework_34
+  - first:
+      213: -3512478085542199953
+    second: Dinosaur Spritework_35
+  - first:
+      213: 5642876274104076222
+    second: Dinosaur Spritework_36
+  - first:
+      213: 7276143539254338059
+    second: Dinosaur Spritework_37
+  - first:
+      213: -2876612652479260931
+    second: Dinosaur Spritework_38
+  - first:
+      213: -7693143151791592023
+    second: Dinosaur Spritework_39
+  - first:
+      213: 2221007084358406067
+    second: Dinosaur Spritework_40
+  - first:
+      213: -4522737606976516765
+    second: Dinosaur Spritework_41
+  - first:
+      213: -2417227176434486794
+    second: Dinosaur Spritework_42
+  - first:
+      213: -2728435517798623959
+    second: Dinosaur Spritework_43
+  - first:
+      213: 3382346445599537203
+    second: Dinosaur Spritework_44
+  - first:
+      213: 6397609378629330120
+    second: Dinosaur Spritework_45
+  - first:
+      213: 2384188585501988390
+    second: Dinosaur Spritework_46
+  - first:
+      213: -1697648097938676586
+    second: Dinosaur Spritework_47
+  - first:
+      213: 6721345401016900221
+    second: Dinosaur Spritework_48
+  - first:
+      213: -1584261627652674638
+    second: Dinosaur Spritework_49
+  - first:
+      213: -1707853063985225705
+    second: Dinosaur Spritework_50
+  - first:
+      213: -3739003893359395942
+    second: Dinosaur Spritework_51
+  - first:
+      213: 5839012803691661368
+    second: Dinosaur Spritework_52
+  - first:
+      213: -779669310906755273
+    second: Dinosaur Spritework_53
+  - first:
+      213: 613586329931109600
+    second: Dinosaur Spritework_54
+  - first:
+      213: 1634787219269327474
+    second: Dinosaur Spritework_55
+  - first:
+      213: -3677687009074520558
+    second: Dinosaur Spritework_56
+  - first:
+      213: 5470999636934442356
+    second: Dinosaur Spritework_57
+  - first:
+      213: 8346837403733623961
+    second: Dinosaur Spritework_58
+  - first:
+      213: 2803498743174868353
+    second: Dinosaur Spritework_59
+  - first:
+      213: 4046911049066159212
+    second: Dinosaur Spritework_60
+  - first:
+      213: 2371155242194645759
+    second: Dinosaur Spritework_61
+  - first:
+      213: 6584895464801986895
+    second: Dinosaur Spritework_62
+  - first:
+      213: -3834036325077892260
+    second: Dinosaur Spritework_63
+  - first:
+      213: 2996641186157109062
+    second: Dinosaur Spritework_64
+  - first:
+      213: -8330473085423714943
+    second: Dinosaur Spritework_65
+  - first:
+      213: 253099231224497024
+    second: Dinosaur Spritework_66
+  - first:
+      213: -6485182960763552843
+    second: Dinosaur Spritework_67
+  - first:
+      213: -4359309832975317288
+    second: Dinosaur Spritework_68
+  - first:
+      213: -2658203430662902006
+    second: Dinosaur Spritework_69
+  - first:
+      213: 2746258787386909069
+    second: Dinosaur Spritework_70
+  - first:
+      213: 5698037699550630663
+    second: Dinosaur Spritework_71
+  - first:
+      213: -8724962945840713961
+    second: Dinosaur Spritework_72
+  - first:
+      213: 6937292005872201075
+    second: Dinosaur Spritework_73
+  - first:
+      213: -2306108740741456824
+    second: Dinosaur Spritework_74
+  - first:
+      213: 8486386232270640532
+    second: Dinosaur Spritework_75
+  - first:
+      213: 3001529061556048707
+    second: Dinosaur Spritework_76
+  - first:
+      213: 7909513827944112288
+    second: Dinosaur Spritework_77
+  - first:
+      213: -3154763607728669000
+    second: Dinosaur Spritework_78
+  - first:
+      213: 6394661371752476820
+    second: Dinosaur Spritework_79
+  - first:
+      213: -2300320101574395551
+    second: Dinosaur Spritework_80
+  - first:
+      213: -6302319238654647914
+    second: Dinosaur Spritework_81
+  - first:
+      213: -1095484144804396941
+    second: Dinosaur Spritework_82
+  - first:
+      213: -7455072441901553385
+    second: Dinosaur Spritework_83
+  - first:
+      213: -4286272866177356623
+    second: Dinosaur Spritework_84
+  - first:
+      213: -7801650511863051603
+    second: Dinosaur Spritework_85
+  - first:
+      213: 5766190570023815364
+    second: Dinosaur Spritework_86
+  - first:
+      213: 1314476406360189473
+    second: Dinosaur Spritework_87
+  - first:
+      213: 5981020578146811454
+    second: Dinosaur Spritework_88
+  - first:
+      213: -2980307573974320193
+    second: Dinosaur Spritework_89
+  - first:
+      213: -2463969229651278206
+    second: Dinosaur Spritework_90
+  - first:
+      213: 2550539215628562431
+    second: Dinosaur Spritework_91
+  - first:
+      213: 3697796037957965529
+    second: Dinosaur Spritework_92
+  - first:
+      213: -3219146693713335182
+    second: Dinosaur Spritework_93
+  - first:
+      213: 4007403470340035934
+    second: Dinosaur Spritework_94
+  - first:
+      213: -1449349262541426150
+    second: Dinosaur Spritework_95
+  - first:
+      213: -7018111296819321021
+    second: Dinosaur Spritework_96
+  - first:
+      213: 7134194838990814662
+    second: Dinosaur Spritework_97
+  - first:
+      213: -133721491797294475
+    second: Dinosaur Spritework_98
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 160
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Side_Idle_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2030
+        width: 480
+        height: 480
+      alignment: 9
+      pivot: {x: 0.5, y: 0.104166664}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 410a951c634d948cdb554fa0334261c6
+      internalID: -1519677832
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Side_Idle_1
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1550
+        width: 480
+        height: 480
+      alignment: 9
+      pivot: {x: 0.5, y: 0.104166664}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1f8df8e0c5c774cc384b27749187aff6
+      internalID: 1780984719
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Side_Idle_2
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1070
+        width: 480
+        height: 480
+      alignment: 9
+      pivot: {x: 0.5, y: 0.104166664}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 39e9996fcdd634d7ea3c327d0ddf9ae0
+      internalID: -69873827
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Side_Idle_3
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 590
+        width: 480
+        height: 480
+      alignment: 9
+      pivot: {x: 0.5, y: 0.104166664}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 132af2ba829a7495585fa32b18e7275c
+      internalID: 1557258565
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Side_Idle_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 110
+        width: 480
+        height: 480
+      alignment: 9
+      pivot: {x: 0.5, y: 0.104166664}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c3b5592a33ed54a858ab6719fe0c45bf
+      internalID: -1552203695
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Side_Walk_0
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 2030
+        width: 480
+        height: 480
+      alignment: 9
+      pivot: {x: 0.5, y: 0.104166664}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d94b36725348400eacee005f3d9fc74
+      internalID: 2096767707
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Side_Walk_1
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 1550
+        width: 480
+        height: 480
+      alignment: 9
+      pivot: {x: 0.5, y: 0.104166664}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 06891686e847348578ebae62118b03a7
+      internalID: 863280716
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Side_Walk_2
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 1070
+        width: 480
+        height: 480
+      alignment: 9
+      pivot: {x: 0.5, y: 0.104166664}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa38ac95146f4435fadb0258c44e3ffe
+      internalID: 1924379101
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Side_Walk_3
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 590
+        width: 480
+        height: 480
+      alignment: 9
+      pivot: {x: 0.5, y: 0.104166664}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa5626e019d304e2fbd14cc96533b30c
+      internalID: 861662942
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Side_Walk_4
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 110
+        width: 480
+        height: 480
+      alignment: 9
+      pivot: {x: 0.5, y: 0.104166664}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d6fa78e8e61ef45b1aa55367ac8afce0
+      internalID: -1927128424
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Side_Idle2_0
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 2030
+        width: 480
+        height: 480
+      alignment: 9
+      pivot: {x: 0.5, y: 0.104166664}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d030b8573adc4245a0c35ed0e2db463
+      internalID: 782716949
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Side_Idle2_1
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 1550
+        width: 480
+        height: 480
+      alignment: 9
+      pivot: {x: 0.5, y: 0.104166664}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e1f92b0436009432493cf145ddb6bffc
+      internalID: 1474430060
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Side_Idle2_2
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 1070
+        width: 480
+        height: 480
+      alignment: 9
+      pivot: {x: 0.5, y: 0.104166664}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 29415c46434744376b2f5a8d16a2ddd2
+      internalID: -224884527
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Side_Idle2_3
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 590
+        width: 480
+        height: 480
+      alignment: 9
+      pivot: {x: 0.5, y: 0.104166664}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 05aeb28fa67114006bf9c8e504b35b02
+      internalID: 1201729268
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Side_Idle2_4
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 110
+        width: 480
+        height: 480
+      alignment: 9
+      pivot: {x: 0.5, y: 0.104166664}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e2fa13911af54512bbad281de0a68f9
+      internalID: 1247987645
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Side_Walk2_0
+      rect:
+        serializedVersion: 2
+        x: 1440
+        y: 2030
+        width: 480
+        height: 480
+      alignment: 9
+      pivot: {x: 0.5, y: 0.104166664}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6e546628c1388405ea5d49e15e3d2cce
+      internalID: 557939377
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Side_Walk2_1
+      rect:
+        serializedVersion: 2
+        x: 1440
+        y: 1550
+        width: 480
+        height: 480
+      alignment: 9
+      pivot: {x: 0.5, y: 0.104166664}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ed76eaba64a824e569fbc8654a74eaf8
+      internalID: 1883299130
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Side_Walk2_2
+      rect:
+        serializedVersion: 2
+        x: 1440
+        y: 1070
+        width: 480
+        height: 480
+      alignment: 9
+      pivot: {x: 0.5, y: 0.104166664}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c0da2377d94084a96bf864be6049e2b4
+      internalID: -255299975
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Side_Walk2_3
+      rect:
+        serializedVersion: 2
+        x: 1440
+        y: 590
+        width: 480
+        height: 480
+      alignment: 9
+      pivot: {x: 0.5, y: 0.104166664}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 631c04e1278754f118816416daec8b2d
+      internalID: 18701332
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Side_Walk2_4
+      rect:
+        serializedVersion: 2
+        x: 1440
+        y: 110
+        width: 480
+        height: 480
+      alignment: 9
+      pivot: {x: 0.5, y: 0.104166664}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cbdb690eb0cca4447aa7f50119ee6579
+      internalID: 242395997
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Front_Idle_0
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 2030
+        width: 480
+        height: 480
+      alignment: 9
+      pivot: {x: 0.5, y: 0.104166664}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb4bc056b0c864deebe5a2b9f3cac1fa
+      internalID: 301131038
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Front_Idle_1
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 1550
+        width: 480
+        height: 480
+      alignment: 9
+      pivot: {x: 0.5, y: 0.104166664}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3fd81353942bd4e4f9f2efb0146c0fde
+      internalID: -1975676412
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Front_Idle_2
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 1070
+        width: 480
+        height: 480
+      alignment: 9
+      pivot: {x: 0.5, y: 0.104166664}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6bc655991c1014770b87db458c5851ab
+      internalID: 1672683951
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Front_Idle_3
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 590
+        width: 480
+        height: 480
+      alignment: 9
+      pivot: {x: 0.5, y: 0.104166664}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 394ca4ab095a54808ae0bec9eb998553
+      internalID: 2056405449
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Front_Idle_4
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 110
+        width: 480
+        height: 480
+      alignment: 9
+      pivot: {x: 0.5, y: 0.104166664}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 638d1b838757a4273b2440fea393ffb4
+      internalID: -1088078557
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Front_Walk_0
+      rect:
+        serializedVersion: 2
+        x: 2400
+        y: 2030
+        width: 480
+        height: 480
+      alignment: 9
+      pivot: {x: 0.5, y: 0.104166664}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ead28046271645c0a497b32db102fdd
+      internalID: 1320460053
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Front_Walk_1
+      rect:
+        serializedVersion: 2
+        x: 2400
+        y: 1550
+        width: 480
+        height: 480
+      alignment: 9
+      pivot: {x: 0.5, y: 0.104166664}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b346d23378fdc4868ac85f749347a930
+      internalID: -1129291191
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Front_Walk_2
+      rect:
+        serializedVersion: 2
+        x: 2400
+        y: 1070
+        width: 480
+        height: 480
+      alignment: 9
+      pivot: {x: 0.5, y: 0.104166664}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: efe7bc8edb0ac454a9b81eef4f6017f3
+      internalID: 287648693
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Front_Walk_3
+      rect:
+        serializedVersion: 2
+        x: 2400
+        y: 590
+        width: 480
+        height: 480
+      alignment: 9
+      pivot: {x: 0.5, y: 0.104166664}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f63e62659b374678b3d19f4d2ad10e9
+      internalID: 1489677451
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Front_Walk_4
+      rect:
+        serializedVersion: 2
+        x: 2400
+        y: 110
+        width: 480
+        height: 480
+      alignment: 9
+      pivot: {x: 0.5, y: 0.104166664}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1675d60e800594e9998df770ef0830c1
+      internalID: -975748314
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Back_Idle_0
+      rect:
+        serializedVersion: 2
+        x: 2880
+        y: 2030
+        width: 480
+        height: 480
+      alignment: 9
+      pivot: {x: 0.5, y: 0.104166664}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d88622dddec5e4658a8256f91c90a165
+      internalID: -258631187
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Back_Idle_1
+      rect:
+        serializedVersion: 2
+        x: 2880
+        y: 1550
+        width: 480
+        height: 480
+      alignment: 9
+      pivot: {x: 0.5, y: 0.104166664}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f973c0188372f4fb088561ef249f12f6
+      internalID: 1654836001
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Back_Idle_2
+      rect:
+        serializedVersion: 2
+        x: 2880
+        y: 1070
+        width: 480
+        height: 480
+      alignment: 9
+      pivot: {x: 0.5, y: 0.104166664}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b15c414402b314c2e97fbcc0a5aa0b67
+      internalID: 1670490323
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Back_Idle_3
+      rect:
+        serializedVersion: 2
+        x: 2880
+        y: 590
+        width: 480
+        height: 480
+      alignment: 9
+      pivot: {x: 0.5, y: 0.104166664}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 08b8a5f8e14a84fa7bb97433669b24bf
+      internalID: 1653153307
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Back_Idle_4
+      rect:
+        serializedVersion: 2
+        x: 2880
+        y: 110
+        width: 480
+        height: 480
+      alignment: 9
+      pivot: {x: 0.5, y: 0.104166664}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 23e5706c1d4a744d89e1051068e881fc
+      internalID: 35377629
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Back_Walk_1
+      rect:
+        serializedVersion: 2
+        x: 3360
+        y: 1550
+        width: 480
+        height: 480
+      alignment: 9
+      pivot: {x: 0.5, y: 0.104166664}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea7ff09d1e67d4117b2ba4f0a2ad88a5
+      internalID: 1235571174
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Back_Walk_2
+      rect:
+        serializedVersion: 2
+        x: 3360
+        y: 1070
+        width: 480
+        height: 480
+      alignment: 9
+      pivot: {x: 0.5, y: 0.104166664}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf9360792191543688b3dddd53c46b1b
+      internalID: -983054269
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Back_Walk_3
+      rect:
+        serializedVersion: 2
+        x: 3360
+        y: 590
+        width: 480
+        height: 480
+      alignment: 9
+      pivot: {x: 0.5, y: 0.104166664}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6fc90cb55430d49ef87819a1f0263017
+      internalID: 1798898751
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Back_Walk_4
+      rect:
+        serializedVersion: 2
+        x: 3360
+        y: 110
+        width: 480
+        height: 480
+      alignment: 9
+      pivot: {x: 0.5, y: 0.104166664}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8af1ce5f046f04d1ea75d88d7f6215be
+      internalID: 2093454649
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Huff_0
+      rect:
+        serializedVersion: 2
+        x: 3840
+        y: 2030
+        width: 480
+        height: 480
+      alignment: 9
+      pivot: {x: 0.5, y: 0.104166664}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a1e6b35648f14abf9f8dc7f66f27387
+      internalID: -1696046506
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Huff_1
+      rect:
+        serializedVersion: 2
+        x: 3840
+        y: 1550
+        width: 480
+        height: 480
+      alignment: 9
+      pivot: {x: 0.5, y: 0.104166664}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aab5f6fbb10e042f6aff7a2361628d83
+      internalID: -1753368335
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Huff_2
+      rect:
+        serializedVersion: 2
+        x: 3840
+        y: 1070
+        width: 480
+        height: 480
+      alignment: 9
+      pivot: {x: 0.5, y: 0.104166664}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6674e20b73caf4cdbb328a2701a96015
+      internalID: -20456074
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Huff_3
+      rect:
+        serializedVersion: 2
+        x: 3840
+        y: 590
+        width: 480
+        height: 480
+      alignment: 9
+      pivot: {x: 0.5, y: 0.104166664}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 30b8b789078db4a84b34547433339701
+      internalID: -1573707808
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Death_0
+      rect:
+        serializedVersion: 2
+        x: 4320
+        y: 2030
+        width: 480
+        height: 480
+      alignment: 9
+      pivot: {x: 0.5, y: 0.104166664}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 807a51bb87d6341c8b5439cf7d23346b
+      internalID: 990733983
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Death_1
+      rect:
+        serializedVersion: 2
+        x: 4320
+        y: 1550
+        width: 480
+        height: 480
+      alignment: 9
+      pivot: {x: 0.5, y: 0.104166664}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c8664e8dc133045549bd9daf007efb59
+      internalID: -1835778172
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Death_2
+      rect:
+        serializedVersion: 2
+        x: 4320
+        y: 1070
+        width: 480
+        height: 480
+      alignment: 9
+      pivot: {x: 0.5, y: 0.104166664}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e34dc40dfa0248ec830eef3771d8add
+      internalID: 89769539
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Death_3
+      rect:
+        serializedVersion: 2
+        x: 4320
+        y: 590
+        width: 480
+        height: 480
+      alignment: 9
+      pivot: {x: 0.5, y: 0.104166664}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b3ebc960a1c244b10991267aff9565de
+      internalID: -903754238
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Death_4
+      rect:
+        serializedVersion: 2
+        x: 4320
+        y: 110
+        width: 480
+        height: 480
+      alignment: 9
+      pivot: {x: 0.5, y: 0.104166664}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 98116555804f849e5804fb0dda28f15a
+      internalID: 1246505473
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Huff2_0
+      rect:
+        serializedVersion: 2
+        x: 4800
+        y: 2030
+        width: 480
+        height: 480
+      alignment: 9
+      pivot: {x: 0.5, y: 0.104166664}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 044b36d07986341a9be50ddf8499a3b9
+      internalID: 1910604514
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Huff2_1
+      rect:
+        serializedVersion: 2
+        x: 4800
+        y: 1550
+        width: 480
+        height: 480
+      alignment: 9
+      pivot: {x: 0.5, y: 0.104166664}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 373ea94d03c494a71b7d7703da7692e1
+      internalID: -631026385
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Huff2_2
+      rect:
+        serializedVersion: 2
+        x: 4800
+        y: 1070
+        width: 480
+        height: 480
+      alignment: 9
+      pivot: {x: 0.5, y: 0.104166664}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9bb23df242c4a4c33afbc1194f6e86d1
+      internalID: -816108830
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Huff2_3
+      rect:
+        serializedVersion: 2
+        x: 4800
+        y: 590
+        width: 480
+        height: 480
+      alignment: 9
+      pivot: {x: 0.5, y: 0.104166664}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 21f0f64e160f54a9eb1b1ffd6baa206e
+      internalID: -1453777589
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Death2_0
+      rect:
+        serializedVersion: 2
+        x: 5280
+        y: 2030
+        width: 480
+        height: 480
+      alignment: 9
+      pivot: {x: 0.5, y: 0.104166664}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 197a32c120c26438da115649a4d6cc78
+      internalID: -610838228
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Death2_1
+      rect:
+        serializedVersion: 2
+        x: 5280
+        y: 1550
+        width: 480
+        height: 480
+      alignment: 9
+      pivot: {x: 0.5, y: 0.104166664}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c240e90d420a242b8834467d0f5a4152
+      internalID: 950760192
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Death2_2
+      rect:
+        serializedVersion: 2
+        x: 5280
+        y: 1070
+        width: 480
+        height: 480
+      alignment: 9
+      pivot: {x: 0.5, y: 0.104166664}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f28d84ad7eff14525811bc5fe1688724
+      internalID: 1374723171
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Death2_3
+      rect:
+        serializedVersion: 2
+        x: 5280
+        y: 590
+        width: 480
+        height: 480
+      alignment: 9
+      pivot: {x: 0.5, y: 0.104166664}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 046af36c7e89043ac9bdd6f0434aa41d
+      internalID: 405225359
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Death2_4
+      rect:
+        serializedVersion: 2
+        x: 5280
+        y: 110
+        width: 480
+        height: 480
+      alignment: 9
+      pivot: {x: 0.5, y: 0.104166664}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 028d964dc0eb7415d9afa4f828bce69d
+      internalID: -780665425
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 23393d12115784dad8aedc49660c9118
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Back_Idle_0: -258631187
+      Back_Idle_1: 1654836001
+      Back_Idle_2: 1670490323
+      Back_Idle_3: 1653153307
+      Back_Idle_4: 35377629
+      Back_Walk_1: 1235571174
+      Back_Walk_2: -983054269
+      Back_Walk_3: 1798898751
+      Back_Walk_4: 2093454649
+      Death2_0: -610838228
+      Death2_1: 950760192
+      Death2_2: 1374723171
+      Death2_3: 405225359
+      Death2_4: -780665425
+      Death_0: 990733983
+      Death_1: -1835778172
+      Death_2: 89769539
+      Death_3: -903754238
+      Death_4: 1246505473
+      Front_Idle_0: 301131038
+      Front_Idle_1: -1975676412
+      Front_Idle_2: 1672683951
+      Front_Idle_3: 2056405449
+      Front_Idle_4: -1088078557
+      Front_Walk_0: 1320460053
+      Front_Walk_1: -1129291191
+      Front_Walk_2: 287648693
+      Front_Walk_3: 1489677451
+      Front_Walk_4: -975748314
+      Huff2_0: 1910604514
+      Huff2_1: -631026385
+      Huff2_2: -816108830
+      Huff2_3: -1453777589
+      Huff_0: -1696046506
+      Huff_1: -1753368335
+      Huff_2: -20456074
+      Huff_3: -1573707808
+      Side_Idle2_0: 782716949
+      Side_Idle2_1: 1474430060
+      Side_Idle2_2: -224884527
+      Side_Idle2_3: 1201729268
+      Side_Idle2_4: 1247987645
+      Side_Idle_0: -1519677832
+      Side_Idle_1: 1780984719
+      Side_Idle_2: -69873827
+      Side_Idle_3: 1557258565
+      Side_Idle_4: -1552203695
+      Side_Walk2_0: 557939377
+      Side_Walk2_1: 1883299130
+      Side_Walk2_2: -255299975
+      Side_Walk2_3: 18701332
+      Side_Walk2_4: 242395997
+      Side_Walk_0: 2096767707
+      Side_Walk_1: 863280716
+      Side_Walk_2: 1924379101
+      Side_Walk_3: 861662942
+      Side_Walk_4: -1927128424
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
