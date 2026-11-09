@@ -1,0 +1,650 @@
+fileFormatVersion: 2
+guid: c89295ec387594262ab60acde06b9bbd
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -2261516680658160350
+    second: Dinosaur Attacks and Actions_0
+  - first:
+      213: -2435504444201800277
+    second: Dinosaur Attacks and Actions_1
+  - first:
+      213: -8551467405779031730
+    second: Dinosaur Attacks and Actions_2
+  - first:
+      213: -7892445029526993830
+    second: Dinosaur Attacks and Actions_3
+  - first:
+      213: 1202953965345888680
+    second: Dinosaur Attacks and Actions_4
+  - first:
+      213: 985219883585392168
+    second: Dinosaur Attacks and Actions_5
+  - first:
+      213: -1402168164596158990
+    second: Dinosaur Attacks and Actions_6
+  - first:
+      213: -6630768796699129789
+    second: Dinosaur Attacks and Actions_7
+  - first:
+      213: 8347175330622464651
+    second: Dinosaur Attacks and Actions_8
+  - first:
+      213: 1104525239766243760
+    second: Dinosaur Attacks and Actions_9
+  - first:
+      213: 3478911492156710846
+    second: Dinosaur Attacks and Actions_10
+  - first:
+      213: -8363185178983626373
+    second: Dinosaur Attacks and Actions_11
+  - first:
+      213: -8696450281110896665
+    second: Dinosaur Attacks and Actions_12
+  - first:
+      213: -6064468384244788162
+    second: Dinosaur Attacks and Actions_13
+  - first:
+      213: 1117373476946004161
+    second: Dinosaur Attacks and Actions_14
+  - first:
+      213: -539262657410433647
+    second: Dinosaur Attacks and Actions_15
+  - first:
+      213: -8789819702137946491
+    second: Dinosaur Attacks and Actions_16
+  - first:
+      213: 3799166312635989058
+    second: Dinosaur Attacks and Actions_17
+  - first:
+      213: -7734019580331182980
+    second: Dinosaur Attacks and Actions_18
+  - first:
+      213: -8095853918929931480
+    second: Dinosaur Attacks and Actions_19
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 160
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Drill_Attack_Side_1
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1550
+        width: 640
+        height: 480
+      alignment: 9
+      pivot: {x: 0.375, y: 0.104166664}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4188798c877664bc890833b9a79c2e6f
+      internalID: 1268392382
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Drill_Attack_Side_2
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1070
+        width: 640
+        height: 480
+      alignment: 9
+      pivot: {x: 0.375, y: 0.104166664}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 68e01171270834e3a986411099ef97b4
+      internalID: -617824121
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Drill_Attack_Side_3
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 590
+        width: 640
+        height: 480
+      alignment: 9
+      pivot: {x: 0.375, y: 0.104166664}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 734efe2dbe80b4e5e91d05889e63c01f
+      internalID: -649200561
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Drill_Attack_Side_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 110
+        width: 640
+        height: 480
+      alignment: 9
+      pivot: {x: 0.375, y: 0.104166664}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b4a866f8303134b77b7089490d2a472e
+      internalID: -825253825
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Drill_Grey_Side_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2030
+        width: 640
+        height: 480
+      alignment: 9
+      pivot: {x: 0.375, y: 0.104166664}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd9992f7e05f740718a2f3a5e5020590
+      internalID: 1761940513
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Drill_Attack_Front_1
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 1540
+        width: 640
+        height: 480
+      alignment: 9
+      pivot: {x: 0.53125, y: 0.125}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d40f14826933046388f5236da6e2493e
+      internalID: -895501483
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Drill_Attack_Front_2
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 1060
+        width: 640
+        height: 480
+      alignment: 9
+      pivot: {x: 0.53125, y: 0.125}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d51cafea38a0496a9303f85d8ff1c3d
+      internalID: -811239219
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Drill_Attack_Front_3
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 580
+        width: 640
+        height: 480
+      alignment: 9
+      pivot: {x: 0.53125, y: 0.125}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb30ccc6d18cc4d97b08130b05c83089
+      internalID: 1016795065
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Drill_Attack_Front_4
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 100
+        width: 640
+        height: 480
+      alignment: 9
+      pivot: {x: 0.53125, y: 0.125}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6de385aa0b3484a919cc20d483fabe13
+      internalID: 486411747
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Drill_Grey_Front_0
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 2020
+        width: 640
+        height: 480
+      alignment: 9
+      pivot: {x: 0.53125, y: 0.125}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 87e941afa2b344ddc8ccc86c43bb107d
+      internalID: -2025000326
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Drill_Attack_Back_1
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 1600
+        width: 640
+        height: 480
+      alignment: 9
+      pivot: {x: 0.46875, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f3f91024548fe458dadf316fdb8f9898
+      internalID: -1611586678
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Drill_Attack_Back_2
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 1120
+        width: 640
+        height: 480
+      alignment: 9
+      pivot: {x: 0.46875, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5fbbff08f6be147e8bb681d4a78f212d
+      internalID: 1635185628
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Drill_Attack_Back_3
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 640
+        width: 640
+        height: 480
+      alignment: 9
+      pivot: {x: 0.46875, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f2606fccc03b419ea571a5b33d2aa71
+      internalID: -1649344498
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Drill_Attack_Back_4
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 160
+        width: 640
+        height: 480
+      alignment: 9
+      pivot: {x: 0.46875, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d6ad1a3fb56ed4134bf2bd06730971d2
+      internalID: 1152364593
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Drill_Grey_Back_0
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 2080
+        width: 640
+        height: 480
+      alignment: 9
+      pivot: {x: 0.46875, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d48f8120249f84697972e1c9f081ed71
+      internalID: -102463017
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Drill_Attack_SideLeft_1
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 1550
+        width: 640
+        height: 480
+      alignment: 9
+      pivot: {x: 0.625, y: 0.104166664}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 740bd09ecb2f041dfb305a056e0cbffb
+      internalID: -903462254
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Drill_Attack_SideLeft_2
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 1070
+        width: 640
+        height: 480
+      alignment: 9
+      pivot: {x: 0.625, y: 0.104166664}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 623573f7cbb0e4089a48b3e6dd06a463
+      internalID: -105571078
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Drill_Attack_SideLeft_3
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 590
+        width: 640
+        height: 480
+      alignment: 9
+      pivot: {x: 0.625, y: 0.104166664}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c7457ea521d174a87a2707fba11c0ae3
+      internalID: 182758263
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Drill_Attack_SideLeft_4
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 110
+        width: 640
+        height: 480
+      alignment: 9
+      pivot: {x: 0.625, y: 0.104166664}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3c9476a18551a4f4cb9839f0adf8ff38
+      internalID: 533166745
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Drill_Grey_SideLeft_0
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 2030
+        width: 640
+        height: 480
+      alignment: 9
+      pivot: {x: 0.625, y: 0.104166664}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 361fabb0a9ce54d5ea8cd14bf27bfb8d
+      internalID: 920015812
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: ed86b883c496e4a77871fd220dbea920
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Drill_Attack_Back_1: -1611586678
+      Drill_Attack_Back_2: 1635185628
+      Drill_Attack_Back_3: -1649344498
+      Drill_Attack_Back_4: 1152364593
+      Drill_Attack_Front_1: -895501483
+      Drill_Attack_Front_2: -811239219
+      Drill_Attack_Front_3: 1016795065
+      Drill_Attack_Front_4: 486411747
+      Drill_Attack_SideLeft_1: -903462254
+      Drill_Attack_SideLeft_2: -105571078
+      Drill_Attack_SideLeft_3: 182758263
+      Drill_Attack_SideLeft_4: 533166745
+      Drill_Attack_Side_1: 1268392382
+      Drill_Attack_Side_2: -617824121
+      Drill_Attack_Side_3: -649200561
+      Drill_Attack_Side_4: -825253825
+      Drill_Grey_Back_0: -102463017
+      Drill_Grey_Front_0: -2025000326
+      Drill_Grey_SideLeft_0: 920015812
+      Drill_Grey_Side_0: 1761940513
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

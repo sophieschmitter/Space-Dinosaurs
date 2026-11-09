@@ -7,28 +7,46 @@ using UnityEditor.U2D.Sprites;
 using UnityEngine;
 
 /// <summary>
-/// Slices "Dinosaur Spritework.PNG" into a grid (one column = one animation, frames run top to bottom)
-/// and builds an AnimationClip per column, an AnimatorController holding them all, and a Dino prefab.
-/// Run from: Tools > Space Dinosaurs > Build Dino Animations. Safe to re-run (sprite IDs are kept).
+/// Slices the dino sprite sheets in Assets/Sprites (one column = one animation, frames run top to bottom),
+/// builds an AnimationClip per column, and puts every clip as a state in one Animator Controller (Dino.controller).
+/// Run from: Tools > Space Dinosaurs > Build Dino Animations. Safe to re-run: sprite IDs, the controller asset
+/// and the Dino prefab (with its movement script and collider) are kept; only the clips and states are refreshed.
+///
+/// All sheets are drawn at 10 texture px per art pixel. Every frame's pivot sits between the dino's feet,
+/// so switching between clips from different sheets never makes the dino jump.
 /// </summary>
 public static class DinoSpriteSheetBuilder
 {
-    const string SheetPath = "Assets/Sprites/Dinosaur Spritework.PNG";
     const string OutFolder = "Assets/Animations/Dino";
+    const string ControllerPath = OutFolder + "/Dino.controller";
     const string PrefabPath = "Assets/Prefabs/Dino.prefab";
-
-    // Sheet layout (in texture pixels). The art is drawn at 10 texture px per art pixel.
-    const int CellW = 480;
-    const int CellH = 480;
-    const int Columns = 12;
-    const int Rows = 5;
-    const int TopMargin = 50;          // empty strip above the first row
-    const int FeetFromCellBottom = 50; // where the feet sit inside each cell -> pivot
-    const int PixelsPerUnit = 160;     // 10 px per art pixel * 16 art px per unit (matches PixelArtImporter's PPU 16)
+    const int PixelsPerUnit = 160;     // 10 px per art pixel * 16 art px per unit (matches PixelArtImporter)
     const float FramesPerSecond = 8f;
+    const int RowPitch = 480;          // rows are 48 art px apart
+    const int FirstFeetY = 480;        // the feet of row 0 sit 480 px from the top; row r at 480 * (r + 1)
+    const string DefaultState = "Side_Idle";
 
-    // One entry per column, left to right. Rename freely; re-run the menu item afterwards.
-    static readonly (string name, bool loop)[] ColumnClips =
+    /// <summary>One animation: a column of frames.</summary>
+    class Clip
+    {
+        public string name;            // clip, state and sprite name prefix
+        public bool loop = true;
+        public int x, width = 480;     // column position in texture px
+        public int above = 430;        // frame rect reaches this far above the feet...
+        public int height = 480;       // ...and is this tall
+        public float pivotX = 0.5f;    // feet position across the frame (0-1)
+        public int[] rows = { 0, 1, 2, 3, 4 };
+        public float PivotY => (height - above) / (float)height;
+    }
+
+    class Sheet
+    {
+        public string path;
+        public List<Clip> clips;
+    }
+
+    // Columns of the two 12 x 5 walk sheets, left to right. Rename freely; re-run the menu item afterwards.
+    static readonly (string name, bool loop)[] WalkColumns =
     {
         ("Side_Idle",   true),   // col 0
         ("Side_Walk",   true),   // col 1
@@ -44,73 +62,115 @@ public static class DinoSpriteSheetBuilder
         ("Death2",      false),  // col 11
     };
 
+    static List<Clip> WalkSheet(string prefix) =>
+        WalkColumns.Select((c, i) => new Clip { name = prefix + c.name, loop = c.loop, x = i * 480 }).ToList();
+
+    // Attack sheet: 4 columns, 640 px wide. Row 0 is a grey copy of the drill idle pose; rows 1-4 are the attack.
+    // Front frames hang 1-2 art px below the feet and back frames reach 4 px higher, so their rects are shifted.
+    static List<Clip> AttackSheet()
+    {
+        var dirs = new[]
+        {
+            // name,       x,    pivotX,        above, (side/back/front geometry measured from the art)
+            ("Side",      0,    240 / 640f,    430),
+            ("Front",     640,  340 / 640f,    420),
+            ("Back",      1280, 300 / 640f,    480),
+            ("SideLeft",  1920, 400 / 640f,    430), // exact mirror of Side
+        };
+        var list = new List<Clip>();
+        foreach (var (dir, x, px, above) in dirs)
+        {
+            list.Add(new Clip { name = "Drill_Attack_" + dir, loop = false, x = x, width = 640, above = above, pivotX = px, rows = new[] { 1, 2, 3, 4 } });
+            list.Add(new Clip { name = "Drill_Grey_" + dir, loop = true, x = x, width = 640, above = above, pivotX = px, rows = new[] { 0 } });
+        }
+        return list;
+    }
+
+    static List<Sheet> Sheets() => new()
+    {
+        new Sheet { path = "Assets/Sprites/Dinosaur Spritework.PNG", clips = WalkSheet("") },
+        new Sheet { path = "Assets/Sprites/Dinosaur Spritework - 2.png", clips = WalkSheet("Drill_") },
+        new Sheet { path = "Assets/Sprites/Dinosaur Attacks and Actions.PNG", clips = AttackSheet() },
+    };
+
     [MenuItem("Tools/Space Dinosaurs/Build Dino Animations")]
     public static void Build()
     {
-        var importer = AssetImporter.GetAtPath(SheetPath) as TextureImporter;
-        if (importer == null) { Debug.LogError($"No texture at {SheetPath}"); return; }
-
-        var cells = FindFilledCells();
-        SliceSheet(importer, cells);
-
-        var sprites = AssetDatabase.LoadAllAssetsAtPath(SheetPath).OfType<Sprite>()
-            .ToDictionary(s => s.name);
-
         EnsureFolder(OutFolder);
         var clips = new List<AnimationClip>();
-        for (int c = 0; c < Columns; c++)
+        var report = new List<string>();
+
+        foreach (var sheet in Sheets())
         {
-            var frames = cells.Where(cell => cell.col == c).OrderBy(cell => cell.row)
-                .Select(cell => sprites[SpriteName(cell.col, cell.row)]).ToList();
-            if (frames.Count == 0) continue;
-            clips.Add(BuildClip(ColumnClips[c].name, ColumnClips[c].loop, frames));
+            if (!File.Exists(sheet.path)) { report.Add($"{Path.GetFileName(sheet.path)}: missing, skipped"); continue; }
+
+            var frames = FindFrames(sheet);
+            SliceSheet(sheet, frames);
+            var sprites = AssetDatabase.LoadAllAssetsAtPath(sheet.path).OfType<Sprite>().ToDictionary(s => s.name);
+
+            int made = 0;
+            foreach (var clip in sheet.clips)
+            {
+                var seq = frames.Where(f => f.clip == clip).OrderBy(f => f.row).Select(f => sprites[f.name]).ToList();
+                if (seq.Count == 0) continue;
+                clips.Add(BuildClip(clip.name, clip.loop, seq));
+                made++;
+            }
+            report.Add($"{Path.GetFileName(sheet.path)}: {frames.Count} frames, {made} clips");
         }
 
         var controller = BuildController(clips);
-        BuildPrefab(controller, clips[0]);
-
+        HookUpPrefab(controller, clips);
         AssetDatabase.SaveAssets();
-        Debug.Log($"Dino: sliced {cells.Count} frames into {clips.Count} clips in {OutFolder}, prefab at {PrefabPath}");
+        Debug.Log("Dino animations: " + string.Join("; ", report) + $". {clips.Count} states in {ControllerPath}");
     }
 
-    static string SpriteName(int col, int row) => $"{ColumnClips[col].name}_{row}";
+    // ---------- slicing ----------
 
-    // Reads the PNG straight from disk so the texture doesn't need Read/Write enabled.
-    static List<(int col, int row)> FindFilledCells()
-    {
-        var tex = new Texture2D(2, 2);
-        tex.LoadImage(File.ReadAllBytes(SheetPath));
-        var px = tex.GetPixels32();
-        int w = tex.width, h = tex.height;
-        var filled = new List<(int, int)>();
-
-        for (int c = 0; c < Columns; c++)
-        for (int r = 0; r < Rows; r++)
-        {
-            RectInt rect = CellRect(c, r, h);
-            int count = 0;
-            for (int y = rect.yMin; y < rect.yMax && count < 2000; y++)
-            for (int x = rect.xMin; x < rect.xMax; x++)
-                if (px[y * w + x].a > 0) count++;
-            if (count >= 2000) filled.Add((c, r)); // ignore cells holding only stray dust
-        }
-        Object.DestroyImmediate(tex);
-        return filled;
-    }
+    class Frame { public Clip clip; public int row; public string name; public RectInt rect; }
 
     // Unity sprite rects use a bottom-left origin.
-    static RectInt CellRect(int col, int row, int texHeight) =>
-        new RectInt(col * CellW, texHeight - TopMargin - (row + 1) * CellH, CellW, CellH);
-
-    static void SliceSheet(TextureImporter importer, List<(int col, int row)> cells)
+    static RectInt FrameRect(Clip c, int row, int texHeight)
     {
+        int top = FirstFeetY + row * RowPitch - c.above;
+        return new RectInt(c.x, texHeight - top - c.height, c.width, c.height);
+    }
+
+    // Reads the PNG straight from disk so the texture doesn't need Read/Write enabled; skips empty cells.
+    static List<Frame> FindFrames(Sheet sheet)
+    {
+        var tex = new Texture2D(2, 2);
+        tex.LoadImage(File.ReadAllBytes(sheet.path));
+        var px = tex.GetPixels32();
+        int w = tex.width, h = tex.height;
+        Object.DestroyImmediate(tex);
+
+        var frames = new List<Frame>();
+        foreach (var clip in sheet.clips)
+        foreach (int row in clip.rows)
+        {
+            var r = FrameRect(clip, row, h);
+            if (r.xMin < 0 || r.yMin < 0 || r.xMax > w || r.yMax > h) continue;
+            int count = 0;
+            for (int y = r.yMin; y < r.yMax && count < 2000; y++)
+            for (int x = r.xMin; x < r.xMax; x++)
+                if (px[y * w + x].a > 0) count++;
+            if (count >= 2000) // ignore cells holding only stray dust
+                frames.Add(new Frame { clip = clip, row = row, name = $"{clip.name}_{row}", rect = r });
+        }
+        return frames;
+    }
+
+    static void SliceSheet(Sheet sheet, List<Frame> frames)
+    {
+        var importer = (TextureImporter)AssetImporter.GetAtPath(sheet.path);
         importer.textureType = TextureImporterType.Sprite;
         importer.spriteImportMode = SpriteImportMode.Multiple;
         importer.spritePixelsPerUnit = PixelsPerUnit;
         importer.filterMode = FilterMode.Point;
         importer.mipmapEnabled = false;
         importer.textureCompression = TextureImporterCompression.Uncompressed;
-        importer.maxTextureSize = 8192; // sheet is 5760 wide; the 2048 default downscales and blurs it
+        importer.maxTextureSize = 8192; // 2048 default downscales and blurs big sheets
 
         var factory = new SpriteDataProviderFactories();
         factory.Init();
@@ -118,33 +178,24 @@ public static class DinoSpriteSheetBuilder
         provider.InitSpriteEditorDataProvider();
 
         // Keep IDs of sprites that already exist with the same name so references survive re-runs.
-        var oldIds = provider.GetSpriteRects().GroupBy(s => s.name)
-            .ToDictionary(g => g.Key, g => g.First().spriteID);
+        var oldIds = provider.GetSpriteRects().GroupBy(s => s.name).ToDictionary(g => g.Key, g => g.First().spriteID);
 
-        int texHeight = 2560;
-        importer.GetSourceTextureWidthAndHeight(out _, out texHeight);
-
-        var pivot = new Vector2(0.5f, FeetFromCellBottom / (float)CellH);
-        var rects = cells.Select(cell =>
+        var rects = frames.Select(f => new SpriteRect
         {
-            string name = SpriteName(cell.col, cell.row);
-            var r = CellRect(cell.col, cell.row, texHeight);
-            return new SpriteRect
-            {
-                name = name,
-                spriteID = oldIds.TryGetValue(name, out var id) ? id : GUID.Generate(),
-                rect = new Rect(r.x, r.y, r.width, r.height),
-                alignment = SpriteAlignment.Custom,
-                pivot = pivot,
-            };
+            name = f.name,
+            spriteID = oldIds.TryGetValue(f.name, out var id) ? id : GUID.Generate(),
+            rect = new Rect(f.rect.x, f.rect.y, f.rect.width, f.rect.height),
+            alignment = SpriteAlignment.Custom,
+            pivot = new Vector2(f.clip.pivotX, f.clip.PivotY),
         }).ToArray();
 
         provider.SetSpriteRects(rects);
-        var names = provider.GetDataProvider<ISpriteNameFileIdDataProvider>();
-        names?.SetNameFileIdPairs(rects.Select(r => new SpriteNameFileIdPair(r.name, r.spriteID)));
+        provider.GetDataProvider<ISpriteNameFileIdDataProvider>()?.SetNameFileIdPairs(rects.Select(r => new SpriteNameFileIdPair(r.name, r.spriteID)));
         provider.Apply();
         importer.SaveAndReimport();
     }
+
+    // ---------- clips, controller, prefab ----------
 
     static AnimationClip BuildClip(string name, bool loop, List<Sprite> frames)
     {
@@ -173,34 +224,48 @@ public static class DinoSpriteSheetBuilder
         return clip;
     }
 
+    static string StateName(AnimationClip clip) => clip.name.StartsWith("Dino_") ? clip.name.Substring(5) : clip.name;
+
+    // Refreshes the states in place so the controller keeps its asset ID (the prefab keeps pointing at it).
     static AnimatorController BuildController(List<AnimationClip> clips)
     {
-        string path = $"{OutFolder}/Dino.controller";
-        AssetDatabase.DeleteAsset(path); // rebuilt from scratch each run
-        var controller = AnimatorController.CreateAnimatorControllerAtPath(path);
+        var controller = AssetDatabase.LoadAssetAtPath<AnimatorController>(ControllerPath)
+                         ?? AnimatorController.CreateAnimatorControllerAtPath(ControllerPath);
         var sm = controller.layers[0].stateMachine;
+        foreach (var s in sm.states.ToArray()) sm.RemoveState(s.state);
 
         for (int i = 0; i < clips.Count; i++)
         {
-            string stateName = clips[i].name.Replace("Dino_", "");
-            var state = sm.AddState(stateName, new Vector3(300 + (i % 4) * 220, i / 4 * 80));
+            var state = sm.AddState(StateName(clips[i]), new Vector3(300 + (i % 4) * 240, i / 4 * 60));
             state.motion = clips[i];
-            if (i == 0) sm.defaultState = state;
+            if (state.name == DefaultState) sm.defaultState = state;
         }
+        if (sm.defaultState == null && sm.states.Length > 0) sm.defaultState = sm.states[0].state;
+        EditorUtility.SetDirty(controller);
         return controller;
     }
 
-    static void BuildPrefab(AnimatorController controller, AnimationClip firstClip)
+    // Creates the Dino prefab the first time; afterwards only re-points its Animator, leaving everything else alone.
+    static void HookUpPrefab(AnimatorController controller, List<AnimationClip> clips)
     {
-        EnsureFolder(Path.GetDirectoryName(PrefabPath).Replace('\\', '/'));
-        var go = new GameObject("Dino");
-        var sr = go.AddComponent<SpriteRenderer>();
-        var firstKey = AnimationUtility.GetObjectReferenceCurve(firstClip,
-            EditorCurveBinding.PPtrCurve("", typeof(SpriteRenderer), "m_Sprite"))[0];
-        sr.sprite = firstKey.value as Sprite;
-        go.AddComponent<Animator>().runtimeAnimatorController = controller;
-        PrefabUtility.SaveAsPrefabAsset(go, PrefabPath);
-        Object.DestroyImmediate(go);
+        if (AssetDatabase.LoadAssetAtPath<GameObject>(PrefabPath) == null)
+        {
+            EnsureFolder(Path.GetDirectoryName(PrefabPath).Replace('\\', '/'));
+            var go = new GameObject("Dino");
+            var idle = clips.FirstOrDefault(c => StateName(c) == DefaultState) ?? clips[0];
+            go.AddComponent<SpriteRenderer>().sprite = AnimationUtility.GetObjectReferenceCurve(idle,
+                EditorCurveBinding.PPtrCurve("", typeof(SpriteRenderer), "m_Sprite"))[0].value as Sprite;
+            go.AddComponent<Animator>();
+            PrefabUtility.SaveAsPrefabAsset(go, PrefabPath);
+            Object.DestroyImmediate(go);
+        }
+
+        var root = PrefabUtility.LoadPrefabContents(PrefabPath);
+        var animator = root.GetComponent<Animator>();
+        if (animator == null) animator = root.AddComponent<Animator>();
+        animator.runtimeAnimatorController = controller;
+        PrefabUtility.SaveAsPrefabAsset(root, PrefabPath);
+        PrefabUtility.UnloadPrefabContents(root);
     }
 
     static void EnsureFolder(string folder)
