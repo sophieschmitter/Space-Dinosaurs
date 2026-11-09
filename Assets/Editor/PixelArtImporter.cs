@@ -11,9 +11,10 @@ public class PixelArtImporter : AssetPostprocessor
 {
     public const int ArtPixelsPerUnit = 16; // one tile; also the Pixel Perfect Camera's Assets PPU
 
-    // Folder -> texture pixels per art pixel. Add a row for any new art folder.
+    // Folder -> texture pixels per art pixel. First match wins, so list sub-folders first.
     static readonly (string folder, int scale)[] Folders =
     {
+        ("Assets/Tiles/Generated", 1), // WallTileBuilder output, already 1x -> PPU 16
         ("Assets/Sprites", 10), // characters: 480px box = 48 art px  -> PPU 160
         ("Assets/Tiles",   15), // tiles: 240px tile = 16 art px      -> PPU 240
         ("Assets/Art",     1),  // un-scaled art: 16px tile            -> PPU 16

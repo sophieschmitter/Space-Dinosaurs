@@ -1,0 +1,442 @@
+fileFormatVersion: 2
+guid: 6d04a382d4f924e57be64694e929ecb4
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 5460527986050250908
+    second: Meteorite Tilemap (1)_0
+  - first:
+      213: 165761699499987422
+    second: Meteorite Tilemap (1)_1
+  - first:
+      213: -9032271711221391648
+    second: Meteorite Tilemap (1)_2
+  - first:
+      213: -946509683487741594
+    second: Meteorite Tilemap (1)_3
+  - first:
+      213: 5912892427641964876
+    second: Meteorite Tilemap (1)_4
+  - first:
+      213: -6511802444885771450
+    second: Meteorite Tilemap (1)_5
+  - first:
+      213: 3826025706944280120
+    second: Meteorite Tilemap (1)_6
+  - first:
+      213: 7276193641515315268
+    second: Meteorite Tilemap (1)_7
+  - first:
+      213: -7152637492185026594
+    second: Meteorite Tilemap (1)_8
+  - first:
+      213: 3397573366230704380
+    second: Meteorite Tilemap (1)_9
+  - first:
+      213: -3353709921089411698
+    second: Meteorite Tilemap (1)_10
+  - first:
+      213: -718439348686490784
+    second: Meteorite Tilemap (1)_11
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 240
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Meteorite Tilemap (1)_0
+      rect:
+        serializedVersion: 2
+        x: 239
+        y: 1919
+        width: 1202
+        height: 1202
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c98ba9ea541b7cb40800000000000000
+      internalID: 5460527986050250908
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Meteorite Tilemap (1)_1
+      rect:
+        serializedVersion: 2
+        x: 1679
+        y: 1919
+        width: 242
+        height: 1202
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ed1df003367ec4200800000000000000
+      internalID: 165761699499987422
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Meteorite Tilemap (1)_2
+      rect:
+        serializedVersion: 2
+        x: 2159
+        y: 2879
+        width: 1202
+        height: 242
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0eed6d1dbbce6a280800000000000000
+      internalID: -9032271711221391648
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Meteorite Tilemap (1)_3
+      rect:
+        serializedVersion: 2
+        x: 2159
+        y: 2159
+        width: 482
+        height: 482
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 669ee3b25725dd2f0800000000000000
+      internalID: -946509683487741594
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Meteorite Tilemap (1)_4
+      rect:
+        serializedVersion: 2
+        x: 2879
+        y: 2159
+        width: 482
+        height: 482
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c4942b8c550de0250800000000000000
+      internalID: 5912892427641964876
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Meteorite Tilemap (1)_5
+      rect:
+        serializedVersion: 2
+        x: 3599
+        y: 2159
+        width: 482
+        height: 482
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 64b30196d2e61a5a0800000000000000
+      internalID: -6511802444885771450
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Meteorite Tilemap (1)_6
+      rect:
+        serializedVersion: 2
+        x: 239
+        y: 959
+        width: 722
+        height: 722
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8363debfb16c81530800000000000000
+      internalID: 3826025706944280120
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Meteorite Tilemap (1)_7
+      rect:
+        serializedVersion: 2
+        x: 1199
+        y: 1439
+        width: 242
+        height: 242
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 440f977e09b3af460800000000000000
+      internalID: 7276193641515315268
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Meteorite Tilemap (1)_8
+      rect:
+        serializedVersion: 2
+        x: 1679
+        y: 1439
+        width: 242
+        height: 242
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: edfab2fd81abcbc90800000000000000
+      internalID: -7152637492185026594
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Meteorite Tilemap (1)_9
+      rect:
+        serializedVersion: 2
+        x: 2159
+        y: 239
+        width: 1682
+        height: 1682
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cf06288b9fa962f20800000000000000
+      internalID: 3397573366230704380
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Meteorite Tilemap (1)_10
+      rect:
+        serializedVersion: 2
+        x: 1199
+        y: 959
+        width: 242
+        height: 242
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e8523c1789a3571d0800000000000000
+      internalID: -3353709921089411698
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Meteorite Tilemap (1)_11
+      rect:
+        serializedVersion: 2
+        x: 1679
+        y: 959
+        width: 242
+        height: 242
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 063f0e408379706f0800000000000000
+      internalID: -718439348686490784
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Meteorite Tilemap (1)_0: 5460527986050250908
+      Meteorite Tilemap (1)_1: 165761699499987422
+      Meteorite Tilemap (1)_10: -3353709921089411698
+      Meteorite Tilemap (1)_11: -718439348686490784
+      Meteorite Tilemap (1)_2: -9032271711221391648
+      Meteorite Tilemap (1)_3: -946509683487741594
+      Meteorite Tilemap (1)_4: 5912892427641964876
+      Meteorite Tilemap (1)_5: -6511802444885771450
+      Meteorite Tilemap (1)_6: 3826025706944280120
+      Meteorite Tilemap (1)_7: 7276193641515315268
+      Meteorite Tilemap (1)_8: -7152637492185026594
+      Meteorite Tilemap (1)_9: 3397573366230704380
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
