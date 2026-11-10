@@ -15,6 +15,7 @@ public class PixelArtImporter : AssetPostprocessor
     static readonly (string folder, int scale)[] Folders =
     {
         ("Assets/Tiles/Generated", 1), // WallTileBuilder output, already 1x -> PPU 16
+        ("Assets/Placeholders", 1),    // stand-in block sprites: 16px = 1 tile
         ("Assets/Sprites", 10), // characters: 480px box = 48 art px  -> PPU 160
         ("Assets/Tiles",   15), // tiles: 240px tile = 16 art px      -> PPU 240
         ("Assets/Art",     1),  // un-scaled art: 16px tile            -> PPU 16

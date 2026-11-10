@@ -196,6 +196,8 @@ GameObject:
   - component: {fileID: 8177111954504239976}
   - component: {fileID: 8071386843482541810}
   - component: {fileID: 1558368566172448437}
+  - component: {fileID: 3065809695302516438}
+  - component: {fileID: 5147664190300440779}
   m_Layer: 0
   m_Name: Dino
   m_TagString: Untagged
@@ -343,10 +345,16 @@ MonoBehaviour:
   walkSpeed: 4
   sprintSpeed: 7
   sprintAnimationSpeed: 1.6
+  accelerationTime: 0.08
+  decelerationTime: 0.1
   hasDrill: 1
   walls: {fileID: 0}
   hitTime: 0.15
   stopWhileDrilling: 1
+  drillDamage: 1
+  knockbackSpeed: 6
+  hurtTime: 0.35
+  restartDelay: 2
   shadow: {fileID: 8325401941781893423}
   sweat: {fileID: 1054538034078846191}
   sweatRight:
@@ -371,6 +379,10 @@ MonoBehaviour:
   leftAttack: Drill_Attack_L
   frontAttack: Drill_Attack_Front
   backAttack: Drill_Attack_Back
+  rightDamage: RDamage
+  leftDamage: LDamage
+  rightDeath: RDeath
+  leftDeath: LDeath
 --- !u!70 &1558368566172448437
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -408,3 +420,40 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: 0.25}
   m_Size: {x: 0.75, y: 0.5}
   m_Direction: 1
+--- !u!114 &3065809695302516438
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7618105241104718134}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0a0ed76bfa8c4186b6e9fe6e4deb932, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Health
+  maxHealth: 5
+  invulnerableTime: 1
+  onDamaged:
+    m_PersistentCalls:
+      m_Calls: []
+  onDied:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &5147664190300440779
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7618105241104718134}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e554b008034c84c9ea4fa43fc1b0303f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DamageFlash
+  flashColor: {r: 1, g: 0.35, b: 0.35, a: 1}
+  flashTime: 0.1
+  blinkWhileInvulnerable: 1
+  blinkInterval: 0.08
+  renderers: []

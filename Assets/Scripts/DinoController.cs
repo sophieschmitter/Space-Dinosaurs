@@ -1,6 +1,8 @@
+using System.Collections;
 using System.Linq;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 
 /// <summary>
 /// Top-down movement and drilling for the dino. Moves only while a direction key is held:
@@ -45,6 +47,27 @@ public class DinoController : MonoBehaviour
     [Tooltip("Stand still while drilling.")]
     public bool stopWhileDrilling = true;
 
+    [Tooltip("Damage the drill does to enemies (or anything with Health) in front of it.")]
+    [Min(0)] public int drillDamage = 1;
+
+    [Tooltip("Where the drill is in the attack art, in tiles from the feet (x right, y up), facing right. " +
+             "Anything touching it is hit. Facing left uses this mirrored. Shown in the Scene view when the dino is selected.")]
+    public Rect drillBoxRight = new Rect(0.25f, 0.06f, 1.7f, 1.0f);
+    [Tooltip("Drill area facing down (front view), in tiles from the feet.")]
+    public Rect drillBoxFront = new Rect(-0.69f, -0.44f, 1.0f, 1.31f);
+    [Tooltip("Drill area facing up (back view, drill raised overhead), in tiles from the feet.")]
+    public Rect drillBoxBack = new Rect(-0.12f, 0.5f, 1.0f, 2.5f);
+    [Tooltip("Also hit anything within this radius just in front of the feet (catches enemies at ground level).")]
+    public float drillGroundRadius = 0.45f;
+
+    [Header("Hurt and death (needs a Health component)")]
+    [Tooltip("Speed the dino is knocked back at when hit, in tiles per second.")]
+    public float knockbackSpeed = 6f;
+    [Tooltip("Seconds the dino is stunned (no control, hurt animation) after a hit.")]
+    public float hurtTime = 0.35f;
+    [Tooltip("Seconds after dying before the level restarts.")]
+    public float restartDelay = 2f;
+
     [Header("Shadow and sweat (set up by Tools > Space Dinosaurs > Build Dino Animations)")]
     [Tooltip("Shown under the dino while it stands or walks/runs facing left or right.")]
     public SpriteRenderer shadow;
@@ -62,6 +85,8 @@ public class DinoController : MonoBehaviour
     public string backIdle = "Back_Idle", backWalk = "Back_Walk";
     public string rightAttack = "Drill_Attack_R", leftAttack = "Drill_Attack_L";
     public string frontAttack = "Drill_Attack_Front", backAttack = "Drill_Attack_Back";
+    public string rightDamage = "RDamage", leftDamage = "LDamage";
+    public string rightDeath = "RDeath", leftDeath = "LDeath";
 
     /// <summary>The way the dino faces: always straight up, down, left or right. It's the first direction
     /// you held, so adding a second direction moves diagonally without turning the dino.</summary>
@@ -69,6 +94,8 @@ public class DinoController : MonoBehaviour
     public bool IsMoving { get; private set; }
     public bool IsSprinting { get; private set; }
     public bool IsDrilling => attackTimer > 0f;
+    public bool IsHurt => hurtTimer > 0f;
+    public bool IsDead { get; private set; }
 
     enum View { Right, Left, Front, Back }
 
@@ -84,6 +111,11 @@ public class DinoController : MonoBehaviour
     Vector2 attackDir;   // cardinal direction of the current attack
     float sweatClock;    // time since the current sweat burst started
     float cruiseSpeed;   // speed the dino was last asked to move at (sets the stopping rate)
+    Health health;
+    float hurtTimer;     // time left in the current hurt/knockback
+    Vector2 knockback;   // knockback velocity at the start of the hit
+    bool facedLeft;      // last sideways facing, for the hurt/death art (which only has left/right)
+    Vector2 spawnPoint;
 
     void Awake()
     {
@@ -91,6 +123,8 @@ public class DinoController : MonoBehaviour
         animator = GetComponent<Animator>();
         sprite = GetComponent<SpriteRenderer>();
         feet = GetComponent<Collider2D>();
+        health = GetComponent<Health>();
+        spawnPoint = transform.position;
 
         body.gravityScale = 0f;                                   // top-down: no falling
         body.constraints = RigidbodyConstraints2D.FreezeRotation; // don't spin when bumping walls
@@ -110,8 +144,18 @@ public class DinoController : MonoBehaviour
         if (walls == null) walls = FindFirstObjectByType<DestructibleTilemap>();
     }
 
-    void OnEnable() { move.Enable(); sprint.Enable(); attack.Enable(); }
-    void OnDisable() { move.Disable(); sprint.Disable(); attack.Disable(); body.linearVelocity = Vector2.zero; }
+    void OnEnable()
+    {
+        move.Enable(); sprint.Enable(); attack.Enable();
+        if (health != null) { health.Damaged += OnDamaged; health.Died += OnDied; }
+    }
+
+    void OnDisable()
+    {
+        move.Disable(); sprint.Disable(); attack.Disable();
+        body.linearVelocity = Vector2.zero;
+        if (health != null) { health.Damaged -= OnDamaged; health.Died -= OnDied; }
+    }
     void OnDestroy() { move.Dispose(); sprint.Dispose(); attack.Dispose(); }
 
     void Update()
@@ -119,12 +163,13 @@ public class DinoController : MonoBehaviour
         input = move.ReadValue<Vector2>();
         if (input.sqrMagnitude > 1f) input.Normalize(); // diagonals aren't faster
 
-        bool locked = IsDrilling && stopWhileDrilling;
+        if (hurtTimer > 0f) hurtTimer -= Time.deltaTime;
+        bool locked = IsDead || IsHurt || (IsDrilling && stopWhileDrilling);
         IsMoving = !locked && input.sqrMagnitude > 0.01f;
         IsSprinting = IsMoving && sprint.IsPressed();
         if (IsMoving) UpdateFacing();
 
-        UpdateAttack();
+        if (!IsDead && !IsHurt) UpdateAttack();
         UpdateAnimation();
     }
 
@@ -141,10 +186,18 @@ public class DinoController : MonoBehaviour
         else if (!horizontal && y != 0) Facing = new Vector2(0, y); // reversed up <-> down
         else if (x != 0) Facing = new Vector2(x, 0);                // switched to the other axis
         else Facing = new Vector2(0, y);
+        if (Facing.x != 0) facedLeft = Facing.x < 0;
     }
 
     void FixedUpdate()
     {
+        if (IsHurt)
+        {
+            // Knocked back, slowing to a stop over the hurt time.
+            body.linearVelocity = knockback * (hurtTimer / hurtTime);
+            return;
+        }
+
         float speed = IsSprinting ? sprintSpeed : walkSpeed;
         Vector2 target = IsMoving ? input * speed : Vector2.zero;
         Vector2 current = body.linearVelocity;
@@ -184,10 +237,85 @@ public class DinoController : MonoBehaviour
 
     void HitTile()
     {
-        if (walls == null) return;
         // Aim from the middle of the feet collider into the next tile over.
         Vector2 origin = feet != null ? (Vector2)feet.bounds.center : body.position;
-        walls.HitInFront(origin, attackDir);
+
+        // Anything with Health touching the drill, or right in front of the feet, takes drill damage (once per attack).
+        var hits = new System.Collections.Generic.HashSet<Health>();
+        Rect box = DrillBox(attackDir);
+        foreach (var col in Physics2D.OverlapBoxAll((Vector2)transform.position + box.center, box.size, 0f)) Add(col);
+        foreach (var col in Physics2D.OverlapCircleAll(origin + attackDir * 0.75f, drillGroundRadius)) Add(col);
+        foreach (var target in hits) target.TakeDamage(drillDamage, origin);
+
+        void Add(Collider2D col)
+        {
+            var target = col.GetComponentInParent<Health>();
+            if (target != null && target != health) hits.Add(target);
+        }
+
+        if (walls != null) walls.HitInFront(origin, attackDir);
+    }
+
+    /// <summary>The drill's hit area for a direction, in tiles from the feet.</summary>
+    public Rect DrillBox(Vector2 dir) => ViewOf(dir) switch
+    {
+        View.Front => drillBoxFront,
+        View.Back => drillBoxBack,
+        View.Left => new Rect(-drillBoxRight.xMax, drillBoxRight.y, drillBoxRight.width, drillBoxRight.height),
+        _ => drillBoxRight,
+    };
+
+    // Select the dino in the Scene view to see the drill areas (yellow) and the ground circle (orange).
+    void OnDrawGizmosSelected()
+    {
+        Vector2 feetPos = transform.position;
+        var col = GetComponent<Collider2D>();
+        Vector2 origin = col != null ? (Vector2)col.bounds.center : feetPos;
+        foreach (var d in new[] { Vector2.right, Vector2.left, Vector2.up, Vector2.down })
+        {
+            bool current = Application.isPlaying ? d == Cardinal(Facing) : d == Vector2.right;
+            Gizmos.color = current ? new Color(1f, 0.9f, 0f, 0.9f) : new Color(1f, 0.9f, 0f, 0.25f);
+            Rect r = DrillBox(d);
+            Gizmos.DrawWireCube(feetPos + r.center, r.size);
+            Gizmos.color = current ? new Color(1f, 0.5f, 0f, 0.9f) : new Color(1f, 0.5f, 0f, 0.25f);
+            Gizmos.DrawWireSphere(origin + d * 0.75f, drillGroundRadius);
+        }
+    }
+
+    // ---------- hurt and death ----------
+
+    void OnDamaged(int amount, Vector2 from)
+    {
+        Vector2 away = (Vector2)body.position - from;
+        knockback = (away.sqrMagnitude > 0.0001f ? away.normalized : -Facing) * knockbackSpeed;
+        hurtTimer = hurtTime;
+        attackTimer = 0f;     // a hit interrupts drilling
+        currentState = null;
+    }
+
+    void OnDied()
+    {
+        IsDead = true;
+        attackTimer = 0f;
+        currentState = null;
+        StartCoroutine(RestartAfterDelay());
+    }
+
+    IEnumerator RestartAfterDelay()
+    {
+        yield return new WaitForSeconds(restartDelay);
+        int index = SceneManager.GetActiveScene().buildIndex;
+        if (index >= 0)
+        {
+            SceneManager.LoadScene(index); // fresh level: walls, enemies and dino all reset
+            yield break;
+        }
+        // Scene isn't in Build Settings: just respawn the dino where it started.
+        body.position = spawnPoint;
+        body.linearVelocity = Vector2.zero;
+        health.ResetHealth();
+        IsDead = false;
+        currentState = null;
     }
 
     static Vector2 Cardinal(Vector2 v) =>
@@ -219,12 +347,18 @@ public class DinoController : MonoBehaviour
         Vector2 dir = IsDrilling ? attackDir : Facing;
         View view = ViewOf(dir);
         sprite.flipX = false; // left and right have their own art
+        string prefix = hasDrill ? "Drill_" : "";
 
         string state;
-        if (IsDrilling) state = AttackState();
+        if (IsDead || IsHurt)
+        {
+            // Hurt and death art only comes facing left or right.
+            view = facedLeft ? View.Left : View.Right;
+            state = prefix + (IsDead ? (facedLeft ? leftDeath : rightDeath) : (facedLeft ? leftDamage : rightDamage));
+        }
+        else if (IsDrilling) state = AttackState();
         else
         {
-            string prefix = hasDrill ? "Drill_" : "";
             state = prefix + view switch
             {
                 View.Back => IsMoving ? backWalk : backIdle,
@@ -237,7 +371,7 @@ public class DinoController : MonoBehaviour
         bool side = view == View.Right || view == View.Left;
         if (shadow != null)
         {
-            shadow.enabled = side && !IsDrilling;
+            shadow.enabled = side && !IsDrilling && !IsDead;
             shadow.flipX = view == View.Left; // the shadow art leans 1 px toward the right-facing feet
         }
         UpdateSweat(side && IsSprinting, view);
