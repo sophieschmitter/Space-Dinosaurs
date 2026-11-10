@@ -12,7 +12,7 @@ public class Health : MonoBehaviour
     [Min(1)] public int maxHealth = 3;
 
     [Tooltip("Seconds after a hit during which further hits are ignored.")]
-    [Min(0f)] public float invulnerableTime = 0.6f;
+    [Min(0f)] public float invulnerableTime = 0;
 
     [Tooltip("Called with the damage amount and the position the hit came from.")]
     public UnityEvent<int, Vector2> onDamaged;

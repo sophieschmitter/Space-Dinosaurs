@@ -227,7 +227,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Health
   maxHealth: 2
-  invulnerableTime: 0.3
+  invulnerableTime: 0
   onDamaged:
     m_PersistentCalls:
       m_Calls: []
@@ -253,7 +253,13 @@ MonoBehaviour:
   wanderPauseTime: {x: 0.5, y: 1.5}
   sightRange: 5
   loseRange: 8
+  huntSpeed: 3
+  huntTimeout: 15
+  repathInterval: 0.5
   contactDamage: 1
+  attackAngle: 30
+  approachAlongAxes: 1
+  lineUpTolerance: 0.15
   hitPause: 0.5
   knockbackSpeed: 7
   hurtTime: 0.25
