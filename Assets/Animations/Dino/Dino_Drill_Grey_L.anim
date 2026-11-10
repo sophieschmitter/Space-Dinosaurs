@@ -6,7 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Dino_Huff
+  m_Name: Dino_Drill_Grey_L
   serializedVersion: 7
   m_Legacy: 0
   m_Compressed: 0
@@ -21,15 +21,9 @@ AnimationClip:
   - serializedVersion: 2
     curve:
     - time: 0
-      value: {fileID: -1696046506, guid: ecef99f68e41049d39dbcff46f062b56, type: 3}
+      value: {fileID: 920015812, guid: c89295ec387594262ab60acde06b9bbd, type: 3}
     - time: 0.125
-      value: {fileID: -1753368335, guid: ecef99f68e41049d39dbcff46f062b56, type: 3}
-    - time: 0.25
-      value: {fileID: -20456074, guid: ecef99f68e41049d39dbcff46f062b56, type: 3}
-    - time: 0.375
-      value: {fileID: -1573707808, guid: ecef99f68e41049d39dbcff46f062b56, type: 3}
-    - time: 0.5
-      value: {fileID: -1573707808, guid: ecef99f68e41049d39dbcff46f062b56, type: 3}
+      value: {fileID: 920015812, guid: c89295ec387594262ab60acde06b9bbd, type: 3}
     attribute: m_Sprite
     path: 
     classID: 212
@@ -52,17 +46,14 @@ AnimationClip:
       isIntCurve: 0
       isSerializeReferenceCurve: 0
     pptrCurveMapping:
-    - {fileID: -1696046506, guid: ecef99f68e41049d39dbcff46f062b56, type: 3}
-    - {fileID: -1753368335, guid: ecef99f68e41049d39dbcff46f062b56, type: 3}
-    - {fileID: -20456074, guid: ecef99f68e41049d39dbcff46f062b56, type: 3}
-    - {fileID: -1573707808, guid: ecef99f68e41049d39dbcff46f062b56, type: 3}
-    - {fileID: -1573707808, guid: ecef99f68e41049d39dbcff46f062b56, type: 3}
+    - {fileID: 920015812, guid: c89295ec387594262ab60acde06b9bbd, type: 3}
+    - {fileID: 920015812, guid: c89295ec387594262ab60acde06b9bbd, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 0.625
+    m_StopTime: 0.25
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0

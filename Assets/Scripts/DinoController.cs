@@ -6,10 +6,12 @@ using UnityEngine.InputSystem;
 /// Top-down movement and drilling for the dino. Moves only while a direction key is held:
 ///   W / Up arrow    = up (shows the dino's back)
 ///   S / Down arrow  = down (shows the dino's front)
-///   A / Left arrow  = left (side view, flipped)
-///   D / Right arrow = right (side view)
-///   Space (held)    = sprint
+///   A / Left arrow  = left (left-facing art)
+///   D / Right arrow = right (right-facing art)
+///   Space (held)    = sprint (sweat drops fly off now and then)
 ///   X               = drill the wall tile in front (hold to keep drilling)
+/// Two directions at once move diagonally while the dino keeps facing the one held first.
+/// Starting and stopping ease in/out over Acceleration Time / Deceleration Time.
 /// Walls stop it through physics, so it needs the Rigidbody2D + collider on the same object.
 /// </summary>
 [RequireComponent(typeof(Rigidbody2D), typeof(Animator), typeof(SpriteRenderer))]
@@ -24,6 +26,12 @@ public class DinoController : MonoBehaviour
     [Tooltip("How much faster the walk animation plays while sprinting.")]
     public float sprintAnimationSpeed = 1.6f;
 
+    [Tooltip("Seconds to get up to full speed after pressing a direction.")]
+    [Min(0f)] public float accelerationTime = 0.08f;
+
+    [Tooltip("Seconds to slide to a stop after letting go.")]
+    [Min(0f)] public float decelerationTime = 0.1f;
+
     [Header("Drill")]
     [Tooltip("Show the drill-holding animations (needed for the drill attack to look right).")]
     public bool hasDrill = true;
@@ -37,19 +45,32 @@ public class DinoController : MonoBehaviour
     [Tooltip("Stand still while drilling.")]
     public bool stopWhileDrilling = true;
 
+    [Header("Shadow and sweat (set up by Tools > Space Dinosaurs > Build Dino Animations)")]
+    [Tooltip("Shown under the dino while it stands or walks/runs facing left or right.")]
+    public SpriteRenderer shadow;
+    public SpriteRenderer sweat;
+    public Sprite[] sweatRight, sweatLeft;
+    [Tooltip("Frames per second of one burst of sweat drops.")]
+    public float sweatFrameRate = 8f;
+    [Tooltip("Seconds of no sweat between bursts while sprinting.")]
+    public float sweatGap = 0.4f;
+
     [Header("Animator state names (\"Drill_\" is added in front when Has Drill is on)")]
-    public string sideIdle = "Side_Idle", sideWalk = "Side_Walk";
+    public string rightIdle = "RIdle", rightWalk = "RWalk";
+    public string leftIdle = "LIdle", leftWalk = "LWalk";
     public string frontIdle = "Front_Idle", frontWalk = "Front_Walk";
     public string backIdle = "Back_Idle", backWalk = "Back_Walk";
-    public string sideAttack = "Drill_Attack_Side", frontAttack = "Drill_Attack_Front", backAttack = "Drill_Attack_Back";
+    public string rightAttack = "Drill_Attack_R", leftAttack = "Drill_Attack_L";
+    public string frontAttack = "Drill_Attack_Front", backAttack = "Drill_Attack_Back";
 
-    /// <summary>The way the dino last moved (world space).</summary>
+    /// <summary>The way the dino faces: always straight up, down, left or right. It's the first direction
+    /// you held, so adding a second direction moves diagonally without turning the dino.</summary>
     public Vector2 Facing { get; private set; } = Vector2.right;
     public bool IsMoving { get; private set; }
     public bool IsSprinting { get; private set; }
     public bool IsDrilling => attackTimer > 0f;
 
-    enum View { Side, Front, Back }
+    enum View { Right, Left, Front, Back }
 
     InputAction move, sprint, attack;
     Rigidbody2D body;
@@ -61,6 +82,8 @@ public class DinoController : MonoBehaviour
     float attackTimer;   // time left in the current attack
     bool hitDone;        // this attack already hit its tile
     Vector2 attackDir;   // cardinal direction of the current attack
+    float sweatClock;    // time since the current sweat burst started
+    float cruiseSpeed;   // speed the dino was last asked to move at (sets the stopping rate)
 
     void Awake()
     {
@@ -99,16 +122,41 @@ public class DinoController : MonoBehaviour
         bool locked = IsDrilling && stopWhileDrilling;
         IsMoving = !locked && input.sqrMagnitude > 0.01f;
         IsSprinting = IsMoving && sprint.IsPressed();
-        if (IsMoving) Facing = input;
+        if (IsMoving) UpdateFacing();
 
         UpdateAttack();
         UpdateAnimation();
     }
 
+    // Keep facing the direction that was held first; only turn when that key is let go (or reversed).
+    void UpdateFacing()
+    {
+        int x = input.x > 0.1f ? 1 : input.x < -0.1f ? -1 : 0;
+        int y = input.y > 0.1f ? 1 : input.y < -0.1f ? -1 : 0;
+        bool horizontal = Facing.x != 0;
+        bool stillHeld = horizontal ? x == (int)Facing.x : y == (int)Facing.y;
+        if (stillHeld) return;
+
+        if (horizontal && x != 0) Facing = new Vector2(x, 0);      // reversed left <-> right
+        else if (!horizontal && y != 0) Facing = new Vector2(0, y); // reversed up <-> down
+        else if (x != 0) Facing = new Vector2(x, 0);                // switched to the other axis
+        else Facing = new Vector2(0, y);
+    }
+
     void FixedUpdate()
     {
         float speed = IsSprinting ? sprintSpeed : walkSpeed;
-        body.linearVelocity = IsMoving ? input * speed : Vector2.zero; // stops as soon as keys are released
+        Vector2 target = IsMoving ? input * speed : Vector2.zero;
+        Vector2 current = body.linearVelocity;
+
+        if (IsMoving) cruiseSpeed = speed;
+
+        // Ease toward the target speed at a steady rate: full speed is reached in accelerationTime,
+        // and a stop from full speed takes decelerationTime.
+        bool speedingUp = target.sqrMagnitude > current.sqrMagnitude;
+        float time = speedingUp ? accelerationTime : decelerationTime;
+        float rate = time > 0f ? Mathf.Max(target.magnitude, cruiseSpeed) / time : float.PositiveInfinity;
+        body.linearVelocity = Vector2.MoveTowards(current, target, rate * Time.fixedDeltaTime);
     }
 
     // ---------- drilling ----------
@@ -149,7 +197,8 @@ public class DinoController : MonoBehaviour
     {
         View.Back => backAttack,
         View.Front => frontAttack,
-        _ => sideAttack,
+        View.Left => leftAttack,
+        _ => rightAttack,
     };
 
     float ClipLength(string state)
@@ -161,14 +210,15 @@ public class DinoController : MonoBehaviour
 
     // ---------- animation ----------
 
+    // Stronger axis wins; diagonals keep the side view.
     static View ViewOf(Vector2 dir) =>
-        Mathf.Abs(dir.y) > Mathf.Abs(dir.x) ? (dir.y > 0 ? View.Back : View.Front) : View.Side;
+        Mathf.Abs(dir.y) > Mathf.Abs(dir.x) ? (dir.y > 0 ? View.Back : View.Front) : (dir.x < 0 ? View.Left : View.Right);
 
     void UpdateAnimation()
     {
         Vector2 dir = IsDrilling ? attackDir : Facing;
-        View view = ViewOf(dir); // stronger axis wins; diagonals keep the side view
-        sprite.flipX = view == View.Side && dir.x < 0; // side art faces right; front/back never flipped
+        View view = ViewOf(dir);
+        sprite.flipX = false; // left and right have their own art
 
         string state;
         if (IsDrilling) state = AttackState();
@@ -179,9 +229,18 @@ public class DinoController : MonoBehaviour
             {
                 View.Back => IsMoving ? backWalk : backIdle,
                 View.Front => IsMoving ? frontWalk : frontIdle,
-                _ => IsMoving ? sideWalk : sideIdle,
+                View.Left => IsMoving ? leftWalk : leftIdle,
+                _ => IsMoving ? rightWalk : rightIdle,
             };
         }
+
+        bool side = view == View.Right || view == View.Left;
+        if (shadow != null)
+        {
+            shadow.enabled = side && !IsDrilling;
+            shadow.flipX = view == View.Left; // the shadow art leans 1 px toward the right-facing feet
+        }
+        UpdateSweat(side && IsSprinting, view);
 
         animator.speed = IsSprinting ? sprintAnimationSpeed : 1f;
         if (state != currentState)
@@ -189,5 +248,25 @@ public class DinoController : MonoBehaviour
             animator.Play(state, 0, 0f);
             currentState = state;
         }
+    }
+
+    // While sprinting sideways: play one burst of drops, wait sweatGap seconds, repeat.
+    void UpdateSweat(bool active, View view)
+    {
+        var frames = view == View.Left ? sweatLeft : sweatRight;
+        if (sweat == null || !active || frames == null || frames.Length == 0)
+        {
+            if (sweat != null) sweat.enabled = false;
+            sweatClock = 0f; // the next sprint starts with a burst straight away
+            return;
+        }
+
+        float burst = frames.Length / sweatFrameRate;
+        int frame = Mathf.FloorToInt(sweatClock * sweatFrameRate);
+        sweat.enabled = frame < frames.Length;
+        if (sweat.enabled) sweat.sprite = frames[frame];
+
+        sweatClock += Time.deltaTime;
+        if (sweatClock >= burst + sweatGap) sweatClock = 0f;
     }
 }
