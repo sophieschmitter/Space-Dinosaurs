@@ -46,6 +46,8 @@ public class EnemyController : MonoBehaviour
     [Tooltip("Only hurt the dino when touching it from straight above, below, left or right (like the drill), " +
              "within this many degrees of the axis. Diagonal bumps do no damage.")]
     [Range(0f, 45f)] public float attackAngle = 30f;
+    [Tooltip("Shown on the lose screen if this enemy lands the hit that kills the dino.")]
+    [TextArea] public string killMessage = "An enemy got you.";
     [Tooltip("While chasing, first line up with the dino on an axis, then come straight at it.")]
     public bool approachAlongAxes = true;
     [Tooltip("How close (tiles) to the dino's line counts as lined up.")]
@@ -263,7 +265,7 @@ public class EnemyController : MonoBehaviour
         if (target == null) return;
         if (!IsOnAxis(PlayerCenter() - body.position)) return; // diagonal touch: no damage
         var targetHealth = target.GetComponent<Health>();
-        if (targetHealth != null && targetHealth.TakeDamage(contactDamage, body.position))
+        if (targetHealth != null && targetHealth.TakeDamage(contactDamage, body.position, killMessage))
             pauseTimer = hitPause; // back off for a moment after landing a hit
     }
 

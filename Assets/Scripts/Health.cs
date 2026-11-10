@@ -32,10 +32,18 @@ public class Health : MonoBehaviour
 
     void Awake() => Current = maxHealth;
 
+    /// <summary>What dealt the last hit that landed, e.g. "A hunter tracked you down." (null if not given).
+    /// The dino's lose screen shows this when it dies.</summary>
+    public string LastHitCause { get; private set; }
+
     /// <summary>Returns true if the hit landed (not dead, not invulnerable).</summary>
-    public bool TakeDamage(int amount, Vector2 from)
+    public bool TakeDamage(int amount, Vector2 from) => TakeDamage(amount, from, null);
+
+    /// <summary>Same, also saying what caused the hit (shown on the lose screen if this hit kills the dino).</summary>
+    public bool TakeDamage(int amount, Vector2 from, string cause)
     {
         if (IsDead || IsInvulnerable || amount <= 0) return false;
+        LastHitCause = cause;
 
         Current = Mathf.Max(0, Current - amount);
         invulnerableUntil = Time.time + invulnerableTime;

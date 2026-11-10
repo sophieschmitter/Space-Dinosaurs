@@ -352,6 +352,25 @@ MonoBehaviour:
   hitTime: 0.15
   stopWhileDrilling: 1
   drillDamage: 1
+  drillBoxRight:
+    serializedVersion: 2
+    x: 0.25
+    y: 0.06
+    width: 1.7
+    height: 1
+  drillBoxFront:
+    serializedVersion: 2
+    x: -0.69
+    y: -0.44
+    width: 1
+    height: 1.31
+  drillBoxBack:
+    serializedVersion: 2
+    x: -0.12
+    y: 0.5
+    width: 1
+    height: 2.5
+  drillGroundRadius: 0.45
   knockbackSpeed: 6
   hurtTime: 0.35
   restartDelay: 2

@@ -8,6 +8,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 490678444310258260, guid: de46bc9578b58450793049795bfc54e2, type: 3}
+      propertyPath: killMessage
+      value: You were killed by a rock crab.
+      objectReference: {fileID: 0}
     - target: {fileID: 5877895179666988452, guid: de46bc9578b58450793049795bfc54e2, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0

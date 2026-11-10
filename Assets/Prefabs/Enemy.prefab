@@ -258,6 +258,7 @@ MonoBehaviour:
   repathInterval: 0.5
   contactDamage: 1
   attackAngle: 30
+  killMessage: You were killed by a rock crab.
   approachAlongAxes: 1
   lineUpTolerance: 0.15
   hitPause: 0.5

@@ -65,8 +65,10 @@ public class DinoController : MonoBehaviour
     public float knockbackSpeed = 6f;
     [Tooltip("Seconds the dino is stunned (no control, hurt animation) after a hit.")]
     public float hurtTime = 0.35f;
-    [Tooltip("Seconds after dying before the level restarts.")]
+    [Tooltip("Seconds after dying before the lose screen appears.")]
     public float restartDelay = 2f;
+    [Tooltip("Lose-screen message when whatever killed the dino didn't give its own Kill Message.")]
+    [TextArea] public string deathMessage = "You died.";
 
     [Header("Shadow and sweat (set up by Tools > Space Dinosaurs > Build Dino Animations)")]
     [Tooltip("Shown under the dino while it stands or walks/runs facing left or right.")]
@@ -304,6 +306,15 @@ public class DinoController : MonoBehaviour
     IEnumerator RestartAfterDelay()
     {
         yield return new WaitForSeconds(restartDelay);
+
+        // Lose screen with what killed us (e.g. an enemy's Kill Message), or the default message.
+        var timer = FindFirstObjectByType<LevelTimer>();
+        if (timer != null)
+        {
+            timer.Fail(string.IsNullOrEmpty(health.LastHitCause) ? deathMessage : health.LastHitCause);
+            yield break;
+        }
+
         int index = SceneManager.GetActiveScene().buildIndex;
         if (index >= 0)
         {
