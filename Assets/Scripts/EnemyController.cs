@@ -4,9 +4,9 @@ using UnityEngine;
 using UnityEngine.Tilemaps;
 
 /// <summary>
-/// Simple enemy: wanders around, chases the dino when it can see it, and hurts it on contact
-/// from straight above, below, left or right (never diagonally, matching the dino's 4-way drill).
-/// Takes damage through its Health (the dino's drill), gets knocked back, and dies.
+/// Base level/rock crab enemy: wanders around, chases the dino when it can see it, and hurts it on contact
+/// from x or y axis.
+/// Takes damage, gets knocked back, and dies.
 /// Hunt() (used by hunter spawners) sends it along a path around the walls straight to the dino;
 /// once it can see the dino, or the hunt times out, it goes back to normal wandering/chasing.
 ///
