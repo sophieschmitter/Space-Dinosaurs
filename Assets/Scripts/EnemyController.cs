@@ -1,10 +1,14 @@
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Tilemaps;
 
 /// <summary>
-/// Simple enemy: wanders around, chases the dino when it can see it, and hurts it on contact.
+/// Simple enemy: wanders around, chases the dino when it can see it, and hurts it on contact
+/// from straight above, below, left or right (never diagonally, matching the dino's 4-way drill).
 /// Takes damage through its Health (the dino's drill), gets knocked back, and dies.
+/// Hunt() (used by hunter spawners) sends it along a path around the walls straight to the dino;
+/// once it can see the dino, or the hunt times out, it goes back to normal wandering/chasing.
 ///
 /// Art is swappable: it works with just a placeholder sprite. To animate it later, give the Animator a
 /// controller with any of these states and they're played automatically: Idle, Walk, Hurt, Death.
@@ -29,8 +33,23 @@ public class EnemyController : MonoBehaviour
     [Tooltip("Gives up when the dino gets this far away.")]
     public float loseRange = 8f;
 
+    [Header("Hunting (when sent by a hunter spawner)")]
+    [Tooltip("Speed while following a path to the dino.")]
+    public float huntSpeed = 3f;
+    [Tooltip("Gives up hunting after this many seconds and goes back to normal behaviour.")]
+    public float huntTimeout = 15f;
+    [Tooltip("How often (seconds) the path is recalculated, since the dino moves.")]
+    public float repathInterval = 0.5f;
+
     [Header("Attack")]
     [Min(0)] public int contactDamage = 1;
+    [Tooltip("Only hurt the dino when touching it from straight above, below, left or right (like the drill), " +
+             "within this many degrees of the axis. Diagonal bumps do no damage.")]
+    [Range(0f, 45f)] public float attackAngle = 30f;
+    [Tooltip("While chasing, first line up with the dino on an axis, then come straight at it.")]
+    public bool approachAlongAxes = true;
+    [Tooltip("How close (tiles) to the dino's line counts as lined up.")]
+    public float lineUpTolerance = 0.15f;
     [Tooltip("Pause after hitting the dino before it can move again.")]
     public float hitPause = 0.5f;
 
@@ -57,6 +76,15 @@ public class EnemyController : MonoBehaviour
     Vector2 knockback;
     bool dead;
     string currentState;
+    bool hunting;
+    float huntTimer, repathTimer;
+    List<Vector2> path;
+    int pathIndex;
+    HashSet<Vector3Int> blockedCells;
+    Tilemap walls;
+
+    public bool IsHunting => hunting;
+    public bool IsChasing => chasing;
 
     void Awake()
     {
@@ -73,9 +101,33 @@ public class EnemyController : MonoBehaviour
 
     void Start()
     {
+        FindPlayer();
+        stateTimer = Random.Range(wanderPauseTime.x, wanderPauseTime.y);
+    }
+
+    void FindPlayer()
+    {
+        if (player != null) return;
         var dino = FindFirstObjectByType<DinoController>();
         if (dino != null) player = dino.transform;
-        stateTimer = Random.Range(wanderPauseTime.x, wanderPauseTime.y);
+    }
+
+    /// <summary>Head for the dino along a path around the walls, then return to normal behaviour.</summary>
+    public void Hunt()
+    {
+        FindPlayer();
+        var destructible = FindFirstObjectByType<DestructibleTilemap>();
+        walls = destructible != null ? destructible.GetComponent<Tilemap>() : null;
+        if (player == null || walls == null) return;
+
+        // Spawners are solid blocks that aren't wall tiles, so tell the pathfinder about them.
+        blockedCells = new HashSet<Vector3Int>();
+        foreach (var s in FindObjectsByType<EnemySpawner>(FindObjectsSortMode.None))
+            blockedCells.Add(walls.WorldToCell(s.transform.position));
+
+        hunting = true;
+        huntTimer = huntTimeout;
+        repathTimer = 0f;
     }
 
     void OnEnable() { health.Damaged += OnDamaged; health.Died += OnDied; }
@@ -87,8 +139,12 @@ public class EnemyController : MonoBehaviour
         if (hurtTimer > 0f) hurtTimer -= Time.deltaTime;
         if (pauseTimer > 0f) pauseTimer -= Time.deltaTime;
 
-        UpdateChaseState();
-        if (!chasing) UpdateWander();
+        if (hunting) UpdateHunt();
+        else
+        {
+            UpdateChaseState();
+            if (!chasing) UpdateWander();
+        }
         UpdateArt();
     }
 
@@ -100,14 +156,45 @@ public class EnemyController : MonoBehaviour
         Vector2 target = Vector2.zero;
         if (pauseTimer <= 0f)
         {
-            if (chasing && player != null) target = ((Vector2)player.position - body.position).normalized * chaseSpeed;
+            if (hunting && path != null && pathIndex < path.Count)
+                target = (path[pathIndex] - body.position).normalized * huntSpeed;
+            else if (chasing && player != null) target = ChaseDirection(PlayerCenter() - body.position) * chaseSpeed;
             else if (wanderWalking) target = wanderDir * wanderSpeed;
         }
-        float rate = Mathf.Max(chaseSpeed, wanderSpeed) / Mathf.Max(0.01f, accelerationTime);
+        float rate = Mathf.Max(chaseSpeed, wanderSpeed, huntSpeed) / Mathf.Max(0.01f, accelerationTime);
         body.linearVelocity = Vector2.MoveTowards(body.linearVelocity, target, rate * Time.fixedDeltaTime);
     }
 
     // ---------- behaviour ----------
+
+    void UpdateHunt()
+    {
+        var dino = player != null ? player.GetComponent<DinoController>() : null;
+        huntTimer -= Time.deltaTime;
+        if (player == null || (dino != null && dino.IsDead) || huntTimer <= 0f) { StopHunting(false); return; }
+
+        // Close enough to see the dino: switch to the normal straight-on chase.
+        if (Vector2.Distance(body.position, player.position) <= sightRange && CanSee(PlayerCenter())) { StopHunting(true); return; }
+
+        repathTimer -= Time.deltaTime;
+        if (repathTimer <= 0f || path == null)
+        {
+            repathTimer = repathInterval;
+            path = TilePathfinder.FindPath(walls, body.position, PlayerCenter(), blockedCells);
+            pathIndex = 0;
+            if (path == null) { StopHunting(false); return; } // no way through: just behave normally
+        }
+
+        // Next waypoint once this one is reached.
+        while (pathIndex < path.Count - 1 && Vector2.Distance(body.position, path[pathIndex]) < 0.15f) pathIndex++;
+    }
+
+    void StopHunting(bool chaseNow)
+    {
+        hunting = false;
+        path = null;
+        chasing = chaseNow;
+    }
 
     void UpdateChaseState()
     {
@@ -118,6 +205,31 @@ public class EnemyController : MonoBehaviour
         float dist = Vector2.Distance(body.position, player.position);
         if (chasing) chasing = dist <= loseRange;
         else chasing = dist <= sightRange && CanSee(player.position);
+    }
+
+    // The middle of the dino's feet collider (what enemies touch), or its position.
+    Vector2 PlayerCenter()
+    {
+        var col = player.GetComponent<Collider2D>();
+        return col != null ? (Vector2)col.bounds.center : (Vector2)player.position;
+    }
+
+    /// <summary>Which way to move toward the dino. With Approach Along Axes, it first closes the smaller gap
+    /// (lining up horizontally or vertically), then moves straight along the line.</summary>
+    public Vector2 ChaseDirection(Vector2 toPlayer)
+    {
+        if (!approachAlongAxes) return toPlayer.normalized;
+        float ax = Mathf.Abs(toPlayer.x), ay = Mathf.Abs(toPlayer.y);
+        if (ax >= ay) // dino is more to the side: line up vertically, then come in sideways
+            return ay > lineUpTolerance ? new Vector2(0, Mathf.Sign(toPlayer.y)) : new Vector2(Mathf.Sign(toPlayer.x), 0);
+        return ax > lineUpTolerance ? new Vector2(Mathf.Sign(toPlayer.x), 0) : new Vector2(0, Mathf.Sign(toPlayer.y));
+    }
+
+    /// <summary>True when the offset to the dino is within Attack Angle of straight up/down/left/right.</summary>
+    public bool IsOnAxis(Vector2 toPlayer)
+    {
+        float ax = Mathf.Abs(toPlayer.x), ay = Mathf.Abs(toPlayer.y);
+        return Mathf.Min(ax, ay) <= Mathf.Max(ax, ay) * Mathf.Tan(attackAngle * Mathf.Deg2Rad);
     }
 
     // True when no wall tilemap is between the enemy and the point.
@@ -149,6 +261,7 @@ public class EnemyController : MonoBehaviour
         if (dead || contactDamage <= 0) return;
         var target = collision.collider.GetComponentInParent<DinoController>();
         if (target == null) return;
+        if (!IsOnAxis(PlayerCenter() - body.position)) return; // diagonal touch: no damage
         var targetHealth = target.GetComponent<Health>();
         if (targetHealth != null && targetHealth.TakeDamage(contactDamage, body.position))
             pauseTimer = hitPause; // back off for a moment after landing a hit
@@ -180,6 +293,15 @@ public class EnemyController : MonoBehaviour
             yield return null;
         }
         Destroy(gameObject);
+    }
+
+    // Select an enemy while it's hunting to see its path.
+    void OnDrawGizmosSelected()
+    {
+        if (path == null) return;
+        Gizmos.color = new Color(1f, 0.6f, 0.1f, 0.9f);
+        Vector2 prev = body != null ? body.position : (Vector2)transform.position;
+        for (int i = pathIndex; i < path.Count; i++) { Gizmos.DrawLine(prev, path[i]); prev = path[i]; }
     }
 
     // ---------- art ----------
