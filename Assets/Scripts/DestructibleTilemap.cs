@@ -26,6 +26,9 @@ public class DestructibleTilemap : MonoBehaviour
     [Tooltip("Called with the cell and its world centre when a tile breaks (hook up particles/sound here).")]
     public UnityEvent<Vector3Int, Vector3> onTileBroken;
 
+    /// <summary>For scripts (e.g. the ore layer): (cell, world centre) when a tile breaks.</summary>
+    public event System.Action<Vector3Int, Vector3> TileBroken;
+
     Tilemap map;
     Tilemap tilemap => map != null ? map : map = GetComponent<Tilemap>();
     readonly Dictionary<Vector3Int, int> damage = new();
@@ -66,5 +69,6 @@ public class DestructibleTilemap : MonoBehaviour
         damage.Remove(cell);
         tilemap.SetTile(cell, null); // Rule Tile refreshes the 8 neighbours; TilemapCollider2D updates itself
         onTileBroken?.Invoke(cell, centre);
+        TileBroken?.Invoke(cell, centre);
     }
 }
