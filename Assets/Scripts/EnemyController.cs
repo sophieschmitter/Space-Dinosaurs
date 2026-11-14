@@ -7,8 +7,8 @@ using UnityEngine.Tilemaps;
 /// Base level/rock crab enemy: wanders around, chases the dino when it can see it, and hurts it on contact
 /// from x or y axis.
 /// Takes damage, gets knocked back, and dies.
-/// Hunt() (used by hunter spawners) sends it along a path around the walls straight to the dino;
-/// once it can see the dino, or the hunt times out, it goes back to normal wandering/chasing.
+/// GoTo(goal) (used by spawners) sends it along a path around the walls to the robot (an EnemyGoal); once it
+/// arrives, or the trip times out, it goes back to normal wandering/chasing. It damages the robot on contact.
 ///
 /// Art is swappable: it works with just a placeholder sprite. Give the Animator a controller and these states
 /// are played automatically when they exist, picked from the way it's moving:
@@ -36,12 +36,12 @@ public class EnemyController : MonoBehaviour
     [Tooltip("Gives up when the dino gets this far away.")]
     public float loseRange = 8f;
 
-    [Header("Hunting (when sent by a hunter spawner)")]
-    [Tooltip("Speed while following a path to the dino.")]
+    [Header("Going to the robot (when a spawner sends it)")]
+    [Tooltip("Speed while following the path to the robot.")]
     public float huntSpeed = 3f;
-    [Tooltip("Gives up hunting after this many seconds and goes back to normal behaviour.")]
+    [Tooltip("Gives up on reaching the robot after this many seconds and goes back to normal behaviour.")]
     public float huntTimeout = 15f;
-    [Tooltip("How often (seconds) the path is recalculated, since the dino moves.")]
+    [Tooltip("How often (seconds) the path is recalculated (walls can be drilled away).")]
     public float repathInterval = 0.5f;
 
     [Header("Attack")]
@@ -124,12 +124,16 @@ public class EnemyController : MonoBehaviour
     }
 
     /// <summary>Head for the dino along a path around the walls, then return to normal behaviour.</summary>
-    public void Hunt()
+    EnemyGoal huntGoal;
+
+    /// <summary>Head for the goal (the robot) along a path around the walls, then return to normal behaviour.</summary>
+    public void GoTo(EnemyGoal goal)
     {
         FindPlayer();
         var destructible = FindFirstObjectByType<DestructibleTilemap>();
         walls = destructible != null ? destructible.GetComponent<Tilemap>() : null;
-        if (player == null || walls == null) return;
+        if (goal == null || walls == null) return;
+        huntGoal = goal;
 
         // Spawners are solid blocks that aren't wall tiles, so tell the pathfinder about them.
         blockedCells = new HashSet<Vector3Int>();
@@ -180,18 +184,17 @@ public class EnemyController : MonoBehaviour
 
     void UpdateHunt()
     {
-        var dino = player != null ? player.GetComponent<DinoController>() : null;
         huntTimer -= Time.deltaTime;
-        if (player == null || (dino != null && dino.IsDead) || huntTimer <= 0f) { StopHunting(false); return; }
+        if (huntGoal == null || huntTimer <= 0f) { StopHunting(false); return; }
 
-        // Close enough to see the dino: switch to the normal straight-on chase.
-        if (Vector2.Distance(body.position, player.position) <= sightRange && CanSee(PlayerCenter())) { StopHunting(true); return; }
+        // Arrived at the robot: back to normal wandering/chasing.
+        if (Vector2.Distance(body.position, huntGoal.transform.position) <= huntGoal.arriveDistance) { StopHunting(false); return; }
 
         repathTimer -= Time.deltaTime;
         if (repathTimer <= 0f || path == null)
         {
             repathTimer = repathInterval;
-            path = TilePathfinder.FindPath(walls, body.position, PlayerCenter(), blockedCells);
+            path = TilePathfinder.FindPath(walls, body.position, huntGoal.transform.position, blockedCells);
             pathIndex = 0;
             if (path == null) { StopHunting(false); return; } // no way through: just behave normally
         }
@@ -269,7 +272,17 @@ public class EnemyController : MonoBehaviour
 
     void OnCollisionStay2D(Collision2D collision)
     {
-        if (dead || contactDamage <= 0) return;
+        if (dead || IsCelebrating || contactDamage <= 0) return;
+
+        // The robot: hurt it from any side.
+        var goal = collision.collider.GetComponentInParent<EnemyGoal>();
+        if (goal != null)
+        {
+            if (goal.TryGetComponent(out Health goalHealth) && goalHealth.TakeDamage(contactDamage, body.position, goal.destroyedMessage))
+                pauseTimer = hitPause;
+            return;
+        }
+
         var target = collision.collider.GetComponentInParent<DinoController>();
         if (target == null) return;
         if (!IsOnAxis(PlayerCenter() - body.position)) return; // diagonal touch: no damage

@@ -12,6 +12,8 @@ GameObject:
   - component: {fileID: 729620894607030594}
   - component: {fileID: -8281911433896060459}
   - component: {fileID: 3804994000448894636}
+  - component: {fileID: 2246356434127942498}
+  - component: {fileID: 8969345204615478176}
   m_Layer: 0
   m_Name: Robot
   m_TagString: Untagged
@@ -149,3 +151,33 @@ MonoBehaviour:
   onDied:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &2246356434127942498
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 719561279630308018}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ece903101ca44b27ac418a388e9c749, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EnemyGoal
+  arriveDistance: 1.2
+  destroyedMessage: The drill robot was destroyed.
+--- !u!114 &8969345204615478176
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 719561279630308018}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5561e373905e6460c949bafed9e0e444, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EndLevelOnDeath
+  outcome: 1
+  delay: 0.5
+  winMessage: Minerals Acquired
+  loseMessage: The drill robot was destroyed.

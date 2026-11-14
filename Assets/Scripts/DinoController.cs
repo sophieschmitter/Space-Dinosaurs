@@ -44,6 +44,13 @@ public class DinoController : MonoBehaviour
     [Tooltip("Seconds into the attack animation when the drill hits the tile.")]
     public float hitTime = 0.15f; // frame 2, when the drill first reaches out
 
+    [Tooltip("Enemies are hit any time from Hit Time until this many seconds before the attack ends " +
+             "(each enemy at most once per attack). 0 = right up to the end.")]
+    [Min(0f)] public float hitWindowEndEarly = 0f;
+
+    [Tooltip("A press of X during an attack or while stunned is remembered this long and fires as soon as possible.")]
+    [Min(0f)] public float pressBuffer = 0.2f;
+
     [Tooltip("Stand still while drilling.")]
     public bool stopWhileDrilling = true;
 
@@ -63,7 +70,10 @@ public class DinoController : MonoBehaviour
     [Header("Hurt and death (needs a Health component)")]
     [Tooltip("Speed the dino is knocked back at when hit, in tiles per second.")]
     public float knockbackSpeed = 6f;
-    [Tooltip("Seconds the dino is stunned (no control, hurt animation) after a hit.")]
+    [Tooltip("Off: a hit only shoves the dino (you keep control and the drill swing isn't interrupted). " +
+             "On: the dino is stunned for Hurt Time (no control, hurt animation, swing cancelled).")]
+    public bool stunOnHit = false;
+    [Tooltip("Seconds the dino is stunned (no control, hurt animation) after a hit. Only used with Stun On Hit.")]
     public float hurtTime = 0.35f;
     [Tooltip("Seconds after dying before the lose screen appears.")]
     public float restartDelay = 2f;
@@ -110,6 +120,8 @@ public class DinoController : MonoBehaviour
     string currentState;
     float attackTimer;   // time left in the current attack
     bool hitDone;        // this attack already hit its tile
+    float bufferedPress; // time left on a remembered X press
+    readonly System.Collections.Generic.HashSet<Health> hitThisAttack = new();
     Vector2 attackDir;   // cardinal direction of the current attack
     float sweatClock;    // time since the current sweat burst started
     float cruiseSpeed;   // speed the dino was last asked to move at (sets the stopping rate)
@@ -166,6 +178,9 @@ public class DinoController : MonoBehaviour
         if (input.sqrMagnitude > 1f) input.Normalize(); // diagonals aren't faster
 
         if (hurtTimer > 0f) hurtTimer -= Time.deltaTime;
+        // Remember a press even mid-attack or while stunned, so quick taps aren't lost.
+        if (attack.WasPressedThisFrame()) bufferedPress = pressBuffer;
+        else if (bufferedPress > 0f) bufferedPress -= Time.deltaTime;
         bool locked = IsDead || IsHurt || (IsDrilling && stopWhileDrilling);
         IsMoving = !locked && input.sqrMagnitude > 0.01f;
         IsSprinting = IsMoving && sprint.IsPressed();
@@ -222,40 +237,52 @@ public class DinoController : MonoBehaviour
         {
             float length = ClipLength(AttackState());
             attackTimer -= Time.deltaTime;
-            if (!hitDone && length - attackTimer >= hitTime) { hitDone = true; HitTile(); }
+            float elapsed = length - attackTimer;
+            if (elapsed >= hitTime)
+            {
+                if (!hitDone) { hitDone = true; BreakTileInFront(); } // one wall tile per attack
+                if (attackTimer >= hitWindowEndEarly) HitEnemies();    // enemies: any time in the window
+            }
             if (attackTimer > 0f) return;
             currentState = null; // let the idle/walk state come back
         }
 
         // Start an attack on press, and keep drilling while X stays held.
-        if (hasDrill && (attack.WasPressedThisFrame() || attack.IsPressed()))
+        if (hasDrill && (bufferedPress > 0f || attack.IsPressed()))
         {
+            bufferedPress = 0f;
             attackDir = Cardinal(Facing);
             attackTimer = ClipLength(AttackState());
             hitDone = false;
+            hitThisAttack.Clear();
             currentState = null; // restart the attack animation from its first frame
         }
     }
 
-    void HitTile()
+    // Middle of the feet collider: where the drill is aimed from.
+    Vector2 DrillOrigin() => feet != null ? (Vector2)feet.bounds.center : body.position;
+
+    // Anything with Health touching the drill, or right in front of the feet, takes drill damage,
+    // at most once per attack. Called every frame of the hit window, so enemies that step in late still get hit.
+    void HitEnemies()
     {
-        // Aim from the middle of the feet collider into the next tile over.
-        Vector2 origin = feet != null ? (Vector2)feet.bounds.center : body.position;
-
-        // Anything with Health touching the drill, or right in front of the feet, takes drill damage (once per attack).
-        var hits = new System.Collections.Generic.HashSet<Health>();
+        Vector2 origin = DrillOrigin();
         Rect box = DrillBox(attackDir);
-        foreach (var col in Physics2D.OverlapBoxAll((Vector2)transform.position + box.center, box.size, 0f)) Add(col);
-        foreach (var col in Physics2D.OverlapCircleAll(origin + attackDir * 0.75f, drillGroundRadius)) Add(col);
-        foreach (var target in hits) target.TakeDamage(drillDamage, origin);
+        foreach (var col in Physics2D.OverlapBoxAll((Vector2)transform.position + box.center, box.size, 0f)) Hit(col);
+        foreach (var col in Physics2D.OverlapCircleAll(origin + attackDir * 0.75f, drillGroundRadius)) Hit(col);
 
-        void Add(Collider2D col)
+        void Hit(Collider2D col)
         {
             var target = col.GetComponentInParent<Health>();
-            if (target != null && target != health) hits.Add(target);
+            if (target == null || target == health || hitThisAttack.Contains(target)) return;
+            // Only count it once the hit actually lands, so a target that's briefly invulnerable can still be hit later in the swing.
+            if (target.TakeDamage(drillDamage, origin)) hitThisAttack.Add(target);
         }
+    }
 
-        if (walls != null) walls.HitInFront(origin, attackDir);
+    void BreakTileInFront()
+    {
+        if (walls != null) walls.HitInFront(DrillOrigin(), attackDir);
     }
 
     /// <summary>The drill's hit area for a direction, in tiles from the feet.</summary>
@@ -290,6 +317,12 @@ public class DinoController : MonoBehaviour
     {
         Vector2 away = (Vector2)body.position - from;
         knockback = (away.sqrMagnitude > 0.0001f ? away.normalized : -Facing) * knockbackSpeed;
+        if (!stunOnHit)
+        {
+            // Just a shove: normal movement easing takes over again right away.
+            body.linearVelocity = knockback;
+            return;
+        }
         hurtTimer = hurtTime;
         attackTimer = 0f;     // a hit interrupts drilling
         currentState = null;

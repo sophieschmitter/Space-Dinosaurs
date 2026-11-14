@@ -5,7 +5,8 @@ using UnityEngine.Tilemaps;
 
 /// <summary>
 /// A stationary, indestructible block that keeps producing enemies.
-/// With Hunt On Spawn ticked (the Hunter Spawner prefab) its enemies head straight for the dino.
+/// With Path To Goal ticked its enemies first head for the robot, then behave normally.
+/// Two prefabs: Crab Spawner (crab1) and Tall Crab Spawner (the stronger tall crab).
 /// Every Spawn Interval seconds it puts an enemy on a free tile next to itself, as long as fewer than
 /// Max Alive of its enemies are still around. It has no Health, so the drill can't hurt it,
 /// and it isn't a wall tile, so it can't be broken either.
@@ -34,9 +35,8 @@ public class EnemySpawner : MonoBehaviour
     [Tooltip("Don't spawn while the dino is closer than this (tiles), so enemies don't pop out on top of it.")]
     [Min(0f)] public float minPlayerDistance = 2f;
 
-    [Tooltip("Hunter spawner: each enemy immediately follows a path around the walls to the dino, " +
-             "then behaves normally once it can see the dino (or its hunt times out).")]
-    public bool huntOnSpawn = false;
+    [Tooltip("Each enemy first follows a path around the walls to the robot (the EnemyGoal), then behaves normally.")]
+    public bool pathToGoal = true;
 
     [Header("Art")]
     public Animator animator;
@@ -72,7 +72,7 @@ public class EnemySpawner : MonoBehaviour
                 var enemy = Instantiate(enemyPrefab, spot, Quaternion.identity);
                 enemy.name = $"{enemyPrefab.name} ({name})";
                 alive.Add(enemy);
-                if (huntOnSpawn && enemy.TryGetComponent(out EnemyController ai)) ai.Hunt();
+                if (pathToGoal && enemy.TryGetComponent(out EnemyController ai)) ai.GoTo(EnemyGoal.Find());
                 Play("Spawn");
             }
             yield return new WaitForSeconds(spawnInterval);

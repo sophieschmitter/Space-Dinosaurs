@@ -209,727 +209,727 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Tall Crab Spritework_0
+      name: tallcrab_Idle_Side_0
       rect:
         serializedVersion: 2
-        x: 79
-        y: 2079
-        width: 182
-        height: 312
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 0
+        y: 2030
+        width: 320
+        height: 480
+      alignment: 9
+      pivot: {x: 0.5, y: 0.104166664}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 657fba3d4fe7ca0a0800000000000000
-      internalID: -6868975741658466474
+      spriteID: 00fd65f2b50f44b1b89806cf126820e1
+      internalID: -1030186843
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tall Crab Spritework_1
+      name: tallcrab_Idle_Side_1
       rect:
         serializedVersion: 2
-        x: 399
-        y: 2079
-        width: 182
-        height: 302
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 0
+        y: 1550
+        width: 320
+        height: 480
+      alignment: 9
+      pivot: {x: 0.5, y: 0.104166664}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: b644ebf0aff7ca970800000000000000
-      internalID: 8767523286566192235
+      spriteID: d74683159c1d94e2283cdddd60e396b5
+      internalID: 592870444
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tall Crab Spritework_2
+      name: tallcrab_Idle_Side_2
       rect:
         serializedVersion: 2
-        x: 719
-        y: 2079
-        width: 182
-        height: 312
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 0
+        y: 1070
+        width: 320
+        height: 480
+      alignment: 9
+      pivot: {x: 0.5, y: 0.104166664}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 4a35bf85a8c810520800000000000000
-      internalID: 2666566980206285732
+      spriteID: b50cbd102f61c4320b6f52bce55b48af
+      internalID: 135841083
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tall Crab Spritework_3
+      name: tallcrab_Idle_Side_3
       rect:
         serializedVersion: 2
-        x: 1029
-        y: 2079
-        width: 172
-        height: 312
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 0
+        y: 590
+        width: 320
+        height: 480
+      alignment: 9
+      pivot: {x: 0.5, y: 0.104166664}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: c8fbe2539e6f72020800000000000000
-      internalID: 2317092014785478540
+      spriteID: 32f6018dff56a41f3bc8be7a735e276a
+      internalID: 1367255128
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tall Crab Spritework_4
+      name: tallcrab_Idle_Side_4
       rect:
         serializedVersion: 2
-        x: 1349
-        y: 2079
-        width: 172
-        height: 302
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 0
+        y: 110
+        width: 320
+        height: 480
+      alignment: 9
+      pivot: {x: 0.5, y: 0.104166664}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 3b0703d8464cb33a0800000000000000
-      internalID: -6684533285756833613
+      spriteID: b2ea45a2544a7444f80b0a4d57aeb67c
+      internalID: -174727812
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tall Crab Spritework_5
+      name: tallcrab_Walk_Side_0
       rect:
         serializedVersion: 2
-        x: 1669
-        y: 2079
-        width: 172
-        height: 312
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 320
+        y: 2030
+        width: 320
+        height: 480
+      alignment: 9
+      pivot: {x: 0.5, y: 0.104166664}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 4fe487ce069933270800000000000000
-      internalID: 8229089585699245812
+      spriteID: 0991dec1aec5848c68b198b6fe25701f
+      internalID: -1152838773
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tall Crab Spritework_6
+      name: tallcrab_Walk_Side_1
       rect:
         serializedVersion: 2
-        x: 1989
-        y: 2079
-        width: 172
-        height: 332
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 320
+        y: 1550
+        width: 320
+        height: 480
+      alignment: 9
+      pivot: {x: 0.5, y: 0.104166664}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: f72445cf47fe53740800000000000000
-      internalID: 5131270636187173503
+      spriteID: 9f1307b8984254198bc3927ebccfe619
+      internalID: -548574209
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tall Crab Spritework_7
+      name: tallcrab_Walk_Side_2
       rect:
         serializedVersion: 2
-        x: 2309
-        y: 2079
-        width: 202
-        height: 302
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 320
+        y: 1070
+        width: 320
+        height: 480
+      alignment: 9
+      pivot: {x: 0.5, y: 0.104166664}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 227c48f410b205d60800000000000000
-      internalID: 7876843032900060962
+      spriteID: 7a25705211c094a16ac44d51998826aa
+      internalID: -784105491
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tall Crab Spritework_8
+      name: tallcrab_Walk_Side_3
       rect:
         serializedVersion: 2
-        x: 79
-        y: 1599
-        width: 182
-        height: 302
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 320
+        y: 590
+        width: 320
+        height: 480
+      alignment: 9
+      pivot: {x: 0.5, y: 0.104166664}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 73f7e8be0683f60f0800000000000000
-      internalID: -1121615793271963849
+      spriteID: f52c93a5ad95c4a58bce7a6cb97acef7
+      internalID: -1111857550
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tall Crab Spritework_9
+      name: tallcrab_Idle_Front_0
       rect:
         serializedVersion: 2
-        x: 399
-        y: 1599
-        width: 182
-        height: 302
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 640
+        y: 2030
+        width: 320
+        height: 480
+      alignment: 9
+      pivot: {x: 0.5, y: 0.104166664}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 68cfcb1a6b35c6850800000000000000
-      internalID: 6371559616685079686
+      spriteID: 5735ee8f5678641169b2fd3020ad86a4
+      internalID: -1506403992
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tall Crab Spritework_10
+      name: tallcrab_Idle_Front_1
       rect:
         serializedVersion: 2
-        x: 709
-        y: 1599
-        width: 202
-        height: 302
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 640
+        y: 1550
+        width: 320
+        height: 480
+      alignment: 9
+      pivot: {x: 0.5, y: 0.104166664}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 777a01a2af4996390800000000000000
-      internalID: -7824559075411056777
+      spriteID: 35b54e68debed4d55b82caea1ae0d35b
+      internalID: -1335404070
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tall Crab Spritework_11
+      name: tallcrab_Idle_Front_2
       rect:
         serializedVersion: 2
-        x: 1029
-        y: 1599
-        width: 172
-        height: 302
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 640
+        y: 1070
+        width: 320
+        height: 480
+      alignment: 9
+      pivot: {x: 0.5, y: 0.104166664}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 6ec875a02d481ba40800000000000000
-      internalID: 5382229067335961830
+      spriteID: 24be3dbe6004f478fa002a1ca72ed281
+      internalID: 1626240477
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tall Crab Spritework_12
+      name: tallcrab_Idle_Front_3
       rect:
         serializedVersion: 2
-        x: 1349
-        y: 1599
-        width: 172
-        height: 302
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 640
+        y: 590
+        width: 320
+        height: 480
+      alignment: 9
+      pivot: {x: 0.5, y: 0.104166664}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 9317c3d71d5810c10800000000000000
-      internalID: 2018041242834465081
+      spriteID: 3a9a8e79cfeff4d4cbbd7c78000a325c
+      internalID: -1857540249
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tall Crab Spritework_13
+      name: tallcrab_Walk_Front_0
       rect:
         serializedVersion: 2
-        x: 1659
-        y: 1589
-        width: 172
-        height: 312
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 960
+        y: 2030
+        width: 320
+        height: 480
+      alignment: 9
+      pivot: {x: 0.5, y: 0.104166664}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: afe5f9028720f0350800000000000000
-      internalID: 5985005144765325050
+      spriteID: 6733b3f652aec41acadb39bdfc9c7ece
+      internalID: 1774284760
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tall Crab Spritework_14
+      name: tallcrab_Walk_Front_1
       rect:
         serializedVersion: 2
-        x: 1989
-        y: 1599
-        width: 172
-        height: 272
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 960
+        y: 1550
+        width: 320
+        height: 480
+      alignment: 9
+      pivot: {x: 0.5, y: 0.104166664}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 8d5b2e1e389559a40800000000000000
-      internalID: 5374300153301874136
+      spriteID: 8fc0a6c4c1bb9498e8ddc560eedb6503
+      internalID: 945559068
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tall Crab Spritework_15
+      name: tallcrab_Walk_Front_2
       rect:
         serializedVersion: 2
-        x: 2299
-        y: 1599
-        width: 222
-        height: 272
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 960
+        y: 1070
+        width: 320
+        height: 480
+      alignment: 9
+      pivot: {x: 0.5, y: 0.104166664}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 0d79100134caa9c90800000000000000
-      internalID: -7162222853348026416
+      spriteID: 75dafd89daf1142a7b9e5d77af8d3b3b
+      internalID: 1663709599
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tall Crab Spritework_16
+      name: tallcrab_Walk_Front_3
       rect:
         serializedVersion: 2
-        x: 79
-        y: 1119
-        width: 182
-        height: 292
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 960
+        y: 590
+        width: 320
+        height: 480
+      alignment: 9
+      pivot: {x: 0.5, y: 0.104166664}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 1279f94944c084bc0800000000000000
-      internalID: -3798772796996217055
+      spriteID: b4a2271b565ed429386d38d944829221
+      internalID: 1355401193
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tall Crab Spritework_17
+      name: tallcrab_Walk_Front_4
       rect:
         serializedVersion: 2
-        x: 399
-        y: 1119
-        width: 182
-        height: 302
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 960
+        y: 110
+        width: 320
+        height: 480
+      alignment: 9
+      pivot: {x: 0.5, y: 0.104166664}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: f8910fcbd61ba61c0800000000000000
-      internalID: -4509596991978727025
+      spriteID: 40e477c62ca66440891ed3f63ed126f5
+      internalID: 1996557133
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tall Crab Spritework_18
+      name: tallcrab_Idle_Back_0
       rect:
         serializedVersion: 2
-        x: 719
-        y: 1119
-        width: 182
-        height: 302
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1280
+        y: 2030
+        width: 320
+        height: 480
+      alignment: 9
+      pivot: {x: 0.5, y: 0.104166664}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 27860b102c321df90800000000000000
-      internalID: -6930719035387516814
+      spriteID: fd4fbc7f81b444ff9b4fade79f90fcdf
+      internalID: 860068615
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tall Crab Spritework_19
+      name: tallcrab_Idle_Back_1
       rect:
         serializedVersion: 2
-        x: 1029
-        y: 1119
-        width: 172
-        height: 292
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1280
+        y: 1550
+        width: 320
+        height: 480
+      alignment: 9
+      pivot: {x: 0.5, y: 0.104166664}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 992118c846b28bba0800000000000000
-      internalID: -6073056386655120743
+      spriteID: df3c28971cb3c4ddfa016f1acd5e2f21
+      internalID: -880364681
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tall Crab Spritework_20
+      name: tallcrab_Idle_Back_2
       rect:
         serializedVersion: 2
-        x: 1349
-        y: 1119
-        width: 172
-        height: 302
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1280
+        y: 1070
+        width: 320
+        height: 480
+      alignment: 9
+      pivot: {x: 0.5, y: 0.104166664}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 32d4b90ba6e9e27c0800000000000000
-      internalID: -4094160830166512349
+      spriteID: 0840bab2fa4e946e9a1a5f1a1178782a
+      internalID: -68676909
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tall Crab Spritework_21
+      name: tallcrab_Idle_Back_3
       rect:
         serializedVersion: 2
-        x: 1659
-        y: 1119
-        width: 172
-        height: 302
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1280
+        y: 590
+        width: 320
+        height: 480
+      alignment: 9
+      pivot: {x: 0.5, y: 0.104166664}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: b9830aaa960b0fe50800000000000000
-      internalID: 6841161801856465051
+      spriteID: bfb21ada2acc845b78498f9e957e8542
+      internalID: -345015361
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tall Crab Spritework_22
+      name: tallcrab_Walk_Back_0
       rect:
         serializedVersion: 2
-        x: 1989
-        y: 1119
-        width: 172
-        height: 372
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1600
+        y: 2030
+        width: 320
+        height: 480
+      alignment: 9
+      pivot: {x: 0.5, y: 0.104166664}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: e38ea1e05fea8ca50800000000000000
-      internalID: 6541670826282510398
+      spriteID: c4f6bf29b4eda46f2baec8ccf9297720
+      internalID: 1123468762
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tall Crab Spritework_23
+      name: tallcrab_Walk_Back_1
       rect:
         serializedVersion: 2
-        x: 2299
-        y: 1119
-        width: 222
-        height: 242
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1600
+        y: 1550
+        width: 320
+        height: 480
+      alignment: 9
+      pivot: {x: 0.5, y: 0.104166664}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 8c56da61fd2207860800000000000000
-      internalID: 7525553318889612744
+      spriteID: 54317faf31a7146dc819de315ff4bf01
+      internalID: 1070905307
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tall Crab Spritework_24
+      name: tallcrab_Walk_Back_2
       rect:
         serializedVersion: 2
-        x: 79
-        y: 639
-        width: 182
-        height: 302
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1600
+        y: 1070
+        width: 320
+        height: 480
+      alignment: 9
+      pivot: {x: 0.5, y: 0.104166664}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 6c2b3eaa50a5d3d90800000000000000
-      internalID: -7116432855787130170
+      spriteID: b5e13e1fe21f345fca8fce6c46fb37a9
+      internalID: 349547001
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tall Crab Spritework_25
+      name: tallcrab_Walk_Back_3
       rect:
         serializedVersion: 2
-        x: 399
-        y: 639
-        width: 182
-        height: 302
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1600
+        y: 590
+        width: 320
+        height: 480
+      alignment: 9
+      pivot: {x: 0.5, y: 0.104166664}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 60a60258629c21000800000000000000
-      internalID: 5287716860226054
+      spriteID: 1b9211acfcde84567a29468e30c9c90a
+      internalID: -1290396598
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tall Crab Spritework_26
+      name: tallcrab_Victory_0
       rect:
         serializedVersion: 2
-        x: 719
-        y: 639
-        width: 182
-        height: 312
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1920
+        y: 2030
+        width: 320
+        height: 480
+      alignment: 9
+      pivot: {x: 0.5, y: 0.104166664}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: abada16ad875dbe40800000000000000
-      internalID: 5673787371445476026
+      spriteID: bac3223f0928e44848d77f669d01cb59
+      internalID: 458383634
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tall Crab Spritework_27
+      name: tallcrab_Victory_1
       rect:
         serializedVersion: 2
-        x: 1029
-        y: 639
-        width: 172
-        height: 302
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1920
+        y: 1550
+        width: 320
+        height: 480
+      alignment: 9
+      pivot: {x: 0.5, y: 0.104166664}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 25d4b8a3c90d2e1e0800000000000000
-      internalID: -2169942701023474350
+      spriteID: 8f46e6f0b4e6746d4beffc9d5570c5f4
+      internalID: 195142002
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tall Crab Spritework_28
+      name: tallcrab_Victory_2
       rect:
         serializedVersion: 2
-        x: 1349
-        y: 639
-        width: 172
-        height: 302
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1920
+        y: 1070
+        width: 320
+        height: 480
+      alignment: 9
+      pivot: {x: 0.5, y: 0.104166664}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 9e44bb390c05dc730800000000000000
-      internalID: 4020958830354187497
+      spriteID: 283504597064d4ba8b589aa193811a33
+      internalID: 2119419764
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tall Crab Spritework_29
+      name: tallcrab_Victory_3
       rect:
         serializedVersion: 2
-        x: 1659
-        y: 629
-        width: 172
-        height: 322
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1920
+        y: 590
+        width: 320
+        height: 480
+      alignment: 9
+      pivot: {x: 0.5, y: 0.104166664}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: e4a672f071939e2b0800000000000000
-      internalID: -5554845894183523762
+      spriteID: 559e5ba9ffa6b4863b399c30fa845622
+      internalID: -1708952178
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tall Crab Spritework_30
+      name: tallcrab_Death_0
       rect:
         serializedVersion: 2
-        x: 1989
-        y: 639
-        width: 172
-        height: 382
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 2240
+        y: 2030
+        width: 320
+        height: 480
+      alignment: 9
+      pivot: {x: 0.5, y: 0.104166664}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 620c1a4ad7e34ea70800000000000000
-      internalID: 8855271476671135782
+      spriteID: 9886fc3b95236467c9dac9002a646ed5
+      internalID: 1508246914
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tall Crab Spritework_31
+      name: tallcrab_Death_1
       rect:
         serializedVersion: 2
-        x: 79
-        y: 159
-        width: 182
-        height: 312
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 2240
+        y: 1550
+        width: 320
+        height: 480
+      alignment: 9
+      pivot: {x: 0.5, y: 0.104166664}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: face301dd0e828a40800000000000000
-      internalID: 5369009895771466927
+      spriteID: ad7fb8b5d3c78437e8b646ae5fe98a6f
+      internalID: 452571644
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tall Crab Spritework_32
+      name: tallcrab_Death_2
       rect:
         serializedVersion: 2
-        x: 1029
-        y: 159
-        width: 172
-        height: 312
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 2240
+        y: 1070
+        width: 320
+        height: 480
+      alignment: 9
+      pivot: {x: 0.5, y: 0.104166664}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: ca90420e9a59173a0800000000000000
-      internalID: -6669385016316524116
+      spriteID: 05938bfedae8143a0accc3da70f77c9b
+      internalID: 804040162
       vertices: []
       indices: 
       edges: []
@@ -938,7 +938,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: d855e1abbe24748a7b329384804c4611
     internalID: 0
     vertices: []
     indices: 
@@ -948,39 +948,39 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Tall Crab Spritework_0: -6868975741658466474
-      Tall Crab Spritework_1: 8767523286566192235
-      Tall Crab Spritework_10: -7824559075411056777
-      Tall Crab Spritework_11: 5382229067335961830
-      Tall Crab Spritework_12: 2018041242834465081
-      Tall Crab Spritework_13: 5985005144765325050
-      Tall Crab Spritework_14: 5374300153301874136
-      Tall Crab Spritework_15: -7162222853348026416
-      Tall Crab Spritework_16: -3798772796996217055
-      Tall Crab Spritework_17: -4509596991978727025
-      Tall Crab Spritework_18: -6930719035387516814
-      Tall Crab Spritework_19: -6073056386655120743
-      Tall Crab Spritework_2: 2666566980206285732
-      Tall Crab Spritework_20: -4094160830166512349
-      Tall Crab Spritework_21: 6841161801856465051
-      Tall Crab Spritework_22: 6541670826282510398
-      Tall Crab Spritework_23: 7525553318889612744
-      Tall Crab Spritework_24: -7116432855787130170
-      Tall Crab Spritework_25: 5287716860226054
-      Tall Crab Spritework_26: 5673787371445476026
-      Tall Crab Spritework_27: -2169942701023474350
-      Tall Crab Spritework_28: 4020958830354187497
-      Tall Crab Spritework_29: -5554845894183523762
-      Tall Crab Spritework_3: 2317092014785478540
-      Tall Crab Spritework_30: 8855271476671135782
-      Tall Crab Spritework_31: 5369009895771466927
-      Tall Crab Spritework_32: -6669385016316524116
-      Tall Crab Spritework_4: -6684533285756833613
-      Tall Crab Spritework_5: 8229089585699245812
-      Tall Crab Spritework_6: 5131270636187173503
-      Tall Crab Spritework_7: 7876843032900060962
-      Tall Crab Spritework_8: -1121615793271963849
-      Tall Crab Spritework_9: 6371559616685079686
+      tallcrab_Death_0: 1508246914
+      tallcrab_Death_1: 452571644
+      tallcrab_Death_2: 804040162
+      tallcrab_Idle_Back_0: 860068615
+      tallcrab_Idle_Back_1: -880364681
+      tallcrab_Idle_Back_2: -68676909
+      tallcrab_Idle_Back_3: -345015361
+      tallcrab_Idle_Front_0: -1506403992
+      tallcrab_Idle_Front_1: -1335404070
+      tallcrab_Idle_Front_2: 1626240477
+      tallcrab_Idle_Front_3: -1857540249
+      tallcrab_Idle_Side_0: -1030186843
+      tallcrab_Idle_Side_1: 592870444
+      tallcrab_Idle_Side_2: 135841083
+      tallcrab_Idle_Side_3: 1367255128
+      tallcrab_Idle_Side_4: -174727812
+      tallcrab_Victory_0: 458383634
+      tallcrab_Victory_1: 195142002
+      tallcrab_Victory_2: 2119419764
+      tallcrab_Victory_3: -1708952178
+      tallcrab_Walk_Back_0: 1123468762
+      tallcrab_Walk_Back_1: 1070905307
+      tallcrab_Walk_Back_2: 349547001
+      tallcrab_Walk_Back_3: -1290396598
+      tallcrab_Walk_Front_0: 1774284760
+      tallcrab_Walk_Front_1: 945559068
+      tallcrab_Walk_Front_2: 1663709599
+      tallcrab_Walk_Front_3: 1355401193
+      tallcrab_Walk_Front_4: 1996557133
+      tallcrab_Walk_Side_0: -1152838773
+      tallcrab_Walk_Side_1: -548574209
+      tallcrab_Walk_Side_2: -784105491
+      tallcrab_Walk_Side_3: -1111857550
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

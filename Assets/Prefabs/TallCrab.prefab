@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1001 &5407605493499870328
+--- !u!1001 &3211000656910159049
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -9,9 +9,37 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 490678444310258260, guid: de46bc9578b58450793049795bfc54e2, type: 3}
-      propertyPath: killMessage
-      value: You were killed by a rock crab.
+      propertyPath: huntSpeed
+      value: 2.3
       objectReference: {fileID: 0}
+    - target: {fileID: 490678444310258260, guid: de46bc9578b58450793049795bfc54e2, type: 3}
+      propertyPath: chaseSpeed
+      value: 2.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 490678444310258260, guid: de46bc9578b58450793049795bfc54e2, type: 3}
+      propertyPath: killMessage
+      value: You've been killed by a tall crab.
+      objectReference: {fileID: 0}
+    - target: {fileID: 490678444310258260, guid: de46bc9578b58450793049795bfc54e2, type: 3}
+      propertyPath: wanderSpeed
+      value: 1.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 490678444310258260, guid: de46bc9578b58450793049795bfc54e2, type: 3}
+      propertyPath: contactDamage
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 490678444310258260, guid: de46bc9578b58450793049795bfc54e2, type: 3}
+      propertyPath: knockbackSpeed
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1845865456573550448, guid: de46bc9578b58450793049795bfc54e2, type: 3}
+      propertyPath: m_Radius
+      value: 0.45
+      objectReference: {fileID: 0}
+    - target: {fileID: 5256155242200776180, guid: de46bc9578b58450793049795bfc54e2, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 5e04c8fa3744e46b0afddab5c31ce91f, type: 2}
     - target: {fileID: 5877895179666988452, guid: de46bc9578b58450793049795bfc54e2, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -52,21 +80,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7518054427660149702, guid: de46bc9578b58450793049795bfc54e2, type: 3}
-      propertyPath: m_Color.b
-      value: 0.15
+    - target: {fileID: 7247674438207081612, guid: de46bc9578b58450793049795bfc54e2, type: 3}
+      propertyPath: maxHealth
+      value: 5
       objectReference: {fileID: 0}
-    - target: {fileID: 7518054427660149702, guid: de46bc9578b58450793049795bfc54e2, type: 3}
-      propertyPath: m_Color.g
-      value: 0.55
-      objectReference: {fileID: 0}
-    - target: {fileID: 7518054427660149702, guid: de46bc9578b58450793049795bfc54e2, type: 3}
-      propertyPath: m_Color.r
-      value: 1
+    - target: {fileID: 7247674438207081612, guid: de46bc9578b58450793049795bfc54e2, type: 3}
+      propertyPath: invulnerableTime
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8505824343020661225, guid: de46bc9578b58450793049795bfc54e2, type: 3}
       propertyPath: m_Name
-      value: HunterEnemy
+      value: TallCrab
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

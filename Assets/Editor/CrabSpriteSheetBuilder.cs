@@ -7,24 +7,36 @@ using UnityEditor.U2D.Sprites;
 using UnityEngine;
 
 /// <summary>
-/// Slices "Rusty Crab Sprites.png" (one column = one animation, frames run top to bottom) into the crab1
-/// animations and an Animator Controller (in Assets/Animations/Rusty Crab), used by the Enemy prefab's Art.
+/// Slices the crab sheets (one column = one animation, frames run top to bottom) into animations and an
+/// Animator Controller each: "Rusty Crab Sprites.png" -> crab1 (Assets/Animations/Rusty Crab) and
+/// "Tall Crab Spritework.png" -> tallcrab (Assets/Animations/Tall Crab). Both sheets use the same column order.
 /// Side animations get both a _Left and a _Right clip (the art faces left; _Right is the same frames mirrored,
 /// with the flip saved in the clip). State names match what EnemyController plays:
 /// Idle/Walk with _Left, _Right, _Front or _Back, victoryDance (on the lose screen) and Death.
-/// Run from: Tools > Space Dinosaurs > Build Crab1 Animations. Safe to re-run (IDs kept).
+/// Run from: Tools > Space Dinosaurs > Build Crab Animations. Safe to re-run (IDs kept).
 /// </summary>
 public static class CrabSpriteSheetBuilder
 {
-    const string SheetPath = "Assets/Sprites/Rusty Crab Sprites.png";
-    const string OutFolder = "Assets/Animations/Rusty Crab";
-    const string ControllerPath = OutFolder + "/Crab1.controller";
-    const string Prefix = "crab1";
-    const int Cell = 320;              // 32 art px at 10 texture px per art px
-    const int FeetFromTop = 210;       // feet line inside each cell -> pivot
     const int PixelsPerUnit = 160;     // 10 px per art pixel * 16 art px per tile (matches the dino)
     const float FramesPerSecond = 8f;
     const string DefaultState = "Idle_Front";
+
+    /// <summary>One crab sheet: where it is, where its clips go, and its cell layout (texture px).</summary>
+    class Sheet
+    {
+        public string path, outFolder, controller, prefix;
+        public int cellW, cellH, topMargin, feetFromTop;
+    }
+
+    static readonly Sheet[] Sheets =
+    {
+        // crab1: 320 x 320 cells, feet 210 px down each cell.
+        new Sheet { path = "Assets/Sprites/Rusty Crab Sprites.png", outFolder = "Assets/Animations/Rusty Crab",
+                    controller = "Crab1.controller", prefix = "crab1", cellW = 320, cellH = 320, topMargin = 0, feetFromTop = 210 },
+        // tall crab: 320 x 480 cells starting 50 px down (same rows as the dino sheets), feet 430 px down each cell.
+        new Sheet { path = "Assets/Sprites/Tall Crab Spritework.png", outFolder = "Assets/Animations/Tall Crab",
+                    controller = "TallCrab.controller", prefix = "tallcrab", cellW = 320, cellH = 480, topMargin = 50, feetFromTop = 430 },
+    };
 
     // Columns left to right: sprite name, loops, and the clips made from it (clip name, mirrored?).
     // Leave the sprite names alone; rename clips freely and re-run.
@@ -46,16 +58,23 @@ public static class CrabSpriteSheetBuilder
         ("Idle_Side", "Idle_Left"), ("Walk_Side", "Walk_Left"), ("Hurt", "victoryDance"), ("Victory", "victoryDance"),
     };
 
-    [MenuItem("Tools/Space Dinosaurs/Build Crab1 Animations")]
+    [MenuItem("Tools/Space Dinosaurs/Build Crab Animations")]
     public static void Build()
     {
+        foreach (var sheet in Sheets) Build(sheet);
+    }
+
+    static void Build(Sheet sheet)
+    {
+        string SheetPath = sheet.path, OutFolder = sheet.outFolder, Prefix = sheet.prefix;
+        string ControllerPath = OutFolder + "/" + sheet.controller;
         var importer = (TextureImporter)AssetImporter.GetAtPath(SheetPath);
-        if (importer == null) { Debug.LogError($"Crab1: no sheet at {SheetPath}"); return; }
+        if (importer == null) { Debug.LogError($"Crab animations: no sheet at {SheetPath}"); return; }
 
         // Which cells have a frame in them (read straight from the PNG).
         var tex = new Texture2D(2, 2);
         tex.LoadImage(File.ReadAllBytes(SheetPath));
-        int w = tex.width, h = tex.height, rows = h / Cell;
+        int w = tex.width, h = tex.height, rows = (h - sheet.topMargin) / sheet.cellH;
         var px = tex.GetPixels32();
         Object.DestroyImmediate(tex);
 
@@ -63,7 +82,7 @@ public static class CrabSpriteSheetBuilder
         for (int c = 0; c < Columns.Length; c++)
         for (int r = 0; r < rows; r++)
         {
-            var rect = new RectInt(c * Cell, h - (r + 1) * Cell, Cell, Cell); // bottom-left origin
+            var rect = new RectInt(c * sheet.cellW, h - sheet.topMargin - (r + 1) * sheet.cellH, sheet.cellW, sheet.cellH); // bottom-left origin
             int count = 0;
             for (int y = rect.yMin; y < rect.yMax && count < 500; y++)
             for (int x = rect.xMin; x < rect.xMax; x++)
@@ -84,7 +103,7 @@ public static class CrabSpriteSheetBuilder
         var provider = factory.GetSpriteEditorDataProviderFromObject(importer);
         provider.InitSpriteEditorDataProvider();
         var oldIds = provider.GetSpriteRects().GroupBy(s => s.name).ToDictionary(g => g.Key, g => g.First().spriteID);
-        var pivot = new Vector2(0.5f, (Cell - FeetFromTop) / (float)Cell);
+        var pivot = new Vector2(0.5f, (sheet.cellH - sheet.feetFromTop) / (float)sheet.cellH);
         var rects = frames.Select(f => new SpriteRect
         {
             name = f.name,
@@ -111,7 +130,7 @@ public static class CrabSpriteSheetBuilder
         {
             var seq = frames.Where(f => f.col == c).OrderBy(f => f.row).Select(f => sprites[f.name]).ToList();
             if (seq.Count == 0) continue;
-            foreach (var (clipName, mirror) in Columns[c].clips) clips.Add(BuildClip(clipName, Columns[c].loop, mirror, seq));
+            foreach (var (clipName, mirror) in Columns[c].clips) clips.Add(BuildClip(OutFolder, Prefix, clipName, Columns[c].loop, mirror, seq));
         }
 
         // Controller (states refreshed in place so prefabs keep pointing at it).
@@ -128,10 +147,10 @@ public static class CrabSpriteSheetBuilder
         }
         EditorUtility.SetDirty(controller);
         AssetDatabase.SaveAssets();
-        Debug.Log($"Crab1: {frames.Count} frames in {clips.Count} clips -> {ControllerPath}");
+        Debug.Log($"{Prefix}: {frames.Count} frames in {clips.Count} clips -> {ControllerPath}");
     }
 
-    static AnimationClip BuildClip(string name, bool loop, bool mirror, List<Sprite> frames)
+    static AnimationClip BuildClip(string OutFolder, string Prefix, string name, bool loop, bool mirror, List<Sprite> frames)
     {
         string path = $"{OutFolder}/{Prefix}_{name}.anim";
         var clip = AssetDatabase.LoadAssetAtPath<AnimationClip>(path);
