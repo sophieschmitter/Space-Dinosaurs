@@ -10,9 +10,12 @@ using UnityEngine.Tilemaps;
 /// Hunt() (used by hunter spawners) sends it along a path around the walls straight to the dino;
 /// once it can see the dino, or the hunt times out, it goes back to normal wandering/chasing.
 ///
-/// Art is swappable: it works with just a placeholder sprite. To animate it later, give the Animator a
-/// controller with any of these states and they're played automatically: Idle, Walk, Hurt, Death.
-/// The sprite flips to face the way it moves (turn off Flip To Face if your art has separate left/right).
+/// Art is swappable: it works with just a placeholder sprite. Give the Animator a controller and these states
+/// are played automatically when they exist, picked from the way it's moving:
+///   Idle_/Walk_ + Left or Right (sideways), Front (down) or Back (up); then _Side (mirrored to face), then plain
+///   Idle/Walk (mirrored to face); plus Death, and the Victory State (default victoryDance) when the player loses.
+/// There's no hurt animation: DamageFlash flashes it when hit.
+/// Side art is mirrored to face the way it moves (set Side Art Faces Left to match your art).
 /// </summary>
 [RequireComponent(typeof(Rigidbody2D), typeof(Health))]
 public class EnemyController : MonoBehaviour
@@ -65,6 +68,11 @@ public class EnemyController : MonoBehaviour
     public SpriteRenderer sprite;
     public Animator animator;
     public bool flipToFace = true;
+    [Tooltip("For art with only one side view (_Side or plain states): which way it's drawn facing. " +
+             "It's mirrored when moving the other way. Not used when the art has _Left and _Right states.")]
+    public bool sideArtFacesLeft = false;
+    [Tooltip("Animator state played when the player loses (the victory dance).")]
+    public string victoryState = "victoryDance";
 
     Rigidbody2D body;
     Health health;
@@ -86,6 +94,7 @@ public class EnemyController : MonoBehaviour
     Tilemap walls;
 
     public bool IsHunting => hunting;
+    public bool IsCelebrating { get; private set; }
     public bool IsChasing => chasing;
 
     void Awake()
@@ -137,7 +146,7 @@ public class EnemyController : MonoBehaviour
 
     void Update()
     {
-        if (dead) return;
+        if (dead || IsCelebrating) return;
         if (hurtTimer > 0f) hurtTimer -= Time.deltaTime;
         if (pauseTimer > 0f) pauseTimer -= Time.deltaTime;
 
@@ -152,7 +161,7 @@ public class EnemyController : MonoBehaviour
 
     void FixedUpdate()
     {
-        if (dead) { body.linearVelocity = Vector2.zero; return; }
+        if (dead || IsCelebrating) { body.linearVelocity = Vector2.zero; return; }
         if (hurtTimer > 0f) { body.linearVelocity = knockback * (hurtTimer / hurtTime); return; }
 
         Vector2 target = Vector2.zero;
@@ -308,13 +317,38 @@ public class EnemyController : MonoBehaviour
 
     // ---------- art ----------
 
+    Vector2 facing = Vector2.down; // last direction moved, so idle keeps looking that way
+
     void UpdateArt()
     {
         Vector2 v = body.linearVelocity;
-        if (flipToFace && sprite != null && Mathf.Abs(v.x) > 0.1f) sprite.flipX = v.x < 0;
+        bool moving = v.sqrMagnitude > 0.05f;
+        if (moving && hurtTimer <= 0f) facing = v;
 
-        if (hurtTimer > 0f) Play("Hurt");
-        else Play(v.sqrMagnitude > 0.05f ? "Walk" : "Idle");
+        // Which view: sideways if moving more across than up/down; otherwise front (down) or back (up).
+        bool side = Mathf.Abs(facing.x) >= Mathf.Abs(facing.y);
+        string action = moving ? "Walk" : "Idle";
+
+        // 1. Separate left/right (and front/back) animations: the clips handle any mirroring themselves.
+        string view = side ? (facing.x < 0 ? "_Left" : "_Right") : facing.y > 0 ? "_Back" : "_Front";
+        if (Play(action + view)) return;
+
+        // 2. One side view (_Side) or 3. a plain Idle/Walk: mirror the sprite to face the way it's moving.
+        bool mirrorable = side ? Play(action + "_Side") || Play(action) : Play(action);
+        if (flipToFace && sprite != null && mirrorable && Mathf.Abs(facing.x) > 0.1f)
+            sprite.flipX = sideArtFacesLeft ? facing.x > 0 : facing.x < 0;
+    }
+
+    /// <summary>The player lost: stop and do the victory dance. Keeps animating while the game is paused.</summary>
+    public void Celebrate()
+    {
+        if (dead || IsCelebrating) return;
+        IsCelebrating = true;
+        hunting = false; chasing = false;
+        body.linearVelocity = Vector2.zero;
+        if (animator != null) animator.updateMode = AnimatorUpdateMode.UnscaledTime; // the lose screen pauses the game
+        if (sprite != null) sprite.flipX = false;
+        if (!Play(victoryState)) Debug.LogWarning($"{name}: no \"{victoryState}\" state in its Animator for the victory dance.");
     }
 
     // Plays an Animator state if the art has one; returns false (and does nothing) otherwise.

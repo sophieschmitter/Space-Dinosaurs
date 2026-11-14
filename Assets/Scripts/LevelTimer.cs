@@ -97,6 +97,7 @@ public class LevelTimer : MonoBehaviour
             loseText.text = string.IsNullOrEmpty(loseHint) ? message : $"{message}\n<size=16>{loseHint}</size>";
         if (losePanel != null) losePanel.SetActive(true);
         Time.timeScale = 0f;
+        foreach (var enemy in FindObjectsByType<EnemyController>(FindObjectsSortMode.None)) enemy.Celebrate(); // victory dance
         onLevelFailed?.Invoke(message);
     }
 

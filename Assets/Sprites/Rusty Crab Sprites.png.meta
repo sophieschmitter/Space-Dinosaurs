@@ -1,0 +1,910 @@
+fileFormatVersion: 2
+guid: 3d0b75123993c4b499396ad4dcdd91cb
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 3711094753591771311
+    second: Rusty Crab Sprites_0
+  - first:
+      213: -634726088270848397
+    second: Rusty Crab Sprites_1
+  - first:
+      213: 3998720921953658870
+    second: Rusty Crab Sprites_2
+  - first:
+      213: 3404747574788445849
+    second: Rusty Crab Sprites_3
+  - first:
+      213: -257011682231908954
+    second: Rusty Crab Sprites_4
+  - first:
+      213: -6710787564540589891
+    second: Rusty Crab Sprites_5
+  - first:
+      213: -4872276497976990418
+    second: Rusty Crab Sprites_6
+  - first:
+      213: 2112596892615364050
+    second: Rusty Crab Sprites_7
+  - first:
+      213: 8423975976355849382
+    second: Rusty Crab Sprites_8
+  - first:
+      213: -2965191610791671482
+    second: Rusty Crab Sprites_9
+  - first:
+      213: -5764131185096880196
+    second: Rusty Crab Sprites_10
+  - first:
+      213: 5339176870022964847
+    second: Rusty Crab Sprites_11
+  - first:
+      213: -5300784352874554677
+    second: Rusty Crab Sprites_12
+  - first:
+      213: 6959228909286890065
+    second: Rusty Crab Sprites_13
+  - first:
+      213: -4385894289053992092
+    second: Rusty Crab Sprites_14
+  - first:
+      213: -10050102673428622
+    second: Rusty Crab Sprites_15
+  - first:
+      213: 2016824551301166106
+    second: Rusty Crab Sprites_16
+  - first:
+      213: 7793396798671788266
+    second: Rusty Crab Sprites_17
+  - first:
+      213: -3689362333135763912
+    second: Rusty Crab Sprites_18
+  - first:
+      213: 1125436481114628793
+    second: Rusty Crab Sprites_19
+  - first:
+      213: 3748522696027942895
+    second: Rusty Crab Sprites_20
+  - first:
+      213: 5407939802506007037
+    second: Rusty Crab Sprites_21
+  - first:
+      213: 6510276433202233066
+    second: Rusty Crab Sprites_22
+  - first:
+      213: 2232748367130345120
+    second: Rusty Crab Sprites_23
+  - first:
+      213: -2952307943033183762
+    second: Rusty Crab Sprites_24
+  - first:
+      213: 5729665630653600162
+    second: Rusty Crab Sprites_25
+  - first:
+      213: 5858445278081264651
+    second: Rusty Crab Sprites_26
+  - first:
+      213: 2862663636623066654
+    second: Rusty Crab Sprites_27
+  - first:
+      213: -7414929325911786214
+    second: Rusty Crab Sprites_28
+  - first:
+      213: 2227159377400472524
+    second: Rusty Crab Sprites_29
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 160
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: crab1_Idle_Side_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1440
+        width: 320
+        height: 320
+      alignment: 9
+      pivot: {x: 0.5, y: 0.34375}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad5647d8cdac54ce1a44533b3f331aad
+      internalID: -1680499048
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: crab1_Idle_Side_1
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1120
+        width: 320
+        height: 320
+      alignment: 9
+      pivot: {x: 0.5, y: 0.34375}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe4c398d98a614965a13295ef9cd2dc6
+      internalID: -1861414460
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: crab1_Idle_Side_2
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 800
+        width: 320
+        height: 320
+      alignment: 9
+      pivot: {x: 0.5, y: 0.34375}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8aed2af87bdd145e5b3d237e08cef992
+      internalID: -1667321650
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: crab1_Walk_Side_0
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 1440
+        width: 320
+        height: 320
+      alignment: 9
+      pivot: {x: 0.5, y: 0.34375}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 57e4ce4307adc4b1898c4f841cda9e02
+      internalID: -1976290480
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: crab1_Walk_Side_1
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 1120
+        width: 320
+        height: 320
+      alignment: 9
+      pivot: {x: 0.5, y: 0.34375}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 91259e4e85fd14a329174ef57c2f645e
+      internalID: 772011432
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: crab1_Walk_Side_2
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 800
+        width: 320
+        height: 320
+      alignment: 9
+      pivot: {x: 0.5, y: 0.34375}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c5f2620b43def4cb1ae006228e6f37c7
+      internalID: -440312531
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: crab1_Walk_Side_3
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 480
+        width: 320
+        height: 320
+      alignment: 9
+      pivot: {x: 0.5, y: 0.34375}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b237e7f59c62040eba89f550014af80e
+      internalID: -2006276271
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: crab1_Walk_Side_4
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 160
+        width: 320
+        height: 320
+      alignment: 9
+      pivot: {x: 0.5, y: 0.34375}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e5411118e361d4d7aa8eb30e0c2878cc
+      internalID: 1363366474
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: crab1_Idle_Front_0
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 1440
+        width: 320
+        height: 320
+      alignment: 9
+      pivot: {x: 0.5, y: 0.34375}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c352f3e13b48f4269b5e367e4c4b37e3
+      internalID: -718602810
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: crab1_Idle_Front_1
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 1120
+        width: 320
+        height: 320
+      alignment: 9
+      pivot: {x: 0.5, y: 0.34375}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 041557c440ec94802b6ffe03867a1618
+      internalID: 1895526246
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: crab1_Idle_Front_2
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 800
+        width: 320
+        height: 320
+      alignment: 9
+      pivot: {x: 0.5, y: 0.34375}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c0a58d2de5b9b4df6b573ba1cef69162
+      internalID: 796141200
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: crab1_Walk_Front_0
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 1440
+        width: 320
+        height: 320
+      alignment: 9
+      pivot: {x: 0.5, y: 0.34375}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e44e2506cb0f04ebaa2167fdaf6f43b0
+      internalID: -1738462286
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: crab1_Walk_Front_1
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 1120
+        width: 320
+        height: 320
+      alignment: 9
+      pivot: {x: 0.5, y: 0.34375}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6efbbacb67b684ef7986948004bb0c8d
+      internalID: -1513173661
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: crab1_Walk_Front_2
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 800
+        width: 320
+        height: 320
+      alignment: 9
+      pivot: {x: 0.5, y: 0.34375}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d8e5c8e47774c48c081bad6fd2b2df6f
+      internalID: 1095353891
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: crab1_Walk_Front_3
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 480
+        width: 320
+        height: 320
+      alignment: 9
+      pivot: {x: 0.5, y: 0.34375}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0de6e4232b2ce482f8efb000733da701
+      internalID: 1191229702
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: crab1_Walk_Front_4
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 160
+        width: 320
+        height: 320
+      alignment: 9
+      pivot: {x: 0.5, y: 0.34375}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 11676af6b8abe48da950e961ae129c38
+      internalID: -1996568418
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: crab1_Idle_Back_0
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 1440
+        width: 320
+        height: 320
+      alignment: 9
+      pivot: {x: 0.5, y: 0.34375}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 641e3f43de95b49a1bab1dfd491d9255
+      internalID: 299453226
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: crab1_Idle_Back_1
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 1120
+        width: 320
+        height: 320
+      alignment: 9
+      pivot: {x: 0.5, y: 0.34375}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: add8d95b084e141bd9af0280a5477f3e
+      internalID: 2062726737
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: crab1_Idle_Back_2
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 800
+        width: 320
+        height: 320
+      alignment: 9
+      pivot: {x: 0.5, y: 0.34375}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b199f08bac9974c3aa8a6e0e61d871df
+      internalID: -1848635543
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: crab1_Walk_Back_1
+      rect:
+        serializedVersion: 2
+        x: 1600
+        y: 1120
+        width: 320
+        height: 320
+      alignment: 9
+      pivot: {x: 0.5, y: 0.34375}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d6546ade3b2b642a6b6d6d4cb3f015b9
+      internalID: 72444623
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: crab1_Walk_Back_2
+      rect:
+        serializedVersion: 2
+        x: 1600
+        y: 800
+        width: 320
+        height: 320
+      alignment: 9
+      pivot: {x: 0.5, y: 0.34375}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d0d3a1cbd36a43ebb298b8736bf2ce4
+      internalID: -1865829588
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: crab1_Walk_Back_3
+      rect:
+        serializedVersion: 2
+        x: 1600
+        y: 480
+        width: 320
+        height: 320
+      alignment: 9
+      pivot: {x: 0.5, y: 0.34375}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3573cd901fae8467387265816d65218e
+      internalID: -1361122049
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: crab1_Walk_Back_4
+      rect:
+        serializedVersion: 2
+        x: 1600
+        y: 160
+        width: 320
+        height: 320
+      alignment: 9
+      pivot: {x: 0.5, y: 0.34375}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b7a87356ae4374258bfd10adae49d951
+      internalID: -1913524673
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: crab1_Death_1
+      rect:
+        serializedVersion: 2
+        x: 2240
+        y: 1120
+        width: 320
+        height: 320
+      alignment: 9
+      pivot: {x: 0.5, y: 0.34375}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b7008bdaaf5f47bd841917326c1f194
+      internalID: -1315045932
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: crab1_Death_2
+      rect:
+        serializedVersion: 2
+        x: 2240
+        y: 800
+        width: 320
+        height: 320
+      alignment: 9
+      pivot: {x: 0.5, y: 0.34375}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a451b965922b048acb0f9ae2886ec9d0
+      internalID: 919005887
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: crab1_Death_3
+      rect:
+        serializedVersion: 2
+        x: 2240
+        y: 480
+        width: 320
+        height: 320
+      alignment: 9
+      pivot: {x: 0.5, y: 0.34375}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 16afa265937354e899f047aafb9de4a9
+      internalID: 274223366
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: crab1_Victory_0
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 1440
+        width: 320
+        height: 320
+      alignment: 9
+      pivot: {x: 0.5, y: 0.34375}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2473eee2a6d95403c9ab15bd6bca10b6
+      internalID: -617818806
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: crab1_Victory_1
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 1120
+        width: 320
+        height: 320
+      alignment: 9
+      pivot: {x: 0.5, y: 0.34375}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a5c66f31ae8a47a7bb6138954a288f9
+      internalID: -1490669939
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: crab1_Victory_2
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 800
+        width: 320
+        height: 320
+      alignment: 9
+      pivot: {x: 0.5, y: 0.34375}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ae63a589bc03445ee8c26c4956837157
+      internalID: 1387819194
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: crab1_Victory_3
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 480
+        width: 320
+        height: 320
+      alignment: 9
+      pivot: {x: 0.5, y: 0.34375}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa4fe1ffa573c4d8381dcb5722b0abc5
+      internalID: 1585337996
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: b4511906cd0bb47b2a0a0e66ede52ea1
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      crab1_Death_1: -1315045932
+      crab1_Death_2: 919005887
+      crab1_Death_3: 274223366
+      crab1_Idle_Back_0: 299453226
+      crab1_Idle_Back_1: 2062726737
+      crab1_Idle_Back_2: -1848635543
+      crab1_Idle_Front_0: -718602810
+      crab1_Idle_Front_1: 1895526246
+      crab1_Idle_Front_2: 796141200
+      crab1_Idle_Side_0: -1680499048
+      crab1_Idle_Side_1: -1861414460
+      crab1_Idle_Side_2: -1667321650
+      crab1_Victory_0: -617818806
+      crab1_Victory_1: -1490669939
+      crab1_Victory_2: 1387819194
+      crab1_Victory_3: 1585337996
+      crab1_Walk_Back_1: 72444623
+      crab1_Walk_Back_2: -1865829588
+      crab1_Walk_Back_3: -1361122049
+      crab1_Walk_Back_4: -1913524673
+      crab1_Walk_Front_0: -1738462286
+      crab1_Walk_Front_1: -1513173661
+      crab1_Walk_Front_2: 1095353891
+      crab1_Walk_Front_3: 1191229702
+      crab1_Walk_Front_4: -1996568418
+      crab1_Walk_Side_0: -1976290480
+      crab1_Walk_Side_1: 772011432
+      crab1_Walk_Side_2: -440312531
+      crab1_Walk_Side_3: -2006276271
+      crab1_Walk_Side_4: 1363366474
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
