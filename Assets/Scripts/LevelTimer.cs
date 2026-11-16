@@ -59,8 +59,10 @@ public class LevelTimer : MonoBehaviour
         if (IsOver)
         {
             var kb = Keyboard.current;
-            if (kb != null && (kb.rKey.wasPressedThisFrame || kb.enterKey.wasPressedThisFrame)) Restart();
-            else if (kb != null && kb.eKey.wasPressedThisFrame) Exit();
+            var pad = Gamepad.current; // controller: Start or A restarts, B exits
+            if ((kb != null && (kb.rKey.wasPressedThisFrame || kb.enterKey.wasPressedThisFrame)) ||
+                (pad != null && (pad.startButton.wasPressedThisFrame || pad.buttonSouth.wasPressedThisFrame))) Restart();
+            else if ((kb != null && kb.eKey.wasPressedThisFrame) || (pad != null && pad.buttonEast.wasPressedThisFrame)) Exit();
             return;
         }
 

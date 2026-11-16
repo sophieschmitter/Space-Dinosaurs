@@ -14,6 +14,7 @@ using UnityEngine.SceneManagement;
 ///   Space (held)    = sprint (sweat drops fly off now and then)
 ///   X               = drill the wall tile in front / fire the gun ahead (hold to keep going)
 ///   Q               = swap between the drill and the gun (same as the HUD weapon buttons)
+/// Game controller: left stick or d-pad = move, X (west button) = attack, Y (north) = swap weapon, A (south) = sprint.
 ///   Left click      = the same, aimed at the mouse: the drill turns to the nearest of up/down/left/right,
 ///                     the gun fires straight at the cursor at any angle (clicks on HUD buttons are ignored)
 /// Two directions at once move diagonally while the dino keeps facing the one held first.
@@ -182,11 +183,16 @@ public class DinoController : MonoBehaviour
         move.AddCompositeBinding("2DVector")
             .With("Up", "<Keyboard>/upArrow").With("Down", "<Keyboard>/downArrow")
             .With("Left", "<Keyboard>/leftArrow").With("Right", "<Keyboard>/rightArrow");
+        move.AddBinding("<Gamepad>/leftStick"); // has the controller's dead zone built in
+        move.AddBinding("<Gamepad>/dpad");
 
         sprint = new InputAction("Sprint", InputActionType.Button, "<Keyboard>/space");
+        sprint.AddBinding("<Gamepad>/buttonSouth");   // A (Xbox) / Cross (PlayStation)
         attack = new InputAction("Attack", InputActionType.Button, "<Keyboard>/x");
+        attack.AddBinding("<Gamepad>/buttonWest");    // X (Xbox) / Square (PlayStation)
         click = new InputAction("Click Attack", InputActionType.Button, "<Mouse>/leftButton");
         swapWeapon = new InputAction("Swap Weapon", InputActionType.Button, "<Keyboard>/q");
+        swapWeapon.AddBinding("<Gamepad>/buttonNorth"); // Y (Xbox) / Triangle (PlayStation)
 
         if (walls == null) walls = FindFirstObjectByType<DestructibleTilemap>();
     }
