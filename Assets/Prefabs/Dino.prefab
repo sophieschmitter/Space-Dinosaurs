@@ -198,6 +198,7 @@ GameObject:
   - component: {fileID: 1558368566172448437}
   - component: {fileID: 3065809695302516438}
   - component: {fileID: 5147664190300440779}
+  - component: {fileID: 701763386983356663}
   m_Layer: 0
   m_Name: Dino
   m_TagString: Untagged
@@ -348,8 +349,11 @@ MonoBehaviour:
   accelerationTime: 0.08
   decelerationTime: 0.1
   hasDrill: 1
+  hasGun: 0
   walls: {fileID: 0}
   hitTime: 0.15
+  hitWindowEndEarly: 0
+  pressBuffer: 0.2
   stopWhileDrilling: 1
   drillDamage: 1
   drillBoxRight:
@@ -372,8 +376,10 @@ MonoBehaviour:
     height: 2.5
   drillGroundRadius: 0.45
   knockbackSpeed: 6
+  stunOnHit: 0
   hurtTime: 0.35
   restartDelay: 2
+  deathMessage: You died.
   shadow: {fileID: 8325401941781893423}
   sweat: {fileID: 1054538034078846191}
   sweatRight:
@@ -384,6 +390,12 @@ MonoBehaviour:
   - {fileID: 1324250237, guid: 36d31ce211bd54af49134dbb59ac7ab6, type: 3}
   - {fileID: 294165692, guid: 36d31ce211bd54af49134dbb59ac7ab6, type: 3}
   - {fileID: 839258976, guid: 36d31ce211bd54af49134dbb59ac7ab6, type: 3}
+  shadowSide: {fileID: 1584360149, guid: 36d31ce211bd54af49134dbb59ac7ab6, type: 3}
+  shadowVertical: {fileID: 1755076370, guid: d1f5a276fb29649c9a7c36655ad6b30d, type: 3}
+  sweatVertical:
+  - {fileID: 1157770055, guid: d1f5a276fb29649c9a7c36655ad6b30d, type: 3}
+  - {fileID: -163799485, guid: d1f5a276fb29649c9a7c36655ad6b30d, type: 3}
+  - {fileID: -114580384, guid: d1f5a276fb29649c9a7c36655ad6b30d, type: 3}
   sweatFrameRate: 8
   sweatGap: 0.4
   rightIdle: RIdle
@@ -471,8 +483,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e554b008034c84c9ea4fa43fc1b0303f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DamageFlash
+  style: 0
   flashColor: {r: 1, g: 0.35, b: 0.35, a: 1}
+  whiteMaterial: {fileID: 0}
   flashTime: 0.1
   blinkWhileInvulnerable: 1
   blinkInterval: 0.08
   renderers: []
+--- !u!210 &701763386983356663
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7618105241104718134}
+  m_Enabled: 1
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 5
+  m_SortAtRoot: 0
+  m_Sort3DAs2D: 0

@@ -62,6 +62,7 @@ public static class CrabSpriteSheetBuilder
     public static void Build()
     {
         foreach (var sheet in Sheets) Build(sheet);
+        TallCrabShotBuilder.AddShootState(); // the controller was rebuilt: put the tall crab's Shoot state back
     }
 
     static void Build(Sheet sheet)

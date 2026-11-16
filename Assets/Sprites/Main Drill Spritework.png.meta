@@ -1,0 +1,1240 @@
+fileFormatVersion: 2
+guid: a29c6620df1674f1a8dd2cee25c0b2ad
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -3445399022125615417
+    second: Main Drill Spritework_0
+  - first:
+      213: -6157768629036691707
+    second: Main Drill Spritework_1
+  - first:
+      213: -3324347691482889444
+    second: Main Drill Spritework_2
+  - first:
+      213: 6312994170574333079
+    second: Main Drill Spritework_3
+  - first:
+      213: 5528191857702419074
+    second: Main Drill Spritework_4
+  - first:
+      213: -7072834687600307500
+    second: Main Drill Spritework_5
+  - first:
+      213: 6144127655765926689
+    second: Main Drill Spritework_6
+  - first:
+      213: 3497930902026474703
+    second: Main Drill Spritework_7
+  - first:
+      213: -949582138347828401
+    second: Main Drill Spritework_8
+  - first:
+      213: -7714326241086198601
+    second: Main Drill Spritework_9
+  - first:
+      213: -3443772941646622277
+    second: Main Drill Spritework_10
+  - first:
+      213: 8208746288299940510
+    second: Main Drill Spritework_11
+  - first:
+      213: -9028230253170030740
+    second: Main Drill Spritework_12
+  - first:
+      213: -6995839773266505933
+    second: Main Drill Spritework_13
+  - first:
+      213: -7208548047009132756
+    second: Main Drill Spritework_14
+  - first:
+      213: 7279430645261566807
+    second: Main Drill Spritework_15
+  - first:
+      213: -8189461226834506394
+    second: Main Drill Spritework_16
+  - first:
+      213: 8081701461814851915
+    second: Main Drill Spritework_17
+  - first:
+      213: -4635577552788035932
+    second: Main Drill Spritework_18
+  - first:
+      213: 337443743558634026
+    second: Main Drill Spritework_19
+  - first:
+      213: 4842211383048004109
+    second: Main Drill Spritework_20
+  - first:
+      213: -5886865293268362001
+    second: Main Drill Spritework_21
+  - first:
+      213: -5093494456276799343
+    second: Main Drill Spritework_22
+  - first:
+      213: 4446338680788583999
+    second: Main Drill Spritework_23
+  - first:
+      213: 3584464412299982016
+    second: Main Drill Spritework_24
+  - first:
+      213: -4134034184242977890
+    second: Main Drill Spritework_25
+  - first:
+      213: -8798826983402397618
+    second: Main Drill Spritework_26
+  - first:
+      213: -2375446797455729905
+    second: Main Drill Spritework_27
+  - first:
+      213: 520101752127578788
+    second: Main Drill Spritework_28
+  - first:
+      213: 8321139655214232189
+    second: Main Drill Spritework_29
+  - first:
+      213: 3756671433147138542
+    second: Main Drill Spritework_30
+  - first:
+      213: -7889033170387581206
+    second: Main Drill Spritework_31
+  - first:
+      213: 8867023441999062031
+    second: Main Drill Spritework_32
+  - first:
+      213: 1045058518713106627
+    second: Main Drill Spritework_33
+  - first:
+      213: -8388337104432653016
+    second: Main Drill Spritework_34
+  - first:
+      213: 2211966785229473061
+    second: Main Drill Spritework_35
+  - first:
+      213: 8726672440409157585
+    second: Main Drill Spritework_36
+  - first:
+      213: 983431811667744938
+    second: Main Drill Spritework_37
+  - first:
+      213: -1327126989495541507
+    second: Main Drill Spritework_38
+  - first:
+      213: -7339587432318770710
+    second: Main Drill Spritework_39
+  - first:
+      213: -5202693346177290917
+    second: Main Drill Spritework_40
+  - first:
+      213: 5809201695573806254
+    second: Main Drill Spritework_41
+  - first:
+      213: -685176415964196581
+    second: Main Drill Spritework_42
+  - first:
+      213: 4918095533540826827
+    second: Main Drill Spritework_43
+  - first:
+      213: 3401202885777088487
+    second: Main Drill Spritework_44
+  - first:
+      213: 2200404788523773065
+    second: Main Drill Spritework_45
+  - first:
+      213: -1501898513550446432
+    second: Main Drill Spritework_46
+  - first:
+      213: -1979961767630523256
+    second: Main Drill Spritework_47
+  - first:
+      213: 4385472091338285927
+    second: Main Drill Spritework_48
+  - first:
+      213: 8782444484636762190
+    second: Main Drill Spritework_49
+  - first:
+      213: -4032760243888901306
+    second: Main Drill Spritework_50
+  - first:
+      213: 7430918248517498819
+    second: Main Drill Spritework_51
+  - first:
+      213: 275479318416579339
+    second: Main Drill Spritework_52
+  - first:
+      213: -961078556907627001
+    second: Main Drill Spritework_53
+  - first:
+      213: -3083265096053761062
+    second: Main Drill Spritework_54
+  - first:
+      213: -3712113695247839353
+    second: Main Drill Spritework_55
+  - first:
+      213: 274193012228336534
+    second: Main Drill Spritework_56
+  - first:
+      213: -2403064384360855292
+    second: Main Drill Spritework_57
+  - first:
+      213: 4947648453527380185
+    second: Main Drill Spritework_58
+  - first:
+      213: 4068783169318744836
+    second: Main Drill Spritework_59
+  - first:
+      213: -8292449781526430608
+    second: Main Drill Spritework_60
+  - first:
+      213: 3746711547382179120
+    second: Main Drill Spritework_61
+  - first:
+      213: 3954546180270586953
+    second: Main Drill Spritework_62
+  - first:
+      213: 7716073584066883483
+    second: Main Drill Spritework_63
+  - first:
+      213: -4200553735304995279
+    second: Main Drill Spritework_64
+  - first:
+      213: 8620675696654569976
+    second: Main Drill Spritework_65
+  - first:
+      213: -8803655815715911452
+    second: Main Drill Spritework_66
+  - first:
+      213: -3328463705435124331
+    second: Main Drill Spritework_67
+  - first:
+      213: -976070700339194688
+    second: Main Drill Spritework_68
+  - first:
+      213: -7439803286309496712
+    second: Main Drill Spritework_69
+  - first:
+      213: 8113095401913363447
+    second: Main Drill Spritework_70
+  - first:
+      213: -1352449012604151035
+    second: Main Drill Spritework_71
+  - first:
+      213: -8873782314741662145
+    second: Main Drill Spritework_72
+  - first:
+      213: 8853205667060909311
+    second: Main Drill Spritework_73
+  - first:
+      213: -8294874569552114616
+    second: Main Drill Spritework_74
+  - first:
+      213: 4749574779806879552
+    second: Main Drill Spritework_75
+  - first:
+      213: -2193785436514722587
+    second: Main Drill Spritework_76
+  - first:
+      213: -406850386746432840
+    second: Main Drill Spritework_77
+  - first:
+      213: -813909996548664183
+    second: Main Drill Spritework_78
+  - first:
+      213: 5472729741415145244
+    second: Main Drill Spritework_79
+  - first:
+      213: -6159619588425857351
+    second: Main Drill Spritework_80
+  - first:
+      213: -3726731263416732284
+    second: Main Drill Spritework_81
+  - first:
+      213: 6109684468236888375
+    second: Main Drill Spritework_82
+  - first:
+      213: 2721005553326043844
+    second: Main Drill Spritework_83
+  - first:
+      213: 5169388584881584378
+    second: Main Drill Spritework_84
+  - first:
+      213: -8689003068692893067
+    second: Main Drill Spritework_85
+  - first:
+      213: 93502348346890935
+    second: Main Drill Spritework_86
+  - first:
+      213: -3509296820850645195
+    second: Main Drill Spritework_87
+  - first:
+      213: 8227501010777821794
+    second: Main Drill Spritework_88
+  - first:
+      213: 2644701182831888504
+    second: Main Drill Spritework_89
+  - first:
+      213: 6772681004283521565
+    second: Main Drill Spritework_90
+  - first:
+      213: 6065478127893844831
+    second: Main Drill Spritework_91
+  - first:
+      213: -5418863341687387571
+    second: Main Drill Spritework_92
+  - first:
+      213: -1180488924767705171
+    second: Main Drill Spritework_93
+  - first:
+      213: 16542623030903139
+    second: Main Drill Spritework_94
+  - first:
+      213: 8243314722639428790
+    second: Main Drill Spritework_95
+  - first:
+      213: 8479964229602338440
+    second: Main Drill Spritework_96
+  - first:
+      213: 1994058447780746058
+    second: Main Drill Spritework_97
+  - first:
+      213: 1645982302398886063
+    second: Main Drill Spritework_98
+  - first:
+      213: 7687566847867134326
+    second: Main Drill Spritework_99
+  - first:
+      213: -8072824911693652028
+    second: Main Drill Spritework_100
+  - first:
+      213: 7419080387175017395
+    second: Main Drill Spritework_101
+  - first:
+      213: -8853652065080950191
+    second: Main Drill Spritework_102
+  - first:
+      213: -578661083288752121
+    second: Main Drill Spritework_103
+  - first:
+      213: 1189878844486747067
+    second: Main Drill Spritework_104
+  - first:
+      213: 9124779294123450765
+    second: Main Drill Spritework_105
+  - first:
+      213: 3360368470846912328
+    second: Main Drill Spritework_106
+  - first:
+      213: 4233131582673664867
+    second: Main Drill Spritework_107
+  - first:
+      213: -4976930304853733853
+    second: Main Drill Spritework_108
+  - first:
+      213: -180146249524693897
+    second: Main Drill Spritework_109
+  - first:
+      213: 9163080104587903871
+    second: Main Drill Spritework_110
+  - first:
+      213: 5394215186421335860
+    second: Main Drill Spritework_111
+  - first:
+      213: 9206944622095372837
+    second: Main Drill Spritework_112
+  - first:
+      213: -872698243910909225
+    second: Main Drill Spritework_113
+  - first:
+      213: 3113770776176881623
+    second: Main Drill Spritework_114
+  - first:
+      213: -6255978674969294602
+    second: Main Drill Spritework_115
+  - first:
+      213: -2423886051291035136
+    second: Main Drill Spritework_116
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 160
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Robot_Green_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 7040
+        width: 640
+        height: 800
+      alignment: 9
+      pivot: {x: 0.5, y: 0.275}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 254479b9406b6415bb4d4c1fdb0f3b62
+      internalID: 782478132
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Robot_Green_1
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 6240
+        width: 640
+        height: 800
+      alignment: 9
+      pivot: {x: 0.5, y: 0.275}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d3be8df4e712c4d6695006c70adb34ec
+      internalID: -1492616471
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Robot_Green_2
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 5440
+        width: 640
+        height: 800
+      alignment: 9
+      pivot: {x: 0.5, y: 0.275}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 383231b94500642f9af1d935c217d79b
+      internalID: -1962098230
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Robot_Green_3
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 4640
+        width: 640
+        height: 800
+      alignment: 9
+      pivot: {x: 0.5, y: 0.275}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b351e401586b44dbbba67611f6cbc646
+      internalID: -382092134
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Robot_Green_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3840
+        width: 640
+        height: 800
+      alignment: 9
+      pivot: {x: 0.5, y: 0.275}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3005dd80f40f04d1e8fa1f3cc5d01909
+      internalID: -592593454
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Robot_Green_5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3040
+        width: 640
+        height: 800
+      alignment: 9
+      pivot: {x: 0.5, y: 0.275}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 51ef83fa2c8e24d7f89edec7f6d4a1bb
+      internalID: -1685388105
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Robot_Green_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2240
+        width: 640
+        height: 800
+      alignment: 9
+      pivot: {x: 0.5, y: 0.275}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d003131d6fb0d4039ac9ad87662db0bd
+      internalID: -254939308
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Robot_Green_7
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1440
+        width: 640
+        height: 800
+      alignment: 9
+      pivot: {x: 0.5, y: 0.275}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b5450779aeab4dfdb18af7099f04475
+      internalID: -133810937
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Robot_Yellow_0
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 7040
+        width: 640
+        height: 800
+      alignment: 9
+      pivot: {x: 0.5, y: 0.275}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f668eeded46754c8a8d2e83b0859a671
+      internalID: -1602187284
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Robot_Yellow_1
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 6240
+        width: 640
+        height: 800
+      alignment: 9
+      pivot: {x: 0.5, y: 0.275}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f9e17cc37577246df8c6df6a19c3aac4
+      internalID: -1510943698
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Robot_Yellow_2
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 5440
+        width: 640
+        height: 800
+      alignment: 9
+      pivot: {x: 0.5, y: 0.275}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7011bcfea85f540598bd0480d629f59b
+      internalID: 1576843625
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Robot_Yellow_3
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 4640
+        width: 640
+        height: 800
+      alignment: 9
+      pivot: {x: 0.5, y: 0.275}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 89641ba3e8d98481a9eb6d570a80d6a2
+      internalID: 1520317556
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Robot_Yellow_4
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 3840
+        width: 640
+        height: 800
+      alignment: 9
+      pivot: {x: 0.5, y: 0.275}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 16b400d2cf8f14d7bbab4b91bcf7dc05
+      internalID: -558802203
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Robot_Yellow_5
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 3040
+        width: 640
+        height: 800
+      alignment: 9
+      pivot: {x: 0.5, y: 0.275}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 122cfd61adf194005a3ded451fad8d1d
+      internalID: -437934809
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Robot_Yellow_6
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 2240
+        width: 640
+        height: 800
+      alignment: 9
+      pivot: {x: 0.5, y: 0.275}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e3c9b9a0c727450b8b94dd647908f04
+      internalID: 1399515728
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Robot_Yellow_7
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 1440
+        width: 640
+        height: 800
+      alignment: 9
+      pivot: {x: 0.5, y: 0.275}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 162a27e2be9a449ddbb1adb1c113038b
+      internalID: 387179595
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Robot_Red_0
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 7040
+        width: 640
+        height: 800
+      alignment: 9
+      pivot: {x: 0.5, y: 0.275}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 60750d34bd51140f68715ae303d3dcdd
+      internalID: 427125787
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Robot_Red_1
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 6240
+        width: 640
+        height: 800
+      alignment: 9
+      pivot: {x: 0.5, y: 0.275}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aff60c07f57af4f47b22ff078ed4621c
+      internalID: 1528425422
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Robot_Red_2
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 5440
+        width: 640
+        height: 800
+      alignment: 9
+      pivot: {x: 0.5, y: 0.275}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 23b879b767b324f9cbce5496f2c58f43
+      internalID: 506997407
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Robot_Red_3
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 4640
+        width: 640
+        height: 800
+      alignment: 9
+      pivot: {x: 0.5, y: 0.275}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 853af4dc876144a49870c419a18e40bd
+      internalID: 596182639
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Robot_Red_4
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 3840
+        width: 640
+        height: 800
+      alignment: 9
+      pivot: {x: 0.5, y: 0.275}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 71e7e76e6916a4e76b8b1001ea086b34
+      internalID: 599641677
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Robot_Red_5
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 3040
+        width: 640
+        height: 800
+      alignment: 9
+      pivot: {x: 0.5, y: 0.275}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f03cf11ac41f64255ae68b8af7942720
+      internalID: -966082095
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Robot_Red_6
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 2240
+        width: 640
+        height: 800
+      alignment: 9
+      pivot: {x: 0.5, y: 0.275}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e68f0f695213e405a82b9e0b7ef980a5
+      internalID: -212603618
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Robot_Red_7
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 1440
+        width: 640
+        height: 800
+      alignment: 9
+      pivot: {x: 0.5, y: 0.275}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3cdcebe92937d4e78834ec8df75b8ac7
+      internalID: -55074086
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Robot_Death_0
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 6880
+        width: 800
+        height: 960
+      alignment: 9
+      pivot: {x: 0.5625, y: 0.22916667}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6e3d898aca9fb49f4a9c35bde3441e0e
+      internalID: -1998352744
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Robot_Death_1
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 5920
+        width: 800
+        height: 960
+      alignment: 9
+      pivot: {x: 0.5625, y: 0.22916667}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 84e9b1c5c673d4660861806431021fa9
+      internalID: -994416905
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Robot_Death_2
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 4960
+        width: 800
+        height: 960
+      alignment: 9
+      pivot: {x: 0.5625, y: 0.22916667}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 77c995b3f5bd84ce7962863434157695
+      internalID: 980232436
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Robot_Death_3
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 4000
+        width: 800
+        height: 960
+      alignment: 9
+      pivot: {x: 0.5625, y: 0.22916667}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cfe035a202e1742c4a7a3b26191a41fc
+      internalID: -856970775
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Robot_Death_4
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 3040
+        width: 800
+        height: 960
+      alignment: 9
+      pivot: {x: 0.5625, y: 0.22916667}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 317cf8c322c1447b585e49c371e717ae
+      internalID: -1297452461
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Robot_Death_5
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 2080
+        width: 800
+        height: 960
+      alignment: 9
+      pivot: {x: 0.5625, y: 0.22916667}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc69932ce310540cababce9d9028c304
+      internalID: 125910606
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Robot_Death_6
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 1120
+        width: 800
+        height: 960
+      alignment: 9
+      pivot: {x: 0.5625, y: 0.22916667}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c01996977d1e54792be88a1bdaf77d28
+      internalID: 1925358580
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Robot_Death_7
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 160
+        width: 800
+        height: 960
+      alignment: 9
+      pivot: {x: 0.5625, y: 0.22916667}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bbea7e86e2bb743f2a06f9f2e9870698
+      internalID: 336466093
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Robot_Wreck
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 160
+        width: 640
+        height: 800
+      alignment: 9
+      pivot: {x: 0.5, y: 0.275}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5750d63c424874ab5af447756615e1c5
+      internalID: -1318511486
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 87214a596db494d408c1e6d86eaa4905
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Robot_Death_0: -1998352744
+      Robot_Death_1: -994416905
+      Robot_Death_2: 980232436
+      Robot_Death_3: -856970775
+      Robot_Death_4: -1297452461
+      Robot_Death_5: 125910606
+      Robot_Death_6: 1925358580
+      Robot_Death_7: 336466093
+      Robot_Green_0: 782478132
+      Robot_Green_1: -1492616471
+      Robot_Green_2: -1962098230
+      Robot_Green_3: -382092134
+      Robot_Green_4: -592593454
+      Robot_Green_5: -1685388105
+      Robot_Green_6: -254939308
+      Robot_Green_7: -133810937
+      Robot_Red_0: 427125787
+      Robot_Red_1: 1528425422
+      Robot_Red_2: 506997407
+      Robot_Red_3: 596182639
+      Robot_Red_4: 599641677
+      Robot_Red_5: -966082095
+      Robot_Red_6: -212603618
+      Robot_Red_7: -55074086
+      Robot_Wreck: -1318511486
+      Robot_Yellow_0: -1602187284
+      Robot_Yellow_1: -1510943698
+      Robot_Yellow_2: 1576843625
+      Robot_Yellow_3: 1520317556
+      Robot_Yellow_4: -558802203
+      Robot_Yellow_5: -437934809
+      Robot_Yellow_6: 1399515728
+      Robot_Yellow_7: 387179595
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

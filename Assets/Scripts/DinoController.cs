@@ -37,6 +37,9 @@ public class DinoController : MonoBehaviour
     [Header("Drill")]
     [Tooltip("Show the drill-holding animations (needed for the drill attack to look right).")]
     public bool hasDrill = true;
+    [Tooltip("Holding the gun (plays the Gun_ animations). Ignored while Has Drill is on. " +
+             "The weapon-select buttons call EquipDrill / EquipGun.")]
+    public bool hasGun = false;
 
     [Tooltip("The breakable wall layer. Found automatically if left empty.")]
     public DestructibleTilemap walls;
@@ -85,6 +88,11 @@ public class DinoController : MonoBehaviour
     public SpriteRenderer shadow;
     public SpriteRenderer sweat;
     public Sprite[] sweatRight, sweatLeft;
+    [Tooltip("Shadow under the side views (taken from the Shadow child if left empty).")]
+    public Sprite shadowSide;
+    [Tooltip("Shadow and sweat for the drill dino facing front or back.")]
+    public Sprite shadowVertical;
+    public Sprite[] sweatVertical;
     [Tooltip("Frames per second of one burst of sweat drops.")]
     public float sweatFrameRate = 8f;
     [Tooltip("Seconds of no sweat between bursts while sprinting.")]
@@ -380,6 +388,22 @@ public class DinoController : MonoBehaviour
         return clip != null ? clip.length : 0.5f;
     }
 
+    // ---------- weapons ----------
+
+    /// <summary>Switch to the drill (X drills).</summary>
+    public void EquipDrill() => SetWeapon(true, false);
+
+    /// <summary>Switch to the gun (Gun_ animations; it doesn't shoot yet).</summary>
+    public void EquipGun() => SetWeapon(false, true);
+
+    void SetWeapon(bool drill, bool gun)
+    {
+        if (hasDrill == drill && hasGun == gun) return;
+        hasDrill = drill; hasGun = gun;
+        attackTimer = 0f;     // stop a drill swing in progress
+        currentState = null;  // switch art straight away
+    }
+
     // ---------- animation ----------
 
     // Stronger axis wins; diagonals keep the side view.
@@ -391,7 +415,7 @@ public class DinoController : MonoBehaviour
         Vector2 dir = IsDrilling ? attackDir : Facing;
         View view = ViewOf(dir);
         sprite.flipX = false; // left and right have their own art
-        string prefix = hasDrill ? "Drill_" : "";
+        string prefix = hasDrill ? "Drill_" : hasGun ? "Gun_" : "";
 
         string state;
         if (IsDead || IsHurt)
@@ -413,12 +437,17 @@ public class DinoController : MonoBehaviour
         }
 
         bool side = view == View.Right || view == View.Left;
+        bool vertical = !side && hasDrill; // front/back effects are drawn for the drill dino
         if (shadow != null)
         {
-            shadow.enabled = side && !IsDrilling && !IsDead;
-            shadow.flipX = view == View.Left; // the shadow art leans 1 px toward the right-facing feet
+            if (shadowSide == null) shadowSide = shadow.sprite;
+            bool hasArt = side ? shadowSide != null : vertical && shadowVertical != null;
+            shadow.enabled = hasArt && !IsDrilling && !IsDead;
+            shadow.sprite = side ? shadowSide : shadowVertical;
+            shadow.flipX = view == View.Left; // the side shadow art leans 1 px toward the right-facing feet
         }
-        UpdateSweat(side && IsSprinting, view);
+        var sweatFrames = side ? (view == View.Left ? sweatLeft : sweatRight) : vertical ? sweatVertical : null;
+        UpdateSweat((side || vertical) && IsSprinting, sweatFrames);
 
         animator.speed = IsSprinting ? sprintAnimationSpeed : 1f;
         if (state != currentState)
@@ -428,10 +457,9 @@ public class DinoController : MonoBehaviour
         }
     }
 
-    // While sprinting sideways: play one burst of drops, wait sweatGap seconds, repeat.
-    void UpdateSweat(bool active, View view)
+    // While sprinting: play one burst of drops, wait sweatGap seconds, repeat.
+    void UpdateSweat(bool active, Sprite[] frames)
     {
-        var frames = view == View.Left ? sweatLeft : sweatRight;
         if (sweat == null || !active || frames == null || frames.Length == 0)
         {
             if (sweat != null) sweat.enabled = false;

@@ -93,7 +93,12 @@ public class EnemyController : MonoBehaviour
     HashSet<Vector3Int> blockedCells;
     Tilemap walls;
 
+    string holdState;      // animation shown while held still (e.g. the tall crab's shot)
+    float holdTimer;
+
     public bool IsHunting => hunting;
+    public bool IsDead => dead;
+    public bool IsHurt => hurtTimer > 0f;
     public bool IsCelebrating { get; private set; }
     public bool IsChasing => chasing;
 
@@ -153,6 +158,7 @@ public class EnemyController : MonoBehaviour
         if (dead || IsCelebrating) return;
         if (hurtTimer > 0f) hurtTimer -= Time.deltaTime;
         if (pauseTimer > 0f) pauseTimer -= Time.deltaTime;
+        if (holdTimer > 0f) holdTimer -= Time.deltaTime;
 
         if (hunting) UpdateHunt();
         else
@@ -328,12 +334,28 @@ public class EnemyController : MonoBehaviour
         for (int i = pathIndex; i < path.Count; i++) { Gizmos.DrawLine(prev, path[i]); prev = path[i]; }
     }
 
+    /// <summary>Stand still for this long, showing this Animator state if the art has one (used by CrabShooter).</summary>
+    public void Hold(float seconds, string state = null)
+    {
+        pauseTimer = Mathf.Max(pauseTimer, seconds);
+        holdTimer = seconds;
+        holdState = state;
+    }
+
+    /// <summary>Turn to look this way (idle animations keep facing it).</summary>
+    public void Face(Vector2 direction)
+    {
+        if (direction.sqrMagnitude > 0.0001f) facing = direction;
+    }
+
     // ---------- art ----------
 
     Vector2 facing = Vector2.down; // last direction moved, so idle keeps looking that way
 
     void UpdateArt()
     {
+        if (holdTimer > 0f && !string.IsNullOrEmpty(holdState) && Play(holdState)) return;
+
         Vector2 v = body.linearVelocity;
         bool moving = v.sqrMagnitude > 0.05f;
         if (moving && hurtTimer <= 0f) facing = v;

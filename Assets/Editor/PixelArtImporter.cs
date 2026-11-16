@@ -11,9 +11,10 @@ public class PixelArtImporter : AssetPostprocessor
 {
     public const int ArtPixelsPerUnit = 16; // one tile; also the Pixel Perfect Camera's Assets PPU
 
-    // Folder -> texture pixels per art pixel. First match wins, so list sub-folders first.
+    // Folder (or single file) -> texture pixels per art pixel. First match wins, so list sub-folders first.
     static readonly (string folder, int scale)[] Folders =
     {
+        ("Assets/Sprites/Tall Crab Projectile Spritework.png", 25), // drawn at 25 px per art pixel -> PPU 400
         ("Assets/Tiles/Generated", 1), // WallTileBuilder output, already 1x -> PPU 16
         ("Assets/Placeholders", 1),    // stand-in block sprites: 16px = 1 tile
         ("Assets/Sprites", 10), // characters: 480px box = 48 art px  -> PPU 160
@@ -25,7 +26,7 @@ public class PixelArtImporter : AssetPostprocessor
     {
         int scale = 0;
         foreach (var f in Folders)
-            if (assetPath.StartsWith(f.folder + "/")) { scale = f.scale; break; }
+            if (assetPath == f.folder || assetPath.StartsWith(f.folder + "/")) { scale = f.scale; break; }
         if (scale == 0) return;
 
         var importer = (TextureImporter)assetImporter;

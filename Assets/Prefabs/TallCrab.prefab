@@ -10,11 +10,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 490678444310258260, guid: de46bc9578b58450793049795bfc54e2, type: 3}
       propertyPath: huntSpeed
-      value: 2.3
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 490678444310258260, guid: de46bc9578b58450793049795bfc54e2, type: 3}
       propertyPath: chaseSpeed
-      value: 2.3
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 490678444310258260, guid: de46bc9578b58450793049795bfc54e2, type: 3}
       propertyPath: killMessage
@@ -22,7 +22,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 490678444310258260, guid: de46bc9578b58450793049795bfc54e2, type: 3}
       propertyPath: wanderSpeed
-      value: 1.1
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 490678444310258260, guid: de46bc9578b58450793049795bfc54e2, type: 3}
       propertyPath: contactDamage
@@ -95,5 +95,34 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 8505824343020661225, guid: de46bc9578b58450793049795bfc54e2, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 7445190090800973873}
   m_SourcePrefab: {fileID: 100100000, guid: de46bc9578b58450793049795bfc54e2, type: 3}
+--- !u!1 &6522626477990667552 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8505824343020661225, guid: de46bc9578b58450793049795bfc54e2, type: 3}
+  m_PrefabInstance: {fileID: 3211000656910159049}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &7445190090800973873
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6522626477990667552}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d99d5314d523f4d60ab5bc97ec552d74, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CrabShooter
+  bulletPrefab: {fileID: 1218640190867170876, guid: 7b20b3e8c954d4183a32f9f62987ca52, type: 3}
+  range: 6
+  lineUpTolerance: 0.4
+  cooldown: 2.5
+  firstShotDelay: 1
+  windUp: 0.4
+  recover: 0.3
+  muzzleDistance: 1
+  shootState: Shoot

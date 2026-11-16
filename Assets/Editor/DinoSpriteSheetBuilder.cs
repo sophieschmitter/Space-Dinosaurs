@@ -38,6 +38,7 @@ public static class DinoSpriteSheetBuilder
         public int height = 480;       // ...and is this tall
         public float pivotX = 0.5f;    // feet position across the frame (0-1)
         public int[] rows = { 0, 1, 2, 3, 4 };
+        public int feetShift;          // moves the feet line up (-) or down (+) from the usual 480 * (row + 1), in px
         public float PivotY => (height - above) / (float)height;
     }
 
@@ -94,6 +95,18 @@ public static class DinoSpriteSheetBuilder
         new Clip { name = "FX_SweatL", x = 960, rows = new[] { 0, 1, 2 } },
     };
 
+    // Vertical effects (Assets/Sprites/Dino Effects 2.png), 480 px cells. Row 0 of each column is a reference
+    // dino; the rows below hold the effect drawn for it. Col 2 = front-facing drill dino with its shadow (row 1),
+    // col 3 = front-walking drill dino with 3 sweat frames (rows 1-3). Both reference dinos sit 1 art px higher
+    // than in the game sheets (feet at 470, not 480) and the col 2 one 2 art px further right, so the effects
+    // are cut with the same offsets to land where they were drawn. Used for the drill dino facing front or back.
+    const string VerticalEffectsPath = "Assets/Sprites/Dino Effects 2.png";
+    static List<Clip> VerticalEffectsSheet() => new()
+    {
+        new Clip { name = "FX_ShadowV", x = 960,  rows = new[] { 1 },       feetShift = -10, above = 430, height = 440, pivotX = 260 / 480f },
+        new Clip { name = "FX_SweatV",  x = 1440, rows = new[] { 1, 2, 3 }, feetShift = -10, above = 430, height = 440, pivotX = 0.5f },
+    };
+
     // Attack sheet: 4 columns, 640 px wide. Row 0 is a grey copy of the drill idle pose; rows 1-4 are the attack.
     // Front frames hang 1-2 art px below the feet and back frames reach 4 px higher, so their rects are shifted.
     static List<Clip> AttackSheet()
@@ -119,9 +132,42 @@ public static class DinoSpriteSheetBuilder
     {
         new Sheet { path = "Assets/Sprites/Dinosaur Spritework.PNG", clips = WalkSheet("") },
         new Sheet { path = "Assets/Sprites/Dinosaur Spritework - 2.png", clips = WalkSheet("Drill_") },
+        new Sheet { path = "Assets/Sprites/Main Dinosaur Spritework.PNG", clips = WalkSheet("Gun_") }, // holding the gun
         new Sheet { path = "Assets/Sprites/Dinosaur Attacks and Actions.PNG", clips = AttackSheet() },
         new Sheet { path = EffectsPath, clips = EffectsSheet(), minPixels = 1, spritesOnly = true },
+        new Sheet { path = VerticalEffectsPath, clips = VerticalEffectsSheet(), minPixels = 1, spritesOnly = true },
     };
+
+    /// <summary>Slices only the vertical shadow/sweat sheet and gives the Dino prefab those sprites
+    /// (leaves every animation clip and the controller untouched).</summary>
+    [MenuItem("Tools/Space Dinosaurs/Build Dino Vertical Shadow and Sweat")]
+    public static void BuildVerticalEffects()
+    {
+        var sheet = new Sheet { path = VerticalEffectsPath, clips = VerticalEffectsSheet(), minPixels = 1, spritesOnly = true };
+        if (!File.Exists(sheet.path)) { Debug.LogError($"Dino effects: no sheet at {sheet.path}"); return; }
+        var frames = FindFrames(sheet);
+        SliceSheet(sheet, frames);
+        var sprites = AssetDatabase.LoadAllAssetsAtPath(sheet.path).OfType<Sprite>().ToDictionary(x => x.name);
+        var effects = new Dictionary<string, Sprite[]>();
+        foreach (var clip in sheet.clips)
+            effects[clip.name] = frames.Where(f => f.clip == clip).OrderBy(f => f.row).Select(f => sprites[f.name]).ToArray();
+
+        var root = PrefabUtility.LoadPrefabContents(PrefabPath);
+        try
+        {
+            var dino = root.GetComponent<DinoController>();
+            if (dino != null) AssignVerticalEffects(dino, effects);
+            PrefabUtility.SaveAsPrefabAsset(root, PrefabPath);
+        }
+        finally { PrefabUtility.UnloadPrefabContents(root); }
+        Debug.Log($"Dino vertical effects: {frames.Count} sprites -> Dino prefab");
+    }
+
+    static void AssignVerticalEffects(DinoController dino, Dictionary<string, Sprite[]> effects)
+    {
+        if (effects.TryGetValue("FX_ShadowV", out var sv) && sv.Length > 0) dino.shadowVertical = sv[0];
+        if (effects.TryGetValue("FX_SweatV", out var wv)) dino.sweatVertical = wv;
+    }
 
     [MenuItem("Tools/Space Dinosaurs/Build Dino Animations")]
     public static void Build()
@@ -165,7 +211,7 @@ public static class DinoSpriteSheetBuilder
     // Unity sprite rects use a bottom-left origin.
     static RectInt FrameRect(Clip c, int row, int texHeight)
     {
-        int top = FirstFeetY + row * RowPitch - c.above;
+        int top = FirstFeetY + row * RowPitch + c.feetShift - c.above;
         return new RectInt(c.x, texHeight - top - c.height, c.width, c.height);
     }
 
@@ -330,6 +376,8 @@ public static class DinoSpriteSheetBuilder
             dino.sweat = sweat;
             if (effects.TryGetValue("FX_SweatR", out var r)) dino.sweatRight = r;
             if (effects.TryGetValue("FX_SweatL", out var l)) dino.sweatLeft = l;
+            if (sh != null && sh.Length > 0) dino.shadowSide = sh[0];
+            AssignVerticalEffects(dino, effects);
         }
         PrefabUtility.SaveAsPrefabAsset(root, PrefabPath);
         PrefabUtility.UnloadPrefabContents(root);
