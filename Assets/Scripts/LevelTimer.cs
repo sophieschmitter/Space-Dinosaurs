@@ -17,6 +17,8 @@ public class LevelTimer : MonoBehaviour
 
     [Tooltip("Image with Image Type = Filled; fills up as time passes.")]
     public Image fill;
+    [Tooltip("Pixel-art timer bar (under the robot's health bar). Used as well as / instead of Fill.")]
+    public PixelBar timerBar;
 
     [Tooltip("Shown when the level is complete (hidden until then).")]
     public GameObject completePanel;
@@ -76,6 +78,7 @@ public class LevelTimer : MonoBehaviour
     void Apply()
     {
         if (fill != null) fill.fillAmount = Progress;
+        if (timerBar != null) timerBar.Value = Progress;
     }
 
     /// <summary>Ends the level as a win: fills the bar, shows the complete panel, pauses. Other scripts can call this too.</summary>

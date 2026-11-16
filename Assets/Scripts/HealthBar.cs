@@ -2,13 +2,20 @@ using UnityEngine;
 using UnityEngine.UI;
 
 /// <summary>
-/// Shows a Health as a bar that empties as damage is taken. Finds the dino automatically if no target is set.
-/// The fill is an Image set to "Filled", so swapping in your own bar art only means changing its sprite.
+/// Shows a Health as a bar that empties as damage is taken. Finds the dino (or, with For Robot, the drill robot)
+/// automatically if no target is set. Drives a PixelBar (the pixel-art bars) if one is set, otherwise a plain
+/// Image set to "Filled".
 /// </summary>
 public class HealthBar : MonoBehaviour
 {
     [Tooltip("Whose health to show. Left empty = the dino.")]
     public Health target;
+
+    [Tooltip("With no Target: follow the drill robot (the EnemyGoal) instead of the dino.")]
+    public bool forRobot;
+
+    [Tooltip("The pixel-art bar to drive (its states pick the colours). Leave empty to use Fill instead.")]
+    public PixelBar bar;
 
     [Tooltip("Image with Image Type = Filled; its Fill Amount shows the health.")]
     public Image fill;
@@ -25,8 +32,8 @@ public class HealthBar : MonoBehaviour
     {
         if (target == null)
         {
-            var dino = FindFirstObjectByType<DinoController>();
-            if (dino != null) target = dino.GetComponent<Health>();
+            Component owner = forRobot ? FindFirstObjectByType<EnemyGoal>() : FindFirstObjectByType<DinoController>();
+            if (owner != null) target = owner.GetComponent<Health>();
         }
         shown = Fraction();
         Apply();
@@ -45,6 +52,7 @@ public class HealthBar : MonoBehaviour
 
     void Apply()
     {
+        if (bar != null) bar.Value = shown;
         if (fill == null) return;
         fill.fillAmount = shown;
         fill.color = Color.Lerp(lowColor, fullColor, shown);
