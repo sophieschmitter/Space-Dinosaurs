@@ -332,7 +332,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8505824343020661225, guid: de46bc9578b58450793049795bfc54e2, type: 3}
       propertyPath: m_Name
-      value: Crab1
+      value: RustyCrab
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -516,7 +516,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PixelCameraFollow
   target: {fileID: 671679903}
   offset: {x: 0, y: 1}
-  smoothTime: 0.15
+  smoothTime: 0
   mapBounds: {fileID: 726334373}
   pixelsPerUnit: 16
 --- !u!1001 &443747532
