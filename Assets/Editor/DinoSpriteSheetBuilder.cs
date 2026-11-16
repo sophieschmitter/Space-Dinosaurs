@@ -68,8 +68,28 @@ public static class DinoSpriteSheetBuilder
         ("LDeath",      "Death2",     false),  // col 11
     };
 
+    // Back_Walk has no top-row frame (the gun sheet puts a red placeholder box there), so it starts a row lower.
+    static int[] RowsFor(string column, int firstRow) =>
+        Enumerable.Range(firstRow + (column == "Back_Walk" ? 1 : 0), column == "Back_Walk" ? 4 : 5).ToArray();
+
     static List<Clip> WalkSheet(string prefix) =>
-        WalkColumns.Select((c, i) => new Clip { name = prefix + c.name, spriteName = prefix + c.sprite, loop = c.loop, x = i * 480 }).ToList();
+        WalkColumns.Select((c, i) => new Clip { name = prefix + c.name, spriteName = prefix + c.sprite, loop = c.loop, x = i * 480, rows = RowsFor(c.sprite, 0) }).ToList();
+
+    // The gun sheet (Main Dinosaur Spritework 2.PNG) is 3 blocks of 5 rows. Rows 0-4: the normal gun animations
+    // (all 12 columns). Rows 5-9 and 10-14: the same idle/walk frames (first 8 columns) with the gun kicked back
+    // 2 and then 3 art px, for when it fires -> clips named e.g. Gun_RWalk_Recoil1 / Gun_RWalk_Recoil2.
+    const string GunSheetPath = "Assets/Sprites/Main Dinosaur Spritework 2.PNG";
+    static List<Clip> GunSheet()
+    {
+        var list = WalkSheet("Gun_");
+        for (int block = 1; block <= 2; block++)
+            for (int i = 0; i < 8; i++)
+            {
+                var c = WalkColumns[i];
+                list.Add(new Clip { name = $"Gun_{c.name}_Recoil{block}", spriteName = $"Gun_{c.sprite}_Recoil{block}", loop = c.loop, x = i * 480, rows = RowsFor(c.sprite, block * 5) });
+            }
+        return list;
+    }
 
     // Earlier clip names -> current ones. Old clip assets are renamed (keeping their IDs) or, if the new one
     // already exists, removed as duplicates.
@@ -132,7 +152,7 @@ public static class DinoSpriteSheetBuilder
     {
         new Sheet { path = "Assets/Sprites/Dinosaur Spritework.PNG", clips = WalkSheet("") },
         new Sheet { path = "Assets/Sprites/Dinosaur Spritework - 2.png", clips = WalkSheet("Drill_") },
-        new Sheet { path = "Assets/Sprites/Main Dinosaur Spritework.PNG", clips = WalkSheet("Gun_") }, // holding the gun
+        new Sheet { path = GunSheetPath, clips = GunSheet() }, // holding the gun, plus its recoil frames
         new Sheet { path = "Assets/Sprites/Dinosaur Attacks and Actions.PNG", clips = AttackSheet() },
         new Sheet { path = EffectsPath, clips = EffectsSheet(), minPixels = 1, spritesOnly = true },
         new Sheet { path = VerticalEffectsPath, clips = VerticalEffectsSheet(), minPixels = 1, spritesOnly = true },

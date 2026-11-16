@@ -350,6 +350,16 @@ MonoBehaviour:
   decelerationTime: 0.1
   hasDrill: 1
   hasGun: 0
+  gunBullet: {fileID: 3416417987016874982, guid: 059bf2331200d4232900e662e080514d, type: 3}
+  fireInterval: 0.35
+  gunDamage: 1
+  muzzleRight: {x: 1.43, y: 0.78}
+  muzzleFront: {x: -0.59, y: 0.13}
+  muzzleBack: {x: 0.81, y: 1.88}
+  recoilFrames:
+  - Recoil1
+  - Recoil2
+  recoilFrameTime: 0.07
   walls: {fileID: 0}
   hitTime: 0.15
   hitWindowEndEarly: 0

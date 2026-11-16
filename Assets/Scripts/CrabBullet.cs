@@ -1,9 +1,11 @@
 using UnityEngine;
 
 /// <summary>
-/// The tall crab's shot. Flies in a straight line at floor level (so it hits walls and the dino's feet
-/// collider where it looks like it should) and explodes on the first wall, spawner, robot or dino it touches,
-/// or when its range runs out. Hurts the dino (and the robot) it explodes on.
+/// A shot (the tall crab's, and for now the dino's gun too). Flies in a straight line at floor level (so it
+/// hits walls and feet colliders where it looks like it should) and explodes on the first thing it touches,
+/// or when its range runs out.
+///   Enemy shot (Fired By Player off): flies past crabs; hurts the dino or the robot; stopped by walls/spawners.
+///   Player shot (Fired By Player on): flies past the dino and the robot; hurts crabs; stopped by walls/spawners.
 ///
 /// Art lives on the Art child, raised to the height it leaves the crab and turned to face the way it flies
 /// (the art is drawn flying left). Animator states: Launch -> Fly (loops) while flying, Explode when it hits.
@@ -21,6 +23,8 @@ public class CrabBullet : MonoBehaviour
     public float explodeTime = 0.34f;
     [Tooltip("Shown on the lose screen if this shot kills the dino.")]
     [TextArea] public string killMessage = "A tall crab shot you.";
+    [Tooltip("On for the dino's gun: hits enemies instead of the dino and the robot.")]
+    public bool firedByPlayer = false;
 
     [Header("Art")]
     [Tooltip("The Art child (sprite + animator). It's rotated to face the flight direction.")]
@@ -35,14 +39,16 @@ public class CrabBullet : MonoBehaviour
     readonly RaycastHit2D[] hits = new RaycastHit2D[8];
 
     /// <summary>Send it off. The owner's own colliders are ignored. If it starts away from the shooter,
-    /// pass the shooter's position as castFrom so it still hits anything in the gap in between.</summary>
-    public void Launch(Vector2 direction, GameObject from, Vector2? castFrom = null)
+    /// pass the shooter's position as castFrom so it still hits anything in the gap in between.
+    /// artHeight (optional) raises the art this far above the bullet's flight line, e.g. to the gun's height.</summary>
+    public void Launch(Vector2 direction, GameObject from, Vector2? castFrom = null, float? artHeight = null)
     {
         dir = direction.sqrMagnitude > 0f ? direction.normalized : Vector2.left;
         owner = from;
         if (art == null && transform.childCount > 0) art = transform.GetChild(0);
         if (animator == null) animator = GetComponentInChildren<Animator>();
         if (art != null) art.localRotation = Quaternion.Euler(0f, 0f, Vector2.SignedAngle(artFaces, dir));
+        if (art != null && artHeight.HasValue) art.localPosition = new Vector3(0f, artHeight.Value, art.localPosition.z);
         Play("Launch");
         if (castFrom.HasValue) CheckPath(castFrom.Value, (Vector2)transform.position);
     }
@@ -58,7 +64,7 @@ public class CrabBullet : MonoBehaviour
         for (int i = 0; i < n; i++)
         {
             var c = hits[i].collider;
-            if (c.isTrigger || IsOwner(c) || c.GetComponentInParent<EnemyController>() != null) continue; // fly past other enemies
+            if (c.isTrigger || IsOwner(c) || PassesThrough(c)) continue;
             if (hits[i].distance < nearest) { nearest = hits[i].distance; target = c; point = hits[i].centroid; }
         }
         if (target == null) return false;
@@ -86,9 +92,21 @@ public class CrabBullet : MonoBehaviour
 
     bool IsOwner(Collider2D c) => owner != null && c.transform.IsChildOf(owner.transform);
 
+    // Enemy shots fly past other enemies; player shots fly past the dino and the robot.
+    bool PassesThrough(Collider2D c) => firedByPlayer
+        ? c.GetComponentInParent<DinoController>() != null || c.GetComponentInParent<EnemyGoal>() != null
+        : c.GetComponentInParent<EnemyController>() != null;
+
     void Hit(Collider2D c)
     {
         var from = (Vector2)transform.position - dir; // knock the target along the shot
+        if (firedByPlayer)
+        {
+            var enemy = c.GetComponentInParent<EnemyController>();
+            if (enemy != null && enemy.TryGetComponent(out Health eh)) eh.TakeDamage(damage, from);
+            Explode();
+            return;
+        }
         var dino = c.GetComponentInParent<DinoController>();
         var goal = dino == null ? c.GetComponentInParent<EnemyGoal>() : null;
         if (dino != null && dino.TryGetComponent(out Health h)) h.TakeDamage(damage, from, killMessage);

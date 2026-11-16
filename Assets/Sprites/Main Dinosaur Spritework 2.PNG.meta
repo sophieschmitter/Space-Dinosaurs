@@ -1,0 +1,3768 @@
+fileFormatVersion: 2
+guid: 98c333fa7a18d4fe687baaf135edc636
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -8927065378854167771
+    second: Main Dinosaur Spritework 2_0
+  - first:
+      213: 8423211983386055024
+    second: Main Dinosaur Spritework 2_1
+  - first:
+      213: 5454303417744055540
+    second: Main Dinosaur Spritework 2_2
+  - first:
+      213: 3213709654692974388
+    second: Main Dinosaur Spritework 2_3
+  - first:
+      213: -6192450913360619087
+    second: Main Dinosaur Spritework 2_4
+  - first:
+      213: -8810017713012491814
+    second: Main Dinosaur Spritework 2_5
+  - first:
+      213: 532898417719216549
+    second: Main Dinosaur Spritework 2_6
+  - first:
+      213: 4077189262378102500
+    second: Main Dinosaur Spritework 2_7
+  - first:
+      213: 7512743715670977922
+    second: Main Dinosaur Spritework 2_8
+  - first:
+      213: -8105839623696332293
+    second: Main Dinosaur Spritework 2_9
+  - first:
+      213: -6045271340340274097
+    second: Main Dinosaur Spritework 2_10
+  - first:
+      213: 4764817086993002771
+    second: Main Dinosaur Spritework 2_11
+  - first:
+      213: -6822061396560695289
+    second: Main Dinosaur Spritework 2_12
+  - first:
+      213: 4028187906699991594
+    second: Main Dinosaur Spritework 2_13
+  - first:
+      213: 1144466633633575851
+    second: Main Dinosaur Spritework 2_14
+  - first:
+      213: 5943993905235962459
+    second: Main Dinosaur Spritework 2_15
+  - first:
+      213: 2725942444740293317
+    second: Main Dinosaur Spritework 2_16
+  - first:
+      213: -2881965200730430328
+    second: Main Dinosaur Spritework 2_17
+  - first:
+      213: 6714922857498532520
+    second: Main Dinosaur Spritework 2_18
+  - first:
+      213: 1269461014558124042
+    second: Main Dinosaur Spritework 2_19
+  - first:
+      213: -2844841579532079304
+    second: Main Dinosaur Spritework 2_20
+  - first:
+      213: -128174425424231021
+    second: Main Dinosaur Spritework 2_21
+  - first:
+      213: -6334123088272977476
+    second: Main Dinosaur Spritework 2_22
+  - first:
+      213: 4288615921501658358
+    second: Main Dinosaur Spritework 2_23
+  - first:
+      213: 3268061434185711822
+    second: Main Dinosaur Spritework 2_24
+  - first:
+      213: -3384424407382155923
+    second: Main Dinosaur Spritework 2_25
+  - first:
+      213: -9117818337762098394
+    second: Main Dinosaur Spritework 2_26
+  - first:
+      213: 2652171244262919609
+    second: Main Dinosaur Spritework 2_27
+  - first:
+      213: -1272120788962588868
+    second: Main Dinosaur Spritework 2_28
+  - first:
+      213: 2865829716063020140
+    second: Main Dinosaur Spritework 2_29
+  - first:
+      213: -7777345036305295217
+    second: Main Dinosaur Spritework 2_30
+  - first:
+      213: -8293991337431742904
+    second: Main Dinosaur Spritework 2_31
+  - first:
+      213: 8870730353826336693
+    second: Main Dinosaur Spritework 2_32
+  - first:
+      213: 3815600751354068392
+    second: Main Dinosaur Spritework 2_33
+  - first:
+      213: -468422853613869524
+    second: Main Dinosaur Spritework 2_34
+  - first:
+      213: 8726501534691907391
+    second: Main Dinosaur Spritework 2_35
+  - first:
+      213: 7943804281518579176
+    second: Main Dinosaur Spritework 2_36
+  - first:
+      213: 740998820304292330
+    second: Main Dinosaur Spritework 2_37
+  - first:
+      213: 9037703926969743759
+    second: Main Dinosaur Spritework 2_38
+  - first:
+      213: 7184385528695670511
+    second: Main Dinosaur Spritework 2_39
+  - first:
+      213: -4408949876029544374
+    second: Main Dinosaur Spritework 2_40
+  - first:
+      213: -5462786373258174852
+    second: Main Dinosaur Spritework 2_41
+  - first:
+      213: -2829676379184485786
+    second: Main Dinosaur Spritework 2_42
+  - first:
+      213: -6324655793195545636
+    second: Main Dinosaur Spritework 2_43
+  - first:
+      213: -1304073842332920356
+    second: Main Dinosaur Spritework 2_44
+  - first:
+      213: 6907254365626145912
+    second: Main Dinosaur Spritework 2_45
+  - first:
+      213: 2573212240737545728
+    second: Main Dinosaur Spritework 2_46
+  - first:
+      213: 6630152207140661694
+    second: Main Dinosaur Spritework 2_47
+  - first:
+      213: 4349140059801433111
+    second: Main Dinosaur Spritework 2_48
+  - first:
+      213: -1148207387157943674
+    second: Main Dinosaur Spritework 2_49
+  - first:
+      213: -1244392741523010912
+    second: Main Dinosaur Spritework 2_50
+  - first:
+      213: -1426867558683212638
+    second: Main Dinosaur Spritework 2_51
+  - first:
+      213: 7054844954604426480
+    second: Main Dinosaur Spritework 2_52
+  - first:
+      213: 8738886377293118442
+    second: Main Dinosaur Spritework 2_53
+  - first:
+      213: 3257789376273108449
+    second: Main Dinosaur Spritework 2_54
+  - first:
+      213: 281039656976612642
+    second: Main Dinosaur Spritework 2_55
+  - first:
+      213: -4481794250502050459
+    second: Main Dinosaur Spritework 2_56
+  - first:
+      213: -2459214928597737083
+    second: Main Dinosaur Spritework 2_57
+  - first:
+      213: 6529843879844309528
+    second: Main Dinosaur Spritework 2_58
+  - first:
+      213: -8066130263075470657
+    second: Main Dinosaur Spritework 2_59
+  - first:
+      213: 6666562294144833945
+    second: Main Dinosaur Spritework 2_60
+  - first:
+      213: 5440003046176409088
+    second: Main Dinosaur Spritework 2_61
+  - first:
+      213: 7171916647197616023
+    second: Main Dinosaur Spritework 2_62
+  - first:
+      213: 8453607653086322697
+    second: Main Dinosaur Spritework 2_63
+  - first:
+      213: -5508391103623666007
+    second: Main Dinosaur Spritework 2_64
+  - first:
+      213: 3935449141396493022
+    second: Main Dinosaur Spritework 2_65
+  - first:
+      213: 242606838442381941
+    second: Main Dinosaur Spritework 2_66
+  - first:
+      213: -2973519143518840475
+    second: Main Dinosaur Spritework 2_67
+  - first:
+      213: -784421746492424392
+    second: Main Dinosaur Spritework 2_68
+  - first:
+      213: -7340616334468862662
+    second: Main Dinosaur Spritework 2_69
+  - first:
+      213: -1992592296733996678
+    second: Main Dinosaur Spritework 2_70
+  - first:
+      213: 7143702067378964884
+    second: Main Dinosaur Spritework 2_71
+  - first:
+      213: -6138515556985977031
+    second: Main Dinosaur Spritework 2_72
+  - first:
+      213: -2063857035265900684
+    second: Main Dinosaur Spritework 2_73
+  - first:
+      213: 8767082948714059408
+    second: Main Dinosaur Spritework 2_74
+  - first:
+      213: -8890371946696372608
+    second: Main Dinosaur Spritework 2_75
+  - first:
+      213: -4092272114001553183
+    second: Main Dinosaur Spritework 2_76
+  - first:
+      213: 4702731084604811217
+    second: Main Dinosaur Spritework 2_77
+  - first:
+      213: 3978912556539870510
+    second: Main Dinosaur Spritework 2_78
+  - first:
+      213: -5624469381398392709
+    second: Main Dinosaur Spritework 2_79
+  - first:
+      213: -5383037358409365650
+    second: Main Dinosaur Spritework 2_80
+  - first:
+      213: 4212707249547124432
+    second: Main Dinosaur Spritework 2_81
+  - first:
+      213: 5828028887362974514
+    second: Main Dinosaur Spritework 2_82
+  - first:
+      213: 7003938484316502901
+    second: Main Dinosaur Spritework 2_83
+  - first:
+      213: -5218554656680486674
+    second: Main Dinosaur Spritework 2_84
+  - first:
+      213: 3012841709467999296
+    second: Main Dinosaur Spritework 2_85
+  - first:
+      213: -6668886351302947287
+    second: Main Dinosaur Spritework 2_86
+  - first:
+      213: 1811905403472940463
+    second: Main Dinosaur Spritework 2_87
+  - first:
+      213: -7926767163275359845
+    second: Main Dinosaur Spritework 2_88
+  - first:
+      213: -7947762459052834812
+    second: Main Dinosaur Spritework 2_89
+  - first:
+      213: 4165823174328548848
+    second: Main Dinosaur Spritework 2_90
+  - first:
+      213: 7707579949597366763
+    second: Main Dinosaur Spritework 2_91
+  - first:
+      213: 1614084417779916142
+    second: Main Dinosaur Spritework 2_92
+  - first:
+      213: 644026529399373911
+    second: Main Dinosaur Spritework 2_93
+  - first:
+      213: -4063329120879813409
+    second: Main Dinosaur Spritework 2_94
+  - first:
+      213: -4321238578952213435
+    second: Main Dinosaur Spritework 2_95
+  - first:
+      213: 8119708430700501762
+    second: Main Dinosaur Spritework 2_96
+  - first:
+      213: 9086198737837543376
+    second: Main Dinosaur Spritework 2_97
+  - first:
+      213: -4081636224082305630
+    second: Main Dinosaur Spritework 2_98
+  - first:
+      213: 2550247847641495658
+    second: Main Dinosaur Spritework 2_99
+  - first:
+      213: -5640098720304104680
+    second: Main Dinosaur Spritework 2_100
+  - first:
+      213: -8308397721595347892
+    second: Main Dinosaur Spritework 2_101
+  - first:
+      213: -7744208342862833116
+    second: Main Dinosaur Spritework 2_102
+  - first:
+      213: -6693576385133116056
+    second: Main Dinosaur Spritework 2_103
+  - first:
+      213: 8309451639630484080
+    second: Main Dinosaur Spritework 2_104
+  - first:
+      213: -5819819192516543599
+    second: Main Dinosaur Spritework 2_105
+  - first:
+      213: -8785290695537958341
+    second: Main Dinosaur Spritework 2_106
+  - first:
+      213: -7613117667646497404
+    second: Main Dinosaur Spritework 2_107
+  - first:
+      213: -2481312344024408642
+    second: Main Dinosaur Spritework 2_108
+  - first:
+      213: 7623274707982865121
+    second: Main Dinosaur Spritework 2_109
+  - first:
+      213: 2358045002682015117
+    second: Main Dinosaur Spritework 2_110
+  - first:
+      213: 2933309297149881375
+    second: Main Dinosaur Spritework 2_111
+  - first:
+      213: 845303646158134177
+    second: Main Dinosaur Spritework 2_112
+  - first:
+      213: -3165987520912690019
+    second: Main Dinosaur Spritework 2_113
+  - first:
+      213: -6178852484317866015
+    second: Main Dinosaur Spritework 2_114
+  - first:
+      213: -8810112295509742131
+    second: Main Dinosaur Spritework 2_115
+  - first:
+      213: 7388692161587762703
+    second: Main Dinosaur Spritework 2_116
+  - first:
+      213: -8721571820171745019
+    second: Main Dinosaur Spritework 2_117
+  - first:
+      213: 9108822984128824212
+    second: Main Dinosaur Spritework 2_118
+  - first:
+      213: 1081665645232427817
+    second: Main Dinosaur Spritework 2_119
+  - first:
+      213: -7141053964612982161
+    second: Main Dinosaur Spritework 2_120
+  - first:
+      213: 7239812788982048746
+    second: Main Dinosaur Spritework 2_121
+  - first:
+      213: 5875664319515166185
+    second: Main Dinosaur Spritework 2_122
+  - first:
+      213: -6664763111765443198
+    second: Main Dinosaur Spritework 2_123
+  - first:
+      213: -701987064475830599
+    second: Main Dinosaur Spritework 2_124
+  - first:
+      213: -7340490272573988445
+    second: Main Dinosaur Spritework 2_125
+  - first:
+      213: -232795381718706474
+    second: Main Dinosaur Spritework 2_126
+  - first:
+      213: -4208828153344844098
+    second: Main Dinosaur Spritework 2_127
+  - first:
+      213: 8748467176679362544
+    second: Main Dinosaur Spritework 2_128
+  - first:
+      213: -9095376975213802771
+    second: Main Dinosaur Spritework 2_129
+  - first:
+      213: -8878355923268784665
+    second: Main Dinosaur Spritework 2_130
+  - first:
+      213: -2295335973717339991
+    second: Main Dinosaur Spritework 2_131
+  - first:
+      213: 6606840782776437180
+    second: Main Dinosaur Spritework 2_132
+  - first:
+      213: -2822568394605794065
+    second: Main Dinosaur Spritework 2_133
+  - first:
+      213: -208979804130069996
+    second: Main Dinosaur Spritework 2_134
+  - first:
+      213: 7072330945170001196
+    second: Main Dinosaur Spritework 2_135
+  - first:
+      213: -5711717888378142810
+    second: Main Dinosaur Spritework 2_136
+  - first:
+      213: -247782474751071872
+    second: Main Dinosaur Spritework 2_137
+  - first:
+      213: 3528067928488336370
+    second: Main Dinosaur Spritework 2_138
+  - first:
+      213: -1650864167534801883
+    second: Main Dinosaur Spritework 2_139
+  - first:
+      213: -542700716322956874
+    second: Main Dinosaur Spritework 2_140
+  - first:
+      213: 1778717457909073541
+    second: Main Dinosaur Spritework 2_141
+  - first:
+      213: 5106597940271180956
+    second: Main Dinosaur Spritework 2_142
+  - first:
+      213: -4889397345274239445
+    second: Main Dinosaur Spritework 2_143
+  - first:
+      213: -5228477259993009302
+    second: Main Dinosaur Spritework 2_144
+  - first:
+      213: 6885347345183507968
+    second: Main Dinosaur Spritework 2_145
+  - first:
+      213: -5863957104628056734
+    second: Main Dinosaur Spritework 2_146
+  - first:
+      213: 1069821821213407428
+    second: Main Dinosaur Spritework 2_147
+  - first:
+      213: -9112596453720726112
+    second: Main Dinosaur Spritework 2_148
+  - first:
+      213: -4310348223506155519
+    second: Main Dinosaur Spritework 2_149
+  - first:
+      213: -8719992530998827756
+    second: Main Dinosaur Spritework 2_150
+  - first:
+      213: -6966601332684351268
+    second: Main Dinosaur Spritework 2_151
+  - first:
+      213: 6545625610404413875
+    second: Main Dinosaur Spritework 2_152
+  - first:
+      213: 7666956064874103305
+    second: Main Dinosaur Spritework 2_153
+  - first:
+      213: -2311234805795057041
+    second: Main Dinosaur Spritework 2_154
+  - first:
+      213: -5064861743257544980
+    second: Main Dinosaur Spritework 2_155
+  - first:
+      213: 5002247203484168163
+    second: Main Dinosaur Spritework 2_156
+  - first:
+      213: 1289166954219240266
+    second: Main Dinosaur Spritework 2_157
+  - first:
+      213: 3000196446755989486
+    second: Main Dinosaur Spritework 2_158
+  - first:
+      213: -6945917030050382687
+    second: Main Dinosaur Spritework 2_159
+  - first:
+      213: 1845885051873780010
+    second: Main Dinosaur Spritework 2_160
+  - first:
+      213: -7959482038209716463
+    second: Main Dinosaur Spritework 2_161
+  - first:
+      213: 1598578272340845260
+    second: Main Dinosaur Spritework 2_162
+  - first:
+      213: 8241266935893197957
+    second: Main Dinosaur Spritework 2_163
+  - first:
+      213: -7383428575725681986
+    second: Main Dinosaur Spritework 2_164
+  - first:
+      213: 1325863247093147727
+    second: Main Dinosaur Spritework 2_165
+  - first:
+      213: -2467252675733813243
+    second: Main Dinosaur Spritework 2_166
+  - first:
+      213: -7464738228197112797
+    second: Main Dinosaur Spritework 2_167
+  - first:
+      213: 6169832082744862245
+    second: Main Dinosaur Spritework 2_168
+  - first:
+      213: 2292107349287567851
+    second: Main Dinosaur Spritework 2_169
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 160
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Gun_Side_Idle_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 7150
+        width: 480
+        height: 480
+      alignment: 9
+      pivot: {x: 0.5, y: 0.104166664}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4ac55616904de499f8bceedeb07fafe9
+      internalID: 201344053
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gun_Side_Idle_1
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 6670
+        width: 480
+        height: 480
+      alignment: 9
+      pivot: {x: 0.5, y: 0.104166664}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5721affa8177341b399262be4204e711
+      internalID: -2134043734
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gun_Side_Idle_2
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 6190
+        width: 480
+        height: 480
+      alignment: 9
+      pivot: {x: 0.5, y: 0.104166664}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6456fbc20da014a388605f0368c8873b
+      internalID: 2028295792
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gun_Side_Idle_3
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 5710
+        width: 480
+        height: 480
+      alignment: 9
+      pivot: {x: 0.5, y: 0.104166664}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e480d7eb1f81429cba1f136dd531114
+      internalID: 1514725568
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gun_Side_Idle_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 5230
+        width: 480
+        height: 480
+      alignment: 9
+      pivot: {x: 0.5, y: 0.104166664}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c5fd3939e956c458c8900185b48d5219
+      internalID: -649058043
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gun_Side_Walk_0
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 7150
+        width: 480
+        height: 480
+      alignment: 9
+      pivot: {x: 0.5, y: 0.104166664}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 41d5fe87313ab4acfb1031047a0b1bcd
+      internalID: -662825309
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gun_Side_Walk_1
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 6670
+        width: 480
+        height: 480
+      alignment: 9
+      pivot: {x: 0.5, y: 0.104166664}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b6a02bb91aa04dc08aff76777f580a6
+      internalID: -1125637857
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gun_Side_Walk_2
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 6190
+        width: 480
+        height: 480
+      alignment: 9
+      pivot: {x: 0.5, y: 0.104166664}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b39bdfa4d9e040daa0c695644087e16
+      internalID: -764309098
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gun_Side_Walk_3
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 5710
+        width: 480
+        height: 480
+      alignment: 9
+      pivot: {x: 0.5, y: 0.104166664}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad15e3a1cde4d4179834ad3519b10d81
+      internalID: -1695418910
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gun_Side_Walk_4
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 5230
+        width: 480
+        height: 480
+      alignment: 9
+      pivot: {x: 0.5, y: 0.104166664}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 137b924e156ff40b48893217fda9e96b
+      internalID: 460995079
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gun_Side_Idle2_0
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 7150
+        width: 480
+        height: 480
+      alignment: 9
+      pivot: {x: 0.5, y: 0.104166664}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c9d3b3fff6e44b0893eb9adee19853c
+      internalID: 1196058632
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gun_Side_Idle2_1
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 6670
+        width: 480
+        height: 480
+      alignment: 9
+      pivot: {x: 0.5, y: 0.104166664}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb876284b32234bff9dfec35b177e685
+      internalID: 281331984
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gun_Side_Idle2_2
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 6190
+        width: 480
+        height: 480
+      alignment: 9
+      pivot: {x: 0.5, y: 0.104166664}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a322a2bccb1f4dd1be492a70cd9284a
+      internalID: 859782735
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gun_Side_Idle2_3
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 5710
+        width: 480
+        height: 480
+      alignment: 9
+      pivot: {x: 0.5, y: 0.104166664}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db2b7342757bb4e3a87f7ed087e621b4
+      internalID: -929876684
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gun_Side_Idle2_4
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 5230
+        width: 480
+        height: 480
+      alignment: 9
+      pivot: {x: 0.5, y: 0.104166664}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 265820f0b20c547959c5859092f38101
+      internalID: -446345791
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gun_Side_Walk2_0
+      rect:
+        serializedVersion: 2
+        x: 1440
+        y: 7150
+        width: 480
+        height: 480
+      alignment: 9
+      pivot: {x: 0.5, y: 0.104166664}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b5e0b0e8abcb4206a476b80bcbd47e8
+      internalID: 310136154
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gun_Side_Walk2_1
+      rect:
+        serializedVersion: 2
+        x: 1440
+        y: 6670
+        width: 480
+        height: 480
+      alignment: 9
+      pivot: {x: 0.5, y: 0.104166664}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 24857e7ffa7b3403eb93a586ef8ca0b0
+      internalID: -1694267523
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gun_Side_Walk2_2
+      rect:
+        serializedVersion: 2
+        x: 1440
+        y: 6190
+        width: 480
+        height: 480
+      alignment: 9
+      pivot: {x: 0.5, y: 0.104166664}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 498e0a14de2074ed98493ba58cd969e9
+      internalID: 127399524
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gun_Side_Walk2_3
+      rect:
+        serializedVersion: 2
+        x: 1440
+        y: 5710
+        width: 480
+        height: 480
+      alignment: 9
+      pivot: {x: 0.5, y: 0.104166664}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cbe3b7121db1e4a72bb0364cc24cc237
+      internalID: 306024611
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gun_Side_Walk2_4
+      rect:
+        serializedVersion: 2
+        x: 1440
+        y: 5230
+        width: 480
+        height: 480
+      alignment: 9
+      pivot: {x: 0.5, y: 0.104166664}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a39bac84c4ac24e529be1032369fe528
+      internalID: 212026567
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gun_Front_Idle_0
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 7150
+        width: 480
+        height: 480
+      alignment: 9
+      pivot: {x: 0.5, y: 0.104166664}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b5585a21c6b904e79863f11e6d83f16e
+      internalID: -1813171824
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gun_Front_Idle_1
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 6670
+        width: 480
+        height: 480
+      alignment: 9
+      pivot: {x: 0.5, y: 0.104166664}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1154e589fe75b4df68b6c21d240259e4
+      internalID: -1674569634
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gun_Front_Idle_2
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 6190
+        width: 480
+        height: 480
+      alignment: 9
+      pivot: {x: 0.5, y: 0.104166664}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eadc2e87a961e415e98a586f767a5403
+      internalID: 1361811517
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gun_Front_Idle_3
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 5710
+        width: 480
+        height: 480
+      alignment: 9
+      pivot: {x: 0.5, y: 0.104166664}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d42d43a011e54ebab6335eecee41cc1
+      internalID: 1950425796
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gun_Front_Idle_4
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 5230
+        width: 480
+        height: 480
+      alignment: 9
+      pivot: {x: 0.5, y: 0.104166664}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b27579d31d964175bc5bb2458f00b90
+      internalID: -833687095
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gun_Front_Walk_0
+      rect:
+        serializedVersion: 2
+        x: 2400
+        y: 7150
+        width: 480
+        height: 480
+      alignment: 9
+      pivot: {x: 0.5, y: 0.104166664}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 359e107d1eaaa468a978f30f0b538f76
+      internalID: 1423611716
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gun_Front_Walk_1
+      rect:
+        serializedVersion: 2
+        x: 2400
+        y: 6670
+        width: 480
+        height: 480
+      alignment: 9
+      pivot: {x: 0.5, y: 0.104166664}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7421f97fb3682450584087648a94ce6f
+      internalID: -1860445751
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gun_Front_Walk_2
+      rect:
+        serializedVersion: 2
+        x: 2400
+        y: 6190
+        width: 480
+        height: 480
+      alignment: 9
+      pivot: {x: 0.5, y: 0.104166664}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 319259477c4fe46b0b8f5a97a642a9d9
+      internalID: 1986442538
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gun_Front_Walk_3
+      rect:
+        serializedVersion: 2
+        x: 2400
+        y: 5710
+        width: 480
+        height: 480
+      alignment: 9
+      pivot: {x: 0.5, y: 0.104166664}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ff415f84adb6444c80a8e82a32b8b9e
+      internalID: 783612471
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gun_Front_Walk_4
+      rect:
+        serializedVersion: 2
+        x: 2400
+        y: 5230
+        width: 480
+        height: 480
+      alignment: 9
+      pivot: {x: 0.5, y: 0.104166664}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9379c47504d424aff8eeaca2b1c2eef4
+      internalID: -383446515
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gun_Back_Idle_0
+      rect:
+        serializedVersion: 2
+        x: 2880
+        y: 7150
+        width: 480
+        height: 480
+      alignment: 9
+      pivot: {x: 0.5, y: 0.104166664}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9737d3afca50f41a7b386cdc541befb7
+      internalID: 201937951
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gun_Back_Idle_1
+      rect:
+        serializedVersion: 2
+        x: 2880
+        y: 6670
+        width: 480
+        height: 480
+      alignment: 9
+      pivot: {x: 0.5, y: 0.104166664}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 075ef79f18d9a4447b53b8a471184be3
+      internalID: -1405666091
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gun_Back_Idle_2
+      rect:
+        serializedVersion: 2
+        x: 2880
+        y: 6190
+        width: 480
+        height: 480
+      alignment: 9
+      pivot: {x: 0.5, y: 0.104166664}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 27e3ab2c02b574cfeb319d77348c466e
+      internalID: 1287669487
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gun_Back_Idle_3
+      rect:
+        serializedVersion: 2
+        x: 2880
+        y: 5710
+        width: 480
+        height: 480
+      alignment: 9
+      pivot: {x: 0.5, y: 0.104166664}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e1cb45b4141642109c0662d05602e78
+      internalID: 338140669
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gun_Back_Idle_4
+      rect:
+        serializedVersion: 2
+        x: 2880
+        y: 5230
+        width: 480
+        height: 480
+      alignment: 9
+      pivot: {x: 0.5, y: 0.104166664}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6f249bdb66c8c45a1991bf4f209718c4
+      internalID: 739132951
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gun_Back_Walk_1
+      rect:
+        serializedVersion: 2
+        x: 3360
+        y: 6670
+        width: 480
+        height: 480
+      alignment: 9
+      pivot: {x: 0.5, y: 0.104166664}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9d61d9df7c3444b9aa932c35c2998928
+      internalID: 1500973852
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gun_Back_Walk_2
+      rect:
+        serializedVersion: 2
+        x: 3360
+        y: 6190
+        width: 480
+        height: 480
+      alignment: 9
+      pivot: {x: 0.5, y: 0.104166664}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 26caee2e609504d50a2427d552940a90
+      internalID: 11477081
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gun_Back_Walk_3
+      rect:
+        serializedVersion: 2
+        x: 3360
+        y: 5710
+        width: 480
+        height: 480
+      alignment: 9
+      pivot: {x: 0.5, y: 0.104166664}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9215b358d08584a7ba615d7788d5268a
+      internalID: -355807233
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gun_Back_Walk_4
+      rect:
+        serializedVersion: 2
+        x: 3360
+        y: 5230
+        width: 480
+        height: 480
+      alignment: 9
+      pivot: {x: 0.5, y: 0.104166664}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2115d7bebb79b49fb8bf119b0a685b89
+      internalID: -451803202
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gun_Huff_0
+      rect:
+        serializedVersion: 2
+        x: 3840
+        y: 7150
+        width: 480
+        height: 480
+      alignment: 9
+      pivot: {x: 0.5, y: 0.104166664}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 30e9547eea8d6474db6db57047eba56c
+      internalID: -2055839012
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gun_Huff_1
+      rect:
+        serializedVersion: 2
+        x: 3840
+        y: 6670
+        width: 480
+        height: 480
+      alignment: 9
+      pivot: {x: 0.5, y: 0.104166664}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 14940fe87e2944d14b98827f9d4381b9
+      internalID: 901470535
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gun_Huff_2
+      rect:
+        serializedVersion: 2
+        x: 3840
+        y: 6190
+        width: 480
+        height: 480
+      alignment: 9
+      pivot: {x: 0.5, y: 0.104166664}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 44efff6f9c2ff4546999a0fc8d39b06c
+      internalID: -2080486629
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gun_Huff_3
+      rect:
+        serializedVersion: 2
+        x: 3840
+        y: 5710
+        width: 480
+        height: 480
+      alignment: 9
+      pivot: {x: 0.5, y: 0.104166664}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 36d2b17b5d22c4c209e0d1fbbd61e6aa
+      internalID: -820343895
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gun_Death_0
+      rect:
+        serializedVersion: 2
+        x: 4320
+        y: 7150
+        width: 480
+        height: 480
+      alignment: 9
+      pivot: {x: 0.5, y: 0.104166664}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 671fd61428ad1446fab6f238487ec333
+      internalID: 401858947
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gun_Death_1
+      rect:
+        serializedVersion: 2
+        x: 4320
+        y: 6670
+        width: 480
+        height: 480
+      alignment: 9
+      pivot: {x: 0.5, y: 0.104166664}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4ecb4f1bc9ba749fd81c75be03dabef1
+      internalID: -1483919599
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gun_Death_2
+      rect:
+        serializedVersion: 2
+        x: 4320
+        y: 6190
+        width: 480
+        height: 480
+      alignment: 9
+      pivot: {x: 0.5, y: 0.104166664}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a8b186c76ff3243bdbfd8f655d9ad449
+      internalID: -797131184
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gun_Death_3
+      rect:
+        serializedVersion: 2
+        x: 4320
+        y: 5710
+        width: 480
+        height: 480
+      alignment: 9
+      pivot: {x: 0.5, y: 0.104166664}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d1e8984150ea43f883fafd88588a18a
+      internalID: 857921825
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gun_Death_4
+      rect:
+        serializedVersion: 2
+        x: 4320
+        y: 5230
+        width: 480
+        height: 480
+      alignment: 9
+      pivot: {x: 0.5, y: 0.104166664}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a8bc97ff551f14289b0503e20bbc4bf3
+      internalID: 95853210
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gun_Huff2_0
+      rect:
+        serializedVersion: 2
+        x: 4800
+        y: 7150
+        width: 480
+        height: 480
+      alignment: 9
+      pivot: {x: 0.5, y: 0.104166664}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 552b48caf48ee465cb84ff33e505fb37
+      internalID: 1164064300
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gun_Huff2_1
+      rect:
+        serializedVersion: 2
+        x: 4800
+        y: 6670
+        width: 480
+        height: 480
+      alignment: 9
+      pivot: {x: 0.5, y: 0.104166664}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e608351f2fe894cfda73eaecb60d7b96
+      internalID: 607962766
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gun_Huff2_2
+      rect:
+        serializedVersion: 2
+        x: 4800
+        y: 6190
+        width: 480
+        height: 480
+      alignment: 9
+      pivot: {x: 0.5, y: 0.104166664}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb07ebb954a60477c86bab92a66d0a0e
+      internalID: -1163056113
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gun_Huff2_3
+      rect:
+        serializedVersion: 2
+        x: 4800
+        y: 5710
+        width: 480
+        height: 480
+      alignment: 9
+      pivot: {x: 0.5, y: 0.104166664}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bfde676d16fbf4ea5b788da05a95f1d2
+      internalID: -1948549390
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gun_Huff2_4
+      rect:
+        serializedVersion: 2
+        x: 4800
+        y: 5230
+        width: 480
+        height: 480
+      alignment: 9
+      pivot: {x: 0.5, y: 0.104166664}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 40d122869c0e34455b536e6dc291aeaf
+      internalID: 999906000
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gun_Death2_0
+      rect:
+        serializedVersion: 2
+        x: 5280
+        y: 7150
+        width: 480
+        height: 480
+      alignment: 9
+      pivot: {x: 0.5, y: 0.104166664}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 79d349a93fdb240859f02854a62a6b18
+      internalID: 1483590243
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gun_Death2_1
+      rect:
+        serializedVersion: 2
+        x: 5280
+        y: 6670
+        width: 480
+        height: 480
+      alignment: 9
+      pivot: {x: 0.5, y: 0.104166664}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 03e3cfd658b114a6fa53f6265b3905f4
+      internalID: -264865933
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gun_Death2_2
+      rect:
+        serializedVersion: 2
+        x: 5280
+        y: 6190
+        width: 480
+        height: 480
+      alignment: 9
+      pivot: {x: 0.5, y: 0.104166664}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 73b4f1bc90ead405f90805d3269a28be
+      internalID: 1152241891
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gun_Death2_3
+      rect:
+        serializedVersion: 2
+        x: 5280
+        y: 5710
+        width: 480
+        height: 480
+      alignment: 9
+      pivot: {x: 0.5, y: 0.104166664}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b61148ce3f0549f79279e155efadc17
+      internalID: 1386109525
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gun_Death2_4
+      rect:
+        serializedVersion: 2
+        x: 5280
+        y: 5230
+        width: 480
+        height: 480
+      alignment: 9
+      pivot: {x: 0.5, y: 0.104166664}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f29f79d221b95426b8c4454fa890207e
+      internalID: 1393594164
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gun_Side_Idle_Recoil1_5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 4750
+        width: 480
+        height: 480
+      alignment: 9
+      pivot: {x: 0.5, y: 0.104166664}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c7ffe794e35ed48a988293d704573eea
+      internalID: -1033068377
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gun_Side_Idle_Recoil1_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 4270
+        width: 480
+        height: 480
+      alignment: 9
+      pivot: {x: 0.5, y: 0.104166664}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b8f96d3c0a1f4649b5a893a3e4757bf
+      internalID: 1201774157
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gun_Side_Idle_Recoil1_7
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3790
+        width: 480
+        height: 480
+      alignment: 9
+      pivot: {x: 0.5, y: 0.104166664}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 448b3be4822da470ea20c71e502c9771
+      internalID: -983884769
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gun_Side_Idle_Recoil1_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3310
+        width: 480
+        height: 480
+      alignment: 9
+      pivot: {x: 0.5, y: 0.104166664}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa75d9952e9594f4e87b0a5f6327679c
+      internalID: 1060557376
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gun_Side_Idle_Recoil1_9
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2830
+        width: 480
+        height: 480
+      alignment: 9
+      pivot: {x: 0.5, y: 0.104166664}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 13236589c2b274adaba6a91bc8285975
+      internalID: 1539883127
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gun_Side_Walk_Recoil1_5
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 4750
+        width: 480
+        height: 480
+      alignment: 9
+      pivot: {x: 0.5, y: 0.104166664}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eaac121fa31eb43b6bb5e05d015a36ee
+      internalID: -1018884142
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gun_Side_Walk_Recoil1_6
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 4270
+        width: 480
+        height: 480
+      alignment: 9
+      pivot: {x: 0.5, y: 0.104166664}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc56658ecb84e4c41b99bc684a59f135
+      internalID: 1628324106
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gun_Side_Walk_Recoil1_7
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 3790
+        width: 480
+        height: 480
+      alignment: 9
+      pivot: {x: 0.5, y: 0.104166664}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b7ca6d4f1854455d8111a3af233f556
+      internalID: 832641166
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gun_Side_Walk_Recoil1_8
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 3310
+        width: 480
+        height: 480
+      alignment: 9
+      pivot: {x: 0.5, y: 0.104166664}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a9e9b0900272f486caa600272036488f
+      internalID: 903363500
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gun_Side_Walk_Recoil1_9
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 2830
+        width: 480
+        height: 480
+      alignment: 9
+      pivot: {x: 0.5, y: 0.104166664}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da8d5bb06162a4b899d3c1e65a961a24
+      internalID: -288915225
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gun_Side_Idle2_Recoil1_5
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 4750
+        width: 480
+        height: 480
+      alignment: 9
+      pivot: {x: 0.5, y: 0.104166664}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a0f88237ff1a84350b8e60a3e215abdb
+      internalID: -1734573061
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gun_Side_Idle2_Recoil1_6
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 4270
+        width: 480
+        height: 480
+      alignment: 9
+      pivot: {x: 0.5, y: 0.104166664}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d2c51dac31cfe4abc8d1db452b42b8e1
+      internalID: 1235552180
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gun_Side_Idle2_Recoil1_7
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 3790
+        width: 480
+        height: 480
+      alignment: 9
+      pivot: {x: 0.5, y: 0.104166664}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 927a4a731897647c2b65e20d1cb3aef9
+      internalID: 2080772607
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gun_Side_Idle2_Recoil1_8
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 3310
+        width: 480
+        height: 480
+      alignment: 9
+      pivot: {x: 0.5, y: 0.104166664}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad6120705379d4c77b9db804d1b7b37a
+      internalID: -1363973823
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gun_Side_Idle2_Recoil1_9
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 2830
+        width: 480
+        height: 480
+      alignment: 9
+      pivot: {x: 0.5, y: 0.104166664}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 22e3fc00388c0435c993ae68e80aefed
+      internalID: -200056405
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gun_Side_Walk2_Recoil1_5
+      rect:
+        serializedVersion: 2
+        x: 1440
+        y: 4750
+        width: 480
+        height: 480
+      alignment: 9
+      pivot: {x: 0.5, y: 0.104166664}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e529fd62ea8544a529f9d852de6cacc3
+      internalID: 1795267583
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gun_Side_Walk2_Recoil1_6
+      rect:
+        serializedVersion: 2
+        x: 1440
+        y: 4270
+        width: 480
+        height: 480
+      alignment: 9
+      pivot: {x: 0.5, y: 0.104166664}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b80a969cba7ac4b05b4b4e6e342c0e5a
+      internalID: 1247981358
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gun_Side_Walk2_Recoil1_7
+      rect:
+        serializedVersion: 2
+        x: 1440
+        y: 3790
+        width: 480
+        height: 480
+      alignment: 9
+      pivot: {x: 0.5, y: 0.104166664}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d02879504bbdb4afdb0bcc3d17246e33
+      internalID: 1800188293
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gun_Side_Walk2_Recoil1_8
+      rect:
+        serializedVersion: 2
+        x: 1440
+        y: 3310
+        width: 480
+        height: 480
+      alignment: 9
+      pivot: {x: 0.5, y: 0.104166664}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fed5a91fda39640e78ada9dacfcab0fe
+      internalID: 1897216513
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gun_Side_Walk2_Recoil1_9
+      rect:
+        serializedVersion: 2
+        x: 1440
+        y: 2830
+        width: 480
+        height: 480
+      alignment: 9
+      pivot: {x: 0.5, y: 0.104166664}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f317ebd65b45a44b08c857fa2bb8eb3f
+      internalID: -400272956
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gun_Front_Idle_Recoil1_5
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 4750
+        width: 480
+        height: 480
+      alignment: 9
+      pivot: {x: 0.5, y: 0.104166664}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a8ad0e0215353496999995e99b8aa94f
+      internalID: 1655201263
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gun_Front_Idle_Recoil1_6
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 4270
+        width: 480
+        height: 480
+      alignment: 9
+      pivot: {x: 0.5, y: 0.104166664}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec2b206163c464dfa9d8984cae0b5a73
+      internalID: 938399736
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gun_Front_Idle_Recoil1_7
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 3790
+        width: 480
+        height: 480
+      alignment: 9
+      pivot: {x: 0.5, y: 0.104166664}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6acdb6c09a96b487cbfac0bd1778b6af
+      internalID: -1070821366
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gun_Front_Idle_Recoil1_8
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 3310
+        width: 480
+        height: 480
+      alignment: 9
+      pivot: {x: 0.5, y: 0.104166664}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3386b4fc8ad5547c0a3cf4ac5774af3d
+      internalID: -1247756414
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gun_Front_Idle_Recoil1_9
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 2830
+        width: 480
+        height: 480
+      alignment: 9
+      pivot: {x: 0.5, y: 0.104166664}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc5ddb973d52a40759c65814ff1b952b
+      internalID: 336448417
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gun_Front_Walk_Recoil1_5
+      rect:
+        serializedVersion: 2
+        x: 2400
+        y: 4750
+        width: 480
+        height: 480
+      alignment: 9
+      pivot: {x: 0.5, y: 0.104166664}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a4369124c86d64cc0a9b7f7c79444559
+      internalID: 2013838281
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gun_Front_Walk_Recoil1_6
+      rect:
+        serializedVersion: 2
+        x: 2400
+        y: 4270
+        width: 480
+        height: 480
+      alignment: 9
+      pivot: {x: 0.5, y: 0.104166664}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 01fd7df1ccd214fe49f4997b4d0ce3e5
+      internalID: 612351564
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gun_Front_Walk_Recoil1_7
+      rect:
+        serializedVersion: 2
+        x: 2400
+        y: 3790
+        width: 480
+        height: 480
+      alignment: 9
+      pivot: {x: 0.5, y: 0.104166664}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a57dd68ed3b5442492f41e37a6674a3
+      internalID: 372760504
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gun_Front_Walk_Recoil1_8
+      rect:
+        serializedVersion: 2
+        x: 2400
+        y: 3310
+        width: 480
+        height: 480
+      alignment: 9
+      pivot: {x: 0.5, y: 0.104166664}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6e42c3633387946d0a0e2c210f473a5a
+      internalID: -511577227
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gun_Front_Walk_Recoil1_9
+      rect:
+        serializedVersion: 2
+        x: 2400
+        y: 2830
+        width: 480
+        height: 480
+      alignment: 9
+      pivot: {x: 0.5, y: 0.104166664}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c92a5de1fb654cad95b50e75e5e9f4f
+      internalID: 271560888
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gun_Back_Idle_Recoil1_5
+      rect:
+        serializedVersion: 2
+        x: 2880
+        y: 4750
+        width: 480
+        height: 480
+      alignment: 9
+      pivot: {x: 0.5, y: 0.104166664}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b3fc6a39eeba4761998db67a4d6104b
+      internalID: -1806122158
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gun_Back_Idle_Recoil1_6
+      rect:
+        serializedVersion: 2
+        x: 2880
+        y: 4270
+        width: 480
+        height: 480
+      alignment: 9
+      pivot: {x: 0.5, y: 0.104166664}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb2e0ac636e7f45238376442b4e05fa5
+      internalID: -443642692
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gun_Back_Idle_Recoil1_7
+      rect:
+        serializedVersion: 2
+        x: 2880
+        y: 3790
+        width: 480
+        height: 480
+      alignment: 9
+      pivot: {x: 0.5, y: 0.104166664}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6bbd57c69bfef44a78eec1ef2dddabf2
+      internalID: -955613186
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gun_Back_Idle_Recoil1_8
+      rect:
+        serializedVersion: 2
+        x: 2880
+        y: 3310
+        width: 480
+        height: 480
+      alignment: 9
+      pivot: {x: 0.5, y: 0.104166664}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e845af982469b4cd3a2f44ba424fd8ce
+      internalID: -1988828865
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gun_Back_Idle_Recoil1_9
+      rect:
+        serializedVersion: 2
+        x: 2880
+        y: 2830
+        width: 480
+        height: 480
+      alignment: 9
+      pivot: {x: 0.5, y: 0.104166664}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7970c637c35b44831b6e8e9803268067
+      internalID: -585745566
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gun_Back_Walk_Recoil1_6
+      rect:
+        serializedVersion: 2
+        x: 3360
+        y: 4270
+        width: 480
+        height: 480
+      alignment: 9
+      pivot: {x: 0.5, y: 0.104166664}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 78e7b0d8c96144e81bd4b858455a2b24
+      internalID: 448452726
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gun_Back_Walk_Recoil1_7
+      rect:
+        serializedVersion: 2
+        x: 3360
+        y: 3790
+        width: 480
+        height: 480
+      alignment: 9
+      pivot: {x: 0.5, y: 0.104166664}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a7cb92094b0634f46a8236a8a9109bfa
+      internalID: -1561690926
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gun_Back_Walk_Recoil1_8
+      rect:
+        serializedVersion: 2
+        x: 3360
+        y: 3310
+        width: 480
+        height: 480
+      alignment: 9
+      pivot: {x: 0.5, y: 0.104166664}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 710698d7854ef4df689f1f38093f7fba
+      internalID: -1504719859
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gun_Back_Walk_Recoil1_9
+      rect:
+        serializedVersion: 2
+        x: 3360
+        y: 2830
+        width: 480
+        height: 480
+      alignment: 9
+      pivot: {x: 0.5, y: 0.104166664}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a63300efc6b7e40a7aa34a10495f89d9
+      internalID: 1740916937
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gun_Side_Idle_Recoil2_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2350
+        width: 480
+        height: 480
+      alignment: 9
+      pivot: {x: 0.5, y: 0.104166664}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7752fcbef7d144110ba354a3aa443906
+      internalID: -190281618
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gun_Side_Idle_Recoil2_11
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1870
+        width: 480
+        height: 480
+      alignment: 9
+      pivot: {x: 0.5, y: 0.104166664}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c09bf8de813c41fb90bae26efae4f42
+      internalID: 119796486
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gun_Side_Idle_Recoil2_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1390
+        width: 480
+        height: 480
+      alignment: 9
+      pivot: {x: 0.5, y: 0.104166664}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ac2d1cb4cfcb4b30baa5f51e0d20e6a
+      internalID: -1992515053
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gun_Side_Idle_Recoil2_13
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 910
+        width: 480
+        height: 480
+      alignment: 9
+      pivot: {x: 0.5, y: 0.104166664}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cde74527240e44367934c17dfef2bc21
+      internalID: -2020856734
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gun_Side_Idle_Recoil2_14
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 430
+        width: 480
+        height: 480
+      alignment: 9
+      pivot: {x: 0.5, y: 0.104166664}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 689064a0e9fcc4a638c597f7b871276e
+      internalID: 590633340
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gun_Side_Walk_Recoil2_10
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 2350
+        width: 480
+        height: 480
+      alignment: 9
+      pivot: {x: 0.5, y: 0.104166664}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de84b92ec6a954e5aaad281ad6ff5c8d
+      internalID: 397036258
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gun_Side_Walk_Recoil2_11
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 1870
+        width: 480
+        height: 480
+      alignment: 9
+      pivot: {x: 0.5, y: 0.104166664}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 90c82a50b741a4889ae225271bc48f7c
+      internalID: -827041502
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gun_Side_Walk_Recoil2_12
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 1390
+        width: 480
+        height: 480
+      alignment: 9
+      pivot: {x: 0.5, y: 0.104166664}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e48f367df7464842b1b8ef11bdedbb9
+      internalID: -1262201673
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gun_Side_Walk_Recoil2_13
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 910
+        width: 480
+        height: 480
+      alignment: 9
+      pivot: {x: 0.5, y: 0.104166664}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 290a37eaa3a2745b29d0017f4b43b9cc
+      internalID: -1235154386
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gun_Side_Walk_Recoil2_14
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 430
+        width: 480
+        height: 480
+      alignment: 9
+      pivot: {x: 0.5, y: 0.104166664}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 11a8cfd42d3234f63acb2cb4771ad7f6
+      internalID: -1232047721
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gun_Side_Idle2_Recoil2_10
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 2350
+        width: 480
+        height: 480
+      alignment: 9
+      pivot: {x: 0.5, y: 0.104166664}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 87bd2f06dceed4adf9b5c503ec3649fd
+      internalID: 1769363128
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gun_Side_Idle2_Recoil2_11
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 1870
+        width: 480
+        height: 480
+      alignment: 9
+      pivot: {x: 0.5, y: 0.104166664}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 852b68a0e49a046d8ac8e034a68f4371
+      internalID: -71036812
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gun_Side_Idle2_Recoil2_12
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 1390
+        width: 480
+        height: 480
+      alignment: 9
+      pivot: {x: 0.5, y: 0.104166664}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a0997ceac9db341268fcba19bb7c6de8
+      internalID: 1773804475
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gun_Side_Idle2_Recoil2_13
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 910
+        width: 480
+        height: 480
+      alignment: 9
+      pivot: {x: 0.5, y: 0.104166664}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd4441e2368a74ecaa95edfc08519538
+      internalID: 473777682
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gun_Side_Idle2_Recoil2_14
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 430
+        width: 480
+        height: 480
+      alignment: 9
+      pivot: {x: 0.5, y: 0.104166664}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0fdb41fc3a2ac4ca6a702bb1048997fe
+      internalID: -1948953891
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gun_Side_Walk2_Recoil2_10
+      rect:
+        serializedVersion: 2
+        x: 1440
+        y: 2350
+        width: 480
+        height: 480
+      alignment: 9
+      pivot: {x: 0.5, y: 0.104166664}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f6749dfb0ea67463ab160427ca362c35
+      internalID: -39708907
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gun_Side_Walk2_Recoil2_11
+      rect:
+        serializedVersion: 2
+        x: 1440
+        y: 1870
+        width: 480
+        height: 480
+      alignment: 9
+      pivot: {x: 0.5, y: 0.104166664}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 210cf53cb6d364774a9b14ab92a537bd
+      internalID: -686599364
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gun_Side_Walk2_Recoil2_12
+      rect:
+        serializedVersion: 2
+        x: 1440
+        y: 1390
+        width: 480
+        height: 480
+      alignment: 9
+      pivot: {x: 0.5, y: 0.104166664}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8877454b369ab4963b28181cee0aa868
+      internalID: -1401036062
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gun_Side_Walk2_Recoil2_13
+      rect:
+        serializedVersion: 2
+        x: 1440
+        y: 910
+        width: 480
+        height: 480
+      alignment: 9
+      pivot: {x: 0.5, y: 0.104166664}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab5126d4ac41b48d9b71f6cdbcc2ce0b
+      internalID: -1129210586
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gun_Side_Walk2_Recoil2_14
+      rect:
+        serializedVersion: 2
+        x: 1440
+        y: 430
+        width: 480
+        height: 480
+      alignment: 9
+      pivot: {x: 0.5, y: 0.104166664}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 046cfb3bd83714b8593ff7ffeea0102f
+      internalID: 385752738
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gun_Front_Idle_Recoil2_10
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 2350
+        width: 480
+        height: 480
+      alignment: 9
+      pivot: {x: 0.5, y: 0.104166664}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 318b70e6f522243b2b393613cde03239
+      internalID: -36660050
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gun_Front_Idle_Recoil2_11
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 1870
+        width: 480
+        height: 480
+      alignment: 9
+      pivot: {x: 0.5, y: 0.104166664}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e3463d46f1b424906a23153548a1a7b4
+      internalID: -1189443101
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gun_Front_Idle_Recoil2_12
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 1390
+        width: 480
+        height: 480
+      alignment: 9
+      pivot: {x: 0.5, y: 0.104166664}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e479984e86b746c893fe8d653d9288d
+      internalID: -764286226
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gun_Front_Idle_Recoil2_13
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 910
+        width: 480
+        height: 480
+      alignment: 9
+      pivot: {x: 0.5, y: 0.104166664}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2367ff92f65944c30a4af8f36fd51b18
+      internalID: 1917168891
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gun_Front_Idle_Recoil2_14
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 430
+        width: 480
+        height: 480
+      alignment: 9
+      pivot: {x: 0.5, y: 0.104166664}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de6f14611fff34226b75080ac44ff193
+      internalID: 548540570
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gun_Front_Walk_Recoil2_10
+      rect:
+        serializedVersion: 2
+        x: 2400
+        y: 2350
+        width: 480
+        height: 480
+      alignment: 9
+      pivot: {x: 0.5, y: 0.104166664}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 01233004bf0d14b1dbff0dd9b9c6d0ed
+      internalID: 210738801
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gun_Front_Walk_Recoil2_11
+      rect:
+        serializedVersion: 2
+        x: 2400
+        y: 1870
+        width: 480
+        height: 480
+      alignment: 9
+      pivot: {x: 0.5, y: 0.104166664}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bab58e8cf70a343feb35825837592e69
+      internalID: -1445933659
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gun_Front_Walk_Recoil2_12
+      rect:
+        serializedVersion: 2
+        x: 2400
+        y: 1390
+        width: 480
+        height: 480
+      alignment: 9
+      pivot: {x: 0.5, y: 0.104166664}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c1b2e62d252d45e196b28b28d1d62f7
+      internalID: 331083749
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gun_Front_Walk_Recoil2_13
+      rect:
+        serializedVersion: 2
+        x: 2400
+        y: 910
+        width: 480
+        height: 480
+      alignment: 9
+      pivot: {x: 0.5, y: 0.104166664}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a250829b1b88463cab95d17b9e22446
+      internalID: -492132069
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gun_Front_Walk_Recoil2_14
+      rect:
+        serializedVersion: 2
+        x: 2400
+        y: 430
+        width: 480
+        height: 480
+      alignment: 9
+      pivot: {x: 0.5, y: 0.104166664}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 353378ebde95941dc9112d3920bd65e9
+      internalID: 226442932
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gun_Back_Idle_Recoil2_10
+      rect:
+        serializedVersion: 2
+        x: 2880
+        y: 2350
+        width: 480
+        height: 480
+      alignment: 9
+      pivot: {x: 0.5, y: 0.104166664}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b6255d7b5ff0e423cb1b7794bbdbf29a
+      internalID: -936588371
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gun_Back_Idle_Recoil2_11
+      rect:
+        serializedVersion: 2
+        x: 2880
+        y: 1870
+        width: 480
+        height: 480
+      alignment: 9
+      pivot: {x: 0.5, y: 0.104166664}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa4aedf1a52c34021ac4a57c5373cbd0
+      internalID: -1044448688
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gun_Back_Idle_Recoil2_12
+      rect:
+        serializedVersion: 2
+        x: 2880
+        y: 1390
+        width: 480
+        height: 480
+      alignment: 9
+      pivot: {x: 0.5, y: 0.104166664}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5cba7c6282235409faf4b8cee5f7e3b7
+      internalID: 1468754988
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gun_Back_Idle_Recoil2_13
+      rect:
+        serializedVersion: 2
+        x: 2880
+        y: 910
+        width: 480
+        height: 480
+      alignment: 9
+      pivot: {x: 0.5, y: 0.104166664}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a9b2952df1e149dea46f7c9c402ae10
+      internalID: -1882932151
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gun_Back_Idle_Recoil2_14
+      rect:
+        serializedVersion: 2
+        x: 2880
+        y: 430
+        width: 480
+        height: 480
+      alignment: 9
+      pivot: {x: 0.5, y: 0.104166664}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b48395622f2f64133beed879f6bce1d1
+      internalID: 847291341
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gun_Back_Walk_Recoil2_11
+      rect:
+        serializedVersion: 2
+        x: 3360
+        y: 1870
+        width: 480
+        height: 480
+      alignment: 9
+      pivot: {x: 0.5, y: 0.104166664}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ffd2dda439ae44b8908812d3357a177
+      internalID: 203767509
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gun_Back_Walk_Recoil2_12
+      rect:
+        serializedVersion: 2
+        x: 3360
+        y: 1390
+        width: 480
+        height: 480
+      alignment: 9
+      pivot: {x: 0.5, y: 0.104166664}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd26ba0d51c724747b93b114f9fe9105
+      internalID: -61780939
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gun_Back_Walk_Recoil2_13
+      rect:
+        serializedVersion: 2
+        x: 3360
+        y: 910
+        width: 480
+        height: 480
+      alignment: 9
+      pivot: {x: 0.5, y: 0.104166664}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 38be7b35d80634a01b8996627e7fda14
+      internalID: 974544272
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gun_Back_Walk_Recoil2_14
+      rect:
+        serializedVersion: 2
+        x: 3360
+        y: 430
+        width: 480
+        height: 480
+      alignment: 9
+      pivot: {x: 0.5, y: 0.104166664}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 95173601ae0d84c9a8b1d288f9b2a60d
+      internalID: 1713219082
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: ee6e65909a1ee439cb3774036945080d
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Gun_Back_Idle_0: 201937951
+      Gun_Back_Idle_1: -1405666091
+      Gun_Back_Idle_2: 1287669487
+      Gun_Back_Idle_3: 338140669
+      Gun_Back_Idle_4: 739132951
+      Gun_Back_Idle_Recoil1_5: -1806122158
+      Gun_Back_Idle_Recoil1_6: -443642692
+      Gun_Back_Idle_Recoil1_7: -955613186
+      Gun_Back_Idle_Recoil1_8: -1988828865
+      Gun_Back_Idle_Recoil1_9: -585745566
+      Gun_Back_Idle_Recoil2_10: -936588371
+      Gun_Back_Idle_Recoil2_11: -1044448688
+      Gun_Back_Idle_Recoil2_12: 1468754988
+      Gun_Back_Idle_Recoil2_13: -1882932151
+      Gun_Back_Idle_Recoil2_14: 847291341
+      Gun_Back_Walk_1: 1500973852
+      Gun_Back_Walk_2: 11477081
+      Gun_Back_Walk_3: -355807233
+      Gun_Back_Walk_4: -451803202
+      Gun_Back_Walk_Recoil1_6: 448452726
+      Gun_Back_Walk_Recoil1_7: -1561690926
+      Gun_Back_Walk_Recoil1_8: -1504719859
+      Gun_Back_Walk_Recoil1_9: 1740916937
+      Gun_Back_Walk_Recoil2_11: 203767509
+      Gun_Back_Walk_Recoil2_12: -61780939
+      Gun_Back_Walk_Recoil2_13: 974544272
+      Gun_Back_Walk_Recoil2_14: 1713219082
+      Gun_Death2_0: 1483590243
+      Gun_Death2_1: -264865933
+      Gun_Death2_2: 1152241891
+      Gun_Death2_3: 1386109525
+      Gun_Death2_4: 1393594164
+      Gun_Death_0: 401858947
+      Gun_Death_1: -1483919599
+      Gun_Death_2: -797131184
+      Gun_Death_3: 857921825
+      Gun_Death_4: 95853210
+      Gun_Front_Idle_0: -1813171824
+      Gun_Front_Idle_1: -1674569634
+      Gun_Front_Idle_2: 1361811517
+      Gun_Front_Idle_3: 1950425796
+      Gun_Front_Idle_4: -833687095
+      Gun_Front_Idle_Recoil1_5: 1655201263
+      Gun_Front_Idle_Recoil1_6: 938399736
+      Gun_Front_Idle_Recoil1_7: -1070821366
+      Gun_Front_Idle_Recoil1_8: -1247756414
+      Gun_Front_Idle_Recoil1_9: 336448417
+      Gun_Front_Idle_Recoil2_10: -36660050
+      Gun_Front_Idle_Recoil2_11: -1189443101
+      Gun_Front_Idle_Recoil2_12: -764286226
+      Gun_Front_Idle_Recoil2_13: 1917168891
+      Gun_Front_Idle_Recoil2_14: 548540570
+      Gun_Front_Walk_0: 1423611716
+      Gun_Front_Walk_1: -1860445751
+      Gun_Front_Walk_2: 1986442538
+      Gun_Front_Walk_3: 783612471
+      Gun_Front_Walk_4: -383446515
+      Gun_Front_Walk_Recoil1_5: 2013838281
+      Gun_Front_Walk_Recoil1_6: 612351564
+      Gun_Front_Walk_Recoil1_7: 372760504
+      Gun_Front_Walk_Recoil1_8: -511577227
+      Gun_Front_Walk_Recoil1_9: 271560888
+      Gun_Front_Walk_Recoil2_10: 210738801
+      Gun_Front_Walk_Recoil2_11: -1445933659
+      Gun_Front_Walk_Recoil2_12: 331083749
+      Gun_Front_Walk_Recoil2_13: -492132069
+      Gun_Front_Walk_Recoil2_14: 226442932
+      Gun_Huff2_0: 1164064300
+      Gun_Huff2_1: 607962766
+      Gun_Huff2_2: -1163056113
+      Gun_Huff2_3: -1948549390
+      Gun_Huff2_4: 999906000
+      Gun_Huff_0: -2055839012
+      Gun_Huff_1: 901470535
+      Gun_Huff_2: -2080486629
+      Gun_Huff_3: -820343895
+      Gun_Side_Idle2_0: 1196058632
+      Gun_Side_Idle2_1: 281331984
+      Gun_Side_Idle2_2: 859782735
+      Gun_Side_Idle2_3: -929876684
+      Gun_Side_Idle2_4: -446345791
+      Gun_Side_Idle2_Recoil1_5: -1734573061
+      Gun_Side_Idle2_Recoil1_6: 1235552180
+      Gun_Side_Idle2_Recoil1_7: 2080772607
+      Gun_Side_Idle2_Recoil1_8: -1363973823
+      Gun_Side_Idle2_Recoil1_9: -200056405
+      Gun_Side_Idle2_Recoil2_10: 1769363128
+      Gun_Side_Idle2_Recoil2_11: -71036812
+      Gun_Side_Idle2_Recoil2_12: 1773804475
+      Gun_Side_Idle2_Recoil2_13: 473777682
+      Gun_Side_Idle2_Recoil2_14: -1948953891
+      Gun_Side_Idle_0: 201344053
+      Gun_Side_Idle_1: -2134043734
+      Gun_Side_Idle_2: 2028295792
+      Gun_Side_Idle_3: 1514725568
+      Gun_Side_Idle_4: -649058043
+      Gun_Side_Idle_Recoil1_5: -1033068377
+      Gun_Side_Idle_Recoil1_6: 1201774157
+      Gun_Side_Idle_Recoil1_7: -983884769
+      Gun_Side_Idle_Recoil1_8: 1060557376
+      Gun_Side_Idle_Recoil1_9: 1539883127
+      Gun_Side_Idle_Recoil2_10: -190281618
+      Gun_Side_Idle_Recoil2_11: 119796486
+      Gun_Side_Idle_Recoil2_12: -1992515053
+      Gun_Side_Idle_Recoil2_13: -2020856734
+      Gun_Side_Idle_Recoil2_14: 590633340
+      Gun_Side_Walk2_0: 310136154
+      Gun_Side_Walk2_1: -1694267523
+      Gun_Side_Walk2_2: 127399524
+      Gun_Side_Walk2_3: 306024611
+      Gun_Side_Walk2_4: 212026567
+      Gun_Side_Walk2_Recoil1_5: 1795267583
+      Gun_Side_Walk2_Recoil1_6: 1247981358
+      Gun_Side_Walk2_Recoil1_7: 1800188293
+      Gun_Side_Walk2_Recoil1_8: 1897216513
+      Gun_Side_Walk2_Recoil1_9: -400272956
+      Gun_Side_Walk2_Recoil2_10: -39708907
+      Gun_Side_Walk2_Recoil2_11: -686599364
+      Gun_Side_Walk2_Recoil2_12: -1401036062
+      Gun_Side_Walk2_Recoil2_13: -1129210586
+      Gun_Side_Walk2_Recoil2_14: 385752738
+      Gun_Side_Walk_0: -662825309
+      Gun_Side_Walk_1: -1125637857
+      Gun_Side_Walk_2: -764309098
+      Gun_Side_Walk_3: -1695418910
+      Gun_Side_Walk_4: 460995079
+      Gun_Side_Walk_Recoil1_5: -1018884142
+      Gun_Side_Walk_Recoil1_6: 1628324106
+      Gun_Side_Walk_Recoil1_7: 832641166
+      Gun_Side_Walk_Recoil1_8: 903363500
+      Gun_Side_Walk_Recoil1_9: -288915225
+      Gun_Side_Walk_Recoil2_10: 397036258
+      Gun_Side_Walk_Recoil2_11: -827041502
+      Gun_Side_Walk_Recoil2_12: -1262201673
+      Gun_Side_Walk_Recoil2_13: -1235154386
+      Gun_Side_Walk_Recoil2_14: -1232047721
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

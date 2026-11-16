@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
 
@@ -11,7 +12,10 @@ using UnityEngine.SceneManagement;
 ///   A / Left arrow  = left (left-facing art)
 ///   D / Right arrow = right (right-facing art)
 ///   Space (held)    = sprint (sweat drops fly off now and then)
-///   X               = drill the wall tile in front (hold to keep drilling)
+///   X               = drill the wall tile in front / fire the gun ahead (hold to keep going)
+///   Q               = swap between the drill and the gun (same as the HUD weapon buttons)
+///   Left click      = the same, aimed at the mouse: the drill turns to the nearest of up/down/left/right,
+///                     the gun fires straight at the cursor at any angle (clicks on HUD buttons are ignored)
 /// Two directions at once move diagonally while the dino keeps facing the one held first.
 /// Starting and stopping ease in/out over Acceleration Time / Deceleration Time.
 /// Walls stop it through physics, so it needs the Rigidbody2D + collider on the same object.
@@ -40,6 +44,23 @@ public class DinoController : MonoBehaviour
     [Tooltip("Holding the gun (plays the Gun_ animations). Ignored while Has Drill is on. " +
              "The weapon-select buttons call EquipDrill / EquipGun.")]
     public bool hasGun = false;
+
+    [Header("Gun")]
+    [Tooltip("What the gun fires (for now the tall crab's bullet art, as the DinoBullet prefab).")]
+    public CrabBullet gunBullet;
+    [Tooltip("Seconds between shots; holding X keeps firing at this rate.")]
+    [Min(0.05f)] public float fireInterval = 0.35f;
+    [Min(0)] public int gunDamage = 1;
+    [Tooltip("Where the bullet leaves the gun, in tiles from the feet (x right, y up), for each way the dino faces. " +
+             "Measured from the gun art. Left is Right mirrored.")]
+    public Vector2 muzzleRight = new Vector2(1.43f, 0.78f);
+    public Vector2 muzzleFront = new Vector2(-0.59f, 0.13f);
+    public Vector2 muzzleBack = new Vector2(0.81f, 1.88f);
+    [Tooltip("Each shot swaps the idle/walk art for these versions in turn (gun kicked back 2 px, then 3 px), " +
+             "staying in step with the walk. Reorder to change the kick, e.g. Recoil2 then Recoil1.")]
+    public string[] recoilFrames = { "Recoil1", "Recoil2" };
+    [Tooltip("Seconds each recoil frame shows.")]
+    [Min(0.01f)] public float recoilFrameTime = 0.07f;
 
     [Tooltip("The breakable wall layer. Found automatically if left empty.")]
     public DestructibleTilemap walls;
@@ -119,7 +140,9 @@ public class DinoController : MonoBehaviour
 
     enum View { Right, Left, Front, Back }
 
-    InputAction move, sprint, attack;
+    InputAction move, sprint, attack, click, swapWeapon;
+    bool aimWithMouse;   // the last attack press was a click: aim at the cursor
+    bool clickOnUI;      // the current click started on a HUD button, so it isn't an attack
     Rigidbody2D body;
     Animator animator;
     SpriteRenderer sprite;
@@ -162,23 +185,25 @@ public class DinoController : MonoBehaviour
 
         sprint = new InputAction("Sprint", InputActionType.Button, "<Keyboard>/space");
         attack = new InputAction("Attack", InputActionType.Button, "<Keyboard>/x");
+        click = new InputAction("Click Attack", InputActionType.Button, "<Mouse>/leftButton");
+        swapWeapon = new InputAction("Swap Weapon", InputActionType.Button, "<Keyboard>/q");
 
         if (walls == null) walls = FindFirstObjectByType<DestructibleTilemap>();
     }
 
     void OnEnable()
     {
-        move.Enable(); sprint.Enable(); attack.Enable();
+        move.Enable(); sprint.Enable(); attack.Enable(); click.Enable(); swapWeapon.Enable();
         if (health != null) { health.Damaged += OnDamaged; health.Died += OnDied; }
     }
 
     void OnDisable()
     {
-        move.Disable(); sprint.Disable(); attack.Disable();
+        move.Disable(); sprint.Disable(); attack.Disable(); click.Disable(); swapWeapon.Disable();
         body.linearVelocity = Vector2.zero;
         if (health != null) { health.Damaged -= OnDamaged; health.Died -= OnDied; }
     }
-    void OnDestroy() { move.Dispose(); sprint.Dispose(); attack.Dispose(); }
+    void OnDestroy() { move.Dispose(); sprint.Dispose(); attack.Dispose(); click.Dispose(); swapWeapon.Dispose(); }
 
     void Update()
     {
@@ -186,15 +211,23 @@ public class DinoController : MonoBehaviour
         if (input.sqrMagnitude > 1f) input.Normalize(); // diagonals aren't faster
 
         if (hurtTimer > 0f) hurtTimer -= Time.deltaTime;
+        if (swapWeapon.WasPressedThisFrame() && !IsDead) SwapWeapon();
         // Remember a press even mid-attack or while stunned, so quick taps aren't lost.
-        if (attack.WasPressedThisFrame()) bufferedPress = pressBuffer;
-        else if (bufferedPress > 0f) bufferedPress -= Time.deltaTime;
+        if (click.WasPressedThisFrame())
+        {
+            clickOnUI = EventSystem.current != null && EventSystem.current.IsPointerOverGameObject();
+            if (!clickOnUI) { bufferedPress = pressBuffer; aimWithMouse = true; }
+        }
+        if (attack.WasPressedThisFrame()) { bufferedPress = pressBuffer; aimWithMouse = false; }
+        else if (bufferedPress > 0f && !click.WasPressedThisFrame()) bufferedPress -= Time.deltaTime;
         bool locked = IsDead || IsHurt || (IsDrilling && stopWhileDrilling);
         IsMoving = !locked && input.sqrMagnitude > 0.01f;
         IsSprinting = IsMoving && sprint.IsPressed();
         if (IsMoving) UpdateFacing();
 
-        if (!IsDead && !IsHurt) UpdateAttack();
+        if (gunTimer > 0f) gunTimer -= Time.deltaTime;
+        if (recoilTimer > 0f) recoilTimer -= Time.deltaTime;
+        if (!IsDead && !IsHurt) { UpdateAttack(); UpdateGun(); }
         UpdateAnimation();
     }
 
@@ -256,15 +289,43 @@ public class DinoController : MonoBehaviour
         }
 
         // Start an attack on press, and keep drilling while X stays held.
-        if (hasDrill && (bufferedPress > 0f || attack.IsPressed()))
+        if (hasDrill && (bufferedPress > 0f || AttackHeld))
         {
             bufferedPress = 0f;
+            if (aimWithMouse) FaceTowards(Aim(DrillOrigin())); // turn to the side the cursor is on
             attackDir = Cardinal(Facing);
             attackTimer = ClipLength(AttackState());
             hitDone = false;
             hitThisAttack.Clear();
             currentState = null; // restart the attack animation from its first frame
         }
+    }
+
+    // X held, or the mouse button held after a click that wasn't on the HUD.
+    bool AttackHeld => attack.IsPressed() || (click.IsPressed() && !clickOnUI && aimWithMouse);
+
+    // The mouse in the world (on the dino's plane).
+    Vector2 MouseWorld()
+    {
+        var cam = Camera.main;
+        if (cam == null || Mouse.current == null) return (Vector2)transform.position + Facing;
+        Vector3 p = Mouse.current.position.ReadValue();
+        p.z = -cam.transform.position.z;
+        return cam.ScreenToWorldPoint(p);
+    }
+
+    // From a point to the mouse (or straight ahead if the cursor is right on it).
+    Vector2 Aim(Vector2 from)
+    {
+        Vector2 v = MouseWorld() - from;
+        return v.sqrMagnitude > 0.0001f ? v : Facing;
+    }
+
+    // Turn to the nearest of up/down/left/right toward a direction.
+    void FaceTowards(Vector2 dir)
+    {
+        Facing = Cardinal(dir);
+        if (Facing.x != 0) facedLeft = Facing.x < 0;
     }
 
     // Middle of the feet collider: where the drill is aimed from.
@@ -388,13 +449,70 @@ public class DinoController : MonoBehaviour
         return clip != null ? clip.length : 0.5f;
     }
 
+    // ---------- gun ----------
+
+    float gunTimer, recoilTimer;
+
+    // X with the gun: fire straight ahead. Click: fire straight at the cursor, at any angle (the art turns to the
+    // nearest side). Holding either keeps firing every Fire Interval.
+    void UpdateGun()
+    {
+        if (hasDrill || !hasGun || gunBullet == null || gunTimer > 0f) return;
+        if (!(bufferedPress > 0f || AttackHeld)) return;
+        bufferedPress = 0f;
+        gunTimer = fireInterval;
+
+        if (aimWithMouse) FaceTowards(Aim(DrillOrigin()));
+        Vector2 dir = Cardinal(Facing);
+        View view = ViewOf(dir);
+        Vector2 muzzle = view switch
+        {
+            View.Front => muzzleFront,
+            View.Back => muzzleBack,
+            View.Left => new Vector2(-muzzleRight.x, muzzleRight.y),
+            _ => muzzleRight,
+        };
+        Vector2 feetPos = transform.position;
+        Vector2 center = DrillOrigin(); // middle of the feet collider: the height shots travel at
+
+        Vector2 start; float artHeight;
+        if (view == View.Left || view == View.Right)
+        {
+            start = new Vector2(feetPos.x + muzzle.x, center.y); // fly along the ground line...
+            artHeight = feetPos.y + muzzle.y - center.y;         // ...drawn at the gun's height
+        }
+        else
+        {
+            start = feetPos + muzzle; // up/down: the gun's spot is on the flight line itself
+            artHeight = 0f;
+        }
+        // Aimed with the mouse: fly so the bullet's art (drawn Art Height above its path) crosses the cursor.
+        if (aimWithMouse)
+        {
+            Vector2 toCursor = MouseWorld() - new Vector2(0f, artHeight) - start;
+            if (toCursor.sqrMagnitude > 0.01f && Vector2.Dot(toCursor, dir) > 0f) dir = toCursor.normalized;
+        }
+        recoilTimer = recoilFrames.Length * recoilFrameTime;
+        var shot = Instantiate(gunBullet, start, Quaternion.identity);
+        shot.firedByPlayer = true;
+        shot.damage = gunDamage;
+        Vector2 castFrom = view == View.Left || view == View.Right ? new Vector2(center.x, start.y) : new Vector2(start.x, center.y);
+        shot.Launch(dir, gameObject, castFrom, artHeight);
+    }
+
     // ---------- weapons ----------
 
     /// <summary>Switch to the drill (X drills).</summary>
     public void EquipDrill() => SetWeapon(true, false);
 
-    /// <summary>Switch to the gun (Gun_ animations; it doesn't shoot yet).</summary>
+    /// <summary>Switch to the gun (Gun_ animations; X or click fires).</summary>
     public void EquipGun() => SetWeapon(false, true);
+
+    /// <summary>Switch to whichever weapon isn't in hand (Q).</summary>
+    public void SwapWeapon()
+    {
+        if (hasDrill) EquipGun(); else EquipDrill();
+    }
 
     void SetWeapon(bool drill, bool gun)
     {
@@ -434,6 +552,14 @@ public class DinoController : MonoBehaviour
                 View.Left => IsMoving ? leftWalk : leftIdle,
                 _ => IsMoving ? rightWalk : rightIdle,
             };
+            // Just fired: show the matching recoil frames (if the art has them).
+            if (recoilTimer > 0f && recoilFrames.Length > 0)
+            {
+                float total = recoilFrames.Length * recoilFrameTime;
+                int i = Mathf.Clamp(Mathf.FloorToInt((total - recoilTimer) / recoilFrameTime), 0, recoilFrames.Length - 1);
+                string recoil = state + "_" + recoilFrames[i];
+                if (animator.HasState(0, Animator.StringToHash(recoil))) state = recoil;
+            }
         }
 
         bool side = view == View.Right || view == View.Left;
@@ -452,9 +578,18 @@ public class DinoController : MonoBehaviour
         animator.speed = IsSprinting ? sprintAnimationSpeed : 1f;
         if (state != currentState)
         {
-            animator.Play(state, 0, 0f);
+            // Swapping between a walk/idle and its recoil version: carry on from the same frame.
+            bool sameMove = currentState != null && BaseState(state) == BaseState(currentState);
+            float t = sameMove ? animator.GetCurrentAnimatorStateInfo(0).normalizedTime : 0f;
+            animator.Play(state, 0, t);
             currentState = state;
         }
+    }
+
+    static string BaseState(string state)
+    {
+        int i = state.IndexOf("_Recoil", System.StringComparison.Ordinal);
+        return i >= 0 ? state.Substring(0, i) : state;
     }
 
     // While sprinting: play one burst of drops, wait sweatGap seconds, repeat.
