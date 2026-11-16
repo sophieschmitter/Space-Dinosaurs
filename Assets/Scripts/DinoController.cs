@@ -221,7 +221,7 @@ public class DinoController : MonoBehaviour
         // Remember a press even mid-attack or while stunned, so quick taps aren't lost.
         if (click.WasPressedThisFrame())
         {
-            clickOnUI = EventSystem.current != null && EventSystem.current.IsPointerOverGameObject();
+            clickOnUI = PointerOverButton();
             if (!clickOnUI) { bufferedPress = pressBuffer; aimWithMouse = true; }
         }
         if (attack.WasPressedThisFrame()) { bufferedPress = pressBuffer; aimWithMouse = false; }
@@ -305,6 +305,21 @@ public class DinoController : MonoBehaviour
             hitThisAttack.Clear();
             currentState = null; // restart the attack animation from its first frame
         }
+    }
+
+    // True when the mouse is over a clickable HUD control (a Button etc.). Only those swallow the click:
+    // other UI under the cursor, like the floor Image on the world-space Canvas, doesn't block attacking.
+    static readonly System.Collections.Generic.List<RaycastResult> uiHits = new();
+    static bool PointerOverButton()
+    {
+        var es = EventSystem.current;
+        if (es == null || Mouse.current == null) return false;
+        var data = new PointerEventData(es) { position = Mouse.current.position.ReadValue() };
+        uiHits.Clear();
+        es.RaycastAll(data, uiHits);
+        foreach (var hit in uiHits)
+            if (hit.gameObject.GetComponentInParent<UnityEngine.UI.Selectable>() != null) return true;
+        return false;
     }
 
     // X held, or the mouse button held after a click that wasn't on the HUD.
