@@ -47,6 +47,12 @@ public static class LaserBulletBuilder
         provider.Apply();
         importer.SaveAndReimport();
         var laser = AssetDatabase.LoadAllAssetsAtPath(SheetPath).OfType<Sprite>().FirstOrDefault(s => s.name == "Laser");
+        if (laser == null) // first slice: the new sprite can take one more import to show up
+        {
+            AssetDatabase.ImportAsset(SheetPath, ImportAssetOptions.ForceSynchronousImport | ImportAssetOptions.ForceUpdate);
+            laser = AssetDatabase.LoadAllAssetsAtPath(SheetPath).OfType<Sprite>().FirstOrDefault(s => s.name == "Laser");
+        }
+        if (laser == null) { Debug.LogError("Laser: couldn't load the sliced Laser sprite; run this again."); return; }
 
         var root = PrefabUtility.LoadPrefabContents(BulletPath);
         try
