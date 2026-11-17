@@ -203,683 +203,683 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Jumpy Crab Spritewprk_0
+      name: jumpycrab_Idle_Front_0
       rect:
         serializedVersion: 2
-        x: 79
-        y: 2079
-        width: 352
-        height: 212
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 0
+        y: 2080
+        width: 480
+        height: 480
+      alignment: 9
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 0008db13ffbd2ddf0800000000000000
-      internalID: -156821147906899968
+      spriteID: 75b331dd82a634ca0b12c722097991fa
+      internalID: 1889692411
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Jumpy Crab Spritewprk_1
+      name: jumpycrab_Idle_Front_1
       rect:
         serializedVersion: 2
-        x: 559
-        y: 2079
-        width: 352
-        height: 212
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 0
+        y: 1600
+        width: 480
+        height: 480
+      alignment: 9
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 3466581d83e614490800000000000000
-      internalID: -7763803092297619901
+      spriteID: acae8a8c32fac4f1b8f8d991f8b85d75
+      internalID: -1555554783
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Jumpy Crab Spritewprk_2
+      name: jumpycrab_Idle_Front_2
       rect:
         serializedVersion: 2
-        x: 1039
-        y: 2079
-        width: 342
-        height: 222
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 0
+        y: 1120
+        width: 480
+        height: 480
+      alignment: 9
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: f24f55e0d18bbcab0800000000000000
-      internalID: -4986689727448615889
+      spriteID: 9ba8084064269424393e0427053e2b27
+      internalID: 147902484
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Jumpy Crab Spritewprk_3
+      name: jumpycrab_Idle_Front_3
       rect:
         serializedVersion: 2
-        x: 1509
-        y: 2079
-        width: 352
-        height: 212
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 0
+        y: 640
+        width: 480
+        height: 480
+      alignment: 9
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: eadd06348356350c0800000000000000
-      internalID: -4588212303037407826
+      spriteID: 157f6215183fa4edea44a36eb52dbe29
+      internalID: 2036191361
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Jumpy Crab Spritewprk_4
+      name: jumpycrab_Idle_Side_0
       rect:
         serializedVersion: 2
-        x: 1989
-        y: 2079
-        width: 342
-        height: 222
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 480
+        y: 2080
+        width: 480
+        height: 480
+      alignment: 9
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 65c359f0a7abcdee0800000000000000
-      internalID: -1234907164396143530
+      spriteID: 30acb512c36ea4105a5ef812c92376b3
+      internalID: 815679022
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Jumpy Crab Spritewprk_5
+      name: jumpycrab_Idle_Side_1
       rect:
         serializedVersion: 2
-        x: 2479
-        y: 2079
-        width: 352
-        height: 222
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 480
+        y: 1600
+        width: 480
+        height: 480
+      alignment: 9
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 25384054bba2139e0800000000000000
-      internalID: -1643485405208345774
+      spriteID: 76271e91d749c44d1a28c2108248d304
+      internalID: 1679049035
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Jumpy Crab Spritewprk_6
+      name: jumpycrab_Idle_Side_2
       rect:
         serializedVersion: 2
-        x: 2959
-        y: 2079
-        width: 352
-        height: 202
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 480
+        y: 1120
+        width: 480
+        height: 480
+      alignment: 9
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 9802c4c3f28dd07f0800000000000000
-      internalID: -644621474257428343
+      spriteID: aea38ea7c9e03489db14d183b7f1c0bf
+      internalID: 1768558820
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Jumpy Crab Spritewprk_7
+      name: jumpycrab_Walk_Front_0
       rect:
         serializedVersion: 2
-        x: 3439
-        y: 2079
-        width: 352
-        height: 212
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 960
+        y: 2080
+        width: 480
+        height: 480
+      alignment: 9
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: bf55f55c5013ac7c0800000000000000
-      internalID: -4050371014010382853
+      spriteID: 12303e61e87154425ab3db8548a4819c
+      internalID: -791308418
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Jumpy Crab Spritewprk_8
+      name: jumpycrab_Walk_Front_1
       rect:
         serializedVersion: 2
-        x: 79
-        y: 1599
-        width: 352
-        height: 202
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 960
+        y: 1600
+        width: 480
+        height: 480
+      alignment: 9
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 68a791d7c75e74970800000000000000
-      internalID: 8739205924773264006
+      spriteID: f354293e106f345fc9e9b66d355cd392
+      internalID: -1332677683
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Jumpy Crab Spritewprk_9
+      name: jumpycrab_Walk_Front_2
       rect:
         serializedVersion: 2
-        x: 559
-        y: 1599
-        width: 352
-        height: 212
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 960
+        y: 1120
+        width: 480
+        height: 480
+      alignment: 9
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 04dc07a898105db60800000000000000
-      internalID: 7770118422342454592
+      spriteID: 4ca683645596f4209b33a00c2b7fc589
+      internalID: 1557442230
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Jumpy Crab Spritewprk_10
+      name: jumpycrab_Walk_Front_3
       rect:
         serializedVersion: 2
-        x: 1079
-        y: 1599
-        width: 232
-        height: 202
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 960
+        y: 640
+        width: 480
+        height: 480
+      alignment: 9
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 55145a8d655c1f5f0800000000000000
-      internalID: -724581088237371051
+      spriteID: fa840777cca2048ba94b663257a878f1
+      internalID: 1055851600
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Jumpy Crab Spritewprk_11
+      name: jumpycrab_Idle_Back_0
       rect:
         serializedVersion: 2
-        x: 1509
-        y: 1599
-        width: 352
-        height: 202
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1440
+        y: 2080
+        width: 480
+        height: 480
+      alignment: 9
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: a4b7774580acbbfb0800000000000000
-      internalID: -4630885654694757558
+      spriteID: 804953ea207e64311b6a05e2ee55d3e1
+      internalID: 807922137
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Jumpy Crab Spritewprk_12
+      name: jumpycrab_Idle_Back_1
       rect:
         serializedVersion: 2
-        x: 2049
-        y: 1599
-        width: 252
-        height: 202
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1440
+        y: 1600
+        width: 480
+        height: 480
+      alignment: 9
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 06c62fb9df2efad30800000000000000
-      internalID: 4445020936108928096
+      spriteID: f38724b2c09074ace9dc1706072bc4ee
+      internalID: -429314247
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Jumpy Crab Spritewprk_13
+      name: jumpycrab_Idle_Back_2
       rect:
         serializedVersion: 2
-        x: 2479
-        y: 1599
-        width: 352
-        height: 192
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1440
+        y: 1120
+        width: 480
+        height: 480
+      alignment: 9
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 5dc5a1c3c625ad1f0800000000000000
-      internalID: -1019411740827689771
+      spriteID: a168c0d751cb24ddb9ace3c0644a4c13
+      internalID: 1669782726
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Jumpy Crab Spritewprk_14
+      name: jumpycrab_Idle_Back_3
       rect:
         serializedVersion: 2
-        x: 2959
-        y: 1599
-        width: 352
-        height: 212
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1440
+        y: 640
+        width: 480
+        height: 480
+      alignment: 9
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 0d29fca7930cf1580800000000000000
-      internalID: -8854146989281013040
+      spriteID: de2eb03ad15224b75ba98719624680c4
+      internalID: 1424527067
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Jumpy Crab Spritewprk_15
+      name: jumpycrab_Walk_Back_0
       rect:
         serializedVersion: 2
-        x: 3439
-        y: 1599
-        width: 352
-        height: 182
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1920
+        y: 2080
+        width: 480
+        height: 480
+      alignment: 9
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 99a8b82b255f6ca30800000000000000
-      internalID: 4235342235120143001
+      spriteID: 9c5c745ba3c0e407fb3af8e1aafaa428
+      internalID: -668903962
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Jumpy Crab Spritewprk_16
+      name: jumpycrab_Walk_Back_1
       rect:
         serializedVersion: 2
-        x: 79
-        y: 1119
-        width: 352
-        height: 192
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1920
+        y: 1600
+        width: 480
+        height: 480
+      alignment: 9
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: bc34eeed7698cdb90800000000000000
-      internalID: -7215741423739583541
+      spriteID: d13646ad99c9b42689a9e363e2487cee
+      internalID: 954386230
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Jumpy Crab Spritewprk_17
+      name: jumpycrab_Walk_Back_2
       rect:
         serializedVersion: 2
-        x: 559
-        y: 1119
-        width: 352
-        height: 212
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1920
+        y: 1120
+        width: 480
+        height: 480
+      alignment: 9
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: ff181f7f34d7e7140800000000000000
-      internalID: 4719347190406939135
+      spriteID: 4368588ce547c4630a20b73bc33f8d63
+      internalID: -1583372842
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Jumpy Crab Spritewprk_18
+      name: jumpycrab_Walk_Back_3
       rect:
         serializedVersion: 2
-        x: 1039
-        y: 1119
-        width: 342
-        height: 212
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1920
+        y: 640
+        width: 480
+        height: 480
+      alignment: 9
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 8635c85fccfbd5210800000000000000
-      internalID: 1323424752530641768
+      spriteID: 09e638eed2e614d44aa44864caff2201
+      internalID: -1083286411
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Jumpy Crab Spritewprk_19
+      name: jumpycrab_Jump_0
       rect:
         serializedVersion: 2
-        x: 1509
-        y: 1119
-        width: 352
-        height: 192
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 2400
+        y: 2080
+        width: 480
+        height: 480
+      alignment: 9
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 9a2c312507b9cbf50800000000000000
-      internalID: 6898559635940426409
+      spriteID: 0b89091c3133241269d0a4b085f01b5a
+      internalID: 1423984005
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Jumpy Crab Spritewprk_20
+      name: jumpycrab_Jump_1
       rect:
         serializedVersion: 2
-        x: 2009
-        y: 1119
-        width: 322
-        height: 222
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 2400
+        y: 1600
+        width: 480
+        height: 480
+      alignment: 9
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 806f5a0696f9ddd20800000000000000
-      internalID: 3304972976501683720
+      spriteID: 5f38044fff34e4b32b0dd64206cc2779
+      internalID: 841317460
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Jumpy Crab Spritewprk_21
+      name: jumpycrab_Jump_2
       rect:
         serializedVersion: 2
-        x: 2479
-        y: 1119
-        width: 352
-        height: 192
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 2400
+        y: 1120
+        width: 480
+        height: 480
+      alignment: 9
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 71fa224672522c170800000000000000
-      internalID: 8197155122881670935
+      spriteID: fa61345115e4e40da9e6eb0c13bf8a6c
+      internalID: 253719009
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Jumpy Crab Spritewprk_22
+      name: jumpycrab_Jump_3
       rect:
         serializedVersion: 2
-        x: 2959
-        y: 1119
-        width: 352
-        height: 202
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 2400
+        y: 640
+        width: 480
+        height: 480
+      alignment: 9
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 487fdf3e7e8805530800000000000000
-      internalID: 3841721011690928004
+      spriteID: 2e2ae45b7872449949ffeea25a13d8e0
+      internalID: -2108522420
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Jumpy Crab Spritewprk_23
+      name: jumpycrab_Jump_4
       rect:
         serializedVersion: 2
-        x: 3449
-        y: 1119
-        width: 352
-        height: 182
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 2400
+        y: 160
+        width: 480
+        height: 480
+      alignment: 9
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 85b11969f8d2efd40800000000000000
-      internalID: 5619979479734623064
+      spriteID: 0ea0667684171438eb7f297c0066669b
+      internalID: -983685826
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Jumpy Crab Spritewprk_24
+      name: jumpycrab_Victory_0
       rect:
         serializedVersion: 2
-        x: 79
-        y: 639
-        width: 352
-        height: 202
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 2880
+        y: 2080
+        width: 480
+        height: 480
+      alignment: 9
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 1a1ebd0a8c0e88e70800000000000000
-      internalID: 9117784597908414881
+      spriteID: 622dd47e97b5c413090f350e8248f9f5
+      internalID: 1698639575
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Jumpy Crab Spritewprk_25
+      name: jumpycrab_Victory_1
       rect:
         serializedVersion: 2
-        x: 1019
-        y: 639
-        width: 382
-        height: 202
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 2880
+        y: 1600
+        width: 480
+        height: 480
+      alignment: 9
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 4efa8ad1277722760800000000000000
-      internalID: 7431633667122311140
+      spriteID: e9a1394649550408f9f0cbbb3d9813c3
+      internalID: 861825826
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Jumpy Crab Spritewprk_26
+      name: jumpycrab_Victory_2
       rect:
         serializedVersion: 2
-        x: 1509
-        y: 639
-        width: 352
-        height: 202
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 2880
+        y: 1120
+        width: 480
+        height: 480
+      alignment: 9
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: b31d05944a5ee39c0800000000000000
-      internalID: -3945463729762545349
+      spriteID: d82ef72877b594ae1b861a9cb7387338
+      internalID: -2081434256
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Jumpy Crab Spritewprk_27
+      name: jumpycrab_Victory_3
       rect:
         serializedVersion: 2
-        x: 1989
-        y: 639
-        width: 362
-        height: 202
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 2880
+        y: 640
+        width: 480
+        height: 480
+      alignment: 9
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 2dd6d9712ece90b30800000000000000
-      internalID: 4254191778831101394
+      spriteID: 11c713d36edfe4e0da2ac7213b73331c
+      internalID: 141168281
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Jumpy Crab Spritewprk_28
+      name: jumpycrab_Death_0
       rect:
         serializedVersion: 2
-        x: 2489
-        y: 659
-        width: 322
-        height: 242
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 3360
+        y: 2080
+        width: 480
+        height: 480
+      alignment: 9
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 30108f2a8b09923e0800000000000000
-      internalID: -2077970630372228861
+      spriteID: f802ff4763f6b4b0092af261d2d02a7c
+      internalID: -469550016
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Jumpy Crab Spritewprk_29
+      name: jumpycrab_Death_1
       rect:
         serializedVersion: 2
-        x: 2959
-        y: 639
-        width: 352
-        height: 212
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 3360
+        y: 1600
+        width: 480
+        height: 480
+      alignment: 9
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 52936344cae5a9340800000000000000
-      internalID: 4871310040926402853
+      spriteID: 9f1c0d1374c39463680d582664dc5df0
+      internalID: 924822282
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Jumpy Crab Spritewprk_30
+      name: jumpycrab_Death_2
       rect:
         serializedVersion: 2
-        x: 2479
-        y: 179
-        width: 352
-        height: 202
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 3360
+        y: 1120
+        width: 480
+        height: 480
+      alignment: 9
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: de5d5ffc67361af10800000000000000
-      internalID: 2279212248372467181
+      spriteID: fa25a9fde649b4d56999349cb5ab4c96
+      internalID: 1398777448
       vertices: []
       indices: 
       edges: []
@@ -888,7 +888,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 0a6ad8534943744149fc2ec683b31bf1
     internalID: 0
     vertices: []
     indices: 
@@ -898,37 +898,37 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Jumpy Crab Spritewprk_0: -156821147906899968
-      Jumpy Crab Spritewprk_1: -7763803092297619901
-      Jumpy Crab Spritewprk_10: -724581088237371051
-      Jumpy Crab Spritewprk_11: -4630885654694757558
-      Jumpy Crab Spritewprk_12: 4445020936108928096
-      Jumpy Crab Spritewprk_13: -1019411740827689771
-      Jumpy Crab Spritewprk_14: -8854146989281013040
-      Jumpy Crab Spritewprk_15: 4235342235120143001
-      Jumpy Crab Spritewprk_16: -7215741423739583541
-      Jumpy Crab Spritewprk_17: 4719347190406939135
-      Jumpy Crab Spritewprk_18: 1323424752530641768
-      Jumpy Crab Spritewprk_19: 6898559635940426409
-      Jumpy Crab Spritewprk_2: -4986689727448615889
-      Jumpy Crab Spritewprk_20: 3304972976501683720
-      Jumpy Crab Spritewprk_21: 8197155122881670935
-      Jumpy Crab Spritewprk_22: 3841721011690928004
-      Jumpy Crab Spritewprk_23: 5619979479734623064
-      Jumpy Crab Spritewprk_24: 9117784597908414881
-      Jumpy Crab Spritewprk_25: 7431633667122311140
-      Jumpy Crab Spritewprk_26: -3945463729762545349
-      Jumpy Crab Spritewprk_27: 4254191778831101394
-      Jumpy Crab Spritewprk_28: -2077970630372228861
-      Jumpy Crab Spritewprk_29: 4871310040926402853
-      Jumpy Crab Spritewprk_3: -4588212303037407826
-      Jumpy Crab Spritewprk_30: 2279212248372467181
-      Jumpy Crab Spritewprk_4: -1234907164396143530
-      Jumpy Crab Spritewprk_5: -1643485405208345774
-      Jumpy Crab Spritewprk_6: -644621474257428343
-      Jumpy Crab Spritewprk_7: -4050371014010382853
-      Jumpy Crab Spritewprk_8: 8739205924773264006
-      Jumpy Crab Spritewprk_9: 7770118422342454592
+      jumpycrab_Death_0: -469550016
+      jumpycrab_Death_1: 924822282
+      jumpycrab_Death_2: 1398777448
+      jumpycrab_Idle_Back_0: 807922137
+      jumpycrab_Idle_Back_1: -429314247
+      jumpycrab_Idle_Back_2: 1669782726
+      jumpycrab_Idle_Back_3: 1424527067
+      jumpycrab_Idle_Front_0: 1889692411
+      jumpycrab_Idle_Front_1: -1555554783
+      jumpycrab_Idle_Front_2: 147902484
+      jumpycrab_Idle_Front_3: 2036191361
+      jumpycrab_Idle_Side_0: 815679022
+      jumpycrab_Idle_Side_1: 1679049035
+      jumpycrab_Idle_Side_2: 1768558820
+      jumpycrab_Jump_0: 1423984005
+      jumpycrab_Jump_1: 841317460
+      jumpycrab_Jump_2: 253719009
+      jumpycrab_Jump_3: -2108522420
+      jumpycrab_Jump_4: -983685826
+      jumpycrab_Victory_0: 1698639575
+      jumpycrab_Victory_1: 861825826
+      jumpycrab_Victory_2: -2081434256
+      jumpycrab_Victory_3: 141168281
+      jumpycrab_Walk_Back_0: -668903962
+      jumpycrab_Walk_Back_1: 954386230
+      jumpycrab_Walk_Back_2: -1583372842
+      jumpycrab_Walk_Back_3: -1083286411
+      jumpycrab_Walk_Front_0: -791308418
+      jumpycrab_Walk_Front_1: -1332677683
+      jumpycrab_Walk_Front_2: 1557442230
+      jumpycrab_Walk_Front_3: 1055851600
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

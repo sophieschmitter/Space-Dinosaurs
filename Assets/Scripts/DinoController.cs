@@ -6,15 +6,11 @@ using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
 
 /// <summary>
-/// Top-down movement and drilling for the dino. Moves only while a direction key is held:
-///   W / Up arrow    = up (shows the dino's back)
-///   S / Down arrow  = down (shows the dino's front)
-///   A / Left arrow  = left (left-facing art)
-///   D / Right arrow = right (right-facing art)
-///   Space (held)    = sprint (sweat drops fly off now and then)
-///   X               = drill the wall tile in front / fire the gun ahead (hold to keep going)
-///   Q               = swap between the drill and the gun (same as the HUD weapon buttons)
-/// Game controller: left stick or d-pad = move, X (west button) = attack, Y (north) = swap weapon, A (south) = sprint.
+///   WASD or arrow keys to move
+///   Shift (held)    = sprint
+///   Spacebar = drill/attack/fire gun
+///   Q  = swap weapons
+/// Game controller: left stick or d-pad = move, X = attack, Y = weapon select, A = sprint.
 ///   Left click      = the same, aimed at the mouse: the drill turns to the nearest of up/down/left/right,
 ///                     the gun fires straight at the cursor at any angle (clicks on HUD buttons are ignored)
 /// Two directions at once move diagonally while the dino keeps facing the one held first.
@@ -186,9 +182,9 @@ public class DinoController : MonoBehaviour
         move.AddBinding("<Gamepad>/leftStick"); // has the controller's dead zone built in
         move.AddBinding("<Gamepad>/dpad");
 
-        sprint = new InputAction("Sprint", InputActionType.Button, "<Keyboard>/space");
+        sprint = new InputAction("Sprint", InputActionType.Button, "<Keyboard>/shift");
         sprint.AddBinding("<Gamepad>/buttonSouth");   // A (Xbox) / Cross (PlayStation)
-        attack = new InputAction("Attack", InputActionType.Button, "<Keyboard>/x");
+        attack = new InputAction("Attack", InputActionType.Button, "<Keyboard>/space");
         attack.AddBinding("<Gamepad>/buttonWest");    // X (Xbox) / Square (PlayStation)
         click = new InputAction("Click Attack", InputActionType.Button, "<Mouse>/leftButton");
         swapWeapon = new InputAction("Swap Weapon", InputActionType.Button, "<Keyboard>/q");

@@ -172,6 +172,7 @@ public class EnemyController : MonoBehaviour
     void FixedUpdate()
     {
         if (dead || IsCelebrating) { body.linearVelocity = Vector2.zero; return; }
+        if (Airborne) { body.linearVelocity = airVelocity; return; }
         if (hurtTimer > 0f) { body.linearVelocity = knockback * (hurtTimer / hurtTime); return; }
 
         Vector2 target = Vector2.zero;
@@ -340,6 +341,41 @@ public class EnemyController : MonoBehaviour
         pauseTimer = Mathf.Max(pauseTimer, seconds);
         holdTimer = seconds;
         holdState = state;
+    }
+
+    /// <summary>Stop a Hold early (e.g. a jump that was called off).</summary>
+    public void ReleaseHold()
+    {
+        pauseTimer = 0f;
+        holdTimer = 0f;
+        holdState = null;
+    }
+
+    Vector2 airVelocity;
+
+    /// <summary>True while leaping (used by CrabJumper): it flies over everything and can't be touched.</summary>
+    public bool Airborne { get; private set; }
+
+    /// <summary>Leave the ground and fly at this velocity until Land() is called. Its colliders are off meanwhile,
+    /// so it passes over walls, enemies and the dino, and shots and the drill miss it.</summary>
+    public void Leap(Vector2 velocity)
+    {
+        if (dead || IsCelebrating) return;
+        Airborne = true;
+        airVelocity = velocity;
+        hurtTimer = 0f;
+        foreach (var c in colliders) c.enabled = false;
+        body.linearVelocity = velocity;
+    }
+
+    /// <summary>Touch down at this point.</summary>
+    public void Land(Vector2 at)
+    {
+        if (!Airborne) return;
+        Airborne = false;
+        body.position = at;
+        body.linearVelocity = Vector2.zero;
+        if (!dead) foreach (var c in colliders) c.enabled = true;
     }
 
     /// <summary>Turn to look this way (idle animations keep facing it).</summary>

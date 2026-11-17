@@ -8,8 +8,9 @@ using UnityEngine;
 
 /// <summary>
 /// Slices the crab sheets (one column = one animation, frames run top to bottom) into animations and an
-/// Animator Controller each: "Rusty Crab Sprites.png" -> crab1 (Assets/Animations/Rusty Crab) and
-/// "Tall Crab Spritework.png" -> tallcrab (Assets/Animations/Tall Crab). Both sheets use the same column order.
+/// Animator Controller each: "Rusty Crab Sprites.png" -> crab1 (Assets/Animations/Rusty Crab),
+/// "Tall Crab Spritework.png" -> tallcrab (Assets/Animations/Tall Crab), both with the same column order, and
+/// "Jumpy Crab Spritewprk.PNG" -> jumpycrab (Assets/Animations/Jumpy Crab), with its own order (JumpyColumns).
 /// Side animations get both a _Left and a _Right clip (the art faces left; _Right is the same frames mirrored,
 /// with the flip saved in the clip). State names match what EnemyController plays:
 /// Idle/Walk with _Left, _Right, _Front or _Back, victoryDance (on the lose screen) and Death.
@@ -26,7 +27,21 @@ public static class CrabSpriteSheetBuilder
     {
         public string path, outFolder, controller, prefix;
         public int cellW, cellH, topMargin, feetFromTop;
+        public (string sprite, bool loop, (string clip, bool mirror)[] clips)[] columns; // null: the usual Columns
     }
+
+    // The jumpy crab faces the camera while it scuttles sideways, so its side clips use front-facing art.
+    static readonly (string sprite, bool loop, (string clip, bool mirror)[] clips)[] JumpyColumns =
+    {
+        ("Idle_Front", true,  new[] { ("Idle_Front", false) }),                                       // col 1: bobbing
+        ("Idle_Side",  true,  new[] { ("Idle_Left", false), ("Idle_Right", true) }),                  // col 2: standing still
+        ("Walk_Front", true,  new[] { ("Walk_Front", false), ("Walk_Left", false), ("Walk_Right", true) }), // col 3
+        ("Idle_Back",  true,  new[] { ("Idle_Back", false) }),                                        // col 4
+        ("Walk_Back",  true,  new[] { ("Walk_Back", false) }),                                        // col 5
+        ("Jump",       false, new[] { ("Jump", false) }),                                             // col 6: crouch, leap, land
+        ("Victory",    true,  new[] { ("victoryDance", false) }),                                     // col 7
+        ("Death",      false, new[] { ("Death", false) }),                                            // col 8
+    };
 
     static readonly Sheet[] Sheets =
     {
@@ -36,7 +51,12 @@ public static class CrabSpriteSheetBuilder
         // tall crab: 320 x 480 cells starting 50 px down (same rows as the dino sheets), feet 430 px down each cell.
         new Sheet { path = "Assets/Sprites/Tall Crab Spritework.png", outFolder = "Assets/Animations/Tall Crab",
                     controller = "TallCrab.controller", prefix = "tallcrab", cellW = 320, cellH = 480, topMargin = 50, feetFromTop = 430 },
+        // jumpy crab: 480 x 480 cells, feet on the bottom of each cell. Its own column order (JumpyColumns).
+        new Sheet { path = "Assets/Sprites/Jumpy Crab Spritewprk.PNG", outFolder = "Assets/Animations/Jumpy Crab",
+                    controller = "JumpyCrab.controller", prefix = "jumpycrab", cellW = 480, cellH = 480, topMargin = 0, feetFromTop = 480,
+                    columns = JumpyColumns },
     };
+
 
     // Columns left to right: sprite name, loops, and the clips made from it (clip name, mirrored?).
     // Leave the sprite names alone; rename clips freely and re-run.
@@ -69,6 +89,7 @@ public static class CrabSpriteSheetBuilder
     {
         string SheetPath = sheet.path, OutFolder = sheet.outFolder, Prefix = sheet.prefix;
         string ControllerPath = OutFolder + "/" + sheet.controller;
+        var Columns = sheet.columns ?? CrabSpriteSheetBuilder.Columns;
         var importer = (TextureImporter)AssetImporter.GetAtPath(SheetPath);
         if (importer == null) { Debug.LogError($"Crab animations: no sheet at {SheetPath}"); return; }
 
