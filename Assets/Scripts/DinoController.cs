@@ -108,7 +108,7 @@ public class DinoController : MonoBehaviour
     public Sprite[] sweatRight, sweatLeft;
     [Tooltip("Shadow under the side views (taken from the Shadow child if left empty).")]
     public Sprite shadowSide;
-    [Tooltip("Shadow and sweat for the drill dino facing front or back.")]
+    [Tooltip("Shadow and sweat for the drill and gun dinos facing front or back.")]
     public Sprite shadowVertical;
     public Sprite[] sweatVertical;
     [Tooltip("Frames per second of one burst of sweat drops.")]
@@ -580,7 +580,7 @@ public class DinoController : MonoBehaviour
         }
 
         bool side = view == View.Right || view == View.Left;
-        bool vertical = !side && hasDrill; // front/back effects are drawn for the drill dino
+        bool vertical = !side && (hasDrill || hasGun); // front/back effects fit the drill and gun dinos (same body)
         if (shadow != null)
         {
             if (shadowSide == null) shadowSide = shadow.sprite;
