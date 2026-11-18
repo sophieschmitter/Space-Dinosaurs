@@ -8,7 +8,7 @@ using UnityEngine.UI;
 
 /// <summary>
 /// Builds the crafting menu down the left side of the screen from "Build Boxes.PNG": three items (columns:
-/// shield generator, tower, shop) and three pictures each (rows: available, pressed, can't afford).
+/// shield generator, turret, ice cream stand) and three pictures each (rows: available, pressed, can't afford).
 /// Makes Assets/Prefabs/Crafting Menu.prefab (its own canvas, laid out like the HUD) and puts it in
 /// Level One, Level Two, Level Three and Training, adding an EventSystem to scenes that don't have one.
 /// Every item costs 3 Nickel and 1 Iridium for now: change it on each button's Craft Button component.
@@ -24,7 +24,9 @@ public static class CraftMenuBuilder
     const int Gap = 4;                    // between buttons, art px
     const float Units = 1f;               // HUD units per art px (the HUD bars use 2: these are half that size)
 
-    static readonly string[] Items = { "Shield Generator", "Tower", "Shop" };
+    static readonly string[] Items = { "Shield Generator", "Turret", "Ice Cream Stand" };
+    // Earlier item names -> current ones (renamed in place, so sprites and scene references survive).
+    static readonly (string from, string to)[] Renames = { ("Tower", "Turret"), ("Shop", "Ice Cream Stand") };
     static readonly int[] ColumnX = { 160, 960, 1760 };   // texture px, left edge of each column
     static readonly int[] RowTop = { 160, 640, 1120 };    // texture px from the top: available, pressed, unaffordable
     static readonly string[] States = { "Available", "Pressed", "Unaffordable" };
@@ -62,6 +64,12 @@ public static class CraftMenuBuilder
         var provider = factory.GetSpriteEditorDataProviderFromObject(importer);
         provider.InitSpriteEditorDataProvider();
         var oldIds = provider.GetSpriteRects().GroupBy(s => s.name).ToDictionary(g => g.Key, g => g.First().spriteID);
+        foreach (var (from, to) in Renames)
+        foreach (var state in States)
+        {
+            string a = $"Craft_{from.Replace(" ", "")}_{state}", b = $"Craft_{to.Replace(" ", "")}_{state}";
+            if (oldIds.TryGetValue(a, out var keep) && !oldIds.ContainsKey(b)) oldIds[b] = keep;
+        }
         int texH = 2560;
         var rects = new System.Collections.Generic.List<SpriteRect>();
         for (int i = 0; i < Items.Length; i++)
@@ -124,6 +132,12 @@ public static class CraftMenuBuilder
             float h = (Items.Length * CellH + (Items.Length - 1) * Gap) * Units;
             var list = Rect(root.transform, "Buttons", new Vector2(0, 0.5f), new Vector2(0, 0.5f), new Vector2(6 * Units, 0), new Vector2(CellW * Units, h));
 
+            foreach (var (from, to) in Renames)
+            {
+                var old = list.Find(from);
+                if (old != null && list.Find(to) == null) old.name = to;
+            }
+
             for (int i = 0; i < Items.Length; i++)
             {
                 var b = Rect(list, Items[i], new Vector2(0, 1), new Vector2(0, 1), new Vector2(0, -i * (CellH + Gap) * Units), new Vector2(CellW, CellH) * Units);
@@ -138,6 +152,7 @@ public static class CraftMenuBuilder
 
                 var craft = Get<CraftButton>(b.gameObject);
                 craft.itemName = Items[i];
+                craft.building = AssetDatabase.LoadAssetAtPath<Building>($"Assets/Prefabs/Buildings/{Items[i]}.prefab"); // Build Buildings makes these
                 craft.image = img;
                 craft.available = sprites[SpriteName(i, 0)];
                 craft.pressed = sprites[SpriteName(i, 1)];

@@ -6,6 +6,7 @@ using UnityEngine;
 /// or when its range runs out.
 ///   Enemy shot (Fired By Player off): flies past crabs; hurts the dino or the robot; stopped by walls/spawners.
 ///   Player shot (Fired By Player on): flies past the dino and the robot; hurts crabs; stopped by walls/spawners.
+///   Shields from a shield generator stop enemy shots; player shots pass through them.
 ///
 /// Art lives on the Art child, raised to the height it leaves the crab and turned to face the way it flies
 /// (the art is drawn flying left). Animator states: Launch -> Fly (loops) while flying, Explode when it hits.
@@ -93,9 +94,14 @@ public class CrabBullet : MonoBehaviour
     bool IsOwner(Collider2D c) => owner != null && c.transform.IsChildOf(owner.transform);
 
     // Enemy shots fly past other enemies; player shots fly past the dino and the robot.
-    bool PassesThrough(Collider2D c) => firedByPlayer
-        ? c.GetComponentInParent<DinoController>() != null || c.GetComponentInParent<EnemyGoal>() != null
-        : c.GetComponentInParent<EnemyController>() != null;
+    // Shields (ShieldField) stop enemy shots and let the dino's through.
+    bool PassesThrough(Collider2D c)
+    {
+        if (c.GetComponent<ShieldField>() != null) return firedByPlayer;
+        return firedByPlayer
+            ? c.GetComponentInParent<DinoController>() != null || c.GetComponentInParent<EnemyGoal>() != null
+            : c.GetComponentInParent<EnemyController>() != null;
+    }
 
     void Hit(Collider2D c)
     {

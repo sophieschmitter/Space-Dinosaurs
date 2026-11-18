@@ -97,9 +97,10 @@ public class CrabJumper : MonoBehaviour
 
     Vector2 Target() => playerCollider != null ? (Vector2)playerCollider.bounds.center : (Vector2)player.position;
 
-    // No wall between here and there. It flies over spawners, the robot and other enemies.
+    // No wall or shield between here and there. It flies over spawners, the robot and other enemies.
     bool ClearPath(Vector2 point)
     {
+        if (ShieldField.AnyBetween(body.position, point)) return false;
         foreach (var hit in Physics2D.LinecastAll(body.position, point))
             if (!hit.collider.isTrigger && hit.collider.GetComponentInParent<Tilemap>() != null) return false;
         return true;

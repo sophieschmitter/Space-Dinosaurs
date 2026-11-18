@@ -194,617 +194,617 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: UntitledArtwork4_0
+      name: ShieldGenerator_Normal_0
       rect:
         serializedVersion: 2
-        x: 29
-        y: 2879
-        width: 262
-        height: 222
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 0
+        y: 2860
+        width: 320
+        height: 390
+      alignment: 9
+      pivot: {x: 0.5, y: 0.051282052}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: a5f5eb8a490ff2c10800000000000000
-      internalID: 2031106478244257626
+      spriteID: 2c1d49c3b253c418a8f7f4fa221269aa
+      internalID: 1192876649
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: UntitledArtwork4_1
+      name: ShieldGenerator_Normal_1
       rect:
         serializedVersion: 2
-        x: 349
-        y: 2879
-        width: 262
-        height: 332
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 320
+        y: 2860
+        width: 320
+        height: 390
+      alignment: 9
+      pivot: {x: 0.5, y: 0.051282052}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 0682a901a6cfd89e0800000000000000
-      internalID: -1617359158680868768
+      spriteID: 5f501437041a14b8ea94ed98c3a11a6a
+      internalID: 1893350155
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: UntitledArtwork4_2
+      name: ShieldGenerator_Normal_2
       rect:
         serializedVersion: 2
-        x: 659
-        y: 2879
-        width: 282
-        height: 352
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 640
+        y: 2860
+        width: 320
+        height: 390
+      alignment: 9
+      pivot: {x: 0.5, y: 0.051282052}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: e86c25e6b65775cb0800000000000000
-      internalID: -4875298967332403570
+      spriteID: 14563cc1464d24accadbd10e4d95c314
+      internalID: 1666219313
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: UntitledArtwork4_3
+      name: ShieldGenerator_Normal_3
       rect:
         serializedVersion: 2
-        x: 989
-        y: 2879
-        width: 262
-        height: 272
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 960
+        y: 2860
+        width: 320
+        height: 390
+      alignment: 9
+      pivot: {x: 0.5, y: 0.051282052}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: a070e614e9ffde8f0800000000000000
-      internalID: -509470127655352566
+      spriteID: 0f164d69a1127402a8e1d3d31e3369fd
+      internalID: 1693852777
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: UntitledArtwork4_4
+      name: ShieldGenerator_Selected_0
       rect:
         serializedVersion: 2
-        x: 339
-        y: 2309
-        width: 282
-        height: 402
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 0
+        y: 1260
+        width: 320
+        height: 390
+      alignment: 9
+      pivot: {x: 0.5, y: 0.051282052}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 298107a2ba7e90e90800000000000000
-      internalID: -7058856218589128558
+      spriteID: 563001952f3bd450f948b594a9cf84d7
+      internalID: 1234378386
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: UntitledArtwork4_5
+      name: ShieldGenerator_Selected_1
       rect:
         serializedVersion: 2
-        x: 659
-        y: 2309
-        width: 282
-        height: 402
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 320
+        y: 1260
+        width: 320
+        height: 390
+      alignment: 9
+      pivot: {x: 0.5, y: 0.051282052}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: b27a8daee83184fc0800000000000000
-      internalID: -3510534404988950741
+      spriteID: 4b5117bd512cc47a588b76e2547a85e5
+      internalID: -500241315
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: UntitledArtwork4_6
+      name: ShieldGenerator_Selected_2
       rect:
         serializedVersion: 2
-        x: 979
-        y: 2309
-        width: 282
-        height: 402
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 640
+        y: 1260
+        width: 320
+        height: 390
+      alignment: 9
+      pivot: {x: 0.5, y: 0.051282052}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 5e69acfdef9e36900800000000000000
-      internalID: 676641649921267429
+      spriteID: 6ab6f4c4e8058441d9b82a205dfe7199
+      internalID: -461482100
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: UntitledArtwork4_7
+      name: ShieldGenerator_Selected_3
       rect:
         serializedVersion: 2
-        x: 1299
-        y: 2309
-        width: 282
-        height: 402
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 960
+        y: 1260
+        width: 320
+        height: 390
+      alignment: 9
+      pivot: {x: 0.5, y: 0.051282052}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 9795c92f4bb412640800000000000000
-      internalID: 5053403497422936441
+      spriteID: d3b3509a9f5034af0babbb7b9721fa96
+      internalID: 1454778473
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: UntitledArtwork4_8
+      name: IceCreamStand_Normal_0
       rect:
         serializedVersion: 2
-        x: 1619
-        y: 2309
-        width: 282
-        height: 402
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 320
+        y: 2290
+        width: 320
+        height: 440
+      alignment: 9
+      pivot: {x: 0.5, y: 0.045454547}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 61ff823c4ed66fa60800000000000000
-      internalID: 7707468641585397526
+      spriteID: affc2b0a990264be79824f83c66151be
+      internalID: -1537075020
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: UntitledArtwork4_9
+      name: IceCreamStand_Normal_1
       rect:
         serializedVersion: 2
-        x: 349
-        y: 1769
-        width: 262
-        height: 442
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 640
+        y: 2290
+        width: 320
+        height: 440
+      alignment: 9
+      pivot: {x: 0.5, y: 0.045454547}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 8e4ddf4763253f920800000000000000
-      internalID: 3022850168740238568
+      spriteID: 8f231e88563eb42d293d282ea9b29f0c
+      internalID: -967255211
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: UntitledArtwork4_10
+      name: IceCreamStand_Normal_2
       rect:
         serializedVersion: 2
-        x: 669
-        y: 1759
-        width: 262
-        height: 432
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 960
+        y: 2290
+        width: 320
+        height: 440
+      alignment: 9
+      pivot: {x: 0.5, y: 0.045454547}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: de592c09e4873d0f0800000000000000
-      internalID: -1093398005689444883
+      spriteID: 884938282e9484c4fbe35a94fcbf33d3
+      internalID: -459525802
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: UntitledArtwork4_11
+      name: IceCreamStand_Normal_3
       rect:
         serializedVersion: 2
-        x: 989
-        y: 1759
-        width: 262
-        height: 422
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1280
+        y: 2290
+        width: 320
+        height: 440
+      alignment: 9
+      pivot: {x: 0.5, y: 0.045454547}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 1c3dc3ec3d18c2440800000000000000
-      internalID: 4912444040252543937
+      spriteID: ee4afe5502612471299f14cba4265082
+      internalID: -530187914
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: UntitledArtwork4_12
+      name: IceCreamStand_Normal_4
       rect:
         serializedVersion: 2
-        x: 1309
-        y: 1759
-        width: 262
-        height: 482
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1600
+        y: 2290
+        width: 320
+        height: 440
+      alignment: 9
+      pivot: {x: 0.5, y: 0.045454547}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 581a7a96f2aafd6c0800000000000000
-      internalID: -4116384413780565627
+      spriteID: 13e1c4be6684747e09fed86bda9cf142
+      internalID: 58366638
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: UntitledArtwork4_13
+      name: IceCreamStand_Selected_0
       rect:
         serializedVersion: 2
-        x: 1629
-        y: 1749
-        width: 262
-        height: 482
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 320
+        y: 690
+        width: 320
+        height: 440
+      alignment: 9
+      pivot: {x: 0.5, y: 0.045454547}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 2d0dd1317366d4490800000000000000
-      internalID: -7760434196159541038
+      spriteID: ed49aedea0052451aa47c9e80341325a
+      internalID: 2103296974
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: UntitledArtwork4_14
+      name: IceCreamStand_Selected_1
       rect:
         serializedVersion: 2
-        x: 19
-        y: 1269
-        width: 282
-        height: 242
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 640
+        y: 690
+        width: 320
+        height: 440
+      alignment: 9
+      pivot: {x: 0.5, y: 0.045454547}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: c0518331cdf586fd0800000000000000
-      internalID: -2348521806853827316
+      spriteID: e001edb7ecc78430aa146bbec7e4c46c
+      internalID: 1141699702
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: UntitledArtwork4_15
+      name: IceCreamStand_Selected_2
       rect:
         serializedVersion: 2
-        x: 339
-        y: 1269
-        width: 282
-        height: 352
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 960
+        y: 690
+        width: 320
+        height: 440
+      alignment: 9
+      pivot: {x: 0.5, y: 0.045454547}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: c9c8ab274452c7cd0800000000000000
-      internalID: -2559129512340452196
+      spriteID: 3a04d9569a9f84111959c4d783a81d8e
+      internalID: -1262994717
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: UntitledArtwork4_16
+      name: IceCreamStand_Selected_3
       rect:
         serializedVersion: 2
-        x: 649
-        y: 1269
-        width: 302
-        height: 372
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1280
+        y: 690
+        width: 320
+        height: 440
+      alignment: 9
+      pivot: {x: 0.5, y: 0.045454547}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: a793f8e67a5b986a0800000000000000
-      internalID: -6446421660885108358
+      spriteID: 1f3a8d4c005344a928c6ede2c5fdaf68
+      internalID: -2035797757
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: UntitledArtwork4_17
+      name: IceCreamStand_Selected_4
       rect:
         serializedVersion: 2
-        x: 979
-        y: 1269
-        width: 282
-        height: 292
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1600
+        y: 690
+        width: 320
+        height: 440
+      alignment: 9
+      pivot: {x: 0.5, y: 0.045454547}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 962cba7dfcfc079b0800000000000000
-      internalID: -5084335487717752215
+      spriteID: b4133bde6448343d7b1586e0e98a3f45
+      internalID: -1592434236
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: UntitledArtwork4_18
+      name: Turret_Normal_0
       rect:
         serializedVersion: 2
-        x: 329
-        y: 699
-        width: 302
-        height: 422
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 320
+        y: 1740
+        width: 320
+        height: 530
+      alignment: 9
+      pivot: {x: 0.5, y: 0.03773585}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 51fdae6197ae2e410800000000000000
-      internalID: 1505023031291600661
+      spriteID: 21bdcac76b8e74936ba306cd046c6e1f
+      internalID: 167904274
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: UntitledArtwork4_19
+      name: Turret_Normal_1
       rect:
         serializedVersion: 2
-        x: 649
-        y: 699
-        width: 302
-        height: 422
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 640
+        y: 1740
+        width: 320
+        height: 530
+      alignment: 9
+      pivot: {x: 0.5, y: 0.03773585}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: b179cd922ef79d220800000000000000
-      internalID: 2511178876577421083
+      spriteID: 2de934c73f41143e99731680dda50eae
+      internalID: 1779534129
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: UntitledArtwork4_20
+      name: Turret_Normal_2
       rect:
         serializedVersion: 2
-        x: 969
-        y: 699
-        width: 302
-        height: 422
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 960
+        y: 1740
+        width: 320
+        height: 530
+      alignment: 9
+      pivot: {x: 0.5, y: 0.03773585}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: bd448c6d37acd71b0800000000000000
-      internalID: -5657142958033976101
+      spriteID: b1db90fddbd54439dab0a4611d85e638
+      internalID: -1612158150
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: UntitledArtwork4_21
+      name: Turret_Normal_3
       rect:
         serializedVersion: 2
-        x: 1289
-        y: 699
-        width: 302
-        height: 422
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1280
+        y: 1740
+        width: 320
+        height: 530
+      alignment: 9
+      pivot: {x: 0.5, y: 0.03773585}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 4171f27427b50e690800000000000000
-      internalID: -7574954026858506476
+      spriteID: 8ee8767716f65481ca3bde63e83d19c1
+      internalID: 1193080427
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: UntitledArtwork4_22
+      name: Turret_Normal_4
       rect:
         serializedVersion: 2
-        x: 1609
-        y: 699
-        width: 302
-        height: 422
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1600
+        y: 1740
+        width: 320
+        height: 530
+      alignment: 9
+      pivot: {x: 0.5, y: 0.03773585}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 91135874043c6e570800000000000000
-      internalID: 8495692427926253849
+      spriteID: 99bbef3f4fe0c407cbf1e8d2c8e54f81
+      internalID: 787119297
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: UntitledArtwork4_23
+      name: Turret_Selected_0
       rect:
         serializedVersion: 2
-        x: 339
-        y: 159
-        width: 282
-        height: 462
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 320
+        y: 140
+        width: 320
+        height: 530
+      alignment: 9
+      pivot: {x: 0.5, y: 0.03773585}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: aaa223969c2b695f0800000000000000
-      internalID: -750215709787542870
+      spriteID: 9ac9b7bdea9354132848b1cd0c2e6540
+      internalID: 591283993
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: UntitledArtwork4_24
+      name: Turret_Selected_1
       rect:
         serializedVersion: 2
-        x: 659
-        y: 149
-        width: 282
-        height: 452
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 640
+        y: 140
+        width: 320
+        height: 530
+      alignment: 9
+      pivot: {x: 0.5, y: 0.03773585}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 0d27b5b4c74b5e6f0800000000000000
-      internalID: -655919724779310384
+      spriteID: ab2168b76ea164c45b45061926cadf8b
+      internalID: 931828895
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: UntitledArtwork4_25
+      name: Turret_Selected_2
       rect:
         serializedVersion: 2
-        x: 979
-        y: 149
-        width: 282
-        height: 442
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 960
+        y: 140
+        width: 320
+        height: 530
+      alignment: 9
+      pivot: {x: 0.5, y: 0.03773585}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 5825b974b3ce0d120800000000000000
-      internalID: 2436707137756025477
+      spriteID: 3d25bba117cfd491bac7424018b62084
+      internalID: 1416783328
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: UntitledArtwork4_26
+      name: Turret_Selected_3
       rect:
         serializedVersion: 2
-        x: 1299
-        y: 149
-        width: 282
-        height: 502
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1280
+        y: 140
+        width: 320
+        height: 530
+      alignment: 9
+      pivot: {x: 0.5, y: 0.03773585}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 0ca280bb2b3002530800000000000000
-      internalID: 3828063749441858240
+      spriteID: ab7cf0c303f004194b6abd519cd5af65
+      internalID: 521400543
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: UntitledArtwork4_27
+      name: Turret_Selected_4
       rect:
         serializedVersion: 2
-        x: 1619
-        y: 139
-        width: 282
-        height: 502
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1600
+        y: 140
+        width: 320
+        height: 530
+      alignment: 9
+      pivot: {x: 0.5, y: 0.03773585}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 72816ac570c53ed30800000000000000
-      internalID: 4459509242715838503
+      spriteID: c81ec524b49c74ad5a0a88f859f904a7
+      internalID: -2036018589
       vertices: []
       indices: 
       edges: []
@@ -813,7 +813,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: e430a368e31da4694ba11f49b102b523
     internalID: 0
     vertices: []
     indices: 
@@ -823,34 +823,34 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      UntitledArtwork4_0: 2031106478244257626
-      UntitledArtwork4_1: -1617359158680868768
-      UntitledArtwork4_10: -1093398005689444883
-      UntitledArtwork4_11: 4912444040252543937
-      UntitledArtwork4_12: -4116384413780565627
-      UntitledArtwork4_13: -7760434196159541038
-      UntitledArtwork4_14: -2348521806853827316
-      UntitledArtwork4_15: -2559129512340452196
-      UntitledArtwork4_16: -6446421660885108358
-      UntitledArtwork4_17: -5084335487717752215
-      UntitledArtwork4_18: 1505023031291600661
-      UntitledArtwork4_19: 2511178876577421083
-      UntitledArtwork4_2: -4875298967332403570
-      UntitledArtwork4_20: -5657142958033976101
-      UntitledArtwork4_21: -7574954026858506476
-      UntitledArtwork4_22: 8495692427926253849
-      UntitledArtwork4_23: -750215709787542870
-      UntitledArtwork4_24: -655919724779310384
-      UntitledArtwork4_25: 2436707137756025477
-      UntitledArtwork4_26: 3828063749441858240
-      UntitledArtwork4_27: 4459509242715838503
-      UntitledArtwork4_3: -509470127655352566
-      UntitledArtwork4_4: -7058856218589128558
-      UntitledArtwork4_5: -3510534404988950741
-      UntitledArtwork4_6: 676641649921267429
-      UntitledArtwork4_7: 5053403497422936441
-      UntitledArtwork4_8: 7707468641585397526
-      UntitledArtwork4_9: 3022850168740238568
+      IceCreamStand_Normal_0: -1537075020
+      IceCreamStand_Normal_1: -967255211
+      IceCreamStand_Normal_2: -459525802
+      IceCreamStand_Normal_3: -530187914
+      IceCreamStand_Normal_4: 58366638
+      IceCreamStand_Selected_0: 2103296974
+      IceCreamStand_Selected_1: 1141699702
+      IceCreamStand_Selected_2: -1262994717
+      IceCreamStand_Selected_3: -2035797757
+      IceCreamStand_Selected_4: -1592434236
+      ShieldGenerator_Normal_0: 1192876649
+      ShieldGenerator_Normal_1: 1893350155
+      ShieldGenerator_Normal_2: 1666219313
+      ShieldGenerator_Normal_3: 1693852777
+      ShieldGenerator_Selected_0: 1234378386
+      ShieldGenerator_Selected_1: -500241315
+      ShieldGenerator_Selected_2: -461482100
+      ShieldGenerator_Selected_3: 1454778473
+      Turret_Normal_0: 167904274
+      Turret_Normal_1: 1779534129
+      Turret_Normal_2: -1612158150
+      Turret_Normal_3: 1193080427
+      Turret_Normal_4: 787119297
+      Turret_Selected_0: 591283993
+      Turret_Selected_1: 931828895
+      Turret_Selected_2: 1416783328
+      Turret_Selected_3: 521400543
+      Turret_Selected_4: -2036018589
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

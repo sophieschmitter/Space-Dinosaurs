@@ -6,10 +6,13 @@ using UnityEngine.Tilemaps;
 
 /// <summary>
 /// When a sprite from the meteorite sheet (or the generated wall tiles) is dropped into a scene, it snaps to the
-/// tile grid. By default it is then turned into Wall Rule Tiles on the scene's "Walls" tilemap, cell for cell,
-/// so it collides and can be broken tile by tile. Toggle with
-/// Tools > Space Dinosaurs > Meteorite Sprites Become Wall Tiles (off = the sprite object only snaps).
-/// Everything is undoable with Cmd+Z.
+/// tile grid. By default it is then turned into a MeteoriteCluster: Wall Rule Tiles in its own little tilemap,
+/// cell for cell, so it can be dragged around on its own and, in play, collides and breaks tile by tile like the
+/// rest of the walls. Toggle with Tools > Space Dinosaurs > Meteorite Sprites Become Wall Tiles
+/// (off = the sprite object only snaps).
+/// Tools > Space Dinosaurs > Split Walls Into Meteorites turns the tiles already painted on the scene's Walls
+/// tilemap into one MeteoriteCluster per connected meteorite (taking the ore on them along).
+/// Meteorites snap to whole tiles when moved. Everything is undoable with Cmd+Z.
 /// </summary>
 [InitializeOnLoad]
 public static class MeteoritePlacement
@@ -74,6 +77,7 @@ public static class MeteoritePlacement
     {
         if (go == null || go.hideFlags != HideFlags.None || !go.scene.IsValid()) return;
         if (EditorUtility.IsPersistent(go) || PrefabUtility.IsPartOfPrefabAsset(go)) return;
+        if (go.GetComponent<MeteoriteCluster>() != null) { SnapCluster(go); return; }
         var sr = go.GetComponent<SpriteRenderer>();
         if (sr == null || sr.sprite == null) return;
         string texPath = AssetDatabase.GetAssetPath(sr.sprite.texture);
@@ -97,8 +101,11 @@ public static class MeteoritePlacement
         var ruleTile = AssetDatabase.LoadAssetAtPath<TileBase>(RuleTilePath);
         if (Convert && walls != null && ruleTile != null)
         {
-            Undo.RegisterCompleteObjectUndo(walls, "Place meteorite tiles");
-            foreach (var c in cells) walls.SetTile(anchor + c.offset, ruleTile);
+            // A meteorite of its own (movable), not tiles on the shared Walls tilemap.
+            var tiles = new Dictionary<Vector3Int, TileBase>();
+            foreach (var c in cells) tiles[anchor + c.offset] = ruleTile;
+            var cluster = NewCluster(walls, FindOre(go.scene), "Meteorite", tiles, null);
+            Selection.activeGameObject = cluster;
             Undo.DestroyObjectImmediate(go);
             return;
         }
@@ -109,6 +116,120 @@ public static class MeteoritePlacement
         if (delta.sqrMagnitude < 1e-8f) return; // already snapped (also stops the change event looping)
         Undo.RecordObject(go.transform, "Snap meteorite to grid");
         go.transform.position += new Vector3(delta.x, delta.y, 0);
+    }
+
+    // ---------- meteorites you can move on their own ----------
+
+    [MenuItem("Tools/Space Dinosaurs/Split Walls Into Meteorites")]
+    static void SplitWalls()
+    {
+        var scene = UnityEngine.SceneManagement.SceneManager.GetActiveScene();
+        var walls = FindWalls(scene);
+        if (walls == null) { Debug.LogWarning("Meteorites: no Walls tilemap in the active scene."); return; }
+        var ore = FindOre(scene);
+        Undo.SetCurrentGroupName("Split walls into meteorites");
+        int group = Undo.GetCurrentGroup();
+        Undo.RegisterCompleteObjectUndo(walls, "Split walls");
+        if (ore != null) Undo.RegisterCompleteObjectUndo(ore, "Split walls");
+
+        // Connected groups of wall tiles (touching sideways or diagonally, like the Rule Tile joins them).
+        var left = new HashSet<Vector3Int>();
+        foreach (var c in walls.cellBounds.allPositionsWithin) if (walls.HasTile(c)) left.Add(c);
+        int made = 0;
+        while (left.Count > 0)
+        {
+            var start = default(Vector3Int);
+            foreach (var c in left) { start = c; break; }
+            var group1 = new List<Vector3Int>();
+            var queue = new Queue<Vector3Int>();
+            queue.Enqueue(start); left.Remove(start);
+            while (queue.Count > 0)
+            {
+                var c = queue.Dequeue();
+                group1.Add(c);
+                for (int dx = -1; dx <= 1; dx++)
+                for (int dy = -1; dy <= 1; dy++)
+                {
+                    var n = c + new Vector3Int(dx, dy, 0);
+                    if (left.Remove(n)) queue.Enqueue(n);
+                }
+            }
+            var wallTiles = new Dictionary<Vector3Int, TileBase>();
+            var oreTiles = new Dictionary<Vector3Int, TileBase>();
+            foreach (var c in group1)
+            {
+                wallTiles[c] = walls.GetTile(c);
+                if (ore != null && ore.GetTile(c) is TileBase o) oreTiles[c] = o;
+            }
+            NewCluster(walls, ore, $"Meteorite {++made}", wallTiles, oreTiles);
+            foreach (var c in group1)
+            {
+                walls.SetTile(c, null);
+                if (ore != null && oreTiles.ContainsKey(c)) ore.SetTile(c, null);
+            }
+        }
+        Undo.CollapseUndoOperations(group);
+        UnityEditor.SceneManagement.EditorSceneManager.MarkSceneDirty(scene);
+        Debug.Log($"Meteorites: split the walls into {made} meteorites. Drag them anywhere; they join up when the level starts.");
+    }
+
+    /// <summary>A movable meteorite under the same Grid as the Walls tilemap, holding these tiles at these cells.</summary>
+    static GameObject NewCluster(Tilemap walls, Tilemap ore, string name, Dictionary<Vector3Int, TileBase> wallTiles, Dictionary<Vector3Int, TileBase> oreTiles)
+    {
+        // Its origin is the corner of its bottom-left cell, so moving it by whole tiles keeps it on the grid.
+        var min = new Vector3Int(int.MaxValue, int.MaxValue, 0);
+        foreach (var c in wallTiles.Keys) { min.x = Mathf.Min(min.x, c.x); min.y = Mathf.Min(min.y, c.y); }
+        var gridT = walls.layoutGrid != null ? walls.layoutGrid.transform : walls.transform.parent;
+        var go = new GameObject(name);
+        Undo.RegisterCreatedObjectUndo(go, "Make meteorite");
+        go.transform.SetParent(gridT, false);
+        go.transform.position = walls.CellToWorld(min);
+        var cluster = go.AddComponent<MeteoriteCluster>();
+        cluster.walls = ChildMap(go.transform, "Meteorite Walls", walls, wallTiles, min);
+        if (ore != null && oreTiles != null && oreTiles.Count > 0) cluster.ore = ChildMap(go.transform, "Meteorite Ore", ore, oreTiles, min);
+        return go;
+    }
+
+    static Tilemap ChildMap(Transform parent, string name, Tilemap like, Dictionary<Vector3Int, TileBase> tiles, Vector3Int min)
+    {
+        var go = new GameObject(name);
+        go.transform.SetParent(parent, false);
+        var map = go.AddComponent<Tilemap>();
+        map.tileAnchor = like.tileAnchor;
+        var r = go.AddComponent<TilemapRenderer>();
+        var likeR = like.GetComponent<TilemapRenderer>();
+        if (likeR != null)
+        {
+            r.sortingLayerID = likeR.sortingLayerID;
+            r.sortingOrder = likeR.sortingOrder;
+            r.sharedMaterial = likeR.sharedMaterial;
+            r.mode = likeR.mode;
+        }
+        foreach (var kv in tiles) map.SetTile(kv.Key - min, kv.Value);
+        return map;
+    }
+
+    // Keeps a meteorite on whole tiles when it's dragged.
+    static void SnapCluster(GameObject go)
+    {
+        var grid = go.GetComponentInParent<Grid>();
+        Vector2 size = grid != null ? (Vector2)grid.cellSize : Vector2.one;
+        Vector3 origin = grid != null ? grid.transform.position : Vector3.zero;
+        Vector3 p = go.transform.position - origin;
+        var snapped = origin + new Vector3(Mathf.Round(p.x / size.x) * size.x, Mathf.Round(p.y / size.y) * size.y, go.transform.position.z);
+        if ((snapped - go.transform.position).sqrMagnitude < 1e-8f) return; // already on the grid (stops the change event looping)
+        Undo.RecordObject(go.transform, "Snap meteorite to grid");
+        go.transform.position = snapped;
+    }
+
+    static Tilemap FindOre(UnityEngine.SceneManagement.Scene scene)
+    {
+        foreach (var root in scene.GetRootGameObjects())
+        {
+            var o = root.GetComponentInChildren<OreLayer>(true);
+            if (o != null) return o.GetComponent<Tilemap>();
+        }
+        return null;
     }
 
     static Tilemap FindWalls(UnityEngine.SceneManagement.Scene scene)

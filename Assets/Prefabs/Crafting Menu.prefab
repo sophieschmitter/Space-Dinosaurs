@@ -89,7 +89,7 @@ GameObject:
   - component: {fileID: 1174604910802496493}
   - component: {fileID: 5219988900311663581}
   m_Layer: 0
-  m_Name: Tower
+  m_Name: Turret
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -210,7 +210,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: efeab2ee714c44c9a98c19b01e897aab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CraftButton
-  itemName: Tower
+  itemName: Turret
+  building: {fileID: 1536390533719195625, guid: 9eea15c0ee2c24c30a736c4121e5c8c0, type: 3}
   nickelCost: 3
   iridiumCost: 1
   image: {fileID: 3837871660395375350}
@@ -652,7 +653,7 @@ GameObject:
   - component: {fileID: 2392922204325827429}
   - component: {fileID: 5775932224872492509}
   m_Layer: 0
-  m_Name: Shop
+  m_Name: Ice Cream Stand
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -773,7 +774,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: efeab2ee714c44c9a98c19b01e897aab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CraftButton
-  itemName: Shop
+  itemName: Ice Cream Stand
+  building: {fileID: 6634044256588663702, guid: 872029519e32a4808b78c8d529070cad, type: 3}
   nickelCost: 3
   iridiumCost: 1
   image: {fileID: 1115360802811558834}
@@ -922,6 +924,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CraftButton
   itemName: Shield Generator
+  building: {fileID: 2452818235249174588, guid: 6597e029f3a0b46a58e2d7d73d3b7e15, type: 3}
   nickelCost: 3
   iridiumCost: 1
   image: {fileID: 2084484596923221514}

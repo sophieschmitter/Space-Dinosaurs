@@ -209,7 +209,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Craft_Tower_Available
+      name: Craft_Turret_Available
       rect:
         serializedVersion: 2
         x: 960
@@ -231,7 +231,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Craft_Tower_Pressed
+      name: Craft_Turret_Pressed
       rect:
         serializedVersion: 2
         x: 960
@@ -253,7 +253,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Craft_Tower_Unaffordable
+      name: Craft_Turret_Unaffordable
       rect:
         serializedVersion: 2
         x: 960
@@ -275,7 +275,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Craft_Shop_Available
+      name: Craft_IceCreamStand_Available
       rect:
         serializedVersion: 2
         x: 1760
@@ -297,7 +297,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Craft_Shop_Pressed
+      name: Craft_IceCreamStand_Pressed
       rect:
         serializedVersion: 2
         x: 1760
@@ -319,7 +319,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Craft_Shop_Unaffordable
+      name: Craft_IceCreamStand_Unaffordable
       rect:
         serializedVersion: 2
         x: 1760
@@ -354,15 +354,15 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
+      Craft_IceCreamStand_Available: 397505852
+      Craft_IceCreamStand_Pressed: 5408836
+      Craft_IceCreamStand_Unaffordable: -1700912708
       Craft_ShieldGenerator_Available: -2126140076
       Craft_ShieldGenerator_Pressed: 516402793
       Craft_ShieldGenerator_Unaffordable: -54909356
-      Craft_Shop_Available: 397505852
-      Craft_Shop_Pressed: 5408836
-      Craft_Shop_Unaffordable: -1700912708
-      Craft_Tower_Available: -1398752907
-      Craft_Tower_Pressed: -1238752132
-      Craft_Tower_Unaffordable: -858651158
+      Craft_Turret_Available: -1398752907
+      Craft_Turret_Pressed: -1238752132
+      Craft_Turret_Unaffordable: -858651158
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

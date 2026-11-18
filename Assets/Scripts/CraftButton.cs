@@ -6,16 +6,19 @@ using UnityEngine.UI;
 /// <summary>
 /// A crafting menu button. Shows one of three pictures:
 ///   Available   - the player has enough Nickel and Iridium (ResourceInventory) to craft it;
-///   Pressed     - while it's held down (and for a moment after a click);
+///   Pressed     - while it's held down, while its building is being placed, and for a moment after a click;
 ///   Unaffordable - not enough resources: clicking does nothing.
-/// Clicking it while affordable spends the cost and fires On Crafted. Nothing is built yet: hook the item's
-/// effect up to On Crafted (or listen to Crafted from code) once it exists.
+/// Clicking it while affordable picks up its Building to place (BuildingPlacer); the cost is paid when it's put
+/// down, then On Crafted fires. Clicking it again while placing puts the building back. With no Building set,
+/// a click pays straight away.
 /// Built by Tools > Space Dinosaurs > Build Crafting Menu.
 /// </summary>
 [RequireComponent(typeof(Button))]
 public class CraftButton : MonoBehaviour, IPointerDownHandler, IPointerUpHandler, IPointerExitHandler
 {
     public string itemName = "Item";
+    [Tooltip("Placed with the mouse after clicking. Empty: clicking just pays.")]
+    public Building building;
 
     [Header("Cost")]
     [Min(0)] public int nickelCost = 3;
@@ -66,7 +69,15 @@ public class CraftButton : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
     {
         // Don't leave the button selected: Space/Enter or the controller's A would "click" it again later.
         if (EventSystem.current != null) EventSystem.current.SetSelectedGameObject(null);
+        if (BuildingPlacer.Placing == this) { BuildingPlacer.Cancel(); return; } // clicked again: put it back
         if (!CanAfford) return;
+        if (building != null) { BuildingPlacer.Begin(this); return; } // paid when it's put down
+        Pay(null);
+    }
+
+    /// <summary>Spends the cost and reports the item as crafted (BuildingPlacer calls this on placing).</summary>
+    public void Pay(Building placed)
+    {
         var inv = ResourceInventory.Instance;
         if (inv != null)
         {
@@ -88,7 +99,8 @@ public class CraftButton : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
         if (flashTimer > 0f) flashTimer -= Time.unscaledDeltaTime;
         if (image == null) return;
         bool afford = CanAfford;
-        var sprite = !afford ? unaffordable : (held || flashTimer > 0f) ? pressed : available;
+        bool placing = BuildingPlacer.Placing == this;
+        var sprite = placing ? pressed : !afford ? unaffordable : (held || flashTimer > 0f) ? pressed : available;
         if (sprite != null && image.sprite != sprite) image.sprite = sprite;
         if (nickelLabel != null) nickelLabel.text = nickelCost.ToString();
         if (iridiumLabel != null) iridiumLabel.text = iridiumCost.ToString();

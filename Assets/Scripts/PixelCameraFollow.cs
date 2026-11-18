@@ -40,9 +40,36 @@ public class PixelCameraFollow : MonoBehaviour
         transform.position = Snap(smoothPosition);
     }
 
+    // FocusOn: gliding to a fixed point instead of following (in real time, so it works while paused).
+    bool focusing;
+    Vector3 focusFrom, focusTo;
+    float focusTime, focusClock;
+
+    /// <summary>Glide to this point over this many real seconds (it works while the game is paused) and stay
+    /// there, e.g. to show the drill robot exploding. Followed by nothing: the camera stays put afterwards.</summary>
+    public void FocusOn(Vector2 point, float seconds)
+    {
+        focusing = true;
+        focusFrom = transform.position;
+        focusTo = new Vector3(point.x, point.y, transform.position.z);
+        focusTime = Mathf.Max(0.01f, seconds);
+        focusClock = 0f;
+    }
+
+    /// <summary>True once a FocusOn glide has arrived.</summary>
+    public bool FocusArrived => focusing && focusClock >= focusTime;
+
     // LateUpdate so the target has finished moving (and physics interpolation applied) this frame.
     void LateUpdate()
     {
+        if (focusing)
+        {
+            focusClock += Time.unscaledDeltaTime;
+            float t = Mathf.SmoothStep(0f, 1f, Mathf.Clamp01(focusClock / focusTime));
+            smoothPosition = Vector3.Lerp(focusFrom, Clamp(focusTo), t);
+            transform.position = Snap(smoothPosition);
+            return;
+        }
         if (target == null) return;
 
         smoothPosition = smoothTime > 0f
