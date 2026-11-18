@@ -140,6 +140,7 @@ public class DinoController : MonoBehaviour
     InputAction move, sprint, attack, click, swapWeapon;
     bool aimWithMouse;   // the last attack press was a click: aim at the cursor
     bool clickOnUI;      // the current click started on a HUD button, so it isn't an attack
+    bool attackForDialogue; // the attack key is held from moving dialogue on, so it isn't an attack
     Rigidbody2D body;
     Animator animator;
     SpriteRenderer sprite;
@@ -209,18 +210,34 @@ public class DinoController : MonoBehaviour
 
     void Update()
     {
-        input = move.ReadValue<Vector2>();
+        input = Scripted ? scriptedInput : move.ReadValue<Vector2>();
         if (input.sqrMagnitude > 1f) input.Normalize(); // diagonals aren't faster
 
         if (hurtTimer > 0f) hurtTimer -= Time.deltaTime;
+        if (Scripted)
+        {
+            // A cutscene is in charge: no attacking, shooting or swapping, and no sprinting.
+            bufferedPress = 0f;
+            bool stopped = IsDead || IsHurt;
+            IsMoving = !stopped && input.sqrMagnitude > 0.01f;
+            IsSprinting = false;
+            if (IsMoving) UpdateFacing();
+            if (gunTimer > 0f) gunTimer -= Time.deltaTime;
+            if (recoilTimer > 0f) recoilTimer -= Time.deltaTime;
+            UpdateAnimation();
+            return;
+        }
         if (swapWeapon.WasPressedThisFrame() && !IsDead) SwapWeapon();
         // Remember a press even mid-attack or while stunned, so quick taps aren't lost.
         if (click.WasPressedThisFrame())
         {
-            clickOnUI = PointerOverButton() || BuildingPlacer.ClickTaken; // a HUD button, or placing a building
+            clickOnUI = PointerOverButton() || BuildingPlacer.ClickTaken || DialogueBox.ClickTaken; // a HUD button, placing a building, or reading dialogue
             if (!clickOnUI) { bufferedPress = pressBuffer; aimWithMouse = true; }
         }
-        if (attack.WasPressedThisFrame()) { bufferedPress = pressBuffer; aimWithMouse = false; }
+        // Space also moves the dialogue on: a press used for that isn't an attack, even if it's held after.
+        if (attack.WasPressedThisFrame() && DialogueBox.ClickTaken) attackForDialogue = true;
+        if (!attack.IsPressed()) attackForDialogue = false;
+        if (attack.WasPressedThisFrame() && !attackForDialogue) { bufferedPress = pressBuffer; aimWithMouse = false; }
         else if (bufferedPress > 0f && !click.WasPressedThisFrame()) bufferedPress -= Time.deltaTime;
         bool locked = IsDead || IsHurt || (IsDrilling && stopWhileDrilling);
         IsMoving = !locked && input.sqrMagnitude > 0.01f;
@@ -319,7 +336,7 @@ public class DinoController : MonoBehaviour
     }
 
     // X held, or the mouse button held after a click that wasn't on the HUD.
-    bool AttackHeld => attack.IsPressed() || (click.IsPressed() && !clickOnUI && aimWithMouse);
+    bool AttackHeld => (attack.IsPressed() && !attackForDialogue) || (click.IsPressed() && !clickOnUI && aimWithMouse);
 
     // The mouse in the world (on the dino's plane).
     Vector2 MouseWorld()
@@ -530,6 +547,27 @@ public class DinoController : MonoBehaviour
     {
         if (hasDrill) EquipGun(); else EquipDrill();
     }
+
+    /// <summary>Put both weapons away (the plain dino animations).</summary>
+    public void Unarm() => SetWeapon(false, false);
+
+    /// <summary>Set exactly which weapon is in hand (both false = none).</summary>
+    public void SetWeapons(bool drill, bool gun) => SetWeapon(drill, gun);
+
+    // ---------- scripted control (cutscenes) ----------
+
+    Vector2 scriptedInput;
+
+    /// <summary>True while a cutscene is moving the dino: the player's controls are ignored.</summary>
+    public bool Scripted { get; private set; }
+
+    /// <summary>Take control away from the player. Then steer with ScriptedMove; give it back with EndScripted.</summary>
+    public void BeginScripted() { Scripted = true; scriptedInput = Vector2.zero; bufferedPress = 0f; }
+
+    /// <summary>While scripted: walk this way (like holding the stick that way), or zero to stop.</summary>
+    public void ScriptedMove(Vector2 direction) => scriptedInput = Vector2.ClampMagnitude(direction, 1f);
+
+    public void EndScripted() { Scripted = false; scriptedInput = Vector2.zero; }
 
     void SetWeapon(bool drill, bool gun)
     {
