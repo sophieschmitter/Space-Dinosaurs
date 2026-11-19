@@ -21,6 +21,12 @@ public class LevelMap : MonoBehaviour
 {
     [Tooltip("Stages in play order. Leave empty to use this object's children that have Map Stage, top to bottom.")]
     public List<MapStage> stages = new List<MapStage>();
+    [Tooltip("Seconds the rocket sits on the asteroid after landing, before the level loads.")]
+    public float landedPause = 0.35f;
+    [Tooltip("Draw the dotted path between the asteroids.")]
+    public bool showPath = false;
+    [Tooltip("The rocket ship that flies between the asteroids (Assets/Prefabs/Rocket Ship with a Map Rocket).")]
+    public MapRocket rocket;
     [Tooltip("Found automatically if left empty.")]
     public MapCamera mapCamera;
     [Tooltip("Found automatically if left empty.")]
@@ -78,11 +84,12 @@ public class LevelMap : MonoBehaviour
     void Awake()
     {
         Time.timeScale = 1f; // a level may have ended paused
+        stages.RemoveAll(s => s == null); // (an empty slot left in the list used to stop it filling itself in)
         if (stages.Count == 0) stages.AddRange(GetComponentsInChildren<MapStage>());
-        stages.RemoveAll(s => s == null);
         LevelProgress.MapScene = gameObject.scene.name;
         if (mapCamera == null) mapCamera = FindFirstObjectByType<MapCamera>();
         if (dino == null) dino = FindFirstObjectByType<MapDino>();
+        if (rocket == null) rocket = FindFirstObjectByType<MapRocket>();
     }
 
     void OnEnable()
@@ -113,11 +120,14 @@ public class LevelMap : MonoBehaviour
         ShowStates(shown);
 
         if (reveal) selected = shown - 1;
-        else if (LevelProgress.LastStage >= 0) selected = Mathf.Clamp(LevelProgress.LastStage, 0, unlockedCount - 1);
+        // Back from a level: stay on the asteroid you played. Otherwise (from Training or the title): the next one to beat.
+        else if (LevelProgress.CameFromMap && LevelProgress.LastStage >= 0) selected = Mathf.Clamp(LevelProgress.LastStage, 0, unlockedCount - 1);
         else selected = FirstUnbeatenStage();
 
         dinoStage = selected;
         if (dino != null) dino.PlaceAt(stages[selected].StandPoint);
+        // Back from a level: the rocket is waiting on its asteroid. Otherwise it flies in when you pick one.
+        if (rocket != null) { if (LevelProgress.CameFromMap) rocket.PlaceOn(stages[selected], selected); else rocket.Hide(); }
         if (mapCamera != null) mapCamera.FocusOn(stages[selected].StandPoint.x, true);
         UpdateBar();
 
@@ -182,7 +192,7 @@ public class LevelMap : MonoBehaviour
         }
         LevelProgress.CameFromMap = true;
         LevelProgress.LastStage = selected;
-        StartCoroutine(Load(stage.sceneName));
+        StartCoroutine(FlyThenLoad(selected, stage.sceneName));
     }
 
     /// <summary>Go back to the title screen. Hook a Back button's On Click up to this.</summary>
@@ -210,8 +220,11 @@ public class LevelMap : MonoBehaviour
         if (busy || animating) return;
         int hit = StageAt(world);
         if (hit < 0) return;
-        if (hit == selected && dino != null && !dino.IsMoving) Play(); // second click on the same stage plays it
-        else TrySelect(hit);
+        // One click: fly there (Play waits for the rocket to land) and start that level.
+        // A locked stage just shakes, and nothing launches.
+        if (hit >= unlockedCount) { TrySelect(hit); return; }
+        TrySelect(hit);
+        Play();
     }
 
     void TrySelect(int index)
@@ -227,6 +240,8 @@ public class LevelMap : MonoBehaviour
         UpdateBar();
         if (mapCamera != null) mapCamera.FocusOn(stages[index].StandPoint.x);
         if (dino != null && index != dinoStage) dino.WalkPath(PathBetween(dinoStage, index));
+        if (rocket != null && rocket.AtStage != index)
+            rocket.FlyTo(stages[index], index, mapCamera != null ? mapCamera.GetComponent<Camera>() : Camera.main);
         dinoStage = index;
     }
 
@@ -356,6 +371,7 @@ public class LevelMap : MonoBehaviour
             var dots = new List<SpriteRenderer>();
             float gapStart = stages[i].Radius * stageGap, gapEnd = stages[i + 1].Radius * stageGap;
             float length = Length(points);
+            if (showPath)
             for (float d = dotSpacing * 0.5f; d < length; d += dotSpacing)
             {
                 Vector3 pos = PointAt(points, d);
@@ -430,6 +446,20 @@ public class LevelMap : MonoBehaviour
     }
 
     // ---------- scene changes ----------
+
+    // The rocket flies to the stage first (if it isn't there yet), lands, then the level loads.
+    IEnumerator FlyThenLoad(int index, string sceneName)
+    {
+        busy = true;
+        if (rocket != null)
+        {
+            if (rocket.AtStage != index) rocket.FlyTo(stages[index], index, mapCamera != null ? mapCamera.GetComponent<Camera>() : Camera.main);
+            while (rocket.IsMoving) yield return null;
+            yield return new WaitForSecondsRealtime(landedPause);
+        }
+        else if (dino != null) while (dino.IsMoving) yield return null;
+        yield return Load(sceneName);
+    }
 
     IEnumerator Load(string sceneName)
     {

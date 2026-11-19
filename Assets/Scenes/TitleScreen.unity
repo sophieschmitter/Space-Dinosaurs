@@ -636,7 +636,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76c26c41f54f64aaa915f093dbe277a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TitleScreen
-  firstLevelScene: Level One
+  firstLevelScene: Training
   mainMenu: {fileID: 0}
   controlsPanel: {fileID: 0}
   firstSelected: {fileID: 1747618267}
@@ -1023,9 +1023,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c77301093e19147c6b96c6455d3dab28, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MenuButtonStyle
-  background: {fileID: 1747618272}
-  border: {fileID: 1747618270}
-  label: {fileID: 1941055928}
+  background: {fileID: 0}
+  border: {fileID: 0}
+  label: {fileID: 0}
   normalBackground: {r: 0.11764706, g: 0.101960786, b: 0.2, a: 0.9019608}
   normalBorder: {r: 0.8784314, g: 0.2784314, b: 0.61960787, a: 1}
   normalText: {r: 0.9254902, g: 0.9019608, b: 1, a: 1}
@@ -1368,7 +1368,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: 'WASD: MOVE    SPACE: SPRINT    L-Click: Use Weapon    Q: Change Weapon'
+  m_Text: 'WASD: MOVE    SHIFT: SPRINT    SPACE or L-Click: Use Weapon    Q: Change
+    Weapon'
 --- !u!222 &1999664857
 CanvasRenderer:
   m_ObjectHideFlags: 0

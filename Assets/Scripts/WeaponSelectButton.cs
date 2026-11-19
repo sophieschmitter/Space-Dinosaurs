@@ -3,8 +3,9 @@ using UnityEngine.UI;
 
 /// <summary>
 /// Put on a HUD button: clicking it hands the dino this weapon (calls DinoController.EquipDrill / EquipGun).
-/// Q on the keyboard swaps weapons too. The button for the weapon in hand shows at full colour and a little
-/// bigger; the other is dimmed. The HUD and the dino are separate prefabs, so the dino is found at runtime.
+/// Q on the keyboard swaps weapons too. Styled like the dialogue box: a dark panel with an outline. The button
+/// for the weapon in hand gets the yellow outline and is a little bigger; the other has the pink outline and a
+/// dimmed icon. The HUD and the dino are separate prefabs, so the dino is found at runtime.
 /// </summary>
 [RequireComponent(typeof(Button))]
 public class WeaponSelectButton : MonoBehaviour
@@ -16,6 +17,14 @@ public class WeaponSelectButton : MonoBehaviour
     public float selectedScale = 1.15f;
     [Tooltip("Brightness of the button that isn't selected (0-1).")]
     [Range(0f, 1f)] public float unselectedBrightness = 0.45f;
+
+    [Header("Look (optional: without these it tints the button's own image)")]
+    [Tooltip("The weapon picture inside the button.")]
+    public Image icon;
+    [Tooltip("The panel's outline (like the dialogue box's).")]
+    public Outline outline;
+    public Color outlineColor = new Color32(0xE0, 0x47, 0x9E, 0xFF);      // the dialogue box's pink
+    public Color selectedOutlineColor = new Color32(0xF5, 0xC5, 0x42, 0xFF); // the HUD's yellow
 
     Image image;
     Color baseColor;
@@ -48,6 +57,17 @@ public class WeaponSelectButton : MonoBehaviour
         if (!FindDino()) return;
         bool selected = weapon == Weapon.Gun ? dino.hasGun && !dino.hasDrill : dino.hasDrill;
         transform.localScale = Vector3.one * (selected ? selectedScale : 1f);
+        if (icon != null || outline != null)
+        {
+            if (outline != null) outline.effectColor = selected ? selectedOutlineColor : outlineColor;
+            if (icon != null)
+            {
+                var ic = selected ? Color.white : Color.white * unselectedBrightness;
+                ic.a = 1f;
+                icon.color = ic;
+            }
+            return;
+        }
         if (image != null)
         {
             var c = selected ? baseColor : baseColor * unselectedBrightness;

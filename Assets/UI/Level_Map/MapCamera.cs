@@ -35,6 +35,14 @@ public class MapCamera : MonoBehaviour
     /// <summary>Called with the world position of a click (a press and release without dragging).</summary>
     public event Action<Vector2> Clicked;
 
+    /// <summary>True once the player has dragged or scrolled the map (the scroll hint goes away then).</summary>
+    public bool HasScrolled { get; private set; }
+    /// <summary>How far the map goes left and right (world X).</summary>
+    public float MapLeft => Left;
+    public float MapRight => Right;
+    /// <summary>Can the view move further right / left from here?</summary>
+    public bool MoreToTheRight => cam != null && transform.position.x < Clamp(float.MaxValue) - 0.05f;
+
     Camera cam;
     float targetX, velocity, dragStartCamX;
     bool pressed, pressedOverUI, dragging;
@@ -93,7 +101,7 @@ public class MapCamera : MonoBehaviour
         }
         else if (down && pressed && !pressedOverUI)
         {
-            if (!dragging && (pos - pressPosition).magnitude > dragThreshold) dragging = true;
+            if (!dragging && (pos - pressPosition).magnitude > dragThreshold) { dragging = true; HasScrolled = true; }
             if (dragging)
             {
                 float unitsPerPixel = cam.orthographicSize * 2f / Mathf.Max(1, Screen.height);
@@ -120,6 +128,7 @@ public class MapCamera : MonoBehaviour
         // Wheels report different sizes per notch on different computers; treat anything big as one notch.
         amount = Mathf.Sign(amount) * Mathf.Min(Mathf.Abs(amount), 1f);
         targetX = Clamp(targetX + amount * wheelStep);
+        HasScrolled = true;
     }
 
     void FitHeight()

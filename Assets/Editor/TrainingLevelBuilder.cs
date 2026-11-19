@@ -13,7 +13,7 @@ using UnityEngine.Tilemaps;
 ///
 /// Layout (world tiles, left to right; hallways are 4 tiles wide):
 ///   entry hallway -> 0 intro room -> 1 wall room (a breakable meteorite wall across it, the ore past it)
-///   -> 2 ice cream / crab room (3 ice cream spots) -> 3 turret room (1 spot) -> 4 shield room (1 spot, a
+///   -> 2 ice cream / crab room (1 ice cream spot) -> 3 turret room (1 spot) -> 4 shield room (1 spot, a
 ///   4-wide dead-end hallway below it that the tall crabs come up) -> up a hallway to 5, the final room.
 /// </summary>
 public static class TrainingLevelBuilder
@@ -132,9 +132,7 @@ public static class TrainingLevelBuilder
             s.GetComponent<BuildingSpot>().onlyFor = only;
         }
         // Just inside each room's entrance, under the path the dino walks in on, so they're in view straight away.
-        Spot(new Vector2(71f, -2f), "Ice Cream Stand");
         Spot(new Vector2(74f, -2f), "Ice Cream Stand");
-        Spot(new Vector2(77f, -2f), "Ice Cream Stand");
         Spot(new Vector2(113f, -2f), "Turret");
         Spot(new Vector2(147f, -2.625f), "Shield Generator"); // over the tall crabs' hallway: its shield closes it off
 

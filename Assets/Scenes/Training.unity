@@ -433,9 +433,9 @@ Camera:
   m_LensShift: {x: 0, y: 0}
   m_NormalizedViewPortRect:
     serializedVersion: 2
-    x: 0.00052083336
+    x: 0.0010416667
     y: 0
-    width: 1.1812501
+    width: 0.91875005
     height: 0.5888889
   near clip plane: 0.3
   far clip plane: 1000
@@ -1609,7 +1609,9 @@ MonoBehaviour:
     has been adequate, adequate indeed. But you'll have to do better on your first
     mission. Your job is to protect the mining robot from alien attackers. For some
     reason they don't like us fracking their asteroids. Your first mission will be
-    on an asteroid belt not far from here...
+    on an asteroid belt not far from here... Enemies will be attacking from... Everywhere
+    All At Once, so use any means at your disposal to keep the mining robot safe.
+    Good luck, comrade.
   finaleState: Happy
   step: 
 --- !u!4 &412061547
@@ -1631,9 +1633,7 @@ Transform:
   - {fileID: 449212696}
   - {fileID: 1927480377}
   - {fileID: 541794139}
-  - {fileID: 2017597836}
   - {fileID: 862414566}
-  - {fileID: 1832494497}
   - {fileID: 437208159}
   - {fileID: 1586671494}
   m_Father: {fileID: 0}
@@ -224123,72 +224123,6 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
---- !u!1001 &1832494496
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 412061547}
-    m_Modifications:
-    - target: {fileID: 2714576992393480750, guid: ab0368ba2b6bd4bfb9b9367f66615fef, type: 3}
-      propertyPath: m_Name
-      value: Building Spot (Ice Cream Stand)
-      objectReference: {fileID: 0}
-    - target: {fileID: 3064120419217615509, guid: ab0368ba2b6bd4bfb9b9367f66615fef, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 77
-      objectReference: {fileID: 0}
-    - target: {fileID: 3064120419217615509, guid: ab0368ba2b6bd4bfb9b9367f66615fef, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -2
-      objectReference: {fileID: 0}
-    - target: {fileID: 3064120419217615509, guid: ab0368ba2b6bd4bfb9b9367f66615fef, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3064120419217615509, guid: ab0368ba2b6bd4bfb9b9367f66615fef, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3064120419217615509, guid: ab0368ba2b6bd4bfb9b9367f66615fef, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3064120419217615509, guid: ab0368ba2b6bd4bfb9b9367f66615fef, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3064120419217615509, guid: ab0368ba2b6bd4bfb9b9367f66615fef, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3064120419217615509, guid: ab0368ba2b6bd4bfb9b9367f66615fef, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3064120419217615509, guid: ab0368ba2b6bd4bfb9b9367f66615fef, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3064120419217615509, guid: ab0368ba2b6bd4bfb9b9367f66615fef, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3258230153109217342, guid: ab0368ba2b6bd4bfb9b9367f66615fef, type: 3}
-      propertyPath: onlyFor
-      value: Ice Cream Stand
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: ab0368ba2b6bd4bfb9b9367f66615fef, type: 3}
---- !u!4 &1832494497 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 3064120419217615509, guid: ab0368ba2b6bd4bfb9b9367f66615fef, type: 3}
-  m_PrefabInstance: {fileID: 1832494496}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1841706954
 GameObject:
   m_ObjectHideFlags: 0
@@ -224831,72 +224765,6 @@ Animator:
 Transform:
   m_CorrespondingSourceObject: {fileID: 3135771315661873531, guid: 839015a6cccb544409566a7088c5e864, type: 3}
   m_PrefabInstance: {fileID: 2012556972}
-  m_PrefabAsset: {fileID: 0}
---- !u!1001 &2017597835
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 412061547}
-    m_Modifications:
-    - target: {fileID: 2714576992393480750, guid: ab0368ba2b6bd4bfb9b9367f66615fef, type: 3}
-      propertyPath: m_Name
-      value: Building Spot (Ice Cream Stand)
-      objectReference: {fileID: 0}
-    - target: {fileID: 3064120419217615509, guid: ab0368ba2b6bd4bfb9b9367f66615fef, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 71
-      objectReference: {fileID: 0}
-    - target: {fileID: 3064120419217615509, guid: ab0368ba2b6bd4bfb9b9367f66615fef, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -2
-      objectReference: {fileID: 0}
-    - target: {fileID: 3064120419217615509, guid: ab0368ba2b6bd4bfb9b9367f66615fef, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3064120419217615509, guid: ab0368ba2b6bd4bfb9b9367f66615fef, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3064120419217615509, guid: ab0368ba2b6bd4bfb9b9367f66615fef, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3064120419217615509, guid: ab0368ba2b6bd4bfb9b9367f66615fef, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3064120419217615509, guid: ab0368ba2b6bd4bfb9b9367f66615fef, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3064120419217615509, guid: ab0368ba2b6bd4bfb9b9367f66615fef, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3064120419217615509, guid: ab0368ba2b6bd4bfb9b9367f66615fef, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3064120419217615509, guid: ab0368ba2b6bd4bfb9b9367f66615fef, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3258230153109217342, guid: ab0368ba2b6bd4bfb9b9367f66615fef, type: 3}
-      propertyPath: onlyFor
-      value: Ice Cream Stand
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: ab0368ba2b6bd4bfb9b9367f66615fef, type: 3}
---- !u!4 &2017597836 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 3064120419217615509, guid: ab0368ba2b6bd4bfb9b9367f66615fef, type: 3}
-  m_PrefabInstance: {fileID: 2017597835}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &2127937545
 GameObject:

@@ -76,6 +76,9 @@ public class TrainingDirector : MonoBehaviour
     [TextArea(2, 4)] public string buildIceCream = "Your vitals indicate that you need a boost to your health. Use the resources you just collected to make an Ice Cream Stand. It can be placed in any of these designated building zones.";
     [TextArea(1, 3)] public string craftHelp = "[Click to select it from the crafting menu with your mouse, then click to place it in the room]";
     [TextArea(2, 4)] public string eatIceCream = "I give you permission to walk up to the stand and consume the cone. Do not worry, the Compsognathus trapped inside will make more. He makes a new cone every 20 seconds or so.";
+    [Tooltip("Seconds between eating the ice cream and the General speaking again.")]
+    public float afterIceCreamPause = 3f;
+    [TextArea(1, 3)] public string afterIceCream = "Adequate. Now, let's move on.";
     [TextArea(2, 4)] public string capturedCrab = "We have captured a Rusty Crab for training purposes. It appears to be performing a mating dance. Destroy it.";
     [TextArea(1, 3)] public string drillAttackHelp = "[Press SpaceBar to use your drill]";
     [TextArea(1, 3)] public string firstCrabDead = "Yes, adequate.";
@@ -86,7 +89,7 @@ public class TrainingDirector : MonoBehaviour
     [TextArea(3, 6)] public string buildTurret = "I do not know where they keep coming from. No matter—I have been craving some paleoseafood recently anyway. Try crafting a gun turret to help you ward off these delicious invaders, then proceed to the next room.";
     [TextArea(3, 6)] public string buildShield = "I angered some tall crabs earlier today when I landed on their queen with my spaceship. It appears they are trying to attack our base. Build a shield generator to keep their projectiles away.";
     [TextArea(1, 3)] public string shieldOreHelp = "[Mine the ore in this room to afford the shield generator.]";
-    [TextArea(4, 8)] public string finale = "Congratulations! You've completed the training module. Your performance has been adequate, adequate indeed. But you'll have to do better on your first mission. Your job is to protect the mining robot from alien attackers. For some reason they don't like us fracking their asteroids. Your first mission will be on an asteroid belt not far from here...";
+    [TextArea(4, 8)] public string finale = "Congratulations! You've completed the training module. Your performance has been adequate, adequate indeed. But you'll have to do better on your first mission. Your job is to protect the mining robot from alien attackers. For some reason they don't like us fracking their asteroids. Your first mission will be on an asteroid belt not far from here... Enemies will be attacking from... Everywhere All At Once, so use any means at your disposal to keep the mining robot safe. Good luck, comrade.";
     public string finaleState = "Happy";
 
     /// <summary>Which step it's on, for debugging (shown in the Inspector while playing).</summary>
@@ -159,11 +162,12 @@ public class TrainingDirector : MonoBehaviour
         yield return Say(General(eatIceCream));
         Step("eat the ice cream");
         while (!AteIceCream()) yield return null;
+        yield return new WaitForSeconds(afterIceCreamPause); // let them enjoy it
 
         var captured = Spawn(crabPrefab, capturedCrabAt);
         captured.Celebrate();
         yield return null;
-        yield return Say(General(capturedCrab), Computer(drillAttackHelp));
+        yield return Say(General(afterIceCream), General(capturedCrab), Computer(drillAttackHelp));
         Step("drill the captured crab");
         while (Alive(captured)) yield return null;
 

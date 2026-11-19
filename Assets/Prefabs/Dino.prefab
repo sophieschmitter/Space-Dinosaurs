@@ -569,10 +569,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b6e2f49664d544c988a05eff49465483, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DrillSounds
-  hitSound: {fileID: 8300000, guid: c8f03c049cbeb446fa5f82661c017941, type: 3}
-  hitVolume: 0.5
-  hitLength: 0.45
-  hitStart: 0.06
+  hitSound: {fileID: 8300000, guid: 4f569446f08e34a57b528f108af5ad18, type: 3}
+  hitVolume: 0.3
+  hitLength: 0.28
+  hitStart: 0
   oreBreakSound: {fileID: 8300000, guid: e772c17884d59494b9dba699eaf3a139, type: 3}
   oreBreakVolume: 0.6
   oreBreakLength: 1.1
