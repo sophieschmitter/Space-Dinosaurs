@@ -33,6 +33,7 @@ public static class WallTileBuilder
         public float connectedAt = 0.5f; // share of wall body an edge strip needs to count as joined (higher = thin rim lines count)
         public int cornerSize = 2;    // art px checked at each corner
         public int bodyMaxRed = FillMaxRed; // colours with less red than this are wall body; the rest is rim
+        public bool bodyIsBlue;       // instead: bluish colours (the navy rock) are body, anything else (ore crust) is rim
     }
 
     public static readonly Config Meteorite = new Config
@@ -54,6 +55,19 @@ public static class WallTileBuilder
         // Its mid purple is shading inside the rock too, so only the two bright shades count as rim; and some
         // tiles have a thin 1 px rim, so an edge needs three quarters wall body to count as joined.
         spritePrefix = "Unbreakable", edgeInset = 0, connectedAt = 0.75f, bodyMaxRed = 132,
+    };
+
+    // Ore veins: navy rock where tiles join, a crust of ore (brown / green) on the exposed sides.
+    public static readonly Config OreBrown = new Config
+    {
+        sheet = "Assets/Sprites/Ore Tilemap.png", outFolder = "Assets/Tiles/Generated/Ore Brown", atlasName = "OreBrownTiles",
+        ruleTileName = "OreBrownRuleTile", paletteName = "Ore Vein Brown", spritePrefix = "OreBrown", bodyIsBlue = true, connectedAt = 0.3f,
+    };
+
+    public static readonly Config OreGreen = new Config
+    {
+        sheet = "Assets/Sprites/Ore Green Tilemap.png", outFolder = "Assets/Tiles/Generated/Ore Green", atlasName = "OreGreenTiles",
+        ruleTileName = "OreGreenRuleTile", paletteName = "Ore Vein Green", spritePrefix = "OreGreen", bodyIsBlue = true, connectedAt = 0.3f,
     };
 
     static Config cfg = Meteorite;
@@ -92,6 +106,9 @@ public static class WallTileBuilder
     /// <summary>The unbreakable meteorite walls from "Assets/Sprites/Meteorite Unbreakable Tilemap.png" (see SolidTilemap).</summary>
     [MenuItem("Tools/Space Dinosaurs/Build Unbreakable Meteorite Tiles")]
     public static void BuildUnbreakable() => Build(UnbreakableMeteorite);
+
+    [MenuItem("Tools/Space Dinosaurs/Build Ore Vein Tiles")]
+    public static void BuildOre() { Build(OreBrown); Build(OreGreen); }
 
     public static RuleTile Build(Config config)
     {
@@ -194,7 +211,7 @@ public static class WallTileBuilder
         return result;
     }
 
-    static bool IsBody(Color32 p) => p.a > 128 && p.r < cfg.bodyMaxRed;
+    static bool IsBody(Color32 p) => p.a > 128 && (cfg.bodyIsBlue ? p.b > p.r && p.b >= p.g : p.r < cfg.bodyMaxRed);
 
     // A side is "connected" when the wall body runs right up to it (no rim); same for corners.
     static int ShapeFromArt(TileArt t)
@@ -278,7 +295,12 @@ public static class WallTileBuilder
         for (int q = 0; q < 4; q++)
         {
             if (QuarterState(best.shape, q) == QuarterState(shape, q)) continue;
-            var donor = pool.First(c => QuarterState(c.shape, q) == QuarterState(shape, q));
+            // Sheets without inner-corner pieces (16-tile sets): fall back to the same sides with the corner filled in.
+            int want = QuarterState(shape, q);
+            var donor = pool.FirstOrDefault(c => QuarterState(c.shape, q) == want);
+            if (donor.art == null) donor = pool.FirstOrDefault(c => QuarterState(c.shape, q) == (want | Quarters[q].corner));
+            if (donor.art == null) donor = pool.FirstOrDefault(c => (QuarterState(c.shape, q) & ~Quarters[q].corner) == (want & ~Quarters[q].corner));
+            if (donor.art == null) continue; // nothing close: keep the best candidate's quarter
             int half = Art / 2, x0 = Quarters[q].qx * half, y0 = Quarters[q].qy * half;
             for (int y = y0; y < y0 + half; y++) for (int x = x0; x < x0 + half; x++) o[x, y] = donor.art[x, y];
         }

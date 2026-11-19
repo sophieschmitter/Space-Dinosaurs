@@ -14,7 +14,8 @@ using UnityEngine.Tilemaps;
 /// tilemap into one MeteoriteCluster per connected meteorite (taking the ore on them along).
 /// Metal sprites ("Assets/Sprites/Metal Tilemap.png") and unbreakable meteorite sprites ("Assets/Sprites/Meteorite
 /// Unbreakable Tilemap.png") work the same way, as blocks on the scene's solid tilemap (SolidTilemap: can't be
-/// drilled). Each kind only merges with its own kind.
+/// drilled). Ore vein sprites ("Assets/Sprites/Ore Tilemap.png", "Ore Green Tilemap.png") become breakable
+/// blocks like the meteorites. Each kind only merges with its own kind.
 /// Meteorites snap to whole tiles when moved, and a meteorite dropped touching another one (side by side or
 /// corner to corner) merges with it into one meteorite, so the edges join up like one piece of rock.
 /// Everything is undoable with Cmd+Z.
@@ -28,6 +29,12 @@ public static class MeteoritePlacement
     const string MetalRuleTilePath = "Assets/Tiles/Generated/Metal/MetalRuleTile.asset";
     const string UnbreakableSheet = "Assets/Sprites/Meteorite Unbreakable Tilemap.png";
     const string UnbreakableRuleTilePath = "Assets/Tiles/Generated/Unbreakable/UnbreakableRuleTile.asset";
+    // Ore veins: breakable like the meteorites (they go on the Walls tilemap).
+    static readonly (string sheet, string ruleTile, string name)[] OreSheets =
+    {
+        ("Assets/Sprites/Ore Tilemap.png", "Assets/Tiles/Generated/Ore Brown/OreBrownRuleTile.asset", "Ore Vein"),
+        ("Assets/Sprites/Ore Green Tilemap.png", "Assets/Tiles/Generated/Ore Green/OreGreenRuleTile.asset", "Green Ore Vein"),
+    };
     const string ConvertPref = "SpaceDinosaurs.MeteoriteToTiles";
     const string MenuPath = "Tools/Space Dinosaurs/Meteorite Sprites Become Wall Tiles";
 
@@ -110,7 +117,8 @@ public static class MeteoritePlacement
         // Metal and unbreakable meteorite both go on the solid (can't be drilled) tilemap.
         bool unbreakableRock = texPath == UnbreakableSheet;
         bool metal = texPath == MetalSheet || unbreakableRock;
-        if (!metal && !texPath.StartsWith(TilesFolder)) return;
+        int ore = System.Array.FindIndex(OreSheets, o => o.sheet == texPath);
+        if (!metal && ore < 0 && !texPath.StartsWith(TilesFolder)) return;
 
         var cells = SpriteCells(sr.sprite, texPath);
         if (cells.Count == 0) return;
@@ -127,13 +135,13 @@ public static class MeteoritePlacement
             Mathf.RoundToInt((world0.x - gridOrigin.x) / cellSize.x - 0.5f),
             Mathf.RoundToInt((world0.y - gridOrigin.y) / cellSize.y - 0.5f), 0);
 
-        var ruleTile = AssetDatabase.LoadAssetAtPath<TileBase>(unbreakableRock ? UnbreakableRuleTilePath : metal ? MetalRuleTilePath : RuleTilePath);
+        var ruleTile = AssetDatabase.LoadAssetAtPath<TileBase>(ore >= 0 ? OreSheets[ore].ruleTile : unbreakableRock ? UnbreakableRuleTilePath : metal ? MetalRuleTilePath : RuleTilePath);
         if (Convert && walls != null && ruleTile != null)
         {
             // A meteorite of its own (movable), not tiles on the shared Walls tilemap.
             var tiles = new Dictionary<Vector3Int, TileBase>();
             foreach (var c in cells) tiles[anchor + c.offset] = ruleTile;
-            string kind = unbreakableRock ? "Unbreakable Meteorite" : metal ? "Metal Block" : "Meteorite";
+            string kind = ore >= 0 ? OreSheets[ore].name : unbreakableRock ? "Unbreakable Meteorite" : metal ? "Metal Block" : "Meteorite";
             var cluster = NewCluster(walls, metal ? null : FindOre(go.scene), kind, tiles, null, metal);
             Selection.activeGameObject = cluster;
             QueueMerge(cluster);
