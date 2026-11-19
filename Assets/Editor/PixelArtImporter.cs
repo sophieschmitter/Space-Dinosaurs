@@ -15,6 +15,7 @@ public class PixelArtImporter : AssetPostprocessor
     static readonly (string folder, int scale)[] Folders =
     {
         ("Assets/Sprites/Tall Crab Projectile Spritework.png", 25), // drawn at 25 px per art pixel -> PPU 400
+        ("Assets/Sprites/Metal Tilemap.png", 3),       // metal wall tiles: 48 px tile = 16 art px -> PPU 48
         ("Assets/Sprites/Laser bullet.PNG", 125),    // 16 x 16 art px canvas drawn at 125 px per art pixel -> PPU 2000
         ("Assets/Tiles/Generated", 1), // WallTileBuilder output, already 1x -> PPU 16
         ("Assets/Placeholders", 1),    // stand-in block sprites: 16px = 1 tile

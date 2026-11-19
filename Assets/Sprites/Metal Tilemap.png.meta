@@ -1,0 +1,2236 @@
+fileFormatVersion: 2
+guid: e02c09df9739f4c589f3b5fc07bd26a5
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 2047508423246524216
+    second: Metal Tilemap_0
+  - first:
+      213: -8776935043024048579
+    second: Metal Tilemap_1
+  - first:
+      213: 8158778943475556482
+    second: Metal Tilemap_2
+  - first:
+      213: -5348506532485608129
+    second: Metal Tilemap_3
+  - first:
+      213: -3556298145283335740
+    second: Metal Tilemap_4
+  - first:
+      213: -881700972106781534
+    second: Metal Tilemap_5
+  - first:
+      213: -6539740129067601795
+    second: Metal Tilemap_6
+  - first:
+      213: -6093125377607057999
+    second: Metal Tilemap_7
+  - first:
+      213: 6781864722404477866
+    second: Metal Tilemap_8
+  - first:
+      213: 8524069734792398311
+    second: Metal Tilemap_9
+  - first:
+      213: 1401829361992020131
+    second: Metal Tilemap_10
+  - first:
+      213: -5167530032969882493
+    second: Metal Tilemap_11
+  - first:
+      213: -2129007288479594351
+    second: Metal Tilemap_12
+  - first:
+      213: 2919260644428352525
+    second: Metal Tilemap_13
+  - first:
+      213: 3108421972320444891
+    second: Metal Tilemap_14
+  - first:
+      213: 5528829530420906093
+    second: Metal Tilemap_15
+  - first:
+      213: 4507263809723355186
+    second: Metal Tilemap_16
+  - first:
+      213: -1018484864115929368
+    second: Metal Tilemap_17
+  - first:
+      213: 7284214117618708271
+    second: Metal Tilemap_18
+  - first:
+      213: -7122829506790149275
+    second: Metal Tilemap_19
+  - first:
+      213: 9111449225032743901
+    second: Metal Tilemap_20
+  - first:
+      213: 8062834378220737032
+    second: Metal Tilemap_21
+  - first:
+      213: -9003213294553264174
+    second: Metal Tilemap_22
+  - first:
+      213: -8817015422408705371
+    second: Metal Tilemap_23
+  - first:
+      213: 1078278601032892885
+    second: Metal Tilemap_24
+  - first:
+      213: 7313387709062822179
+    second: Metal Tilemap_25
+  - first:
+      213: -8960667101441954826
+    second: Metal Tilemap_26
+  - first:
+      213: -6546572978935094511
+    second: Metal Tilemap_27
+  - first:
+      213: -5592918696267022992
+    second: Metal Tilemap_28
+  - first:
+      213: 7688187916088396891
+    second: Metal Tilemap_29
+  - first:
+      213: -1496533163606926027
+    second: Metal Tilemap_30
+  - first:
+      213: 6759976848970157458
+    second: Metal Tilemap_31
+  - first:
+      213: 8637727830528956610
+    second: Metal Tilemap_32
+  - first:
+      213: 2370744113826661757
+    second: Metal Tilemap_33
+  - first:
+      213: 813227784199739313
+    second: Metal Tilemap_34
+  - first:
+      213: 5207171093785741343
+    second: Metal Tilemap_35
+  - first:
+      213: 5156520073873834419
+    second: Metal Tilemap_36
+  - first:
+      213: -4053160894022937470
+    second: Metal Tilemap_37
+  - first:
+      213: 183612854957372895
+    second: Metal Tilemap_38
+  - first:
+      213: -6985884219594651859
+    second: Metal Tilemap_39
+  - first:
+      213: 2591897943179501850
+    second: Metal Tilemap_40
+  - first:
+      213: 6348829823947315472
+    second: Metal Tilemap_41
+  - first:
+      213: -2302650597938562595
+    second: Metal Tilemap_42
+  - first:
+      213: -7705924293607482373
+    second: Metal Tilemap_43
+  - first:
+      213: -7982789056328901428
+    second: Metal Tilemap_44
+  - first:
+      213: -1429085364123638593
+    second: Metal Tilemap_45
+  - first:
+      213: -5510459939638896436
+    second: Metal Tilemap_46
+  - first:
+      213: 2217642049849778185
+    second: Metal Tilemap_47
+  - first:
+      213: 5453935040784498321
+    second: Metal Tilemap_48
+  - first:
+      213: 8749923727974481507
+    second: Metal Tilemap_49
+  - first:
+      213: 3484245740086595461
+    second: Metal Tilemap_50
+  - first:
+      213: 1930670871048291901
+    second: Metal Tilemap_51
+  - first:
+      213: 775569270652181987
+    second: Metal Tilemap_52
+  - first:
+      213: 6455551652156987219
+    second: Metal Tilemap_53
+  - first:
+      213: -7043652331099670948
+    second: Metal Tilemap_54
+  - first:
+      213: -6252653599335476927
+    second: Metal Tilemap_55
+  - first:
+      213: -3321512061668329756
+    second: Metal Tilemap_56
+  - first:
+      213: 1062749618146500279
+    second: Metal Tilemap_57
+  - first:
+      213: 6891223643683344944
+    second: Metal Tilemap_58
+  - first:
+      213: -255017187970166037
+    second: Metal Tilemap_59
+  - first:
+      213: 7754143421891419433
+    second: Metal Tilemap_60
+  - first:
+      213: 590112236665861119
+    second: Metal Tilemap_61
+  - first:
+      213: 3227925116536630247
+    second: Metal Tilemap_62
+  - first:
+      213: -6201420613068429033
+    second: Metal Tilemap_63
+  - first:
+      213: -1348148016279222095
+    second: Metal Tilemap_64
+  - first:
+      213: 7394301416181378548
+    second: Metal Tilemap_65
+  - first:
+      213: -3484339748177709300
+    second: Metal Tilemap_66
+  - first:
+      213: -4589028050992654787
+    second: Metal Tilemap_67
+  - first:
+      213: -1468752806613470219
+    second: Metal Tilemap_68
+  - first:
+      213: 2575817893648510001
+    second: Metal Tilemap_69
+  - first:
+      213: 4637671261362527362
+    second: Metal Tilemap_70
+  - first:
+      213: -8184396356623167324
+    second: Metal Tilemap_71
+  - first:
+      213: -5032712703713410601
+    second: Metal Tilemap_72
+  - first:
+      213: 9176341393650200820
+    second: Metal Tilemap_73
+  - first:
+      213: 7241540275671620448
+    second: Metal Tilemap_74
+  - first:
+      213: -9033421273090453422
+    second: Metal Tilemap_75
+  - first:
+      213: -4154733996987529124
+    second: Metal Tilemap_76
+  - first:
+      213: 610522266355441919
+    second: Metal Tilemap_77
+  - first:
+      213: -6175154387086663272
+    second: Metal Tilemap_78
+  - first:
+      213: 8275776982188640946
+    second: Metal Tilemap_79
+  - first:
+      213: -6712446276998735189
+    second: Metal Tilemap_80
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 48
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Metal Tilemap_0
+      rect:
+        serializedVersion: 2
+        x: 47
+        y: 1055
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 83faa3210163a6c10800000000000000
+      internalID: 2047508423246524216
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Metal Tilemap_1
+      rect:
+        serializedVersion: 2
+        x: 143
+        y: 1055
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d3eafdf9410123680800000000000000
+      internalID: -8776935043024048579
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Metal Tilemap_2
+      rect:
+        serializedVersion: 2
+        x: 239
+        y: 1055
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2802cc6d83ec93170800000000000000
+      internalID: 8158778943475556482
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Metal Tilemap_3
+      rect:
+        serializedVersion: 2
+        x: 335
+        y: 1055
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f3dc65475a946c5b0800000000000000
+      internalID: -5348506532485608129
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Metal Tilemap_4
+      rect:
+        serializedVersion: 2
+        x: 431
+        y: 1055
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4c9910fcdad75aec0800000000000000
+      internalID: -3556298145283335740
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Metal Tilemap_5
+      rect:
+        serializedVersion: 2
+        x: 527
+        y: 1055
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2ac657723a193c3f0800000000000000
+      internalID: -881700972106781534
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Metal Tilemap_6
+      rect:
+        serializedVersion: 2
+        x: 623
+        y: 1055
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d70fe8b600d2e35a0800000000000000
+      internalID: -6539740129067601795
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Metal Tilemap_7
+      rect:
+        serializedVersion: 2
+        x: 719
+        y: 1055
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1bd30d770ced07ba0800000000000000
+      internalID: -6093125377607057999
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Metal Tilemap_8
+      rect:
+        serializedVersion: 2
+        x: 815
+        y: 1055
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aab0cad78060e1e50800000000000000
+      internalID: 6781864722404477866
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Metal Tilemap_9
+      rect:
+        serializedVersion: 2
+        x: 911
+        y: 1055
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7e585f6e2449b4670800000000000000
+      internalID: 8524069734792398311
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Metal Tilemap_10
+      rect:
+        serializedVersion: 2
+        x: 1007
+        y: 1055
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3a03f35a06c447310800000000000000
+      internalID: 1401829361992020131
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Metal Tilemap_11
+      rect:
+        serializedVersion: 2
+        x: 47
+        y: 911
+        width: 50
+        height: 98
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 384eaa250de3948b0800000000000000
+      internalID: -5167530032969882493
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Metal Tilemap_12
+      rect:
+        serializedVersion: 2
+        x: 143
+        y: 911
+        width: 50
+        height: 98
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 198c4fda62f3472e0800000000000000
+      internalID: -2129007288479594351
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Metal Tilemap_13
+      rect:
+        serializedVersion: 2
+        x: 239
+        y: 959
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d0c0ee5d61c438820800000000000000
+      internalID: 2919260644428352525
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Metal Tilemap_14
+      rect:
+        serializedVersion: 2
+        x: 335
+        y: 911
+        width: 50
+        height: 98
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bd1ed209055532b20800000000000000
+      internalID: 3108421972320444891
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Metal Tilemap_15
+      rect:
+        serializedVersion: 2
+        x: 431
+        y: 911
+        width: 50
+        height: 98
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d688d683a295abc40800000000000000
+      internalID: 5528829530420906093
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Metal Tilemap_16
+      rect:
+        serializedVersion: 2
+        x: 527
+        y: 911
+        width: 50
+        height: 98
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 230d88fed840d8e30800000000000000
+      internalID: 4507263809723355186
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Metal Tilemap_17
+      rect:
+        serializedVersion: 2
+        x: 623
+        y: 911
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8ee0249896d9dd1f0800000000000000
+      internalID: -1018484864115929368
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Metal Tilemap_18
+      rect:
+        serializedVersion: 2
+        x: 719
+        y: 911
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f2f6c84852ab61560800000000000000
+      internalID: 7284214117618708271
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Metal Tilemap_19
+      rect:
+        serializedVersion: 2
+        x: 1007
+        y: 911
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5633a1c4d40a62d90800000000000000
+      internalID: -7122829506790149275
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Metal Tilemap_20
+      rect:
+        serializedVersion: 2
+        x: 1103
+        y: 911
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ddbb51fabce527e70800000000000000
+      internalID: 9111449225032743901
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Metal Tilemap_21
+      rect:
+        serializedVersion: 2
+        x: 1199
+        y: 911
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 80297a4f521f4ef60800000000000000
+      internalID: 8062834378220737032
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Metal Tilemap_22
+      rect:
+        serializedVersion: 2
+        x: 47
+        y: 815
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2df041da5392e0380800000000000000
+      internalID: -9003213294553264174
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Metal Tilemap_23
+      rect:
+        serializedVersion: 2
+        x: 143
+        y: 815
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5aa3038103ba3a580800000000000000
+      internalID: -8817015422408705371
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Metal Tilemap_24
+      rect:
+        serializedVersion: 2
+        x: 239
+        y: 815
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5d18877bca0d6fe00800000000000000
+      internalID: 1078278601032892885
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Metal Tilemap_25
+      rect:
+        serializedVersion: 2
+        x: 335
+        y: 815
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 329b5679f5f5e7560800000000000000
+      internalID: 7313387709062822179
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Metal Tilemap_26
+      rect:
+        serializedVersion: 2
+        x: 431
+        y: 815
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6fbe5043fb055a380800000000000000
+      internalID: -8960667101441954826
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Metal Tilemap_27
+      rect:
+        serializedVersion: 2
+        x: 527
+        y: 815
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 11327669f86e525a0800000000000000
+      internalID: -6546572978935094511
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Metal Tilemap_28
+      rect:
+        serializedVersion: 2
+        x: 623
+        y: 815
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 07dfc5b0416f162b0800000000000000
+      internalID: -5592918696267022992
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Metal Tilemap_29
+      rect:
+        serializedVersion: 2
+        x: 719
+        y: 815
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b5c46e80d2ee1ba60800000000000000
+      internalID: 7688187916088396891
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Metal Tilemap_30
+      rect:
+        serializedVersion: 2
+        x: 911
+        y: 815
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 53d1e94440f3b3be0800000000000000
+      internalID: -1496533163606926027
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Metal Tilemap_31
+      rect:
+        serializedVersion: 2
+        x: 1007
+        y: 815
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 29d0bb4d02340dd50800000000000000
+      internalID: 6759976848970157458
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Metal Tilemap_32
+      rect:
+        serializedVersion: 2
+        x: 1103
+        y: 815
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2c81f2d72bf5fd770800000000000000
+      internalID: 8637727830528956610
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Metal Tilemap_33
+      rect:
+        serializedVersion: 2
+        x: 47
+        y: 719
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d758cf5f53396e020800000000000000
+      internalID: 2370744113826661757
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Metal Tilemap_34
+      rect:
+        serializedVersion: 2
+        x: 143
+        y: 719
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1b714be6c5a294b00800000000000000
+      internalID: 813227784199739313
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Metal Tilemap_35
+      rect:
+        serializedVersion: 2
+        x: 239
+        y: 719
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f1808c16586934840800000000000000
+      internalID: 5207171093785741343
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Metal Tilemap_36
+      rect:
+        serializedVersion: 2
+        x: 335
+        y: 719
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3b1cb60dfa3af8740800000000000000
+      internalID: 5156520073873834419
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Metal Tilemap_37
+      rect:
+        serializedVersion: 2
+        x: 431
+        y: 719
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 284124634a740c7c0800000000000000
+      internalID: -4053160894022937470
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Metal Tilemap_38
+      rect:
+        serializedVersion: 2
+        x: 527
+        y: 719
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fd5fde33be25c8200800000000000000
+      internalID: 183612854957372895
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Metal Tilemap_39
+      rect:
+        serializedVersion: 2
+        x: 623
+        y: 671
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d27cd09a0572d0f90800000000000000
+      internalID: -6985884219594651859
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Metal Tilemap_40
+      rect:
+        serializedVersion: 2
+        x: 815
+        y: 671
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a11a745627548f320800000000000000
+      internalID: 2591897943179501850
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Metal Tilemap_41
+      rect:
+        serializedVersion: 2
+        x: 1007
+        y: 671
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 01919cb56139b1850800000000000000
+      internalID: 6348829823947315472
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Metal Tilemap_42
+      rect:
+        serializedVersion: 2
+        x: 143
+        y: 575
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dd9f70c2b775b00e0800000000000000
+      internalID: -2302650597938562595
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Metal Tilemap_43
+      rect:
+        serializedVersion: 2
+        x: 527
+        y: 575
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bfb1975ceae0f0590800000000000000
+      internalID: -7705924293607482373
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Metal Tilemap_44
+      rect:
+        serializedVersion: 2
+        x: 623
+        y: 575
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cccd3acd5af673190800000000000000
+      internalID: -7982789056328901428
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Metal Tilemap_45
+      rect:
+        serializedVersion: 2
+        x: 719
+        y: 575
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fb463b5de6eda2ce0800000000000000
+      internalID: -1429085364123638593
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Metal Tilemap_46
+      rect:
+        serializedVersion: 2
+        x: 815
+        y: 575
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cc89dcc61e9e683b0800000000000000
+      internalID: -5510459939638896436
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Metal Tilemap_47
+      rect:
+        serializedVersion: 2
+        x: 911
+        y: 575
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 900e34cd1b5a6ce10800000000000000
+      internalID: 2217642049849778185
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Metal Tilemap_48
+      rect:
+        serializedVersion: 2
+        x: 1007
+        y: 575
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 19ef30ef50540bb40800000000000000
+      internalID: 5453935040784498321
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Metal Tilemap_49
+      rect:
+        serializedVersion: 2
+        x: 1103
+        y: 575
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 36e3ea18549fd6970800000000000000
+      internalID: 8749923727974481507
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Metal Tilemap_50
+      rect:
+        serializedVersion: 2
+        x: 47
+        y: 479
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 58f87005a078a5030800000000000000
+      internalID: 3484245740086595461
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Metal Tilemap_51
+      rect:
+        serializedVersion: 2
+        x: 143
+        y: 479
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d3607079dee1bca10800000000000000
+      internalID: 1930670871048291901
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Metal Tilemap_52
+      rect:
+        serializedVersion: 2
+        x: 239
+        y: 479
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3ed9eeb742063ca00800000000000000
+      internalID: 775569270652181987
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Metal Tilemap_53
+      rect:
+        serializedVersion: 2
+        x: 623
+        y: 479
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 357d000560ab69950800000000000000
+      internalID: 6455551652156987219
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Metal Tilemap_54
+      rect:
+        serializedVersion: 2
+        x: 719
+        y: 479
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c56b373168bef3e90800000000000000
+      internalID: -7043652331099670948
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Metal Tilemap_55
+      rect:
+        serializedVersion: 2
+        x: 815
+        y: 479
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1419a0cedac1a39a0800000000000000
+      internalID: -6252653599335476927
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Metal Tilemap_56
+      rect:
+        serializedVersion: 2
+        x: 911
+        y: 479
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4e67517c06e97e1d0800000000000000
+      internalID: -3321512061668329756
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Metal Tilemap_57
+      rect:
+        serializedVersion: 2
+        x: 1007
+        y: 479
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7beddc2a525afbe00800000000000000
+      internalID: 1062749618146500279
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Metal Tilemap_58
+      rect:
+        serializedVersion: 2
+        x: 143
+        y: 383
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 032d485846b82af50800000000000000
+      internalID: 6891223643683344944
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Metal Tilemap_59
+      rect:
+        serializedVersion: 2
+        x: 527
+        y: 383
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: be25b6bf73ff57cf0800000000000000
+      internalID: -255017187970166037
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Metal Tilemap_60
+      rect:
+        serializedVersion: 2
+        x: 623
+        y: 383
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 92d1547eb504c9b60800000000000000
+      internalID: 7754143421891419433
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Metal Tilemap_61
+      rect:
+        serializedVersion: 2
+        x: 719
+        y: 383
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ff37414e3ff703800800000000000000
+      internalID: 590112236665861119
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Metal Tilemap_62
+      rect:
+        serializedVersion: 2
+        x: 815
+        y: 383
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7eb2abc8ac4ebcc20800000000000000
+      internalID: 3227925116536630247
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Metal Tilemap_63
+      rect:
+        serializedVersion: 2
+        x: 911
+        y: 383
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 71965471fc020f9a0800000000000000
+      internalID: -6201420613068429033
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Metal Tilemap_64
+      rect:
+        serializedVersion: 2
+        x: 1007
+        y: 383
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1b88701a58a6a4de0800000000000000
+      internalID: -1348148016279222095
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Metal Tilemap_65
+      rect:
+        serializedVersion: 2
+        x: 1103
+        y: 383
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4fda8a916f5dd9660800000000000000
+      internalID: 7394301416181378548
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Metal Tilemap_66
+      rect:
+        serializedVersion: 2
+        x: 623
+        y: 287
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c07f719b57325afc0800000000000000
+      internalID: -3484339748177709300
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Metal Tilemap_67
+      rect:
+        serializedVersion: 2
+        x: 719
+        y: 287
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d3697442d4f7050c0800000000000000
+      internalID: -4589028050992654787
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Metal Tilemap_68
+      rect:
+        serializedVersion: 2
+        x: 815
+        y: 287
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5f332faaa11fd9be0800000000000000
+      internalID: -1468752806613470219
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Metal Tilemap_69
+      rect:
+        serializedVersion: 2
+        x: 911
+        y: 287
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 13ca30d1ab42fb320800000000000000
+      internalID: 2575817893648510001
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Metal Tilemap_70
+      rect:
+        serializedVersion: 2
+        x: 1007
+        y: 287
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 28c1d86d0715c5040800000000000000
+      internalID: 4637671261362527362
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Metal Tilemap_71
+      rect:
+        serializedVersion: 2
+        x: 527
+        y: 191
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4a0997e50ee2b6e80800000000000000
+      internalID: -8184396356623167324
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Metal Tilemap_72
+      rect:
+        serializedVersion: 2
+        x: 623
+        y: 191
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7d1019ed576382ab0800000000000000
+      internalID: -5032712703713410601
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Metal Tilemap_73
+      rect:
+        serializedVersion: 2
+        x: 719
+        y: 191
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4f0bb3211e9e85f70800000000000000
+      internalID: 9176341393650200820
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Metal Tilemap_74
+      rect:
+        serializedVersion: 2
+        x: 815
+        y: 191
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 06b571e638e1f7460800000000000000
+      internalID: 7241540275671620448
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Metal Tilemap_75
+      rect:
+        serializedVersion: 2
+        x: 911
+        y: 191
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2509cf69637d2a280800000000000000
+      internalID: -9033421273090453422
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Metal Tilemap_76
+      rect:
+        serializedVersion: 2
+        x: 1007
+        y: 191
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c58c155417b6756c0800000000000000
+      internalID: -4154733996987529124
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Metal Tilemap_77
+      rect:
+        serializedVersion: 2
+        x: 1103
+        y: 191
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ff0259d34c2097800800000000000000
+      internalID: 610522266355441919
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Metal Tilemap_78
+      rect:
+        serializedVersion: 2
+        x: 623
+        y: 95
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 89121846dc17d4aa0800000000000000
+      internalID: -6175154387086663272
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Metal Tilemap_79
+      rect:
+        serializedVersion: 2
+        x: 815
+        y: 95
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2ba45bf715779d270800000000000000
+      internalID: 8275776982188640946
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Metal Tilemap_80
+      rect:
+        serializedVersion: 2
+        x: 1007
+        y: 95
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: baad895dca998d2a0800000000000000
+      internalID: -6712446276998735189
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Metal Tilemap_0: 2047508423246524216
+      Metal Tilemap_1: -8776935043024048579
+      Metal Tilemap_10: 1401829361992020131
+      Metal Tilemap_11: -5167530032969882493
+      Metal Tilemap_12: -2129007288479594351
+      Metal Tilemap_13: 2919260644428352525
+      Metal Tilemap_14: 3108421972320444891
+      Metal Tilemap_15: 5528829530420906093
+      Metal Tilemap_16: 4507263809723355186
+      Metal Tilemap_17: -1018484864115929368
+      Metal Tilemap_18: 7284214117618708271
+      Metal Tilemap_19: -7122829506790149275
+      Metal Tilemap_2: 8158778943475556482
+      Metal Tilemap_20: 9111449225032743901
+      Metal Tilemap_21: 8062834378220737032
+      Metal Tilemap_22: -9003213294553264174
+      Metal Tilemap_23: -8817015422408705371
+      Metal Tilemap_24: 1078278601032892885
+      Metal Tilemap_25: 7313387709062822179
+      Metal Tilemap_26: -8960667101441954826
+      Metal Tilemap_27: -6546572978935094511
+      Metal Tilemap_28: -5592918696267022992
+      Metal Tilemap_29: 7688187916088396891
+      Metal Tilemap_3: -5348506532485608129
+      Metal Tilemap_30: -1496533163606926027
+      Metal Tilemap_31: 6759976848970157458
+      Metal Tilemap_32: 8637727830528956610
+      Metal Tilemap_33: 2370744113826661757
+      Metal Tilemap_34: 813227784199739313
+      Metal Tilemap_35: 5207171093785741343
+      Metal Tilemap_36: 5156520073873834419
+      Metal Tilemap_37: -4053160894022937470
+      Metal Tilemap_38: 183612854957372895
+      Metal Tilemap_39: -6985884219594651859
+      Metal Tilemap_4: -3556298145283335740
+      Metal Tilemap_40: 2591897943179501850
+      Metal Tilemap_41: 6348829823947315472
+      Metal Tilemap_42: -2302650597938562595
+      Metal Tilemap_43: -7705924293607482373
+      Metal Tilemap_44: -7982789056328901428
+      Metal Tilemap_45: -1429085364123638593
+      Metal Tilemap_46: -5510459939638896436
+      Metal Tilemap_47: 2217642049849778185
+      Metal Tilemap_48: 5453935040784498321
+      Metal Tilemap_49: 8749923727974481507
+      Metal Tilemap_5: -881700972106781534
+      Metal Tilemap_50: 3484245740086595461
+      Metal Tilemap_51: 1930670871048291901
+      Metal Tilemap_52: 775569270652181987
+      Metal Tilemap_53: 6455551652156987219
+      Metal Tilemap_54: -7043652331099670948
+      Metal Tilemap_55: -6252653599335476927
+      Metal Tilemap_56: -3321512061668329756
+      Metal Tilemap_57: 1062749618146500279
+      Metal Tilemap_58: 6891223643683344944
+      Metal Tilemap_59: -255017187970166037
+      Metal Tilemap_6: -6539740129067601795
+      Metal Tilemap_60: 7754143421891419433
+      Metal Tilemap_61: 590112236665861119
+      Metal Tilemap_62: 3227925116536630247
+      Metal Tilemap_63: -6201420613068429033
+      Metal Tilemap_64: -1348148016279222095
+      Metal Tilemap_65: 7394301416181378548
+      Metal Tilemap_66: -3484339748177709300
+      Metal Tilemap_67: -4589028050992654787
+      Metal Tilemap_68: -1468752806613470219
+      Metal Tilemap_69: 2575817893648510001
+      Metal Tilemap_7: -6093125377607057999
+      Metal Tilemap_70: 4637671261362527362
+      Metal Tilemap_71: -8184396356623167324
+      Metal Tilemap_72: -5032712703713410601
+      Metal Tilemap_73: 9176341393650200820
+      Metal Tilemap_74: 7241540275671620448
+      Metal Tilemap_75: -9033421273090453422
+      Metal Tilemap_76: -4154733996987529124
+      Metal Tilemap_77: 610522266355441919
+      Metal Tilemap_78: -6175154387086663272
+      Metal Tilemap_79: 8275776982188640946
+      Metal Tilemap_8: 6781864722404477866
+      Metal Tilemap_80: -6712446276998735189
+      Metal Tilemap_9: 8524069734792398311
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

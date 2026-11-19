@@ -231,11 +231,12 @@ public class DinoController : MonoBehaviour
         // Remember a press even mid-attack or while stunned, so quick taps aren't lost.
         if (click.WasPressedThisFrame())
         {
-            clickOnUI = PointerOverButton() || BuildingPlacer.ClickTaken || DialogueBox.ClickTaken; // a HUD button, placing a building, or reading dialogue
+            clickOnUI = PointerOverButton() || BuildingPlacer.ClickTaken || DialogueBox.ClickTaken || PauseMenu.InputTaken; // a HUD button, placing a building, dialogue, or the menu
             if (!clickOnUI) { bufferedPress = pressBuffer; aimWithMouse = true; }
         }
-        // Space also moves the dialogue on: a press used for that isn't an attack, even if it's held after.
-        if (attack.WasPressedThisFrame() && DialogueBox.ClickTaken) attackForDialogue = true;
+        // Space also moves the dialogue on and presses menu buttons: a press used for that isn't an attack,
+        // even if it's held after.
+        if (attack.WasPressedThisFrame() && (DialogueBox.ClickTaken || PauseMenu.InputTaken)) attackForDialogue = true;
         if (!attack.IsPressed()) attackForDialogue = false;
         if (attack.WasPressedThisFrame() && !attackForDialogue) { bufferedPress = pressBuffer; aimWithMouse = false; }
         else if (bufferedPress > 0f && !click.WasPressedThisFrame()) bufferedPress -= Time.deltaTime;

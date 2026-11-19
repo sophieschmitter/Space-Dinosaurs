@@ -12,13 +12,22 @@ using UnityEngine.Tilemaps;
 /// (off = the sprite object only snaps).
 /// Tools > Space Dinosaurs > Split Walls Into Meteorites turns the tiles already painted on the scene's Walls
 /// tilemap into one MeteoriteCluster per connected meteorite (taking the ore on them along).
-/// Meteorites snap to whole tiles when moved. Everything is undoable with Cmd+Z.
+/// Metal sprites ("Assets/Sprites/Metal Tilemap.png") and unbreakable meteorite sprites ("Assets/Sprites/Meteorite
+/// Unbreakable Tilemap.png") work the same way, as blocks on the scene's solid tilemap (SolidTilemap: can't be
+/// drilled). Each kind only merges with its own kind.
+/// Meteorites snap to whole tiles when moved, and a meteorite dropped touching another one (side by side or
+/// corner to corner) merges with it into one meteorite, so the edges join up like one piece of rock.
+/// Everything is undoable with Cmd+Z.
 /// </summary>
 [InitializeOnLoad]
 public static class MeteoritePlacement
 {
     const string TilesFolder = "Assets/Tiles/";
     const string RuleTilePath = "Assets/Tiles/Generated/WallRuleTile.asset";
+    const string MetalSheet = "Assets/Sprites/Metal Tilemap.png";
+    const string MetalRuleTilePath = "Assets/Tiles/Generated/Metal/MetalRuleTile.asset";
+    const string UnbreakableSheet = "Assets/Sprites/Meteorite Unbreakable Tilemap.png";
+    const string UnbreakableRuleTilePath = "Assets/Tiles/Generated/Unbreakable/UnbreakableRuleTile.asset";
     const string ConvertPref = "SpaceDinosaurs.MeteoriteToTiles";
     const string MenuPath = "Tools/Space Dinosaurs/Meteorite Sprites Become Wall Tiles";
 
@@ -40,6 +49,7 @@ public static class MeteoritePlacement
     static MeteoritePlacement()
     {
         ObjectChangeEvents.changesPublished += OnChanges;
+        EditorApplication.update += TickMerges;
     }
 
     static void OnChanges(ref ObjectChangeEventStream stream)
@@ -77,16 +87,35 @@ public static class MeteoritePlacement
     {
         if (go == null || go.hideFlags != HideFlags.None || !go.scene.IsValid()) return;
         if (EditorUtility.IsPersistent(go) || PrefabUtility.IsPartOfPrefabAsset(go)) return;
-        if (go.GetComponent<MeteoriteCluster>() != null) { SnapCluster(go); return; }
+        if (go.GetComponent<MeteoriteCluster>() != null) { SnapCluster(go); QueueMerge(go); return; }
+        // One of a meteorite's own tilemaps was dragged (picked from the Hierarchy): move the whole meteorite
+        // instead, so its tiles stay on the grid and its walls and ore stay together.
+        var owner = go.transform.parent != null ? go.transform.parent.GetComponent<MeteoriteCluster>() : null;
+        if (owner != null && go.GetComponent<Tilemap>() != null)
+        {
+            Vector3 offset = go.transform.localPosition;
+            if (offset.sqrMagnitude < 1e-8f) return;
+            Undo.RecordObject(go.transform, "Move meteorite");
+            Undo.RecordObject(owner.transform, "Move meteorite");
+            owner.transform.position = go.transform.position; // the tilemap's origin is the meteorite's origin
+            go.transform.localPosition = Vector3.zero;
+            SnapCluster(owner.gameObject);
+            QueueMerge(owner.gameObject);
+            Selection.activeGameObject = owner.gameObject;
+            return;
+        }
         var sr = go.GetComponent<SpriteRenderer>();
         if (sr == null || sr.sprite == null) return;
         string texPath = AssetDatabase.GetAssetPath(sr.sprite.texture);
-        if (!texPath.StartsWith(TilesFolder)) return;
+        // Metal and unbreakable meteorite both go on the solid (can't be drilled) tilemap.
+        bool unbreakableRock = texPath == UnbreakableSheet;
+        bool metal = texPath == MetalSheet || unbreakableRock;
+        if (!metal && !texPath.StartsWith(TilesFolder)) return;
 
         var cells = SpriteCells(sr.sprite, texPath);
         if (cells.Count == 0) return;
 
-        Tilemap walls = FindWalls(go.scene);
+        Tilemap walls = metal ? (Convert ? EnsureMetal(go.scene) : FindMetal(go.scene)) : FindWalls(go.scene);
         Grid grid = walls != null ? walls.layoutGrid as Grid : Object.FindFirstObjectByType<Grid>();
         Vector2 cellSize = grid != null ? (Vector2)grid.cellSize : Vector2.one;
         Vector3 gridOrigin = grid != null ? grid.transform.position : Vector3.zero;
@@ -98,14 +127,16 @@ public static class MeteoritePlacement
             Mathf.RoundToInt((world0.x - gridOrigin.x) / cellSize.x - 0.5f),
             Mathf.RoundToInt((world0.y - gridOrigin.y) / cellSize.y - 0.5f), 0);
 
-        var ruleTile = AssetDatabase.LoadAssetAtPath<TileBase>(RuleTilePath);
+        var ruleTile = AssetDatabase.LoadAssetAtPath<TileBase>(unbreakableRock ? UnbreakableRuleTilePath : metal ? MetalRuleTilePath : RuleTilePath);
         if (Convert && walls != null && ruleTile != null)
         {
             // A meteorite of its own (movable), not tiles on the shared Walls tilemap.
             var tiles = new Dictionary<Vector3Int, TileBase>();
             foreach (var c in cells) tiles[anchor + c.offset] = ruleTile;
-            var cluster = NewCluster(walls, FindOre(go.scene), "Meteorite", tiles, null);
+            string kind = unbreakableRock ? "Unbreakable Meteorite" : metal ? "Metal Block" : "Meteorite";
+            var cluster = NewCluster(walls, metal ? null : FindOre(go.scene), kind, tiles, null, metal);
             Selection.activeGameObject = cluster;
+            QueueMerge(cluster);
             Undo.DestroyObjectImmediate(go);
             return;
         }
@@ -174,19 +205,22 @@ public static class MeteoritePlacement
     }
 
     /// <summary>A movable meteorite under the same Grid as the Walls tilemap, holding these tiles at these cells.</summary>
-    static GameObject NewCluster(Tilemap walls, Tilemap ore, string name, Dictionary<Vector3Int, TileBase> wallTiles, Dictionary<Vector3Int, TileBase> oreTiles)
+    static GameObject NewCluster(Tilemap walls, Tilemap ore, string name, Dictionary<Vector3Int, TileBase> wallTiles, Dictionary<Vector3Int, TileBase> oreTiles, bool metal = false)
     {
         // Its origin is the corner of its bottom-left cell, so moving it by whole tiles keeps it on the grid.
         var min = new Vector3Int(int.MaxValue, int.MaxValue, 0);
         foreach (var c in wallTiles.Keys) { min.x = Mathf.Min(min.x, c.x); min.y = Mathf.Min(min.y, c.y); }
         var gridT = walls.layoutGrid != null ? walls.layoutGrid.transform : walls.transform.parent;
         var go = new GameObject(name);
-        Undo.RegisterCreatedObjectUndo(go, "Make meteorite");
         go.transform.SetParent(gridT, false);
         go.transform.position = walls.CellToWorld(min);
         var cluster = go.AddComponent<MeteoriteCluster>();
-        cluster.walls = ChildMap(go.transform, "Meteorite Walls", walls, wallTiles, min);
+        cluster.unbreakable = metal;
+        cluster.walls = ChildMap(go.transform, metal ? "Solid Walls" : "Meteorite Walls", walls, wallTiles, min);
         if (ore != null && oreTiles != null && oreTiles.Count > 0) cluster.ore = ChildMap(go.transform, "Meteorite Ore", ore, oreTiles, min);
+        // Registered once it's complete, so undo and redo bring back the whole meteorite (tilemaps and tiles),
+        // not an empty shell.
+        Undo.RegisterCreatedObjectUndo(go, "Make meteorite");
         return go;
     }
 
@@ -220,6 +254,234 @@ public static class MeteoritePlacement
         if ((snapped - go.transform.position).sqrMagnitude < 1e-8f) return; // already on the grid (stops the change event looping)
         Undo.RecordObject(go.transform, "Snap meteorite to grid");
         go.transform.position = snapped;
+    }
+
+    // ---------- merging meteorites that touch ----------
+
+    static readonly HashSet<int> pendingMerges = new();
+
+    static void QueueMerge(GameObject go) { if (go != null) pendingMerges.Add(go.GetInstanceID()); }
+
+    // Merge once the mouse is let go, not in the middle of a drag (the dragged object would vanish under it).
+    static void TickMerges()
+    {
+        if (pendingMerges.Count == 0 || GUIUtility.hotControl != 0 || EditorApplication.isPlayingOrWillChangePlaymode) return;
+        var ids = new List<int>(pendingMerges);
+        pendingMerges.Clear();
+        foreach (int id in ids)
+            if (EditorUtility.InstanceIDToObject(id) is GameObject go && go != null && go.GetComponent<MeteoriteCluster>() is MeteoriteCluster c)
+                MergeTouching(c);
+    }
+
+    /// <summary>Folds every meteorite touching this one (including corner to corner) into it.</summary>
+    static void MergeTouching(MeteoriteCluster keep)
+    {
+        var grid = keep.GetComponentInParent<Grid>();
+        if (grid == null || keep.walls == null) return;
+        bool merged = false;
+        for (int guard = 0; guard < 64; guard++)
+        {
+            var mine = Cells(keep.walls, grid);
+            MeteoriteCluster other = null;
+            foreach (var root in keep.gameObject.scene.GetRootGameObjects())
+            foreach (var c in root.GetComponentsInChildren<MeteoriteCluster>(true))
+            {
+                // Only the same kind merges (meteorite, metal, unbreakable meteorite): their tiles wouldn't join up anyway.
+                if (c == keep || c.walls == null || c.unbreakable != keep.unbreakable || Kind(c) != Kind(keep) || c.GetComponentInParent<Grid>() != grid) continue;
+                if (Touches(mine, Cells(c.walls, grid))) { other = c; break; }
+            }
+            if (other == null) break;
+            Absorb(keep, other, grid);
+            merged = true;
+        }
+        if (merged)
+        {
+            Selection.activeGameObject = keep.gameObject;
+            UnityEditor.SceneManagement.EditorSceneManager.MarkSceneDirty(keep.gameObject.scene);
+        }
+    }
+
+    // Which wall tile a meteorite is made of (its first one).
+    static TileBase Kind(MeteoriteCluster c)
+    {
+        if (c.walls == null) return null;
+        foreach (var p in c.walls.cellBounds.allPositionsWithin) { var t = c.walls.GetTile(p); if (t != null) return t; }
+        return null;
+    }
+
+    // A meteorite's tiles by Grid cell.
+    static Dictionary<Vector3Int, TileBase> Cells(Tilemap map, Grid grid)
+    {
+        var result = new Dictionary<Vector3Int, TileBase>();
+        if (map == null) return result;
+        foreach (var c in map.cellBounds.allPositionsWithin)
+        {
+            var t = map.GetTile(c);
+            if (t != null) result[grid.WorldToCell(map.GetCellCenterWorld(c))] = t;
+        }
+        return result;
+    }
+
+    static bool Touches(Dictionary<Vector3Int, TileBase> a, Dictionary<Vector3Int, TileBase> b)
+    {
+        foreach (var c in a.Keys)
+            for (int dx = -1; dx <= 1; dx++)
+            for (int dy = -1; dy <= 1; dy++)
+                if (b.ContainsKey(c + new Vector3Int(dx, dy, 0))) return true;
+        return false;
+    }
+
+    // Moves other's walls and ore into keep (keep's tiles win where both have one) and deletes other.
+    static void Absorb(MeteoriteCluster keep, MeteoriteCluster other, Grid grid)
+    {
+        var walls = Cells(keep.walls, grid);
+        foreach (var kv in Cells(other.walls, grid)) if (!walls.ContainsKey(kv.Key)) walls[kv.Key] = kv.Value;
+        var ore = Cells(keep.ore, grid);
+        foreach (var kv in Cells(other.ore, grid)) if (!ore.ContainsKey(kv.Key)) ore[kv.Key] = kv.Value;
+
+        var min = new Vector3Int(int.MaxValue, int.MaxValue, 0);
+        foreach (var c in walls.Keys) { min.x = Mathf.Min(min.x, c.x); min.y = Mathf.Min(min.y, c.y); }
+
+        Undo.RecordObject(keep.transform, "Merge meteorites");
+        Undo.RegisterCompleteObjectUndo(keep.walls, "Merge meteorites");
+        if (keep.ore != null) Undo.RegisterCompleteObjectUndo(keep.ore, "Merge meteorites");
+        Undo.RecordObject(keep, "Merge meteorites");
+        keep.transform.position = grid.CellToWorld(min);
+        keep.walls.ClearAllTiles();
+        foreach (var kv in walls) keep.walls.SetTile(kv.Key - min, kv.Value);
+        if (ore.Count > 0)
+        {
+            if (keep.ore == null)
+            {
+                var likeOre = other.ore != null ? other.ore : FindOre(keep.gameObject.scene);
+                if (likeOre != null)
+                {
+                    var shifted = new Dictionary<Vector3Int, TileBase>();
+                    foreach (var kv in ore) shifted[kv.Key] = kv.Value;
+                    keep.ore = ChildMap(keep.transform, "Meteorite Ore", likeOre, shifted, min);
+                    Undo.RegisterCreatedObjectUndo(keep.ore.gameObject, "Merge meteorites");
+                }
+            }
+            else
+            {
+                keep.ore.ClearAllTiles();
+                foreach (var kv in ore) keep.ore.SetTile(kv.Key - min, kv.Value);
+            }
+        }
+        Undo.DestroyObjectImmediate(other.gameObject);
+    }
+
+    // ---------- metal walls ----------
+
+    static Tilemap FindMetal(UnityEngine.SceneManagement.Scene scene)
+    {
+        foreach (var root in scene.GetRootGameObjects())
+        {
+            var s = root.GetComponentInChildren<SolidTilemap>(true);
+            if (s != null) return s.GetComponent<Tilemap>();
+        }
+        return null;
+    }
+
+    /// <summary>The scene's solid tilemap (metal and unbreakable meteorite; can't be drilled), made under its Grid
+    /// (or a new one) if it has none.</summary>
+    static Tilemap EnsureMetal(UnityEngine.SceneManagement.Scene scene)
+    {
+        var found = FindMetal(scene);
+        if (found != null) return found;
+        Grid grid = null;
+        foreach (var root in scene.GetRootGameObjects()) { grid = root.GetComponentInChildren<Grid>(true); if (grid != null) break; }
+        if (grid == null)
+        {
+            var g = new GameObject("Grid");
+            UnityEngine.SceneManagement.SceneManager.MoveGameObjectToScene(g, scene);
+            grid = g.AddComponent<Grid>();
+            Undo.RegisterCreatedObjectUndo(g, "Make metal tilemap");
+        }
+        var go = new GameObject("Solid Walls");
+        go.transform.SetParent(grid.transform, false);
+        var map = go.AddComponent<Tilemap>();
+        var r = go.AddComponent<TilemapRenderer>();
+        var walls = FindWalls(scene);
+        var wr = walls != null ? walls.GetComponent<TilemapRenderer>() : null;
+        if (wr != null) { r.sortingLayerID = wr.sortingLayerID; r.sharedMaterial = wr.sharedMaterial; r.mode = wr.mode; }
+        r.sortingOrder = 1; // like the meteorite walls: over the floor, under the shadows and characters
+        var body = go.AddComponent<Rigidbody2D>();
+        body.bodyType = RigidbodyType2D.Static;
+        var tc = go.AddComponent<TilemapCollider2D>();
+        tc.compositeOperation = Collider2D.CompositeOperation.Merge;
+        go.AddComponent<CompositeCollider2D>();
+        go.AddComponent<SolidTilemap>();
+        Undo.RegisterCreatedObjectUndo(go, "Make metal tilemap");
+        return map;
+    }
+
+    /// <summary>Turns the placeholder walls (plain Square sprites with box colliders) in the active scene into
+    /// metal blocks on the tile grid, one block per connected group, and deletes the placeholders.</summary>
+    [MenuItem("Tools/Space Dinosaurs/Replace Temporary Walls With Metal")]
+    static void ReplaceTemporaryWalls() => ReplaceTemporaryWalls(UnityEngine.SceneManagement.SceneManager.GetActiveScene());
+
+    public static int ReplaceTemporaryWalls(UnityEngine.SceneManagement.Scene scene)
+    {
+        var tile = AssetDatabase.LoadAssetAtPath<TileBase>(MetalRuleTilePath);
+        if (tile == null) { Debug.LogError("Metal walls: build them first (Tools > Space Dinosaurs > Build Metal Wall Tiles)."); return 0; }
+        var placeholders = new List<GameObject>();
+        foreach (var root in scene.GetRootGameObjects())
+        foreach (var sr in root.GetComponentsInChildren<SpriteRenderer>(true))
+            if (sr.sprite != null && sr.sprite.name == "Square" && sr.GetComponent<BoxCollider2D>() != null && sr.GetComponent<MonoBehaviour>() == null)
+                placeholders.Add(sr.gameObject);
+        if (placeholders.Count == 0) { Debug.Log("Metal walls: no temporary walls in " + scene.name); return 0; }
+
+        Undo.SetCurrentGroupName("Replace temporary walls with metal");
+        int group = Undo.GetCurrentGroup();
+        var metal = EnsureMetal(scene);
+        var grid = metal.layoutGrid as Grid;
+        // Every grid cell whose middle is inside a placeholder (left/bottom edges count, right/top don't).
+        var cells = new HashSet<Vector3Int>();
+        foreach (var p in placeholders)
+        {
+            var b = p.GetComponent<SpriteRenderer>().bounds;
+            var lo = grid.WorldToCell(b.min - new Vector3(0.5f, 0.5f, 0)); var hi = grid.WorldToCell(b.max + new Vector3(0.5f, 0.5f, 0));
+            for (int x = lo.x; x <= hi.x; x++)
+            for (int y = lo.y; y <= hi.y; y++)
+            {
+                var c = new Vector3Int(x, y, 0);
+                Vector3 mid = grid.GetCellCenterWorld(c);
+                if (mid.x >= b.min.x - 0.02f && mid.x < b.max.x - 0.02f && mid.y >= b.min.y - 0.02f && mid.y < b.max.y - 0.02f) cells.Add(c);
+            }
+        }
+        // One movable block per connected group.
+        int blocks = 0;
+        var left = new HashSet<Vector3Int>(cells);
+        while (left.Count > 0)
+        {
+            var start = default(Vector3Int);
+            foreach (var c in left) { start = c; break; }
+            var group1 = new Dictionary<Vector3Int, TileBase>();
+            var queue = new Queue<Vector3Int>();
+            queue.Enqueue(start); left.Remove(start);
+            while (queue.Count > 0)
+            {
+                var c = queue.Dequeue();
+                group1[c] = tile;
+                for (int dx = -1; dx <= 1; dx++)
+                for (int dy = -1; dy <= 1; dy++)
+                {
+                    var n = c + new Vector3Int(dx, dy, 0);
+                    if (left.Remove(n)) queue.Enqueue(n);
+                }
+            }
+            NewCluster(metal, null, $"Metal Block {++blocks}", group1, null, true);
+        }
+        // Remove the placeholders, then any group objects they leave empty.
+        var parents = new HashSet<Transform>();
+        foreach (var p in placeholders) { if (p.transform.parent != null) parents.Add(p.transform.parent); Undo.DestroyObjectImmediate(p); }
+        foreach (var t in parents) if (t != null && t.childCount == 0 && t.GetComponents<Component>().Length == 1) Undo.DestroyObjectImmediate(t.gameObject);
+        foreach (var t in parents) if (t != null && t.parent != null && t.parent.childCount == 0) Undo.DestroyObjectImmediate(t.parent.gameObject);
+        Undo.CollapseUndoOperations(group);
+        UnityEditor.SceneManagement.EditorSceneManager.MarkSceneDirty(scene);
+        Debug.Log($"Metal walls: replaced {placeholders.Count} temporary walls in {scene.name} with {cells.Count} metal tiles in {blocks} blocks.");
+        return placeholders.Count;
     }
 
     static Tilemap FindOre(UnityEngine.SceneManagement.Scene scene)

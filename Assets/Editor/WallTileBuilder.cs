@@ -23,10 +23,44 @@ using UnityEngine.Tilemaps;
 public static class WallTileBuilder
 {
     const string SourceFolder = "Assets/Tiles";
-    const string OutFolder = "Assets/Tiles/Generated";
-    const string AtlasPath = OutFolder + "/WallTiles.png";
-    const string RuleTilePath = OutFolder + "/WallRuleTile.asset";
-    const string PaletteName = "Walls";
+
+    /// <summary>One wall look: where its sheet is and what it builds.</summary>
+    public class Config
+    {
+        public string sheet;          // null: the first PNG straight in Assets/Tiles (the meteorite sheet)
+        public string outFolder, atlasName, ruleTileName, paletteName, spritePrefix;
+        public int edgeInset;         // art px to skip at each edge when reading shapes (1 = a dark outline outside the rim)
+        public float connectedAt = 0.5f; // share of wall body an edge strip needs to count as joined (higher = thin rim lines count)
+        public int cornerSize = 2;    // art px checked at each corner
+        public int bodyMaxRed = FillMaxRed; // colours with less red than this are wall body; the rest is rim
+    }
+
+    public static readonly Config Meteorite = new Config
+    {
+        outFolder = "Assets/Tiles/Generated", atlasName = "WallTiles", ruleTileName = "WallRuleTile",
+        paletteName = "Walls", spritePrefix = "Wall", edgeInset = 0,
+    };
+
+    public static readonly Config Metal = new Config
+    {
+        sheet = "Assets/Sprites/Metal Tilemap.png", outFolder = "Assets/Tiles/Generated/Metal", atlasName = "MetalTiles",
+        ruleTileName = "MetalRuleTile", paletteName = "Metal", spritePrefix = "Metal", edgeInset = 1,
+    };
+
+    public static readonly Config UnbreakableMeteorite = new Config
+    {
+        sheet = "Assets/Sprites/Meteorite Unbreakable Tilemap.png", outFolder = "Assets/Tiles/Generated/Unbreakable",
+        atlasName = "UnbreakableTiles", ruleTileName = "UnbreakableRuleTile", paletteName = "Unbreakable Meteorite",
+        // Its mid purple is shading inside the rock too, so only the two bright shades count as rim; and some
+        // tiles have a thin 1 px rim, so an edge needs three quarters wall body to count as joined.
+        spritePrefix = "Unbreakable", edgeInset = 0, connectedAt = 0.75f, bodyMaxRed = 132,
+    };
+
+    static Config cfg = Meteorite;
+    static string OutFolder => cfg.outFolder;
+    static string AtlasPath => $"{cfg.outFolder}/{cfg.atlasName}.png";
+    static string RuleTilePath => $"{cfg.outFolder}/{cfg.ruleTileName}.asset";
+    static string PaletteName => cfg.paletteName;
     const int Art = 16;              // art pixels per tile
     const int AtlasColumns = 8;
     const int FillMaxRed = 100;      // wall-body colours (navy/dark purple) have red below this; rim colours above
@@ -49,10 +83,27 @@ public static class WallTileBuilder
     }
 
     [MenuItem("Tools/Space Dinosaurs/Build Wall Tiles")]
-    public static void Build()
+    public static void Build() => Build(Meteorite);
+
+    /// <summary>The metal walls from "Assets/Sprites/Metal Tilemap.png" (indestructible: see SolidTilemap).</summary>
+    [MenuItem("Tools/Space Dinosaurs/Build Metal Wall Tiles")]
+    public static void BuildMetal() => Build(Metal);
+
+    /// <summary>The unbreakable meteorite walls from "Assets/Sprites/Meteorite Unbreakable Tilemap.png" (see SolidTilemap).</summary>
+    [MenuItem("Tools/Space Dinosaurs/Build Unbreakable Meteorite Tiles")]
+    public static void BuildUnbreakable() => Build(UnbreakableMeteorite);
+
+    public static RuleTile Build(Config config)
     {
-        string sheetPath = FindSheet();
-        if (sheetPath == null) { Debug.LogError($"WallTileBuilder: put the wall sheet PNG in {SourceFolder}."); return; }
+        cfg = config;
+        try { return BuildCurrent(); }
+        finally { cfg = Meteorite; }
+    }
+
+    static RuleTile BuildCurrent()
+    {
+        string sheetPath = cfg.sheet ?? FindSheet();
+        if (sheetPath == null || AssetImporter.GetAtPath(sheetPath) == null) { Debug.LogError($"WallTileBuilder: no wall sheet ({cfg.sheet ?? "a PNG in " + SourceFolder})."); return null; }
 
         var cells = ReadSheet(sheetPath, out string report);
 
@@ -89,6 +140,7 @@ public static class WallTileBuilder
 
         Debug.Log($"WallTileBuilder: {report}. {realShapes} of 47 shapes from the sheet, {rotated} by rotating/mirroring, " +
                   $"{stitched} stitched from quarter-tiles. Rule Tile: {RuleTilePath}");
+        return tile;
     }
 
     static string FindSheet() =>
@@ -142,7 +194,7 @@ public static class WallTileBuilder
         return result;
     }
 
-    static bool IsBody(Color32 p) => p.a > 128 && p.r < FillMaxRed;
+    static bool IsBody(Color32 p) => p.a > 128 && p.r < cfg.bodyMaxRed;
 
     // A side is "connected" when the wall body runs right up to it (no rim); same for corners.
     static int ShapeFromArt(TileArt t)
@@ -153,15 +205,16 @@ public static class WallTileBuilder
             for (int y = y0; y < y1; y++) for (int x = x0; x < x1; x++) { n++; if (IsBody(t[x, y])) b++; }
             return b / (float)n;
         }
-        int m = 0;
-        if (Body(3, 0, 13, 2) >= 0.5f) m |= N;
-        if (Body(3, 14, 13, 16) >= 0.5f) m |= S;
-        if (Body(0, 3, 2, 13) >= 0.5f) m |= W;
-        if (Body(14, 3, 16, 13) >= 0.5f) m |= E;
-        if (Body(0, 0, 2, 2) >= 0.5f) m |= NW;
-        if (Body(14, 0, 16, 2) >= 0.5f) m |= NE;
-        if (Body(0, 14, 2, 16) >= 0.5f) m |= SW;
-        if (Body(14, 14, 16, 16) >= 0.5f) m |= SE;
+        int m = 0, i = cfg.edgeInset, k = cfg.cornerSize; // read the strips just inside any outline
+        float need = cfg.connectedAt;
+        if (Body(3, i, 13, i + 2) >= need) m |= N;
+        if (Body(3, 14 - i, 13, 16 - i) >= need) m |= S;
+        if (Body(i, 3, i + 2, 13) >= need) m |= W;
+        if (Body(14 - i, 3, 16 - i, 13) >= need) m |= E;
+        if (Body(i, i, i + k, i + k) >= need) m |= NW;
+        if (Body(16 - i - k, i, 16 - i, i + k) >= need) m |= NE;
+        if (Body(i, 16 - i - k, i + k, 16 - i) >= need) m |= SW;
+        if (Body(16 - i - k, 16 - i - k, 16 - i, 16 - i) >= need) m |= SE;
         return Normalize(m);
     }
 
@@ -256,7 +309,7 @@ public static class WallTileBuilder
             int cx = (i % AtlasColumns) * Art, cyTop = (i / AtlasColumns) * Art;
             for (int y = 0; y < Art; y++) for (int x = 0; x < Art; x++)
                 px[(th - 1 - (cyTop + y)) * tw + cx + x] = art[x, y];
-            string name = $"Wall_{ShapeName(shape)}_{variant}";
+            string name = $"{cfg.spritePrefix}_{ShapeName(shape)}_{variant}";
             if (!names.TryGetValue(shape, out var l)) names[shape] = l = new List<string>();
             l.Add(name);
             rects.Add(new SpriteRect { name = name, rect = new Rect(cx, th - cyTop - Art, Art, Art), alignment = SpriteAlignment.Center, pivot = new Vector2(0.5f, 0.5f) });

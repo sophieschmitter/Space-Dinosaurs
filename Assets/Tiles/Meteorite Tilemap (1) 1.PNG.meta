@@ -1,0 +1,2418 @@
+fileFormatVersion: 2
+guid: b2092c688231c4c89b6e4cc606fd58ba
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 8378991225189809492
+    second: Meteorite Tilemap (1) 1_0
+  - first:
+      213: 3120272279532037530
+    second: Meteorite Tilemap (1) 1_1
+  - first:
+      213: 8347749253709606952
+    second: Meteorite Tilemap (1) 1_2
+  - first:
+      213: 5436018526335414431
+    second: Meteorite Tilemap (1) 1_3
+  - first:
+      213: -8154215443193709333
+    second: Meteorite Tilemap (1) 1_4
+  - first:
+      213: -5689419053914494468
+    second: Meteorite Tilemap (1) 1_5
+  - first:
+      213: 5810648875076095804
+    second: Meteorite Tilemap (1) 1_6
+  - first:
+      213: -3500030454165657831
+    second: Meteorite Tilemap (1) 1_7
+  - first:
+      213: 8052565738488075784
+    second: Meteorite Tilemap (1) 1_8
+  - first:
+      213: 4285235993359537952
+    second: Meteorite Tilemap (1) 1_9
+  - first:
+      213: 6544508210163157922
+    second: Meteorite Tilemap (1) 1_10
+  - first:
+      213: -5409186883396007998
+    second: Meteorite Tilemap (1) 1_11
+  - first:
+      213: -7378382166489769226
+    second: Meteorite Tilemap (1) 1_12
+  - first:
+      213: 8743172747034006537
+    second: Meteorite Tilemap (1) 1_13
+  - first:
+      213: -4145873030352898224
+    second: Meteorite Tilemap (1) 1_14
+  - first:
+      213: -1814984593035941792
+    second: Meteorite Tilemap (1) 1_15
+  - first:
+      213: -2226438759846929516
+    second: Meteorite Tilemap (1) 1_16
+  - first:
+      213: -2971620723075428397
+    second: Meteorite Tilemap (1) 1_17
+  - first:
+      213: 6034496306002257959
+    second: Meteorite Tilemap (1) 1_18
+  - first:
+      213: 158223711622080343
+    second: Meteorite Tilemap (1) 1_19
+  - first:
+      213: -2332697901419444153
+    second: Meteorite Tilemap (1) 1_20
+  - first:
+      213: 3004081663441179965
+    second: Meteorite Tilemap (1) 1_21
+  - first:
+      213: 7487128985532089431
+    second: Meteorite Tilemap (1) 1_22
+  - first:
+      213: -2738782900269166731
+    second: Meteorite Tilemap (1) 1_23
+  - first:
+      213: 6770181656725179201
+    second: Meteorite Tilemap (1) 1_24
+  - first:
+      213: -2813620964879894418
+    second: Meteorite Tilemap (1) 1_25
+  - first:
+      213: 6105126500396415588
+    second: Meteorite Tilemap (1) 1_26
+  - first:
+      213: 8053900962620153765
+    second: Meteorite Tilemap (1) 1_27
+  - first:
+      213: 1024695368698966809
+    second: Meteorite Tilemap (1) 1_28
+  - first:
+      213: 2529840246838006070
+    second: Meteorite Tilemap (1) 1_29
+  - first:
+      213: -5677181506849918140
+    second: Meteorite Tilemap (1) 1_30
+  - first:
+      213: -2909855421938808816
+    second: Meteorite Tilemap (1) 1_31
+  - first:
+      213: 780275302433860496
+    second: Meteorite Tilemap (1) 1_32
+  - first:
+      213: 8532036924027546745
+    second: Meteorite Tilemap (1) 1_33
+  - first:
+      213: -3586532317919384033
+    second: Meteorite Tilemap (1) 1_34
+  - first:
+      213: 927900850391148066
+    second: Meteorite Tilemap (1) 1_35
+  - first:
+      213: 8567234832020195648
+    second: Meteorite Tilemap (1) 1_36
+  - first:
+      213: 4126613592644115147
+    second: Meteorite Tilemap (1) 1_37
+  - first:
+      213: -4897740042587731777
+    second: Meteorite Tilemap (1) 1_38
+  - first:
+      213: -308681730002771314
+    second: Meteorite Tilemap (1) 1_39
+  - first:
+      213: -1456271423340255240
+    second: Meteorite Tilemap (1) 1_40
+  - first:
+      213: 7481890960364050704
+    second: Meteorite Tilemap (1) 1_41
+  - first:
+      213: 6059830712385640284
+    second: Meteorite Tilemap (1) 1_42
+  - first:
+      213: -476720892084135935
+    second: Meteorite Tilemap (1) 1_43
+  - first:
+      213: 8176027178127140999
+    second: Meteorite Tilemap (1) 1_44
+  - first:
+      213: -1500196922716612927
+    second: Meteorite Tilemap (1) 1_45
+  - first:
+      213: 1481871585385683647
+    second: Meteorite Tilemap (1) 1_46
+  - first:
+      213: -301617175275784927
+    second: Meteorite Tilemap (1) 1_47
+  - first:
+      213: 2021770165751429190
+    second: Meteorite Tilemap (1) 1_48
+  - first:
+      213: -7028550399224918520
+    second: Meteorite Tilemap (1) 1_49
+  - first:
+      213: -3102839590317576568
+    second: Meteorite Tilemap (1) 1_50
+  - first:
+      213: 3484556678902206046
+    second: Meteorite Tilemap (1) 1_51
+  - first:
+      213: 7879356318509896537
+    second: Meteorite Tilemap (1) 1_52
+  - first:
+      213: 2420254258351653207
+    second: Meteorite Tilemap (1) 1_53
+  - first:
+      213: -9010824200507092226
+    second: Meteorite Tilemap (1) 1_54
+  - first:
+      213: -6537373529757677443
+    second: Meteorite Tilemap (1) 1_55
+  - first:
+      213: 7756298921997166946
+    second: Meteorite Tilemap (1) 1_56
+  - first:
+      213: -4344466278384259676
+    second: Meteorite Tilemap (1) 1_57
+  - first:
+      213: 7328208107376130103
+    second: Meteorite Tilemap (1) 1_58
+  - first:
+      213: 2119672259452005455
+    second: Meteorite Tilemap (1) 1_59
+  - first:
+      213: -1984895818805389395
+    second: Meteorite Tilemap (1) 1_60
+  - first:
+      213: -3235062400677298416
+    second: Meteorite Tilemap (1) 1_61
+  - first:
+      213: -8509294491883058939
+    second: Meteorite Tilemap (1) 1_62
+  - first:
+      213: -8918318415564878506
+    second: Meteorite Tilemap (1) 1_63
+  - first:
+      213: 5468930291329302623
+    second: Meteorite Tilemap (1) 1_64
+  - first:
+      213: 2859604237446204108
+    second: Meteorite Tilemap (1) 1_65
+  - first:
+      213: 1916336072794268209
+    second: Meteorite Tilemap (1) 1_66
+  - first:
+      213: -2377393257166477828
+    second: Meteorite Tilemap (1) 1_67
+  - first:
+      213: -4073169753924624660
+    second: Meteorite Tilemap (1) 1_68
+  - first:
+      213: -8423018892703316084
+    second: Meteorite Tilemap (1) 1_69
+  - first:
+      213: -8935577111124199166
+    second: Meteorite Tilemap (1) 1_70
+  - first:
+      213: 170935633509520355
+    second: Meteorite Tilemap (1) 1_71
+  - first:
+      213: -1740911927531371094
+    second: Meteorite Tilemap (1) 1_72
+  - first:
+      213: -1816859112020731321
+    second: Meteorite Tilemap (1) 1_73
+  - first:
+      213: -994158014217737627
+    second: Meteorite Tilemap (1) 1_74
+  - first:
+      213: 2482474225065487537
+    second: Meteorite Tilemap (1) 1_75
+  - first:
+      213: -7161991372393679302
+    second: Meteorite Tilemap (1) 1_76
+  - first:
+      213: 736294989868844205
+    second: Meteorite Tilemap (1) 1_77
+  - first:
+      213: -8336023742124159041
+    second: Meteorite Tilemap (1) 1_78
+  - first:
+      213: -8408243395264760056
+    second: Meteorite Tilemap (1) 1_79
+  - first:
+      213: -674739676335602761
+    second: Meteorite Tilemap (1) 1_80
+  - first:
+      213: 2784384261514372206
+    second: Meteorite Tilemap (1) 1_81
+  - first:
+      213: -1817284362146254292
+    second: Meteorite Tilemap (1) 1_82
+  - first:
+      213: 554451509379360826
+    second: Meteorite Tilemap (1) 1_83
+  - first:
+      213: -8449425208674204026
+    second: Meteorite Tilemap (1) 1_84
+  - first:
+      213: 7913337303203412593
+    second: Meteorite Tilemap (1) 1_85
+  - first:
+      213: -5455648900545901680
+    second: Meteorite Tilemap (1) 1_86
+  - first:
+      213: -7180999561975795296
+    second: Meteorite Tilemap (1) 1_87
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 240
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Meteorite Tilemap (1) 1_0
+      rect:
+        serializedVersion: 2
+        x: 239
+        y: 5279
+        width: 242
+        height: 242
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 45dbd812028284470800000000000000
+      internalID: 8378991225189809492
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Meteorite Tilemap (1) 1_1
+      rect:
+        serializedVersion: 2
+        x: 719
+        y: 5279
+        width: 242
+        height: 242
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a9561083b1f6d4b20800000000000000
+      internalID: 3120272279532037530
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Meteorite Tilemap (1) 1_2
+      rect:
+        serializedVersion: 2
+        x: 1199
+        y: 5279
+        width: 242
+        height: 242
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 820b46dc7b929d370800000000000000
+      internalID: 8347749253709606952
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Meteorite Tilemap (1) 1_3
+      rect:
+        serializedVersion: 2
+        x: 1679
+        y: 5279
+        width: 242
+        height: 242
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f903aa66c0e907b40800000000000000
+      internalID: 5436018526335414431
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Meteorite Tilemap (1) 1_4
+      rect:
+        serializedVersion: 2
+        x: 2159
+        y: 5279
+        width: 242
+        height: 242
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bec3f6ed14866de80800000000000000
+      internalID: -8154215443193709333
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Meteorite Tilemap (1) 1_5
+      rect:
+        serializedVersion: 2
+        x: 2639
+        y: 5279
+        width: 242
+        height: 242
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cf96619a38f1b01b0800000000000000
+      internalID: -5689419053914494468
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Meteorite Tilemap (1) 1_6
+      rect:
+        serializedVersion: 2
+        x: 3119
+        y: 5279
+        width: 242
+        height: 242
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c3f0f61ad5293a050800000000000000
+      internalID: 5810648875076095804
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Meteorite Tilemap (1) 1_7
+      rect:
+        serializedVersion: 2
+        x: 3599
+        y: 5279
+        width: 242
+        height: 242
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 917286c88d46d6fc0800000000000000
+      internalID: -3500030454165657831
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Meteorite Tilemap (1) 1_8
+      rect:
+        serializedVersion: 2
+        x: 4079
+        y: 5279
+        width: 242
+        height: 242
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8061015ffd570cf60800000000000000
+      internalID: 8052565738488075784
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Meteorite Tilemap (1) 1_9
+      rect:
+        serializedVersion: 2
+        x: 4559
+        y: 5279
+        width: 242
+        height: 242
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 027d9ea8e67387b30800000000000000
+      internalID: 4285235993359537952
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Meteorite Tilemap (1) 1_10
+      rect:
+        serializedVersion: 2
+        x: 5039
+        y: 5279
+        width: 242
+        height: 242
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2ab0768fa83c2da50800000000000000
+      internalID: 6544508210163157922
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Meteorite Tilemap (1) 1_11
+      rect:
+        serializedVersion: 2
+        x: 254
+        y: 4799
+        width: 227
+        height: 242
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2c78a7b4035bee4b0800000000000000
+      internalID: -5409186883396007998
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Meteorite Tilemap (1) 1_12
+      rect:
+        serializedVersion: 2
+        x: 719
+        y: 4799
+        width: 242
+        height: 242
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6fadc4d0388ba9990800000000000000
+      internalID: -7378382166489769226
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Meteorite Tilemap (1) 1_13
+      rect:
+        serializedVersion: 2
+        x: 1199
+        y: 4799
+        width: 242
+        height: 242
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 90496d44a4df55970800000000000000
+      internalID: 8743172747034006537
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Meteorite Tilemap (1) 1_14
+      rect:
+        serializedVersion: 2
+        x: 1679
+        y: 4799
+        width: 242
+        height: 242
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 05771f5d176e676c0800000000000000
+      internalID: -4145873030352898224
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Meteorite Tilemap (1) 1_15
+      rect:
+        serializedVersion: 2
+        x: 2159
+        y: 4799
+        width: 242
+        height: 242
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 068294bf021efc6e0800000000000000
+      internalID: -1814984593035941792
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Meteorite Tilemap (1) 1_16
+      rect:
+        serializedVersion: 2
+        x: 2639
+        y: 4799
+        width: 242
+        height: 242
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 49b992d7eb91a11e0800000000000000
+      internalID: -2226438759846929516
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Meteorite Tilemap (1) 1_17
+      rect:
+        serializedVersion: 2
+        x: 254
+        y: 4319
+        width: 227
+        height: 242
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3df46e952bea2c6d0800000000000000
+      internalID: -2971620723075428397
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Meteorite Tilemap (1) 1_18
+      rect:
+        serializedVersion: 2
+        x: 719
+        y: 4319
+        width: 242
+        height: 242
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 728ebad0b66deb350800000000000000
+      internalID: 6034496306002257959
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Meteorite Tilemap (1) 1_19
+      rect:
+        serializedVersion: 2
+        x: 1679
+        y: 4319
+        width: 242
+        height: 242
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 757274e90af123200800000000000000
+      internalID: 158223711622080343
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Meteorite Tilemap (1) 1_20
+      rect:
+        serializedVersion: 2
+        x: 2159
+        y: 4319
+        width: 242
+        height: 242
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 74848992e9790afd0800000000000000
+      internalID: -2332697901419444153
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Meteorite Tilemap (1) 1_21
+      rect:
+        serializedVersion: 2
+        x: 2639
+        y: 4319
+        width: 242
+        height: 242
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d351da94b54a0b920800000000000000
+      internalID: 3004081663441179965
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Meteorite Tilemap (1) 1_22
+      rect:
+        serializedVersion: 2
+        x: 3119
+        y: 4319
+        width: 242
+        height: 242
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 754cb22d420a7e760800000000000000
+      internalID: 7487128985532089431
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Meteorite Tilemap (1) 1_23
+      rect:
+        serializedVersion: 2
+        x: 3599
+        y: 4319
+        width: 242
+        height: 242
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 57fca808673edf9d0800000000000000
+      internalID: -2738782900269166731
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Meteorite Tilemap (1) 1_24
+      rect:
+        serializedVersion: 2
+        x: 5039
+        y: 4319
+        width: 242
+        height: 242
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 14b48f9c85484fd50800000000000000
+      internalID: 6770181656725179201
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Meteorite Tilemap (1) 1_25
+      rect:
+        serializedVersion: 2
+        x: 5519
+        y: 4319
+        width: 242
+        height: 242
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e68fdbfb3a204f8d0800000000000000
+      internalID: -2813620964879894418
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Meteorite Tilemap (1) 1_26
+      rect:
+        serializedVersion: 2
+        x: 5999
+        y: 4319
+        width: 242
+        height: 242
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 46ab3fca434c9b450800000000000000
+      internalID: 6105126500396415588
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Meteorite Tilemap (1) 1_27
+      rect:
+        serializedVersion: 2
+        x: 254
+        y: 3839
+        width: 227
+        height: 242
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5af962d014435cf60800000000000000
+      internalID: 8053900962620153765
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Meteorite Tilemap (1) 1_28
+      rect:
+        serializedVersion: 2
+        x: 719
+        y: 3839
+        width: 242
+        height: 242
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9133a4e3203783e00800000000000000
+      internalID: 1024695368698966809
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Meteorite Tilemap (1) 1_29
+      rect:
+        serializedVersion: 2
+        x: 1199
+        y: 3839
+        width: 242
+        height: 242
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 63114430d4ccb1320800000000000000
+      internalID: 2529840246838006070
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Meteorite Tilemap (1) 1_30
+      rect:
+        serializedVersion: 2
+        x: 1679
+        y: 3839
+        width: 242
+        height: 242
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4433bce9f799631b0800000000000000
+      internalID: -5677181506849918140
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Meteorite Tilemap (1) 1_31
+      rect:
+        serializedVersion: 2
+        x: 2159
+        y: 3839
+        width: 242
+        height: 242
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 018c79b29ed1e97d0800000000000000
+      internalID: -2909855421938808816
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Meteorite Tilemap (1) 1_32
+      rect:
+        serializedVersion: 2
+        x: 2639
+        y: 3839
+        width: 242
+        height: 242
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 09ba494e04814da00800000000000000
+      internalID: 780275302433860496
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Meteorite Tilemap (1) 1_33
+      rect:
+        serializedVersion: 2
+        x: 3119
+        y: 3839
+        width: 242
+        height: 242
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 97cad23b062e76670800000000000000
+      internalID: 8532036924027546745
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Meteorite Tilemap (1) 1_34
+      rect:
+        serializedVersion: 2
+        x: 3599
+        y: 3839
+        width: 242
+        height: 242
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f1ee4feebd31a3ec0800000000000000
+      internalID: -3586532317919384033
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Meteorite Tilemap (1) 1_35
+      rect:
+        serializedVersion: 2
+        x: 4559
+        y: 3839
+        width: 242
+        height: 242
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 226e85e38e090ec00800000000000000
+      internalID: 927900850391148066
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Meteorite Tilemap (1) 1_36
+      rect:
+        serializedVersion: 2
+        x: 5039
+        y: 3839
+        width: 242
+        height: 242
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 049cae540bee4e670800000000000000
+      internalID: 8567234832020195648
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Meteorite Tilemap (1) 1_37
+      rect:
+        serializedVersion: 2
+        x: 5519
+        y: 3839
+        width: 242
+        height: 242
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bcad9d2e23da44930800000000000000
+      internalID: 4126613592644115147
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Meteorite Tilemap (1) 1_38
+      rect:
+        serializedVersion: 2
+        x: 239
+        y: 3359
+        width: 242
+        height: 242
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fb80a5f616bb70cb0800000000000000
+      internalID: -4897740042587731777
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Meteorite Tilemap (1) 1_39
+      rect:
+        serializedVersion: 2
+        x: 719
+        y: 3374
+        width: 242
+        height: 227
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e82288e1a9757bbf0800000000000000
+      internalID: -308681730002771314
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Meteorite Tilemap (1) 1_40
+      rect:
+        serializedVersion: 2
+        x: 1199
+        y: 3374
+        width: 242
+        height: 227
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8f7604b2bd84acbe0800000000000000
+      internalID: -1456271423340255240
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Meteorite Tilemap (1) 1_41
+      rect:
+        serializedVersion: 2
+        x: 1679
+        y: 3359
+        width: 242
+        height: 242
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 01994bc003405d760800000000000000
+      internalID: 7481890960364050704
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Meteorite Tilemap (1) 1_42
+      rect:
+        serializedVersion: 2
+        x: 2159
+        y: 3359
+        width: 242
+        height: 242
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c579fb23de7d81450800000000000000
+      internalID: 6059830712385640284
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Meteorite Tilemap (1) 1_43
+      rect:
+        serializedVersion: 2
+        x: 2639
+        y: 3359
+        width: 242
+        height: 242
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 108515adfd85269f0800000000000000
+      internalID: -476720892084135935
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Meteorite Tilemap (1) 1_44
+      rect:
+        serializedVersion: 2
+        x: 719
+        y: 2879
+        width: 242
+        height: 242
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 788253a6665177170800000000000000
+      internalID: 8176027178127140999
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Meteorite Tilemap (1) 1_45
+      rect:
+        serializedVersion: 2
+        x: 3119
+        y: 3119
+        width: 242
+        height: 242
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1c69750e8da3e2be0800000000000000
+      internalID: -1500196922716612927
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Meteorite Tilemap (1) 1_46
+      rect:
+        serializedVersion: 2
+        x: 4079
+        y: 3119
+        width: 242
+        height: 242
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fba98a90b5aa09410800000000000000
+      internalID: 1481871585385683647
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Meteorite Tilemap (1) 1_47
+      rect:
+        serializedVersion: 2
+        x: 5039
+        y: 3119
+        width: 242
+        height: 242
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 125b781f6c070dbf0800000000000000
+      internalID: -301617175275784927
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Meteorite Tilemap (1) 1_48
+      rect:
+        serializedVersion: 2
+        x: 239
+        y: 2399
+        width: 242
+        height: 242
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 648b8130145ce0c10800000000000000
+      internalID: 2021770165751429190
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Meteorite Tilemap (1) 1_49
+      rect:
+        serializedVersion: 2
+        x: 719
+        y: 2399
+        width: 242
+        height: 242
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 80ec44896a2957e90800000000000000
+      internalID: -7028550399224918520
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Meteorite Tilemap (1) 1_50
+      rect:
+        serializedVersion: 2
+        x: 1199
+        y: 2399
+        width: 242
+        height: 242
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 88e2a1805df70f4d0800000000000000
+      internalID: -3102839590317576568
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Meteorite Tilemap (1) 1_51
+      rect:
+        serializedVersion: 2
+        x: 2639
+        y: 2639
+        width: 242
+        height: 242
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e5e4ea566d1ab5030800000000000000
+      internalID: 3484556678902206046
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Meteorite Tilemap (1) 1_52
+      rect:
+        serializedVersion: 2
+        x: 3119
+        y: 2639
+        width: 242
+        height: 242
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 953138733d8195d60800000000000000
+      internalID: 7879356318509896537
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Meteorite Tilemap (1) 1_53
+      rect:
+        serializedVersion: 2
+        x: 3599
+        y: 2639
+        width: 242
+        height: 242
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7514d27cc68769120800000000000000
+      internalID: 2420254258351653207
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Meteorite Tilemap (1) 1_54
+      rect:
+        serializedVersion: 2
+        x: 4079
+        y: 2639
+        width: 242
+        height: 242
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ef2184b812f13f280800000000000000
+      internalID: -9010824200507092226
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Meteorite Tilemap (1) 1_55
+      rect:
+        serializedVersion: 2
+        x: 4559
+        y: 2639
+        width: 242
+        height: 242
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d7880c249659645a0800000000000000
+      internalID: -6537373529757677443
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Meteorite Tilemap (1) 1_56
+      rect:
+        serializedVersion: 2
+        x: 5039
+        y: 2639
+        width: 242
+        height: 242
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 269e26166c8e3ab60800000000000000
+      internalID: 7756298921997166946
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Meteorite Tilemap (1) 1_57
+      rect:
+        serializedVersion: 2
+        x: 5519
+        y: 2639
+        width: 242
+        height: 242
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4ad2e3210fa55b3c0800000000000000
+      internalID: -4344466278384259676
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Meteorite Tilemap (1) 1_58
+      rect:
+        serializedVersion: 2
+        x: 2864
+        y: 2384
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 738ba48727603b560800000000000000
+      internalID: 7328208107376130103
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Meteorite Tilemap (1) 1_59
+      rect:
+        serializedVersion: 2
+        x: 3119
+        y: 2159
+        width: 242
+        height: 242
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f4ce2e080b69a6d10800000000000000
+      internalID: 2119672259452005455
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Meteorite Tilemap (1) 1_60
+      rect:
+        serializedVersion: 2
+        x: 3599
+        y: 2159
+        width: 242
+        height: 242
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: da752fbe4cb3474e0800000000000000
+      internalID: -1984895818805389395
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Meteorite Tilemap (1) 1_61
+      rect:
+        serializedVersion: 2
+        x: 4079
+        y: 2159
+        width: 242
+        height: 242
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 01f386df2efba13d0800000000000000
+      internalID: -3235062400677298416
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Meteorite Tilemap (1) 1_62
+      rect:
+        serializedVersion: 2
+        x: 4559
+        y: 2159
+        width: 242
+        height: 242
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5094f1a6eb9e8e980800000000000000
+      internalID: -8509294491883058939
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Meteorite Tilemap (1) 1_63
+      rect:
+        serializedVersion: 2
+        x: 5039
+        y: 2159
+        width: 242
+        height: 242
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 65d4e6ef6a4cb3480800000000000000
+      internalID: -8918318415564878506
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Meteorite Tilemap (1) 1_64
+      rect:
+        serializedVersion: 2
+        x: 719
+        y: 1919
+        width: 242
+        height: 242
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f508e04df1b85eb40800000000000000
+      internalID: 5468930291329302623
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Meteorite Tilemap (1) 1_65
+      rect:
+        serializedVersion: 2
+        x: 2639
+        y: 1679
+        width: 242
+        height: 242
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ccace2337ea5fa720800000000000000
+      internalID: 2859604237446204108
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Meteorite Tilemap (1) 1_66
+      rect:
+        serializedVersion: 2
+        x: 3119
+        y: 1679
+        width: 242
+        height: 242
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1326b294181389a10800000000000000
+      internalID: 1916336072794268209
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Meteorite Tilemap (1) 1_67
+      rect:
+        serializedVersion: 2
+        x: 3599
+        y: 1679
+        width: 242
+        height: 242
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cf5ee27bd6dc10fd0800000000000000
+      internalID: -2377393257166477828
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Meteorite Tilemap (1) 1_68
+      rect:
+        serializedVersion: 2
+        x: 4079
+        y: 1679
+        width: 242
+        height: 242
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cee157b70b13977c0800000000000000
+      internalID: -4073169753924624660
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Meteorite Tilemap (1) 1_69
+      rect:
+        serializedVersion: 2
+        x: 4559
+        y: 1679
+        width: 242
+        height: 242
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c87c304b1fc6b1b80800000000000000
+      internalID: -8423018892703316084
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Meteorite Tilemap (1) 1_70
+      rect:
+        serializedVersion: 2
+        x: 5039
+        y: 1679
+        width: 242
+        height: 242
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 209b45cc5f37ef380800000000000000
+      internalID: -8935577111124199166
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Meteorite Tilemap (1) 1_71
+      rect:
+        serializedVersion: 2
+        x: 5519
+        y: 1679
+        width: 242
+        height: 242
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3e39ac29d094f5200800000000000000
+      internalID: 170935633509520355
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Meteorite Tilemap (1) 1_72
+      rect:
+        serializedVersion: 2
+        x: 3119
+        y: 1199
+        width: 242
+        height: 242
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aa5804e53d907d7e0800000000000000
+      internalID: -1740911927531371094
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Meteorite Tilemap (1) 1_73
+      rect:
+        serializedVersion: 2
+        x: 3599
+        y: 1199
+        width: 242
+        height: 242
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 74a9215834839c6e0800000000000000
+      internalID: -1816859112020731321
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Meteorite Tilemap (1) 1_74
+      rect:
+        serializedVersion: 2
+        x: 4079
+        y: 1199
+        width: 242
+        height: 242
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 56aa1f7ad8a0432f0800000000000000
+      internalID: -994158014217737627
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Meteorite Tilemap (1) 1_75
+      rect:
+        serializedVersion: 2
+        x: 4559
+        y: 1199
+        width: 242
+        height: 242
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1bc671da725837220800000000000000
+      internalID: 2482474225065487537
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Meteorite Tilemap (1) 1_76
+      rect:
+        serializedVersion: 2
+        x: 5039
+        y: 1199
+        width: 242
+        height: 242
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a36ff0ceace7b9c90800000000000000
+      internalID: -7161991372393679302
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Meteorite Tilemap (1) 1_77
+      rect:
+        serializedVersion: 2
+        x: 5519
+        y: 1199
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: da448096468d73a00800000000000000
+      internalID: 736294989868844205
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Meteorite Tilemap (1) 1_78
+      rect:
+        serializedVersion: 2
+        x: 2639
+        y: 719
+        width: 242
+        height: 242
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fbf877b929e705c80800000000000000
+      internalID: -8336023742124159041
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Meteorite Tilemap (1) 1_79
+      rect:
+        serializedVersion: 2
+        x: 3119
+        y: 719
+        width: 242
+        height: 242
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 80738384e2bef4b80800000000000000
+      internalID: -8408243395264760056
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Meteorite Tilemap (1) 1_80
+      rect:
+        serializedVersion: 2
+        x: 3599
+        y: 719
+        width: 242
+        height: 242
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7b3872cd6d7d2a6f0800000000000000
+      internalID: -674739676335602761
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Meteorite Tilemap (1) 1_81
+      rect:
+        serializedVersion: 2
+        x: 4079
+        y: 719
+        width: 242
+        height: 242
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e64a0c9cbbe14a620800000000000000
+      internalID: 2784384261514372206
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Meteorite Tilemap (1) 1_82
+      rect:
+        serializedVersion: 2
+        x: 4559
+        y: 734
+        width: 242
+        height: 227
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c2276624085b7c6e0800000000000000
+      internalID: -1817284362146254292
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Meteorite Tilemap (1) 1_83
+      rect:
+        serializedVersion: 2
+        x: 5039
+        y: 719
+        width: 242
+        height: 242
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a386cbdc5bec1b700800000000000000
+      internalID: 554451509379360826
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Meteorite Tilemap (1) 1_84
+      rect:
+        serializedVersion: 2
+        x: 5519
+        y: 719
+        width: 242
+        height: 242
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6864eb82a8c9dba80800000000000000
+      internalID: -8449425208674204026
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Meteorite Tilemap (1) 1_85
+      rect:
+        serializedVersion: 2
+        x: 3119
+        y: 254
+        width: 242
+        height: 227
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 17a7941c952d1dd60800000000000000
+      internalID: 7913337303203412593
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Meteorite Tilemap (1) 1_86
+      rect:
+        serializedVersion: 2
+        x: 4079
+        y: 254
+        width: 242
+        height: 227
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 09b06bfea34a944b0800000000000000
+      internalID: -5455648900545901680
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Meteorite Tilemap (1) 1_87
+      rect:
+        serializedVersion: 2
+        x: 5039
+        y: 239
+        width: 242
+        height: 242
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0a17238e1f6f75c90800000000000000
+      internalID: -7180999561975795296
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Meteorite Tilemap (1) 1_0: 8378991225189809492
+      Meteorite Tilemap (1) 1_1: 3120272279532037530
+      Meteorite Tilemap (1) 1_10: 6544508210163157922
+      Meteorite Tilemap (1) 1_11: -5409186883396007998
+      Meteorite Tilemap (1) 1_12: -7378382166489769226
+      Meteorite Tilemap (1) 1_13: 8743172747034006537
+      Meteorite Tilemap (1) 1_14: -4145873030352898224
+      Meteorite Tilemap (1) 1_15: -1814984593035941792
+      Meteorite Tilemap (1) 1_16: -2226438759846929516
+      Meteorite Tilemap (1) 1_17: -2971620723075428397
+      Meteorite Tilemap (1) 1_18: 6034496306002257959
+      Meteorite Tilemap (1) 1_19: 158223711622080343
+      Meteorite Tilemap (1) 1_2: 8347749253709606952
+      Meteorite Tilemap (1) 1_20: -2332697901419444153
+      Meteorite Tilemap (1) 1_21: 3004081663441179965
+      Meteorite Tilemap (1) 1_22: 7487128985532089431
+      Meteorite Tilemap (1) 1_23: -2738782900269166731
+      Meteorite Tilemap (1) 1_24: 6770181656725179201
+      Meteorite Tilemap (1) 1_25: -2813620964879894418
+      Meteorite Tilemap (1) 1_26: 6105126500396415588
+      Meteorite Tilemap (1) 1_27: 8053900962620153765
+      Meteorite Tilemap (1) 1_28: 1024695368698966809
+      Meteorite Tilemap (1) 1_29: 2529840246838006070
+      Meteorite Tilemap (1) 1_3: 5436018526335414431
+      Meteorite Tilemap (1) 1_30: -5677181506849918140
+      Meteorite Tilemap (1) 1_31: -2909855421938808816
+      Meteorite Tilemap (1) 1_32: 780275302433860496
+      Meteorite Tilemap (1) 1_33: 8532036924027546745
+      Meteorite Tilemap (1) 1_34: -3586532317919384033
+      Meteorite Tilemap (1) 1_35: 927900850391148066
+      Meteorite Tilemap (1) 1_36: 8567234832020195648
+      Meteorite Tilemap (1) 1_37: 4126613592644115147
+      Meteorite Tilemap (1) 1_38: -4897740042587731777
+      Meteorite Tilemap (1) 1_39: -308681730002771314
+      Meteorite Tilemap (1) 1_4: -8154215443193709333
+      Meteorite Tilemap (1) 1_40: -1456271423340255240
+      Meteorite Tilemap (1) 1_41: 7481890960364050704
+      Meteorite Tilemap (1) 1_42: 6059830712385640284
+      Meteorite Tilemap (1) 1_43: -476720892084135935
+      Meteorite Tilemap (1) 1_44: 8176027178127140999
+      Meteorite Tilemap (1) 1_45: -1500196922716612927
+      Meteorite Tilemap (1) 1_46: 1481871585385683647
+      Meteorite Tilemap (1) 1_47: -301617175275784927
+      Meteorite Tilemap (1) 1_48: 2021770165751429190
+      Meteorite Tilemap (1) 1_49: -7028550399224918520
+      Meteorite Tilemap (1) 1_5: -5689419053914494468
+      Meteorite Tilemap (1) 1_50: -3102839590317576568
+      Meteorite Tilemap (1) 1_51: 3484556678902206046
+      Meteorite Tilemap (1) 1_52: 7879356318509896537
+      Meteorite Tilemap (1) 1_53: 2420254258351653207
+      Meteorite Tilemap (1) 1_54: -9010824200507092226
+      Meteorite Tilemap (1) 1_55: -6537373529757677443
+      Meteorite Tilemap (1) 1_56: 7756298921997166946
+      Meteorite Tilemap (1) 1_57: -4344466278384259676
+      Meteorite Tilemap (1) 1_58: 7328208107376130103
+      Meteorite Tilemap (1) 1_59: 2119672259452005455
+      Meteorite Tilemap (1) 1_6: 5810648875076095804
+      Meteorite Tilemap (1) 1_60: -1984895818805389395
+      Meteorite Tilemap (1) 1_61: -3235062400677298416
+      Meteorite Tilemap (1) 1_62: -8509294491883058939
+      Meteorite Tilemap (1) 1_63: -8918318415564878506
+      Meteorite Tilemap (1) 1_64: 5468930291329302623
+      Meteorite Tilemap (1) 1_65: 2859604237446204108
+      Meteorite Tilemap (1) 1_66: 1916336072794268209
+      Meteorite Tilemap (1) 1_67: -2377393257166477828
+      Meteorite Tilemap (1) 1_68: -4073169753924624660
+      Meteorite Tilemap (1) 1_69: -8423018892703316084
+      Meteorite Tilemap (1) 1_7: -3500030454165657831
+      Meteorite Tilemap (1) 1_70: -8935577111124199166
+      Meteorite Tilemap (1) 1_71: 170935633509520355
+      Meteorite Tilemap (1) 1_72: -1740911927531371094
+      Meteorite Tilemap (1) 1_73: -1816859112020731321
+      Meteorite Tilemap (1) 1_74: -994158014217737627
+      Meteorite Tilemap (1) 1_75: 2482474225065487537
+      Meteorite Tilemap (1) 1_76: -7161991372393679302
+      Meteorite Tilemap (1) 1_77: 736294989868844205
+      Meteorite Tilemap (1) 1_78: -8336023742124159041
+      Meteorite Tilemap (1) 1_79: -8408243395264760056
+      Meteorite Tilemap (1) 1_8: 8052565738488075784
+      Meteorite Tilemap (1) 1_80: -674739676335602761
+      Meteorite Tilemap (1) 1_81: 2784384261514372206
+      Meteorite Tilemap (1) 1_82: -1817284362146254292
+      Meteorite Tilemap (1) 1_83: 554451509379360826
+      Meteorite Tilemap (1) 1_84: -8449425208674204026
+      Meteorite Tilemap (1) 1_85: 7913337303203412593
+      Meteorite Tilemap (1) 1_86: -5455648900545901680
+      Meteorite Tilemap (1) 1_87: -7180999561975795296
+      Meteorite Tilemap (1) 1_9: 4285235993359537952
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

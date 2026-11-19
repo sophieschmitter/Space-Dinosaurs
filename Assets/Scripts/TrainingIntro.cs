@@ -5,7 +5,8 @@ using UnityEngine;
 /// The training level's opening: the dino (weapons put away, so the plain dino) walks in from off the left
 /// edge of the screen, stops Stop Distance tiles from Talk To, stands idle, and the Dialogue plays. When the
 /// dialogue closes the player takes over (and, with Rearm After, the dino gets back the weapon it started with).
-/// The player can't move, attack or swap weapons until then.
+/// The player can't move, attack or swap weapons until then. With Hold Camera the camera stays put for the
+/// walk-in, then catches up with the dino and follows it.
 /// </summary>
 public class TrainingIntro : MonoBehaviour
 {
@@ -20,9 +21,25 @@ public class TrainingIntro : MonoBehaviour
     public DialogueTrigger dialogue;
     [Tooltip("Give the dino back the weapon it had once the dialogue is over.")]
     public bool rearmAfter = true;
+    [Tooltip("Keep the camera where it's placed in the scene during the walk-in (so the dino walks on screen), " +
+             "then glide over to the dino and follow it.")]
+    public bool holdCamera = true;
+    [Tooltip("Seconds the camera takes to reach the dino after the dialogue.")]
+    public float cameraCatchUp = 0.6f;
+
+    PixelCameraFollow cam;
+    Vector2 introView;
+
+    void Awake()
+    {
+        // Read before the camera's Start moves it onto the dino.
+        cam = Camera.main != null ? Camera.main.GetComponent<PixelCameraFollow>() : null;
+        if (cam != null) introView = cam.transform.position;
+    }
 
     IEnumerator Start()
     {
+        if (holdCamera && cam != null) cam.FocusOn(introView, 0.01f);
         if (dino == null) dino = FindFirstObjectByType<DinoController>();
         if (dino == null || talkTo == null) yield break;
         var body = dino.GetComponent<Rigidbody2D>();
@@ -51,6 +68,7 @@ public class TrainingIntro : MonoBehaviour
 
         if (rearmAfter) dino.SetWeapons(hadDrill, hadGun);
         dino.EndScripted();
+        if (holdCamera && cam != null) cam.Release(cameraCatchUp);
     }
 
     // Just outside the left of the view, so it walks on screen.

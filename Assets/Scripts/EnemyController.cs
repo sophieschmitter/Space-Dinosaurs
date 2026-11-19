@@ -144,6 +144,7 @@ public class EnemyController : MonoBehaviour
         blockedCells = new HashSet<Vector3Int>();
         foreach (var s in FindObjectsByType<EnemySpawner>(FindObjectsSortMode.None))
             blockedCells.Add(walls.WorldToCell(s.transform.position));
+        SolidTilemap.AddCells(walls, blockedCells); // metal walls aren't on the Walls tilemap either
 
         hunting = true;
         huntTimer = huntTimeout;

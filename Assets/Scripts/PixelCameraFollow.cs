@@ -59,15 +59,29 @@ public class PixelCameraFollow : MonoBehaviour
     /// <summary>True once a FocusOn glide has arrived.</summary>
     public bool FocusArrived => focusing && focusClock >= focusTime;
 
+    bool releasing;
+
+    /// <summary>After FocusOn: glide back to the target over this many seconds, then follow it again.</summary>
+    public void Release(float seconds)
+    {
+        if (!focusing) return;
+        focusFrom = transform.position;
+        focusTime = Mathf.Max(0.01f, seconds);
+        focusClock = 0f;
+        releasing = true;
+    }
+
     // LateUpdate so the target has finished moving (and physics interpolation applied) this frame.
     void LateUpdate()
     {
         if (focusing)
         {
+            if (releasing && target != null) focusTo = Desired(); // chase the target as it moves
             focusClock += Time.unscaledDeltaTime;
             float t = Mathf.SmoothStep(0f, 1f, Mathf.Clamp01(focusClock / focusTime));
             smoothPosition = Vector3.Lerp(focusFrom, Clamp(focusTo), t);
             transform.position = Snap(smoothPosition);
+            if (releasing && t >= 1f) { focusing = false; releasing = false; velocity = Vector3.zero; } // following again
             return;
         }
         if (target == null) return;

@@ -68,6 +68,7 @@ public class BuildingPlacer : MonoBehaviour
     void Update()
     {
         if (held == null) return;
+        if (PauseMenu.Instance != null && PauseMenu.Instance.IsOpen) return; // paused: menu clicks aren't placing
         var mouse = Mouse.current;
         var keyboard = Keyboard.current;
         if ((mouse != null && mouse.rightButton.wasPressedThisFrame) || (keyboard != null && keyboard.escapeKey.wasPressedThisFrame)

@@ -1,0 +1,2366 @@
+fileFormatVersion: 2
+guid: 064770d3ab8ef4b8b98f40dc2da0d164
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -263717508405935970
+    second: Meteorite Unbreakable Tilemap_0
+  - first:
+      213: 1125391938515280557
+    second: Meteorite Unbreakable Tilemap_1
+  - first:
+      213: 6089617643315755921
+    second: Meteorite Unbreakable Tilemap_2
+  - first:
+      213: -6340028882061297316
+    second: Meteorite Unbreakable Tilemap_3
+  - first:
+      213: 6685555844857233638
+    second: Meteorite Unbreakable Tilemap_4
+  - first:
+      213: 1741465394631352015
+    second: Meteorite Unbreakable Tilemap_5
+  - first:
+      213: -5024656995013123317
+    second: Meteorite Unbreakable Tilemap_6
+  - first:
+      213: -5331698229509026274
+    second: Meteorite Unbreakable Tilemap_7
+  - first:
+      213: -63632174285597078
+    second: Meteorite Unbreakable Tilemap_8
+  - first:
+      213: 6743402185022091546
+    second: Meteorite Unbreakable Tilemap_9
+  - first:
+      213: -8254435876046036078
+    second: Meteorite Unbreakable Tilemap_10
+  - first:
+      213: -5486195004057010159
+    second: Meteorite Unbreakable Tilemap_11
+  - first:
+      213: 5795711344119962627
+    second: Meteorite Unbreakable Tilemap_12
+  - first:
+      213: -8269919351925020562
+    second: Meteorite Unbreakable Tilemap_13
+  - first:
+      213: -7076002697997327280
+    second: Meteorite Unbreakable Tilemap_14
+  - first:
+      213: 2131294661395357211
+    second: Meteorite Unbreakable Tilemap_15
+  - first:
+      213: 8096796008924256342
+    second: Meteorite Unbreakable Tilemap_16
+  - first:
+      213: -796394028891155765
+    second: Meteorite Unbreakable Tilemap_17
+  - first:
+      213: 6040712522127595100
+    second: Meteorite Unbreakable Tilemap_18
+  - first:
+      213: 6066373212177009913
+    second: Meteorite Unbreakable Tilemap_19
+  - first:
+      213: -5015274570280872139
+    second: Meteorite Unbreakable Tilemap_20
+  - first:
+      213: -3968432799772839424
+    second: Meteorite Unbreakable Tilemap_21
+  - first:
+      213: -4282599818669441235
+    second: Meteorite Unbreakable Tilemap_22
+  - first:
+      213: 1469645192844079183
+    second: Meteorite Unbreakable Tilemap_23
+  - first:
+      213: -3612583682458399861
+    second: Meteorite Unbreakable Tilemap_24
+  - first:
+      213: -3763116011760095741
+    second: Meteorite Unbreakable Tilemap_25
+  - first:
+      213: 7907896051632502928
+    second: Meteorite Unbreakable Tilemap_26
+  - first:
+      213: -1143430303407855862
+    second: Meteorite Unbreakable Tilemap_27
+  - first:
+      213: -7365243536122335794
+    second: Meteorite Unbreakable Tilemap_28
+  - first:
+      213: 2516575509264535826
+    second: Meteorite Unbreakable Tilemap_29
+  - first:
+      213: -377857874309951557
+    second: Meteorite Unbreakable Tilemap_30
+  - first:
+      213: 1850491342811396755
+    second: Meteorite Unbreakable Tilemap_31
+  - first:
+      213: 891929875833430922
+    second: Meteorite Unbreakable Tilemap_32
+  - first:
+      213: 7972498388325520651
+    second: Meteorite Unbreakable Tilemap_33
+  - first:
+      213: -4205152853887244766
+    second: Meteorite Unbreakable Tilemap_34
+  - first:
+      213: 1138167328958834741
+    second: Meteorite Unbreakable Tilemap_35
+  - first:
+      213: 1429030517432944420
+    second: Meteorite Unbreakable Tilemap_36
+  - first:
+      213: -1444742750453561775
+    second: Meteorite Unbreakable Tilemap_37
+  - first:
+      213: -935795226194446105
+    second: Meteorite Unbreakable Tilemap_38
+  - first:
+      213: 7352983554821231299
+    second: Meteorite Unbreakable Tilemap_39
+  - first:
+      213: -7734900400475533389
+    second: Meteorite Unbreakable Tilemap_40
+  - first:
+      213: -9015665994666431325
+    second: Meteorite Unbreakable Tilemap_41
+  - first:
+      213: -7419634725697142088
+    second: Meteorite Unbreakable Tilemap_42
+  - first:
+      213: -5843650301748007907
+    second: Meteorite Unbreakable Tilemap_43
+  - first:
+      213: 59343917380838394
+    second: Meteorite Unbreakable Tilemap_44
+  - first:
+      213: 7967078610591551313
+    second: Meteorite Unbreakable Tilemap_45
+  - first:
+      213: -8710078002596027903
+    second: Meteorite Unbreakable Tilemap_46
+  - first:
+      213: 6955483496077037419
+    second: Meteorite Unbreakable Tilemap_47
+  - first:
+      213: -6340215799109405833
+    second: Meteorite Unbreakable Tilemap_48
+  - first:
+      213: 2279691282130501176
+    second: Meteorite Unbreakable Tilemap_49
+  - first:
+      213: 6016460884200716014
+    second: Meteorite Unbreakable Tilemap_50
+  - first:
+      213: -7410286566759116330
+    second: Meteorite Unbreakable Tilemap_51
+  - first:
+      213: -3545812021407173451
+    second: Meteorite Unbreakable Tilemap_52
+  - first:
+      213: -6562674367138817996
+    second: Meteorite Unbreakable Tilemap_53
+  - first:
+      213: -2420039045609830466
+    second: Meteorite Unbreakable Tilemap_54
+  - first:
+      213: -3696661989207584501
+    second: Meteorite Unbreakable Tilemap_55
+  - first:
+      213: 7565618290276798974
+    second: Meteorite Unbreakable Tilemap_56
+  - first:
+      213: 1053815128248519794
+    second: Meteorite Unbreakable Tilemap_57
+  - first:
+      213: 5973458006118613840
+    second: Meteorite Unbreakable Tilemap_58
+  - first:
+      213: 4961440010542722431
+    second: Meteorite Unbreakable Tilemap_59
+  - first:
+      213: -6014467347182639381
+    second: Meteorite Unbreakable Tilemap_60
+  - first:
+      213: -2565326398120717031
+    second: Meteorite Unbreakable Tilemap_61
+  - first:
+      213: 3459843394433143412
+    second: Meteorite Unbreakable Tilemap_62
+  - first:
+      213: 4893408272103718847
+    second: Meteorite Unbreakable Tilemap_63
+  - first:
+      213: 446397861888860278
+    second: Meteorite Unbreakable Tilemap_64
+  - first:
+      213: -7033386503292319776
+    second: Meteorite Unbreakable Tilemap_65
+  - first:
+      213: 3248739733766336370
+    second: Meteorite Unbreakable Tilemap_66
+  - first:
+      213: -2077968797843079300
+    second: Meteorite Unbreakable Tilemap_67
+  - first:
+      213: -368733965172629882
+    second: Meteorite Unbreakable Tilemap_68
+  - first:
+      213: -1499344215250428349
+    second: Meteorite Unbreakable Tilemap_69
+  - first:
+      213: 9200429503219921931
+    second: Meteorite Unbreakable Tilemap_70
+  - first:
+      213: 1495726322389952074
+    second: Meteorite Unbreakable Tilemap_71
+  - first:
+      213: 4211611088895650927
+    second: Meteorite Unbreakable Tilemap_72
+  - first:
+      213: -6485343956106284585
+    second: Meteorite Unbreakable Tilemap_73
+  - first:
+      213: -6525008901769005824
+    second: Meteorite Unbreakable Tilemap_74
+  - first:
+      213: 3765721664185570528
+    second: Meteorite Unbreakable Tilemap_75
+  - first:
+      213: 577437371756567882
+    second: Meteorite Unbreakable Tilemap_76
+  - first:
+      213: 6086637654548821897
+    second: Meteorite Unbreakable Tilemap_77
+  - first:
+      213: 773341265814313462
+    second: Meteorite Unbreakable Tilemap_78
+  - first:
+      213: 602028602099617762
+    second: Meteorite Unbreakable Tilemap_79
+  - first:
+      213: 6298726415056476868
+    second: Meteorite Unbreakable Tilemap_80
+  - first:
+      213: 1844968870947130046
+    second: Meteorite Unbreakable Tilemap_81
+  - first:
+      213: 637436394999200898
+    second: Meteorite Unbreakable Tilemap_82
+  - first:
+      213: 6653455016305208042
+    second: Meteorite Unbreakable Tilemap_83
+  - first:
+      213: 3023455511147477180
+    second: Meteorite Unbreakable Tilemap_84
+  - first:
+      213: -3462910547168124940
+    second: Meteorite Unbreakable Tilemap_85
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 160
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Meteorite Unbreakable Tilemap_0
+      rect:
+        serializedVersion: 2
+        x: 159
+        y: 3519
+        width: 162
+        height: 162
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e90c966c256175cf0800000000000000
+      internalID: -263717508405935970
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Meteorite Unbreakable Tilemap_1
+      rect:
+        serializedVersion: 2
+        x: 479
+        y: 3519
+        width: 162
+        height: 162
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: da2aa4861023e9f00800000000000000
+      internalID: 1125391938515280557
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Meteorite Unbreakable Tilemap_2
+      rect:
+        serializedVersion: 2
+        x: 799
+        y: 3519
+        width: 162
+        height: 162
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 19b79cf7bfaa28450800000000000000
+      internalID: 6089617643315755921
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Meteorite Unbreakable Tilemap_3
+      rect:
+        serializedVersion: 2
+        x: 1119
+        y: 3519
+        width: 162
+        height: 162
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c59f40b9251b308a0800000000000000
+      internalID: -6340028882061297316
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Meteorite Unbreakable Tilemap_4
+      rect:
+        serializedVersion: 2
+        x: 1439
+        y: 3519
+        width: 162
+        height: 162
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6e080ca8e9dd7cc50800000000000000
+      internalID: 6685555844857233638
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Meteorite Unbreakable Tilemap_5
+      rect:
+        serializedVersion: 2
+        x: 1759
+        y: 3519
+        width: 162
+        height: 162
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fce13abbc8dea2810800000000000000
+      internalID: 1741465394631352015
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Meteorite Unbreakable Tilemap_6
+      rect:
+        serializedVersion: 2
+        x: 2079
+        y: 3519
+        width: 162
+        height: 162
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b03af06b515d44ab0800000000000000
+      internalID: -5024656995013123317
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Meteorite Unbreakable Tilemap_7
+      rect:
+        serializedVersion: 2
+        x: 2399
+        y: 3519
+        width: 162
+        height: 162
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e1e098475b00206b0800000000000000
+      internalID: -5331698229509026274
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Meteorite Unbreakable Tilemap_8
+      rect:
+        serializedVersion: 2
+        x: 2719
+        y: 3519
+        width: 162
+        height: 162
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a66db67efdeed1ff0800000000000000
+      internalID: -63632174285597078
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Meteorite Unbreakable Tilemap_9
+      rect:
+        serializedVersion: 2
+        x: 3039
+        y: 3519
+        width: 162
+        height: 162
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a11b5d72f80659d50800000000000000
+      internalID: 6743402185022091546
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Meteorite Unbreakable Tilemap_10
+      rect:
+        serializedVersion: 2
+        x: 3359
+        y: 3519
+        width: 162
+        height: 162
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 293290bfd4a527d80800000000000000
+      internalID: -8254435876046036078
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Meteorite Unbreakable Tilemap_11
+      rect:
+        serializedVersion: 2
+        x: 169
+        y: 3199
+        width: 152
+        height: 162
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 110c8aef5be1dd3b0800000000000000
+      internalID: -5486195004057010159
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Meteorite Unbreakable Tilemap_12
+      rect:
+        serializedVersion: 2
+        x: 479
+        y: 3199
+        width: 162
+        height: 162
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 30cd8fea2c08e6050800000000000000
+      internalID: 5795711344119962627
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Meteorite Unbreakable Tilemap_13
+      rect:
+        serializedVersion: 2
+        x: 799
+        y: 3199
+        width: 162
+        height: 162
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e6861635a285b3d80800000000000000
+      internalID: -8269919351925020562
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Meteorite Unbreakable Tilemap_14
+      rect:
+        serializedVersion: 2
+        x: 1119
+        y: 3199
+        width: 162
+        height: 162
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 054e924590dfccd90800000000000000
+      internalID: -7076002697997327280
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Meteorite Unbreakable Tilemap_15
+      rect:
+        serializedVersion: 2
+        x: 1439
+        y: 3199
+        width: 162
+        height: 162
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b1e1824d331e39d10800000000000000
+      internalID: 2131294661395357211
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Meteorite Unbreakable Tilemap_16
+      rect:
+        serializedVersion: 2
+        x: 1759
+        y: 3199
+        width: 162
+        height: 162
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6581bba42199d5070800000000000000
+      internalID: 8096796008924256342
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Meteorite Unbreakable Tilemap_17
+      rect:
+        serializedVersion: 2
+        x: 169
+        y: 2879
+        width: 152
+        height: 162
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bc253b6a9d3a2f4f0800000000000000
+      internalID: -796394028891155765
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Meteorite Unbreakable Tilemap_18
+      rect:
+        serializedVersion: 2
+        x: 479
+        y: 2879
+        width: 162
+        height: 162
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c565ba7a80ce4d350800000000000000
+      internalID: 6040712522127595100
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Meteorite Unbreakable Tilemap_19
+      rect:
+        serializedVersion: 2
+        x: 1119
+        y: 2879
+        width: 162
+        height: 162
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9fc81c2ab46103450800000000000000
+      internalID: 6066373212177009913
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Meteorite Unbreakable Tilemap_20
+      rect:
+        serializedVersion: 2
+        x: 1439
+        y: 2879
+        width: 162
+        height: 162
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 537db53b95a266ab0800000000000000
+      internalID: -5015274570280872139
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Meteorite Unbreakable Tilemap_21
+      rect:
+        serializedVersion: 2
+        x: 1759
+        y: 2879
+        width: 162
+        height: 162
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 002f78ee46b4de8c0800000000000000
+      internalID: -3968432799772839424
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Meteorite Unbreakable Tilemap_22
+      rect:
+        serializedVersion: 2
+        x: 2079
+        y: 2879
+        width: 162
+        height: 162
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d2f3e05b7262194c0800000000000000
+      internalID: -4282599818669441235
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Meteorite Unbreakable Tilemap_23
+      rect:
+        serializedVersion: 2
+        x: 2399
+        y: 2879
+        width: 162
+        height: 162
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f40f451348a356410800000000000000
+      internalID: 1469645192844079183
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Meteorite Unbreakable Tilemap_24
+      rect:
+        serializedVersion: 2
+        x: 3359
+        y: 2879
+        width: 162
+        height: 162
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b8bc1b5f7468dddc0800000000000000
+      internalID: -3612583682458399861
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Meteorite Unbreakable Tilemap_25
+      rect:
+        serializedVersion: 2
+        x: 3679
+        y: 2879
+        width: 162
+        height: 162
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 30e6476dce9b6cbc0800000000000000
+      internalID: -3763116011760095741
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Meteorite Unbreakable Tilemap_26
+      rect:
+        serializedVersion: 2
+        x: 3999
+        y: 2879
+        width: 162
+        height: 162
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 098f446af8d7ebd60800000000000000
+      internalID: 7907896051632502928
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Meteorite Unbreakable Tilemap_27
+      rect:
+        serializedVersion: 2
+        x: 169
+        y: 2559
+        width: 152
+        height: 162
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a0725fb7238b120f0800000000000000
+      internalID: -1143430303407855862
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Meteorite Unbreakable Tilemap_28
+      rect:
+        serializedVersion: 2
+        x: 479
+        y: 2559
+        width: 162
+        height: 162
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ecdaf21d60669c990800000000000000
+      internalID: -7365243536122335794
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Meteorite Unbreakable Tilemap_29
+      rect:
+        serializedVersion: 2
+        x: 799
+        y: 2559
+        width: 162
+        height: 162
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2111920a71cace220800000000000000
+      internalID: 2516575509264535826
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Meteorite Unbreakable Tilemap_30
+      rect:
+        serializedVersion: 2
+        x: 1119
+        y: 2559
+        width: 162
+        height: 162
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bbfcb2ae34491caf0800000000000000
+      internalID: -377857874309951557
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Meteorite Unbreakable Tilemap_31
+      rect:
+        serializedVersion: 2
+        x: 1439
+        y: 2559
+        width: 162
+        height: 162
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 39a753c62144ea910800000000000000
+      internalID: 1850491342811396755
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Meteorite Unbreakable Tilemap_32
+      rect:
+        serializedVersion: 2
+        x: 1759
+        y: 2559
+        width: 162
+        height: 162
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a832c951f75c06c00800000000000000
+      internalID: 891929875833430922
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Meteorite Unbreakable Tilemap_33
+      rect:
+        serializedVersion: 2
+        x: 2079
+        y: 2559
+        width: 162
+        height: 162
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b0554884b0104ae60800000000000000
+      internalID: 7972498388325520651
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Meteorite Unbreakable Tilemap_34
+      rect:
+        serializedVersion: 2
+        x: 2399
+        y: 2559
+        width: 162
+        height: 162
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 226a4dd52cb44a5c0800000000000000
+      internalID: -4205152853887244766
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Meteorite Unbreakable Tilemap_35
+      rect:
+        serializedVersion: 2
+        x: 3039
+        y: 2559
+        width: 162
+        height: 162
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 538eb89c7259bcf00800000000000000
+      internalID: 1138167328958834741
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Meteorite Unbreakable Tilemap_36
+      rect:
+        serializedVersion: 2
+        x: 3359
+        y: 2559
+        width: 162
+        height: 162
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 42788cc2fafe4d310800000000000000
+      internalID: 1429030517432944420
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Meteorite Unbreakable Tilemap_37
+      rect:
+        serializedVersion: 2
+        x: 3679
+        y: 2559
+        width: 162
+        height: 162
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 156056f7f1e33fbe0800000000000000
+      internalID: -1444742750453561775
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Meteorite Unbreakable Tilemap_38
+      rect:
+        serializedVersion: 2
+        x: 159
+        y: 2239
+        width: 162
+        height: 162
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7e87c2823336303f0800000000000000
+      internalID: -935795226194446105
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Meteorite Unbreakable Tilemap_39
+      rect:
+        serializedVersion: 2
+        x: 479
+        y: 2249
+        width: 162
+        height: 152
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3c29868d59b0b0660800000000000000
+      internalID: 7352983554821231299
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Meteorite Unbreakable Tilemap_40
+      rect:
+        serializedVersion: 2
+        x: 799
+        y: 2249
+        width: 162
+        height: 152
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3bf01a8211d18a490800000000000000
+      internalID: -7734900400475533389
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Meteorite Unbreakable Tilemap_41
+      rect:
+        serializedVersion: 2
+        x: 1119
+        y: 2239
+        width: 162
+        height: 162
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3aca65e7b8be1e280800000000000000
+      internalID: -9015665994666431325
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Meteorite Unbreakable Tilemap_42
+      rect:
+        serializedVersion: 2
+        x: 1439
+        y: 2239
+        width: 162
+        height: 162
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8b24ba32789280990800000000000000
+      internalID: -7419634725697142088
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Meteorite Unbreakable Tilemap_43
+      rect:
+        serializedVersion: 2
+        x: 1759
+        y: 2239
+        width: 162
+        height: 162
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d1ca4b4f20f27eea0800000000000000
+      internalID: -5843650301748007907
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Meteorite Unbreakable Tilemap_44
+      rect:
+        serializedVersion: 2
+        x: 479
+        y: 1919
+        width: 162
+        height: 162
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: af3a01b7af4d2d000800000000000000
+      internalID: 59343917380838394
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Meteorite Unbreakable Tilemap_45
+      rect:
+        serializedVersion: 2
+        x: 2079
+        y: 2079
+        width: 162
+        height: 162
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 15f0ce1f8cfb09e60800000000000000
+      internalID: 7967078610591551313
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Meteorite Unbreakable Tilemap_46
+      rect:
+        serializedVersion: 2
+        x: 2719
+        y: 2079
+        width: 162
+        height: 162
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 102e15164369f1780800000000000000
+      internalID: -8710078002596027903
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Meteorite Unbreakable Tilemap_47
+      rect:
+        serializedVersion: 2
+        x: 3359
+        y: 2079
+        width: 162
+        height: 162
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b6f83c05367d68060800000000000000
+      internalID: 6955483496077037419
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Meteorite Unbreakable Tilemap_48
+      rect:
+        serializedVersion: 2
+        x: 159
+        y: 1599
+        width: 162
+        height: 162
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 773b3c692570308a0800000000000000
+      internalID: -6340215799109405833
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Meteorite Unbreakable Tilemap_49
+      rect:
+        serializedVersion: 2
+        x: 479
+        y: 1599
+        width: 162
+        height: 162
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 83e71fc842713af10800000000000000
+      internalID: 2279691282130501176
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Meteorite Unbreakable Tilemap_50
+      rect:
+        serializedVersion: 2
+        x: 799
+        y: 1599
+        width: 162
+        height: 162
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ee6f0df2c43ce7350800000000000000
+      internalID: 6016460884200716014
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Meteorite Unbreakable Tilemap_51
+      rect:
+        serializedVersion: 2
+        x: 1759
+        y: 1759
+        width: 162
+        height: 162
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6d1597001af592990800000000000000
+      internalID: -7410286566759116330
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Meteorite Unbreakable Tilemap_52
+      rect:
+        serializedVersion: 2
+        x: 2079
+        y: 1759
+        width: 162
+        height: 162
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5b437b7c0cebacec0800000000000000
+      internalID: -3545812021407173451
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Meteorite Unbreakable Tilemap_53
+      rect:
+        serializedVersion: 2
+        x: 2399
+        y: 1759
+        width: 162
+        height: 162
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 43811220f62bce4a0800000000000000
+      internalID: -6562674367138817996
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Meteorite Unbreakable Tilemap_54
+      rect:
+        serializedVersion: 2
+        x: 2719
+        y: 1759
+        width: 162
+        height: 162
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eb7c9d75f4b4a6ed0800000000000000
+      internalID: -2420039045609830466
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Meteorite Unbreakable Tilemap_55
+      rect:
+        serializedVersion: 2
+        x: 3039
+        y: 1759
+        width: 162
+        height: 162
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b01d79ea181d2bcc0800000000000000
+      internalID: -3696661989207584501
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Meteorite Unbreakable Tilemap_56
+      rect:
+        serializedVersion: 2
+        x: 3359
+        y: 1759
+        width: 162
+        height: 162
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ef1952a20c97ef860800000000000000
+      internalID: 7565618290276798974
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Meteorite Unbreakable Tilemap_57
+      rect:
+        serializedVersion: 2
+        x: 3679
+        y: 1759
+        width: 162
+        height: 162
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 27c8f2a9647ef9e00800000000000000
+      internalID: 1053815128248519794
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Meteorite Unbreakable Tilemap_58
+      rect:
+        serializedVersion: 2
+        x: 479
+        y: 1279
+        width: 162
+        height: 162
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 053c967686cf5e250800000000000000
+      internalID: 5973458006118613840
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Meteorite Unbreakable Tilemap_59
+      rect:
+        serializedVersion: 2
+        x: 2079
+        y: 1439
+        width: 162
+        height: 162
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f7d2fca17639ad440800000000000000
+      internalID: 4961440010542722431
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Meteorite Unbreakable Tilemap_60
+      rect:
+        serializedVersion: 2
+        x: 2399
+        y: 1439
+        width: 162
+        height: 162
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: be62ef150d1588ca0800000000000000
+      internalID: -6014467347182639381
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Meteorite Unbreakable Tilemap_61
+      rect:
+        serializedVersion: 2
+        x: 2719
+        y: 1439
+        width: 162
+        height: 162
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 915151b8b31266cd0800000000000000
+      internalID: -2565326398120717031
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Meteorite Unbreakable Tilemap_62
+      rect:
+        serializedVersion: 2
+        x: 3039
+        y: 1439
+        width: 162
+        height: 162
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4725ba77c35d30030800000000000000
+      internalID: 3459843394433143412
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Meteorite Unbreakable Tilemap_63
+      rect:
+        serializedVersion: 2
+        x: 3359
+        y: 1439
+        width: 162
+        height: 162
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fbf33b7a5e0e8e340800000000000000
+      internalID: 4893408272103718847
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Meteorite Unbreakable Tilemap_64
+      rect:
+        serializedVersion: 2
+        x: 1759
+        y: 1119
+        width: 162
+        height: 162
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 67021628d7ce13600800000000000000
+      internalID: 446397861888860278
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Meteorite Unbreakable Tilemap_65
+      rect:
+        serializedVersion: 2
+        x: 2079
+        y: 1119
+        width: 162
+        height: 162
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0e70c3f5d34646e90800000000000000
+      internalID: -7033386503292319776
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Meteorite Unbreakable Tilemap_66
+      rect:
+        serializedVersion: 2
+        x: 2399
+        y: 1119
+        width: 162
+        height: 162
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 27fe6d64397d51d20800000000000000
+      internalID: 3248739733766336370
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Meteorite Unbreakable Tilemap_67
+      rect:
+        serializedVersion: 2
+        x: 2719
+        y: 1119
+        width: 162
+        height: 162
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c7fb73e43629923e0800000000000000
+      internalID: -2077968797843079300
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Meteorite Unbreakable Tilemap_68
+      rect:
+        serializedVersion: 2
+        x: 3039
+        y: 1119
+        width: 162
+        height: 162
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 68e934d896ef1eaf0800000000000000
+      internalID: -368733965172629882
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Meteorite Unbreakable Tilemap_69
+      rect:
+        serializedVersion: 2
+        x: 3359
+        y: 1119
+        width: 162
+        height: 162
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 34e16fd4162413be0800000000000000
+      internalID: -1499344215250428349
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Meteorite Unbreakable Tilemap_70
+      rect:
+        serializedVersion: 2
+        x: 3679
+        y: 1119
+        width: 162
+        height: 162
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b04727023ed7eaf70800000000000000
+      internalID: 9200429503219921931
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Meteorite Unbreakable Tilemap_71
+      rect:
+        serializedVersion: 2
+        x: 2079
+        y: 799
+        width: 162
+        height: 162
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a46214f5a23e1c410800000000000000
+      internalID: 1495726322389952074
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Meteorite Unbreakable Tilemap_72
+      rect:
+        serializedVersion: 2
+        x: 2399
+        y: 799
+        width: 162
+        height: 162
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f6ca8b5a8f5a27a30800000000000000
+      internalID: 4211611088895650927
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Meteorite Unbreakable Tilemap_73
+      rect:
+        serializedVersion: 2
+        x: 2719
+        y: 799
+        width: 162
+        height: 162
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7d1fe02680e6ff5a0800000000000000
+      internalID: -6485343956106284585
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Meteorite Unbreakable Tilemap_74
+      rect:
+        serializedVersion: 2
+        x: 3039
+        y: 799
+        width: 162
+        height: 162
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 005fbcd89f28275a0800000000000000
+      internalID: -6525008901769005824
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Meteorite Unbreakable Tilemap_75
+      rect:
+        serializedVersion: 2
+        x: 3359
+        y: 799
+        width: 162
+        height: 162
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0e416c4e6e7824430800000000000000
+      internalID: 3765721664185570528
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Meteorite Unbreakable Tilemap_76
+      rect:
+        serializedVersion: 2
+        x: 1759
+        y: 479
+        width: 162
+        height: 162
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a4dd59fea38730800800000000000000
+      internalID: 577437371756567882
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Meteorite Unbreakable Tilemap_77
+      rect:
+        serializedVersion: 2
+        x: 2079
+        y: 479
+        width: 162
+        height: 162
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 98736ebc2b4187450800000000000000
+      internalID: 6086637654548821897
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Meteorite Unbreakable Tilemap_78
+      rect:
+        serializedVersion: 2
+        x: 2399
+        y: 479
+        width: 162
+        height: 162
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6f9530fa8c57bba00800000000000000
+      internalID: 773341265814313462
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Meteorite Unbreakable Tilemap_79
+      rect:
+        serializedVersion: 2
+        x: 2719
+        y: 479
+        width: 162
+        height: 162
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2efc5cce2d5da5800800000000000000
+      internalID: 602028602099617762
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Meteorite Unbreakable Tilemap_80
+      rect:
+        serializedVersion: 2
+        x: 3039
+        y: 489
+        width: 162
+        height: 152
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4ca9fca6d42996750800000000000000
+      internalID: 6298726415056476868
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Meteorite Unbreakable Tilemap_81
+      rect:
+        serializedVersion: 2
+        x: 3359
+        y: 479
+        width: 162
+        height: 162
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eba057eb965aa9910800000000000000
+      internalID: 1844968870947130046
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Meteorite Unbreakable Tilemap_82
+      rect:
+        serializedVersion: 2
+        x: 3679
+        y: 479
+        width: 162
+        height: 162
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 28c35d22601a8d800800000000000000
+      internalID: 637436394999200898
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Meteorite Unbreakable Tilemap_83
+      rect:
+        serializedVersion: 2
+        x: 2079
+        y: 169
+        width: 162
+        height: 152
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aeaa9e7f512d55c50800000000000000
+      internalID: 6653455016305208042
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Meteorite Unbreakable Tilemap_84
+      rect:
+        serializedVersion: 2
+        x: 2719
+        y: 169
+        width: 162
+        height: 152
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cb87428b4c875f920800000000000000
+      internalID: 3023455511147477180
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Meteorite Unbreakable Tilemap_85
+      rect:
+        serializedVersion: 2
+        x: 3359
+        y: 159
+        width: 162
+        height: 162
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4ff1713643541ffc0800000000000000
+      internalID: -3462910547168124940
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Meteorite Unbreakable Tilemap_0: -263717508405935970
+      Meteorite Unbreakable Tilemap_1: 1125391938515280557
+      Meteorite Unbreakable Tilemap_10: -8254435876046036078
+      Meteorite Unbreakable Tilemap_11: -5486195004057010159
+      Meteorite Unbreakable Tilemap_12: 5795711344119962627
+      Meteorite Unbreakable Tilemap_13: -8269919351925020562
+      Meteorite Unbreakable Tilemap_14: -7076002697997327280
+      Meteorite Unbreakable Tilemap_15: 2131294661395357211
+      Meteorite Unbreakable Tilemap_16: 8096796008924256342
+      Meteorite Unbreakable Tilemap_17: -796394028891155765
+      Meteorite Unbreakable Tilemap_18: 6040712522127595100
+      Meteorite Unbreakable Tilemap_19: 6066373212177009913
+      Meteorite Unbreakable Tilemap_2: 6089617643315755921
+      Meteorite Unbreakable Tilemap_20: -5015274570280872139
+      Meteorite Unbreakable Tilemap_21: -3968432799772839424
+      Meteorite Unbreakable Tilemap_22: -4282599818669441235
+      Meteorite Unbreakable Tilemap_23: 1469645192844079183
+      Meteorite Unbreakable Tilemap_24: -3612583682458399861
+      Meteorite Unbreakable Tilemap_25: -3763116011760095741
+      Meteorite Unbreakable Tilemap_26: 7907896051632502928
+      Meteorite Unbreakable Tilemap_27: -1143430303407855862
+      Meteorite Unbreakable Tilemap_28: -7365243536122335794
+      Meteorite Unbreakable Tilemap_29: 2516575509264535826
+      Meteorite Unbreakable Tilemap_3: -6340028882061297316
+      Meteorite Unbreakable Tilemap_30: -377857874309951557
+      Meteorite Unbreakable Tilemap_31: 1850491342811396755
+      Meteorite Unbreakable Tilemap_32: 891929875833430922
+      Meteorite Unbreakable Tilemap_33: 7972498388325520651
+      Meteorite Unbreakable Tilemap_34: -4205152853887244766
+      Meteorite Unbreakable Tilemap_35: 1138167328958834741
+      Meteorite Unbreakable Tilemap_36: 1429030517432944420
+      Meteorite Unbreakable Tilemap_37: -1444742750453561775
+      Meteorite Unbreakable Tilemap_38: -935795226194446105
+      Meteorite Unbreakable Tilemap_39: 7352983554821231299
+      Meteorite Unbreakable Tilemap_4: 6685555844857233638
+      Meteorite Unbreakable Tilemap_40: -7734900400475533389
+      Meteorite Unbreakable Tilemap_41: -9015665994666431325
+      Meteorite Unbreakable Tilemap_42: -7419634725697142088
+      Meteorite Unbreakable Tilemap_43: -5843650301748007907
+      Meteorite Unbreakable Tilemap_44: 59343917380838394
+      Meteorite Unbreakable Tilemap_45: 7967078610591551313
+      Meteorite Unbreakable Tilemap_46: -8710078002596027903
+      Meteorite Unbreakable Tilemap_47: 6955483496077037419
+      Meteorite Unbreakable Tilemap_48: -6340215799109405833
+      Meteorite Unbreakable Tilemap_49: 2279691282130501176
+      Meteorite Unbreakable Tilemap_5: 1741465394631352015
+      Meteorite Unbreakable Tilemap_50: 6016460884200716014
+      Meteorite Unbreakable Tilemap_51: -7410286566759116330
+      Meteorite Unbreakable Tilemap_52: -3545812021407173451
+      Meteorite Unbreakable Tilemap_53: -6562674367138817996
+      Meteorite Unbreakable Tilemap_54: -2420039045609830466
+      Meteorite Unbreakable Tilemap_55: -3696661989207584501
+      Meteorite Unbreakable Tilemap_56: 7565618290276798974
+      Meteorite Unbreakable Tilemap_57: 1053815128248519794
+      Meteorite Unbreakable Tilemap_58: 5973458006118613840
+      Meteorite Unbreakable Tilemap_59: 4961440010542722431
+      Meteorite Unbreakable Tilemap_6: -5024656995013123317
+      Meteorite Unbreakable Tilemap_60: -6014467347182639381
+      Meteorite Unbreakable Tilemap_61: -2565326398120717031
+      Meteorite Unbreakable Tilemap_62: 3459843394433143412
+      Meteorite Unbreakable Tilemap_63: 4893408272103718847
+      Meteorite Unbreakable Tilemap_64: 446397861888860278
+      Meteorite Unbreakable Tilemap_65: -7033386503292319776
+      Meteorite Unbreakable Tilemap_66: 3248739733766336370
+      Meteorite Unbreakable Tilemap_67: -2077968797843079300
+      Meteorite Unbreakable Tilemap_68: -368733965172629882
+      Meteorite Unbreakable Tilemap_69: -1499344215250428349
+      Meteorite Unbreakable Tilemap_7: -5331698229509026274
+      Meteorite Unbreakable Tilemap_70: 9200429503219921931
+      Meteorite Unbreakable Tilemap_71: 1495726322389952074
+      Meteorite Unbreakable Tilemap_72: 4211611088895650927
+      Meteorite Unbreakable Tilemap_73: -6485343956106284585
+      Meteorite Unbreakable Tilemap_74: -6525008901769005824
+      Meteorite Unbreakable Tilemap_75: 3765721664185570528
+      Meteorite Unbreakable Tilemap_76: 577437371756567882
+      Meteorite Unbreakable Tilemap_77: 6086637654548821897
+      Meteorite Unbreakable Tilemap_78: 773341265814313462
+      Meteorite Unbreakable Tilemap_79: 602028602099617762
+      Meteorite Unbreakable Tilemap_8: -63632174285597078
+      Meteorite Unbreakable Tilemap_80: 6298726415056476868
+      Meteorite Unbreakable Tilemap_81: 1844968870947130046
+      Meteorite Unbreakable Tilemap_82: 637436394999200898
+      Meteorite Unbreakable Tilemap_83: 6653455016305208042
+      Meteorite Unbreakable Tilemap_84: 3023455511147477180
+      Meteorite Unbreakable Tilemap_85: -3462910547168124940
+      Meteorite Unbreakable Tilemap_9: 6743402185022091546
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
