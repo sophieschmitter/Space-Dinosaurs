@@ -33,7 +33,7 @@ public class CrabJumper : MonoBehaviour
     public float jumpHeight = 0.8f;
 
     [Header("Landing")]
-    [Min(0)] public int landDamage = 1;
+    [Min(0)] public int landDamage = 20;
     [Tooltip("Hurts the dino if it lands this close to it (tiles).")]
     public float landRadius = 0.6f;
     [TextArea] public string killMessage = "A jumpy crab landed on you.";

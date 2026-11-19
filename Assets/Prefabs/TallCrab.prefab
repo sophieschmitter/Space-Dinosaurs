@@ -26,7 +26,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 490678444310258260, guid: de46bc9578b58450793049795bfc54e2, type: 3}
       propertyPath: contactDamage
-      value: 2
+      value: 40
       objectReference: {fileID: 0}
     - target: {fileID: 490678444310258260, guid: de46bc9578b58450793049795bfc54e2, type: 3}
       propertyPath: knockbackSpeed

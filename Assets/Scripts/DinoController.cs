@@ -45,6 +45,9 @@ public class DinoController : MonoBehaviour
     [Header("Gun")]
     [Tooltip("What the gun fires (for now the tall crab's bullet art, as the DinoBullet prefab).")]
     public CrabBullet gunBullet;
+    [Tooltip("Played each time the gun fires.")]
+    public AudioClip gunSound;
+    [Range(0f, 1f)] public float gunVolume = 0.5f;
     [Tooltip("Seconds between shots; holding X keeps firing at this rate.")]
     [Min(0.05f)] public float fireInterval = 0.35f;
     [Min(0)] public int gunDamage = 1;
@@ -533,6 +536,21 @@ public class DinoController : MonoBehaviour
         shot.damage = gunDamage;
         Vector2 castFrom = view == View.Left || view == View.Right ? new Vector2(center.x, start.y) : new Vector2(start.x, center.y);
         shot.Launch(dir, gameObject, castFrom, artHeight);
+        PlayGunSound();
+    }
+
+    AudioSource gunAudio;
+    void PlayGunSound()
+    {
+        if (gunSound == null) return;
+        if (gunAudio == null)
+        {
+            gunAudio = gameObject.AddComponent<AudioSource>();
+            gunAudio.playOnAwake = false;
+            gunAudio.spatialBlend = 0f; // 2D: the camera follows the dino
+        }
+        gunAudio.pitch = 1f + Random.Range(-0.04f, 0.04f);
+        gunAudio.PlayOneShot(gunSound, gunVolume);
     }
 
     // ---------- weapons ----------

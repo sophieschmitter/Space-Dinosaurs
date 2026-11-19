@@ -200,6 +200,7 @@ GameObject:
   - component: {fileID: 5147664190300440779}
   - component: {fileID: 701763386983356663}
   - component: {fileID: 3200471149054770357}
+  - component: {fileID: 706304984746820595}
   m_Layer: 0
   m_Name: Dino
   m_TagString: Untagged
@@ -352,6 +353,8 @@ MonoBehaviour:
   hasDrill: 1
   hasGun: 0
   gunBullet: {fileID: 3416417987016874982, guid: 059bf2331200d4232900e662e080514d, type: 3}
+  gunSound: {fileID: 8300000, guid: 1182cb1e0fceb4f3aab925248a9bbac4, type: 3}
+  gunVolume: 0.5
   fireInterval: 0.35
   gunDamage: 1
   muzzleRight: {x: 1.43, y: 0.78}
@@ -537,8 +540,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 25e3b587e002b4c8bbc4bbe578a8feed, type: 3}
   - {fileID: 8300000, guid: 696d4d6a42cce433a8441eda99c4e320, type: 3}
   - {fileID: 8300000, guid: 2c4bdee8c70894afe893fd29a8bc519d, type: 3}
-  - {fileID: 8300000, guid: 241f139caae8e4086b16a504b5d8bf58, type: 3}
-  volume: 0.35
+  volume: 0.4
   sprintPitch: 1.1
   pitchJitter: 0.04
   footfalls:
@@ -547,3 +549,25 @@ MonoBehaviour:
   backFootfalls:
   - 0
   - 0.4
+--- !u!114 &706304984746820595
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7618105241104718134}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6e2f49664d544c988a05eff49465483, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DrillSounds
+  hitSound: {fileID: 8300000, guid: c8f03c049cbeb446fa5f82661c017941, type: 3}
+  hitVolume: 0.5
+  hitLength: 0.45
+  hitStart: 0.06
+  oreBreakSound: {fileID: 8300000, guid: e772c17884d59494b9dba699eaf3a139, type: 3}
+  oreBreakVolume: 0.6
+  oreBreakLength: 1.1
+  oreBreakStart: 0.04
+  fadeOut: 0.12
+  pitchJitter: 0.06

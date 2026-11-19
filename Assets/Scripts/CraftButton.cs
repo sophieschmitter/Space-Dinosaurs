@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 /// <summary>
 /// A crafting menu button. Shows one of three pictures:
-///   Available   - the player has enough Nickel and Iridium (ResourceInventory) to craft it;
+///   Available   - the player has enough Copper and Iridium (ResourceInventory) to craft it;
 ///   Pressed     - while it's held down, while its building is being placed, and for a moment after a click;
 ///   Unaffordable - not enough resources: clicking does nothing.
 /// Clicking it while affordable picks up its Building to place (BuildingPlacer); the cost is paid when it's put
@@ -21,14 +21,15 @@ public class CraftButton : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
     public Building building;
 
     [Header("Cost")]
-    [Min(0)] public int nickelCost = 3;
+    [UnityEngine.Serialization.FormerlySerializedAs("nickelCost")] [Min(0)] public int copperCost = 3;
     [Min(0)] public int iridiumCost = 1;
 
     [Header("Art")]
     public Image image;
     public Sprite available, pressed, unaffordable;
-    [Tooltip("Optional: shows the cost, e.g. \"3\" next to the nickel icon.")]
-    public Text nickelLabel, iridiumLabel;
+    [Tooltip("Optional: shows the cost, e.g. \"3\" next to the copper icon.")]
+    [UnityEngine.Serialization.FormerlySerializedAs("nickelLabel")] public Text copperLabel;
+    public Text iridiumLabel;
     [Tooltip("Seconds the pressed picture stays after a click (so keyboard and controller clicks show too).")]
     public float pressedFlash = 0.12f;
 
@@ -46,8 +47,8 @@ public class CraftButton : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
         get
         {
             var inv = ResourceInventory.Instance;
-            if (inv == null) return nickelCost <= 0 && iridiumCost <= 0;
-            return inv.Get(ResourceType.Nickel) >= nickelCost && inv.Get(ResourceType.Iridium) >= iridiumCost;
+            if (inv == null) return copperCost <= 0 && iridiumCost <= 0;
+            return inv.Get(ResourceType.Copper) >= copperCost && inv.Get(ResourceType.Iridium) >= iridiumCost;
         }
     }
 
@@ -61,7 +62,7 @@ public class CraftButton : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
 
     void OnValidate()
     {
-        if (nickelLabel != null) nickelLabel.text = nickelCost.ToString();
+        if (copperLabel != null) copperLabel.text = copperCost.ToString();
         if (iridiumLabel != null) iridiumLabel.text = iridiumCost.ToString();
     }
 
@@ -81,7 +82,7 @@ public class CraftButton : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
         var inv = ResourceInventory.Instance;
         if (inv != null)
         {
-            inv.TrySpend(ResourceType.Nickel, nickelCost);
+            inv.TrySpend(ResourceType.Copper, copperCost);
             inv.TrySpend(ResourceType.Iridium, iridiumCost);
         }
         flashTimer = pressedFlash;
@@ -102,7 +103,7 @@ public class CraftButton : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
         bool placing = BuildingPlacer.Placing == this;
         var sprite = placing ? pressed : !afford ? unaffordable : (held || flashTimer > 0f) ? pressed : available;
         if (sprite != null && image.sprite != sprite) image.sprite = sprite;
-        if (nickelLabel != null) nickelLabel.text = nickelCost.ToString();
+        if (copperLabel != null) copperLabel.text = copperCost.ToString();
         if (iridiumLabel != null) iridiumLabel.text = iridiumCost.ToString();
     }
 }

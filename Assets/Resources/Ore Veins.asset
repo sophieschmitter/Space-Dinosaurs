@@ -1,0 +1,151 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1989ca44774e486a81d04089a4a7f05, type: 3}
+  m_Name: Ore Veins
+  m_EditorClassIdentifier: Assembly-CSharp::OreVeins
+  veins:
+  - tile: {fileID: 11400000, guid: a0cf157d49ef847bf9b0d79b9d988153, type: 2}
+    resource: 0
+    amount: 1
+    hitsToBreak: 3
+  - tile: {fileID: 11400000, guid: 504c7d62cbfee4119aa6d6975ba98b79, type: 2}
+    resource: 1
+    amount: 1
+    hitsToBreak: 3
+  - tile: {fileID: 11400000, guid: 89aab79d3507b48bcb3d8b245d779596, type: 2}
+    resource: 0
+    amount: 1
+    hitsToBreak: 3
+  - tile: {fileID: 11400000, guid: 24e37b4d5a2574ec392e73af247ae3d4, type: 2}
+    resource: 0
+    amount: 1
+    hitsToBreak: 3
+  - tile: {fileID: 11400000, guid: 4325d8734dda9464a9f0da2d3fbeaecf, type: 2}
+    resource: 0
+    amount: 1
+    hitsToBreak: 3
+  - tile: {fileID: 11400000, guid: 33720965462df4d19afe6448e8074b09, type: 2}
+    resource: 0
+    amount: 1
+    hitsToBreak: 3
+  - tile: {fileID: 11400000, guid: 898bd085ed338424391460804e49a20b, type: 2}
+    resource: 0
+    amount: 1
+    hitsToBreak: 3
+  - tile: {fileID: 11400000, guid: de0c4bcde637b423fb1c15ada9244152, type: 2}
+    resource: 0
+    amount: 1
+    hitsToBreak: 3
+  - tile: {fileID: 11400000, guid: aeabe8e131c9544689b57149a72fea36, type: 2}
+    resource: 0
+    amount: 1
+    hitsToBreak: 3
+  - tile: {fileID: 11400000, guid: 8a1c4ad73a1bc47c08b85ba676648a72, type: 2}
+    resource: 0
+    amount: 1
+    hitsToBreak: 3
+  - tile: {fileID: 11400000, guid: 25d9ebfa383f6406ea2bc918a3eeedb5, type: 2}
+    resource: 0
+    amount: 1
+    hitsToBreak: 3
+  - tile: {fileID: 11400000, guid: ce579671fea174536bd8544a7a789a75, type: 2}
+    resource: 0
+    amount: 1
+    hitsToBreak: 3
+  - tile: {fileID: 11400000, guid: 8a1db98145e6f446ea42c6760906164a, type: 2}
+    resource: 0
+    amount: 1
+    hitsToBreak: 3
+  - tile: {fileID: 11400000, guid: a410cdef6e4744be5831125ef79ca201, type: 2}
+    resource: 0
+    amount: 1
+    hitsToBreak: 3
+  - tile: {fileID: 11400000, guid: 3911c10b5f9eb40a6b115cc3e64e7ea8, type: 2}
+    resource: 0
+    amount: 1
+    hitsToBreak: 3
+  - tile: {fileID: 11400000, guid: 50e0e5fa5e90c428e9c1330770ddaa83, type: 2}
+    resource: 0
+    amount: 1
+    hitsToBreak: 3
+  - tile: {fileID: 11400000, guid: 64b8623512e564bac9dc06944432b685, type: 2}
+    resource: 0
+    amount: 1
+    hitsToBreak: 3
+  - tile: {fileID: 11400000, guid: eea12de30e9974fa2bc661a267d97661, type: 2}
+    resource: 0
+    amount: 1
+    hitsToBreak: 3
+  - tile: {fileID: 11400000, guid: fe332f387c7724890998dca5c3bbcb3e, type: 2}
+    resource: 1
+    amount: 1
+    hitsToBreak: 3
+  - tile: {fileID: 11400000, guid: 156d05c8bdb94426c815b541abbfd536, type: 2}
+    resource: 1
+    amount: 1
+    hitsToBreak: 3
+  - tile: {fileID: 11400000, guid: dae343d1b9c474da68500f3346157f0a, type: 2}
+    resource: 1
+    amount: 1
+    hitsToBreak: 3
+  - tile: {fileID: 11400000, guid: 865dc3eb6c378420b8fda7026185f466, type: 2}
+    resource: 1
+    amount: 1
+    hitsToBreak: 3
+  - tile: {fileID: 11400000, guid: c4969f65a2d0640f58ef92a851f43756, type: 2}
+    resource: 1
+    amount: 1
+    hitsToBreak: 3
+  - tile: {fileID: 11400000, guid: 1ddb611c918d64597b3dad68e8f247a4, type: 2}
+    resource: 1
+    amount: 1
+    hitsToBreak: 3
+  - tile: {fileID: 11400000, guid: 80ad64c7d0fc84a069018b7a0caf94db, type: 2}
+    resource: 1
+    amount: 1
+    hitsToBreak: 3
+  - tile: {fileID: 11400000, guid: 191f96d216d144b5ea2e9b0778298db6, type: 2}
+    resource: 1
+    amount: 1
+    hitsToBreak: 3
+  - tile: {fileID: 11400000, guid: 24d96326962d04c18b288b0d42425b5a, type: 2}
+    resource: 1
+    amount: 1
+    hitsToBreak: 3
+  - tile: {fileID: 11400000, guid: f16720524f7dd497aabafffaf1519296, type: 2}
+    resource: 1
+    amount: 1
+    hitsToBreak: 3
+  - tile: {fileID: 11400000, guid: ffa585878a7bf411aa80e291bc9f7f50, type: 2}
+    resource: 1
+    amount: 1
+    hitsToBreak: 3
+  - tile: {fileID: 11400000, guid: aeda3fb1a61f84681a20f6e8d378d399, type: 2}
+    resource: 1
+    amount: 1
+    hitsToBreak: 3
+  - tile: {fileID: 11400000, guid: c17e0eb5c4ae34563bafef5fa0127c8a, type: 2}
+    resource: 1
+    amount: 1
+    hitsToBreak: 3
+  - tile: {fileID: 11400000, guid: fb8bb64ae1e1544d4bfd76364ebe794a, type: 2}
+    resource: 1
+    amount: 1
+    hitsToBreak: 3
+  - tile: {fileID: 11400000, guid: 6e1e1647b2adf4b85b9c5153a69db83f, type: 2}
+    resource: 1
+    amount: 1
+    hitsToBreak: 3
+  - tile: {fileID: 11400000, guid: ef6cad34e85fb44f98daf6704636e06c, type: 2}
+    resource: 1
+    amount: 1
+    hitsToBreak: 3

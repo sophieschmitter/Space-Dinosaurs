@@ -35,12 +35,14 @@ public static class BuildingSpriteSheetBuilder
         public int ground;              // texture px from the top: where the base sits in the Normal row
         public int above;               // how much art there is above the ground line
         public Vector2 footprint;       // collider at the base, tiles
+        public int[] skipFrames = { };   // sliced (so the sprites exist) but left out of the animations
         public int emptyFrame = -1;     // a frame left out of the loops and given its own Empty state (the stand with no ice cream)
     }
 
     static readonly Def[] Defs =
     {
-        new Def { name = "ShieldGenerator", item = "Shield Generator", firstCol = 0, frames = 4, ground = 480,  above = 370, footprint = new Vector2(1.5f, 0.6f) },
+        new Def { name = "ShieldGenerator", item = "Shield Generator", firstCol = 0, frames = 4, ground = 480,  above = 370, footprint = new Vector2(1.5f, 0.6f),
+                  skipFrames = new[] { 0 } }, // frame 0 is the plain base with no shield: kept as a sprite for other uses
         new Def { name = "IceCreamStand",   item = "Ice Cream Stand",  firstCol = 1, frames = 5, ground = 1050, above = 420, footprint = new Vector2(1.5f, 0.6f), emptyFrame = 0 },
         new Def { name = "Turret",          item = "Turret",           firstCol = 1, frames = 5, ground = 1600, above = 510, footprint = new Vector2(1.5f, 0.6f) },
     };
@@ -98,12 +100,12 @@ public static class BuildingSpriteSheetBuilder
         EnsureFolder(PrefabFolder);
         foreach (var d in Defs)
         {
-            var loop = Enumerable.Range(0, d.frames).Where(f => f != d.emptyFrame).ToArray();
+            var loop = Enumerable.Range(0, d.frames).Where(f => f != d.emptyFrame && !d.skipFrames.Contains(f)).ToArray();
             var normal = BuildClip(d, "Normal", false, loop, sprites);
             var selected = BuildClip(d, "Selected", true, loop, sprites);
             var empty = d.emptyFrame >= 0 ? BuildClip(d, "Empty", false, new[] { d.emptyFrame }, sprites) : null;
             var controller = BuildController(d, normal, selected, empty);
-            BuildPrefab(d, controller, sprites[FrameName(d, false, 0)]);
+            BuildPrefab(d, controller, sprites[FrameName(d, false, loop[0])]); // first frame of the loop
         }
         AssetDatabase.SaveAssets();
         Debug.Log("Buildings: " + string.Join(", ", Defs.Select(d => d.item)) + " -> " + PrefabFolder);
@@ -165,6 +167,14 @@ public static class BuildingSpriteSheetBuilder
             b.itemName = d.item;
             b.animator = root.GetComponent<Animator>();
             if (d.name == "ShieldGenerator") SetUpShield(Get<ShieldGenerator>(root));
+            if (d.name == "Turret") // shoots enemies in range with the dino's gun bullet
+            {
+                var gun = Get<TurretGun>(root);
+                if (gun.bullet == null)
+                    gun.bullet = AssetDatabase.LoadAssetAtPath<CrabBullet>("Assets/Prefabs/DinoBullet.prefab");
+                if (gun.fireSound == null)
+                    gun.fireSound = AssetDatabase.LoadAssetAtPath<AudioClip>("Assets/SFX/freesound_community-laser-104024.mp3");
+            }
             if (d.emptyFrame >= 0) // the ice cream stand: walking up to it eats the ice cream and heals
             {
                 Get<IceCreamStand>(root);

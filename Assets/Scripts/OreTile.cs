@@ -9,7 +9,7 @@ using UnityEngine.Tilemaps;
 [CreateAssetMenu(menuName = "Space Dinosaurs/Ore Tile")]
 public class OreTile : Tile
 {
-    public ResourceType resource = ResourceType.Nickel;
+    public ResourceType resource = ResourceType.Copper;
 
     [Tooltip("How much of the resource mining one node gives.")]
     [Min(1)] public int amount = 3;

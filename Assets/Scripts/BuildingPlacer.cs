@@ -3,8 +3,9 @@ using UnityEngine.InputSystem;
 
 /// <summary>
 /// Puts down buildings from the crafting menu. Clicking a craft button you can afford picks the building up:
-/// it follows the mouse showing its Selected animation (tinted red where it doesn't fit). Left-click places
-/// it and pays its cost; right-click or Escape puts it back for free. Clicking another craft button swaps
+/// it follows the mouse showing its Selected animation. Buildings only go on free Building Spots: near one
+/// (within Spot Snap Distance of the mouse) it snaps onto it; anywhere else it's tinted red and can't be put
+/// down (also red if something is standing on the spot). Left-click places it and pays its cost; right-click or Escape puts it back for free. Clicking another craft button swaps
 /// to that building. Clicks used for placing never make the dino attack.
 /// Created by the first craft button that's used, so scenes don't need one.
 /// </summary>
@@ -18,12 +19,15 @@ public class BuildingPlacer : MonoBehaviour
     public Color blockedTint = new Color(1f, 0.45f, 0.45f, 0.85f);
     [Tooltip("Snaps to this many positions per tile (16 = whole art pixels, so the art stays crisp).")]
     public int snapPerTile = 16;
+    [Tooltip("The held building jumps onto a free Building Spot this close to the mouse (tiles).")]
+    public float spotSnapDistance = 1.5f;
 
     CraftButton source;
     Building held;
     SpriteRenderer[] heldSprites;
     Color[] heldColors;
     BoxCollider2D footprint;
+    BuildingSpot spot; // the free spot it's over, if any
     readonly Collider2D[] overlaps = new Collider2D[8];
 
     /// <summary>True while a building is following the mouse, and on the frame one is put down: the dino
@@ -62,6 +66,7 @@ public class BuildingPlacer : MonoBehaviour
     {
         if (held != null) Destroy(held.gameObject);
         held = null;
+        spot = null;
         source = null;
     }
 
@@ -86,7 +91,7 @@ public class BuildingPlacer : MonoBehaviour
     /// <summary>Puts the held building down where it is and pays for it. False if it doesn't fit there.</summary>
     public bool Place()
     {
-        if (held == null || !Fits(held.transform.position)) return false;
+        if (held == null || !Fits(held.transform.position)) return false; // (Fits needs a free spot under it)
         if (!source.CanAfford) { Drop(); return false; } // spent the resources on something else meanwhile
         var placed = held;
         var paidBy = source;
@@ -94,26 +99,35 @@ public class BuildingPlacer : MonoBehaviour
         source = null;
         Tint(null);
         placed.Selected = false;
+        spot.Occupy(placed);
+        spot = null;
         lastPlacedFrame = Time.frameCount;
         paidBy.Pay(placed);
         return true;
     }
 
-    /// <summary>Moves the held building here (snapped to the art pixel grid) and shows whether it fits.</summary>
+    /// <summary>Moves the held building here (onto the nearest free Building Spot, else snapped to the art pixel
+    /// grid) and shows whether it can go down.</summary>
     public bool MoveTo(Vector2 p)
     {
         if (held == null) return false;
-        float snap = Mathf.Max(1, snapPerTile);
-        p = new Vector2(Mathf.Round(p.x * snap) / snap, Mathf.Round(p.y * snap) / snap);
+        spot = BuildingSpot.NearestFree(p, spotSnapDistance);
+        if (spot != null) p = spot.transform.position;
+        else
+        {
+            float snap = Mathf.Max(1, snapPerTile);
+            p = new Vector2(Mathf.Round(p.x * snap) / snap, Mathf.Round(p.y * snap) / snap);
+        }
         held.transform.position = p;
         bool fits = Fits(p);
         Tint(fits ? (Color?)null : blockedTint);
         return fits;
     }
 
-    // Nothing solid (walls, spawners, the robot, crabs, the dino, other buildings) under its base.
+    // On a free Building Spot, with nothing solid (walls, spawners, the robot, crabs, the dino, other buildings) under its base.
     bool Fits(Vector2 at)
     {
+        if (spot == null || !spot.Free || ((Vector2)spot.transform.position - at).sqrMagnitude > 1e-6f) return false; // only on a free spot
         if (footprint == null) return true;
         Vector2 center = at + footprint.offset;
         int n = Physics2D.OverlapBoxNonAlloc(center, footprint.size, 0f, overlaps);

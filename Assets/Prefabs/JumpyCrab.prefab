@@ -350,7 +350,7 @@ MonoBehaviour:
   huntSpeed: 1
   huntTimeout: 15
   repathInterval: 0.5
-  contactDamage: 1
+  contactDamage: 20
   attackAngle: 30
   killMessage: A jumpy crab got you.
   approachAlongAxes: 1
@@ -416,7 +416,7 @@ MonoBehaviour:
   airTime: 0.55
   recover: 0.35
   jumpHeight: 0.8
-  landDamage: 1
+  landDamage: 20
   landRadius: 0.6
   killMessage: A jumpy crab landed on you.
   jumpState: Jump

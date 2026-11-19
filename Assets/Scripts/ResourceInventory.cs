@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using UnityEngine;
 
-public enum ResourceType { Nickel, Iridium }
+public enum ResourceType { Copper, Iridium } // Copper was called Nickel (same slot, so saved data keeps working)
 
 /// <summary>
 /// How much of each resource the player has collected this level. One per scene; anything can call

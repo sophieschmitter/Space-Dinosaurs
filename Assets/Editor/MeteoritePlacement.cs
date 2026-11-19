@@ -15,7 +15,7 @@ using UnityEngine.Tilemaps;
 /// Metal sprites ("Assets/Sprites/Metal Tilemap.png") and unbreakable meteorite sprites ("Assets/Sprites/Meteorite
 /// Unbreakable Tilemap.png") work the same way, as blocks on the scene's solid tilemap (SolidTilemap: can't be
 /// drilled). Ore vein sprites ("Assets/Sprites/Ore Tilemap.png", "Ore Green Tilemap.png") become breakable
-/// blocks like the meteorites. Each kind only merges with its own kind.
+/// blocks like the meteorites, but never merge (each piece stays as placed). Other kinds only merge with their own kind.
 /// Meteorites snap to whole tiles when moved, and a meteorite dropped touching another one (side by side or
 /// corner to corner) merges with it into one meteorite, so the edges join up like one piece of rock.
 /// Everything is undoable with Cmd+Z.
@@ -140,9 +140,13 @@ public static class MeteoritePlacement
         {
             // A meteorite of its own (movable), not tiles on the shared Walls tilemap.
             var tiles = new Dictionary<Vector3Int, TileBase>();
-            foreach (var c in cells) tiles[anchor + c.offset] = ruleTile;
+            // Ore keeps the exact piece you dropped (each of the sheet's ore sprites becomes its own plain tile);
+            // everything else becomes the self-joining wall Rule Tile.
+            var tile = ore >= 0 ? OrePieceTile(sr.sprite, ruleTile) : ruleTile;
+            foreach (var c in cells) tiles[anchor + c.offset] = tile;
             string kind = ore >= 0 ? OreSheets[ore].name : unbreakableRock ? "Unbreakable Meteorite" : metal ? "Metal Block" : "Meteorite";
             var cluster = NewCluster(walls, metal ? null : FindOre(go.scene), kind, tiles, null, metal);
+            if (ore >= 0) OreInFront(cluster.GetComponent<MeteoriteCluster>());
             Selection.activeGameObject = cluster;
             QueueMerge(cluster);
             Undo.DestroyObjectImmediate(go);
@@ -155,6 +159,53 @@ public static class MeteoritePlacement
         if (delta.sqrMagnitude < 1e-8f) return; // already snapped (also stops the change event looping)
         Undo.RecordObject(go.transform, "Snap meteorite to grid");
         go.transform.position += new Vector3(delta.x, delta.y, 0);
+    }
+
+    // ---------- ore pieces ----------
+
+    /// <summary>A plain Tile showing exactly this ore sprite (made once, in the ore's Generated folder under
+    /// Pieces), listed in Resources/Ore Veins with the same resource and drill hits as that ore's main tile.</summary>
+    static TileBase OrePieceTile(Sprite sprite, TileBase oreRuleTile)
+    {
+        string folder = Path.GetDirectoryName(AssetDatabase.GetAssetPath(oreRuleTile)).Replace('\\', '/') + "/Pieces";
+        if (!AssetDatabase.IsValidFolder(folder)) AssetDatabase.CreateFolder(Path.GetDirectoryName(folder).Replace('\\', '/'), "Pieces");
+        string path = $"{folder}/{sprite.name}.asset";
+        var tile = AssetDatabase.LoadAssetAtPath<Tile>(path);
+        if (tile == null)
+        {
+            tile = ScriptableObject.CreateInstance<Tile>();
+            tile.sprite = sprite;
+            tile.colliderType = Tile.ColliderType.Grid;
+            AssetDatabase.CreateAsset(tile, path);
+        }
+        else if (tile.sprite != sprite) { tile.sprite = sprite; EditorUtility.SetDirty(tile); }
+
+        // Mining it gives the same as the main ore tile.
+        var table = OreVeins.Table;
+        var main = OreVeins.For(oreRuleTile);
+        if (table != null && main != null && OreVeins.For(tile) == null)
+        {
+            var list = new List<OreVeins.Vein>(table.veins);
+            list.Add(new OreVeins.Vein { tile = tile, resource = main.resource, amount = main.amount, hitsToBreak = main.hitsToBreak });
+            table.veins = list.ToArray();
+            EditorUtility.SetDirty(table);
+            AssetDatabase.SaveAssetIfDirty(table);
+        }
+        return tile;
+    }
+
+    [MenuItem("Tools/Space Dinosaurs/Make Ore Piece Tiles")]
+    static void MakeAllOrePieces()
+    {
+        int n = 0;
+        foreach (var o in OreSheets)
+        {
+            var rule = AssetDatabase.LoadAssetAtPath<TileBase>(o.ruleTile);
+            foreach (var a in AssetDatabase.LoadAllAssetsAtPath(o.sheet))
+                if (a is Sprite sp) { OrePieceTile(sp, rule); n++; }
+        }
+        AssetDatabase.SaveAssets();
+        Debug.Log($"Made {n} ore piece tiles (one per ore sprite).");
     }
 
     // ---------- meteorites you can move on their own ----------
@@ -213,7 +264,7 @@ public static class MeteoritePlacement
     }
 
     /// <summary>A movable meteorite under the same Grid as the Walls tilemap, holding these tiles at these cells.</summary>
-    static GameObject NewCluster(Tilemap walls, Tilemap ore, string name, Dictionary<Vector3Int, TileBase> wallTiles, Dictionary<Vector3Int, TileBase> oreTiles, bool metal = false)
+    internal static GameObject NewCluster(Tilemap walls, Tilemap ore, string name, Dictionary<Vector3Int, TileBase> wallTiles, Dictionary<Vector3Int, TileBase> oreTiles, bool metal = false)
     {
         // Its origin is the corner of its bottom-left cell, so moving it by whole tiles keeps it on the grid.
         var min = new Vector3Int(int.MaxValue, int.MaxValue, 0);
@@ -286,6 +337,7 @@ public static class MeteoritePlacement
     {
         var grid = keep.GetComponentInParent<Grid>();
         if (grid == null || keep.walls == null) return;
+        if (OreVeins.For(Kind(keep)) != null) return; // ore veins never merge: each placed piece stays its own
         bool merged = false;
         for (int guard = 0; guard < 64; guard++)
         {
@@ -307,6 +359,16 @@ public static class MeteoritePlacement
             Selection.activeGameObject = keep.gameObject;
             UnityEditor.SceneManagement.EditorSceneManager.MarkSceneDirty(keep.gameObject.scene);
         }
+    }
+
+    /// <summary>Ore veins draw one step above the walls, so where they overlap rock the ore shows.</summary>
+    static void OreInFront(MeteoriteCluster c)
+    {
+        if (c == null || c.walls == null) return;
+        var r = c.walls.GetComponent<TilemapRenderer>();
+        var walls = FindWalls(c.gameObject.scene);
+        var wr = walls != null ? walls.GetComponent<TilemapRenderer>() : null;
+        if (r != null) r.sortingOrder = (wr != null ? wr.sortingOrder : 1) + 1;
     }
 
     // Which wall tile a meteorite is made of (its first one).

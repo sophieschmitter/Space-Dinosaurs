@@ -18,7 +18,7 @@ public static class AudioCleanup
     [MenuItem("Tools/Space Dinosaurs/Clean Up Footsteps")]
     public static void Run() => Debug.Log(CleanFootsteps());
 
-    public static string CleanFootsteps(float noiseStart = 0.1f, float noiseEnd = 1.5f, float reductionDb = 14f)
+    public static string CleanFootsteps(float noiseStart = 0.1f, float noiseEnd = 1.5f, float reductionDb = 6f)
     {
         var clip = AssetDatabase.LoadAssetAtPath<AudioClip>(Source);
         int ch = clip.channels, rate = clip.frequency, n = clip.samples;
@@ -30,7 +30,8 @@ public static class AudioCleanup
         {
             var mono = new float[n];
             for (int i = 0; i < n; i++) mono[i] = data[i * ch + c];
-            var clean = Denoise(mono, rate, (int)(noiseStart * rate), (int)(noiseEnd * rate), reductionDb);
+            var clean = DenoiseSmooth(mono, rate, (int)(noiseStart * rate), (int)(noiseEnd * rate), reductionDb);
+            clean = Tone(clean, rate);
             for (int i = 0; i < n; i++) outData[i * ch + c] = clean[i];
         }
         WriteWav(CleanPath, outData, ch, rate);
@@ -44,6 +45,7 @@ public static class AudioCleanup
     }
 
     // ---------- spectral noise reduction ----------
+    // Denoise: the first, harsher gate (kept for reference). DenoiseSmooth below is the one used.
 
     const int Frame = 2048, Hop = Frame / 4;
 
@@ -91,6 +93,74 @@ public static class AudioCleanup
                 // fast attack (steps start instantly), slower release (tails don't get chopped)
                 g = g > prevGain[k] ? g : prevGain[k] * 0.6 + g * 0.4;
                 prevGain[k] = g;
+                re[k] *= g; im[k] *= g;
+            }
+            var frame = Inverse(re, im);
+            for (int i = 0; i < Frame; i++)
+            {
+                int j = start + i;
+                if (j >= x.Length) break;
+                output[j] += frame[i] * window[i];
+                norm[j] += window[i] * window[i];
+            }
+        }
+        var y = new float[x.Length];
+        for (int i = 0; i < x.Length; i++) y[i] = norm[i] > 1e-6 ? (float)(output[i] / norm[i]) : 0f;
+        return y;
+    }
+
+    // Gentler version (the one in use): a Wiener filter with the "decision-directed" smoothing used in speech
+    // clean-up. Each band's gain follows a smoothed estimate of how far above the noise it is, so gains glide
+    // instead of flicking on and off frame to frame - that flicker is what sounds watery / like a maraca.
+    // Gains are also averaged with neighbouring bands, and never go below the Reduction floor, so a little
+    // natural background is left (that keeps the steps sounding real rather than processed).
+    public static double Alpha = 0.99; public static int Spread = 6; public static double TimeSmooth = 0.7;
+    static float[] DenoiseSmooth(float[] x, int rate, int noiseFrom, int noiseTo, float reductionDb)
+    {
+        int bins = Frame / 2 + 1;
+        var window = new float[Frame];
+        for (int i = 0; i < Frame; i++) window[i] = 0.5f - 0.5f * Mathf.Cos(2f * Mathf.PI * i / Frame);
+
+        var noise = new double[bins]; // noise power per band
+        int frames = 0;
+        for (int start = noiseFrom; start + Frame <= noiseTo; start += Hop, frames++)
+        {
+            var (re, im) = Spectrum(x, start, window);
+            for (int k = 0; k < bins; k++) noise[k] += re[k] * re[k] + im[k] * im[k];
+        }
+        for (int k = 0; k < bins; k++) noise[k] = Math.Max(noise[k] / Math.Max(1, frames), 1e-12);
+
+        double floor = Math.Pow(10, -reductionDb / 20.0);
+        double alpha = Alpha;          // how much the SNR estimate leans on the last frame (higher = smoother)
+        var heldGain = new double[bins];
+        for (int k = 0; k < bins; k++) heldGain[k] = 1;
+        var output = new double[x.Length + Frame];
+        var norm = new double[x.Length + Frame];
+        var prevClean = new double[bins]; // last frame's cleaned power
+        var gain = new double[bins];
+        var smoothGain = new double[bins];
+        for (int start = 0; start < x.Length; start += Hop)
+        {
+            var (re, im) = Spectrum(x, start, window);
+            for (int k = 0; k < bins; k++)
+            {
+                double power = re[k] * re[k] + im[k] * im[k];
+                double post = power / noise[k];                                  // a posteriori SNR
+                double prio = alpha * prevClean[k] / noise[k] + (1 - alpha) * Math.Max(post - 1, 0); // a priori
+                gain[k] = Math.Max(prio / (1 + prio), floor);
+            }
+            for (int k = 0; k < bins; k++) // average with Spread bands either side
+            {
+                double sum = 0; int n = 0;
+                for (int j = Math.Max(0, k - Spread); j <= Math.Min(bins - 1, k + Spread); j++) { sum += gain[j]; n++; }
+                smoothGain[k] = sum / n;
+            }
+            for (int k = 0; k < bins; k++)
+            {
+                // opens instantly (step hits stay sharp), closes gradually (no fizz as the gate shuts)
+                double g = smoothGain[k] >= heldGain[k] ? smoothGain[k] : heldGain[k] * TimeSmooth + smoothGain[k] * (1 - TimeSmooth);
+                heldGain[k] = g;
+                prevClean[k] = g * g * (re[k] * re[k] + im[k] * im[k]);
                 re[k] *= g; im[k] *= g;
             }
             var frame = Inverse(re, im);
@@ -159,6 +229,52 @@ public static class AudioCleanup
         }
     }
 
+    // ---------- tone ----------
+
+    /// <summary>Gentle EQ after the noise reduction: cut rumble below 70 Hz, a little more body around
+    /// 180 Hz (the heel thump), and soften the fizzy top above 7 kHz (the crunchy, maraca-like part).
+    /// Plain filters like these don't flicker, unlike heavier noise reduction.</summary>
+    public static float BodyDb = 3f, TopDb = -5f;
+    static float[] Tone(float[] x, int rate)
+    {
+        x = Biquad(x, HighPass(70, 0.707, rate));
+        x = Biquad(x, Peak(180, 1.0, BodyDb, rate));
+        x = Biquad(x, HighShelf(7000, TopDb, rate));
+        return x;
+    }
+
+    // RBJ audio EQ cookbook filters: (b0, b1, b2, a1, a2), normalised by a0.
+    static double[] HighPass(double f, double q, int rate)
+    {
+        double w = 2 * Math.PI * f / rate, c = Math.Cos(w), al = Math.Sin(w) / (2 * q), a0 = 1 + al;
+        return new[] { (1 + c) / 2 / a0, -(1 + c) / a0, (1 + c) / 2 / a0, -2 * c / a0, (1 - al) / a0 };
+    }
+    static double[] Peak(double f, double q, double db, int rate)
+    {
+        double A = Math.Pow(10, db / 40), w = 2 * Math.PI * f / rate, c = Math.Cos(w), al = Math.Sin(w) / (2 * q), a0 = 1 + al / A;
+        return new[] { (1 + al * A) / a0, -2 * c / a0, (1 - al * A) / a0, -2 * c / a0, (1 - al / A) / a0 };
+    }
+    static double[] HighShelf(double f, double db, int rate)
+    {
+        double A = Math.Pow(10, db / 40), w = 2 * Math.PI * f / rate, c = Math.Cos(w), s = Math.Sin(w);
+        double al = s / 2 * Math.Sqrt(2), sq = 2 * Math.Sqrt(A) * al;
+        double a0 = (A + 1) - (A - 1) * c + sq;
+        return new[] {
+            A * ((A + 1) + (A - 1) * c + sq) / a0, -2 * A * ((A - 1) + (A + 1) * c) / a0, A * ((A + 1) + (A - 1) * c - sq) / a0,
+            2 * ((A - 1) - (A + 1) * c) / a0, ((A + 1) - (A - 1) * c - sq) / a0 };
+    }
+    static float[] Biquad(float[] x, double[] k)
+    {
+        var y = new float[x.Length];
+        double x1 = 0, x2 = 0, y1 = 0, y2 = 0;
+        for (int i = 0; i < x.Length; i++)
+        {
+            double v = k[0] * x[i] + k[1] * x1 + k[2] * x2 - k[3] * y1 - k[4] * y2;
+            x2 = x1; x1 = x[i]; y2 = y1; y1 = v; y[i] = (float)v;
+        }
+        return y;
+    }
+
     // ---------- cutting into single steps ----------
 
     /// <summary>Finds each footstep in the cleaned recording and writes it as its own short file.
@@ -187,7 +303,7 @@ public static class AudioCleanup
 
         if (!AssetDatabase.IsValidFolder(StepFolder)) AssetDatabase.CreateFolder("Assets/SFX", "Footstep Steps");
         foreach (var old in Directory.GetFiles(StepFolder, "Step *.wav")) AssetDatabase.DeleteAsset(old.Replace('\\', '/'));
-        // Even out the steps: bring each to the median loudness (within 0.5x-2x, so nothing gets boosted into noise).
+        // Even out the steps: bring each to the median loudness (within 0.6x-1.5x, so nothing gets boosted into noise).
         var levels = new List<double>();
         for (int s = 0; s < onsets.Count; s++)
         {
@@ -206,7 +322,7 @@ public static class AudioCleanup
             var piece = new float[len * ch];
             Array.Copy(data, a * ch, piece, 0, len * ch);
             int fadeIn = rate / 1000, fadeOut = Math.Min(len / 3, rate / 25);           // 1 ms in, up to 40 ms out
-            float level = (float)Math.Clamp(levels[s] > 0 ? median / levels[s] : 1, 0.5, 2.0);
+            float level = (float)Math.Clamp(levels[s] > 0 ? median / levels[s] : 1, 0.6, 1.5);
             for (int i = 0; i < len; i++)
             {
                 float g = level;

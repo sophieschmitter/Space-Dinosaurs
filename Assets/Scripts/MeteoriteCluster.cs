@@ -6,7 +6,7 @@ using UnityEngine.Tilemaps;
 /// its own child tilemaps ("Meteorite Walls" and "Meteorite Ore"). Drag it in the Scene view; it snaps to whole tiles.
 /// When the level starts it stamps its tiles into the scene's main Walls tilemap (DestructibleTilemap) and Ore
 /// tilemap (OreLayer) and removes itself, so drilling, ore and enemy pathfinding treat every meteorite as one
-/// connected wall, exactly as before.
+/// connected wall, exactly as before. Ore vein blocks stay as they are, each its own piece over the rock (OreVeinLayer).
 /// Made by Tools > Space Dinosaurs > Split Walls Into Meteorites, or by dropping a meteorite sprite into a scene.
 /// </summary>
 [DefaultExecutionOrder(-500)] // before anything reads the walls
@@ -27,12 +27,28 @@ public class MeteoriteCluster : MonoBehaviour
         }
         else
         {
+            // Ore veins stay as their own piece over the rock (they don't join up with other ore, and the rock
+            // under them stays whole): just make them solid and drillable.
+            if (IsOreVein())
+            {
+                OreVeinLayer.Register(walls);
+                var mainOreLayer = FindFirstObjectByType<OreLayer>();
+                Stamp(ore, mainOreLayer != null ? mainOreLayer.GetComponent<Tilemap>() : null);
+                return; // the block stays in the level
+            }
             var mainWalls = FindFirstObjectByType<DestructibleTilemap>();
             Stamp(walls, mainWalls != null ? mainWalls.GetComponent<Tilemap>() : null);
         }
         var mainOre = FindFirstObjectByType<OreLayer>();
         Stamp(ore, mainOre != null ? mainOre.GetComponent<Tilemap>() : null);
         Destroy(gameObject);
+    }
+
+    bool IsOreVein()
+    {
+        if (walls == null) return false;
+        foreach (var c in walls.cellBounds.allPositionsWithin) { var t = walls.GetTile(c); if (t != null) return OreVeins.For(t) != null; }
+        return false;
     }
 
     // Copies every tile to the cell under it in the target tilemap (same Grid, so cells line up).

@@ -257,7 +257,7 @@ MonoBehaviour:
   huntSpeed: 1
   huntTimeout: 15
   repathInterval: 0.5
-  contactDamage: 1
+  contactDamage: 20
   attackAngle: 30
   killMessage: You were killed by a rock crab.
   approachAlongAxes: 1

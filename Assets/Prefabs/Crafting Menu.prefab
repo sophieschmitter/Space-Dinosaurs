@@ -58,14 +58,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 0.7, g: 0.35, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 7744f0ecf83284e31b97e621632597ac, type: 3}
+  m_Sprite: {fileID: -639646884, guid: a27b60b4f131b4f21a58e66af7653353, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -212,13 +212,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::CraftButton
   itemName: Turret
   building: {fileID: 1536390533719195625, guid: 9eea15c0ee2c24c30a736c4121e5c8c0, type: 3}
-  nickelCost: 3
+  copperCost: 3
   iridiumCost: 1
   image: {fileID: 3837871660395375350}
   available: {fileID: -1398752907, guid: c137fd3d906f84702ada21048b78daeb, type: 3}
   pressed: {fileID: -1238752132, guid: c137fd3d906f84702ada21048b78daeb, type: 3}
   unaffordable: {fileID: -858651158, guid: c137fd3d906f84702ada21048b78daeb, type: 3}
-  nickelLabel: {fileID: 2034938408250406586}
+  copperLabel: {fileID: 2034938408250406586}
   iridiumLabel: {fileID: 3747890718559765351}
   pressedFlash: 0.12
   onCrafted:
@@ -271,7 +271,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7919132512190336555}
   m_Layer: 0
-  m_Name: Nickel Cost
+  m_Name: Copper Cost
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -356,14 +356,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 0.78, g: 0.8, b: 0.86, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 7744f0ecf83284e31b97e621632597ac, type: 3}
+  m_Sprite: {fileID: -1328041733, guid: 43505dd4d80c84f76a02179682456ce3, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -431,14 +431,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 0.78, g: 0.8, b: 0.86, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 7744f0ecf83284e31b97e621632597ac, type: 3}
+  m_Sprite: {fileID: -1328041733, guid: 43505dd4d80c84f76a02179682456ce3, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -585,14 +585,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 0.7, g: 0.35, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 7744f0ecf83284e31b97e621632597ac, type: 3}
+  m_Sprite: {fileID: -639646884, guid: a27b60b4f131b4f21a58e66af7653353, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -776,13 +776,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::CraftButton
   itemName: Ice Cream Stand
   building: {fileID: 6634044256588663702, guid: 872029519e32a4808b78c8d529070cad, type: 3}
-  nickelCost: 3
+  copperCost: 3
   iridiumCost: 1
   image: {fileID: 1115360802811558834}
   available: {fileID: 397505852, guid: c137fd3d906f84702ada21048b78daeb, type: 3}
   pressed: {fileID: 5408836, guid: c137fd3d906f84702ada21048b78daeb, type: 3}
   unaffordable: {fileID: -1700912708, guid: c137fd3d906f84702ada21048b78daeb, type: 3}
-  nickelLabel: {fileID: 6337301947069572757}
+  copperLabel: {fileID: 6337301947069572757}
   iridiumLabel: {fileID: 3578281626748989542}
   pressedFlash: 0.12
   onCrafted:
@@ -925,13 +925,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::CraftButton
   itemName: Shield Generator
   building: {fileID: 2452818235249174588, guid: 6597e029f3a0b46a58e2d7d73d3b7e15, type: 3}
-  nickelCost: 3
+  copperCost: 3
   iridiumCost: 1
   image: {fileID: 2084484596923221514}
   available: {fileID: -2126140076, guid: c137fd3d906f84702ada21048b78daeb, type: 3}
   pressed: {fileID: 516402793, guid: c137fd3d906f84702ada21048b78daeb, type: 3}
   unaffordable: {fileID: -54909356, guid: c137fd3d906f84702ada21048b78daeb, type: 3}
-  nickelLabel: {fileID: 4507545145397716528}
+  copperLabel: {fileID: 4507545145397716528}
   iridiumLabel: {fileID: 496101566608624974}
   pressedFlash: 0.12
   onCrafted:
@@ -1032,14 +1032,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 0.78, g: 0.8, b: 0.86, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 7744f0ecf83284e31b97e621632597ac, type: 3}
+  m_Sprite: {fileID: -1328041733, guid: 43505dd4d80c84f76a02179682456ce3, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1138,7 +1138,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4164710151960221651}
   m_Layer: 0
-  m_Name: Nickel Cost
+  m_Name: Copper Cost
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1483,14 +1483,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 0.7, g: 0.35, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 7744f0ecf83284e31b97e621632597ac, type: 3}
+  m_Sprite: {fileID: -639646884, guid: a27b60b4f131b4f21a58e66af7653353, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1668,7 +1668,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3118778357251526459}
   m_Layer: 0
-  m_Name: Nickel Cost
+  m_Name: Copper Cost
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

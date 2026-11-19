@@ -33,6 +33,7 @@ public static class WallTileBuilder
         public float connectedAt = 0.5f; // share of wall body an edge strip needs to count as joined (higher = thin rim lines count)
         public int cornerSize = 2;    // art px checked at each corner
         public int bodyMaxRed = FillMaxRed; // colours with less red than this are wall body; the rest is rim
+        public bool standalone;       // every tile is drawn as the Single piece: no joining up with neighbours (ore)
         public bool bodyIsBlue;       // instead: bluish colours (the navy rock) are body, anything else (ore crust) is rim
     }
 
@@ -61,13 +62,13 @@ public static class WallTileBuilder
     public static readonly Config OreBrown = new Config
     {
         sheet = "Assets/Sprites/Ore Tilemap.png", outFolder = "Assets/Tiles/Generated/Ore Brown", atlasName = "OreBrownTiles",
-        ruleTileName = "OreBrownRuleTile", paletteName = "Ore Vein Brown", spritePrefix = "OreBrown", bodyIsBlue = true, connectedAt = 0.3f,
+        ruleTileName = "OreBrownRuleTile", paletteName = "Ore Vein Brown", spritePrefix = "OreBrown", standalone = true, bodyIsBlue = true, connectedAt = 0.3f,
     };
 
     public static readonly Config OreGreen = new Config
     {
         sheet = "Assets/Sprites/Ore Green Tilemap.png", outFolder = "Assets/Tiles/Generated/Ore Green", atlasName = "OreGreenTiles",
-        ruleTileName = "OreGreenRuleTile", paletteName = "Ore Vein Green", spritePrefix = "OreGreen", bodyIsBlue = true, connectedAt = 0.3f,
+        ruleTileName = "OreGreenRuleTile", paletteName = "Ore Vein Green", spritePrefix = "OreGreen", standalone = true, bodyIsBlue = true, connectedAt = 0.3f,
     };
 
     static Config cfg = Meteorite;
@@ -372,6 +373,8 @@ public static class WallTileBuilder
         tile.m_TilingRules = new List<RuleTile.TilingRule>();
 
         int id = 0;
+        // Ore: no rules at all, so it always shows the default (Single) piece whatever is next to it.
+        if (!cfg.standalone)
         foreach (int shape in shapes.OrderByDescending(s => System.Convert.ToString(s, 2).Count(ch => ch == '1')))
         {
             var rule = new RuleTile.TilingRule { m_Id = id++, m_ColliderType = Tile.ColliderType.Grid };

@@ -11,7 +11,7 @@ using UnityEngine.UI;
 /// shield generator, turret, ice cream stand) and three pictures each (rows: available, pressed, can't afford).
 /// Makes Assets/Prefabs/Crafting Menu.prefab (its own canvas, laid out like the HUD) and puts it in
 /// Level One, Level Two, Level Three and Training, adding an EventSystem to scenes that don't have one.
-/// Every item costs 3 Nickel and 1 Iridium for now: change it on each button's Craft Button component.
+/// Every item costs 3 Copper and 1 Iridium for now: change it on each button's Craft Button component.
 /// Run from: Tools > Space Dinosaurs > Build Crafting Menu. Safe to re-run (sprite IDs and prefab kept).
 /// </summary>
 public static class CraftMenuBuilder
@@ -157,10 +157,11 @@ public static class CraftMenuBuilder
                 craft.available = sprites[SpriteName(i, 0)];
                 craft.pressed = sprites[SpriteName(i, 1)];
                 craft.unaffordable = sprites[SpriteName(i, 2)];
-                if (!existing) { craft.nickelCost = 3; craft.iridiumCost = 1; }
+                if (!existing) { craft.copperCost = 3; craft.iridiumCost = 1; }
 
-                // Cost on the empty right half of the box: icon + number, nickel above iridium.
-                craft.nickelLabel = CostRow(b, "Nickel Cost", Icon(ResourceType.Nickel), font, 5, craft.nickelCost);
+                // Cost on the empty right half of the box: icon + number, copper above iridium.
+                var oldRow = b.Find("Nickel Cost"); if (oldRow != null && b.Find("Copper Cost") == null) oldRow.name = "Copper Cost";
+                craft.copperLabel = CostRow(b, "Copper Cost", Icon(ResourceType.Copper), font, 5, craft.copperCost);
                 craft.iridiumLabel = CostRow(b, "Iridium Cost", Icon(ResourceType.Iridium), font, 24, craft.iridiumCost);
             }
 

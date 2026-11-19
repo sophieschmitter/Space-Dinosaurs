@@ -45,7 +45,7 @@ public class EnemyController : MonoBehaviour
     public float repathInterval = 0.5f;
 
     [Header("Attack")]
-    [Min(0)] public int contactDamage = 1;
+    [Min(0)] public int contactDamage = 20;
     [Tooltip("Only hurt the dino when touching it from straight above, below, left or right (like the drill), " +
              "within this many degrees of the axis. Diagonal bumps do no damage.")]
     [Range(0f, 45f)] public float attackAngle = 30f;
@@ -145,14 +145,18 @@ public class EnemyController : MonoBehaviour
         foreach (var s in FindObjectsByType<EnemySpawner>(FindObjectsSortMode.None))
             blockedCells.Add(walls.WorldToCell(s.transform.position));
         SolidTilemap.AddCells(walls, blockedCells); // metal walls aren't on the Walls tilemap either
+        OreVeinLayer.AddCells(walls, blockedCells); // nor are ore veins (their own layer over the rock)
 
         hunting = true;
         huntTimer = huntTimeout;
         repathTimer = 0f;
     }
 
-    void OnEnable() { health.Damaged += OnDamaged; health.Died += OnDied; }
-    void OnDisable() { health.Damaged -= OnDamaged; health.Died -= OnDied; }
+    /// <summary>Every enemy in the scene (the dino's shots test against their art).</summary>
+    public static readonly List<EnemyController> All = new List<EnemyController>();
+
+    void OnEnable() { health.Damaged += OnDamaged; health.Died += OnDied; All.Add(this); }
+    void OnDisable() { health.Damaged -= OnDamaged; health.Died -= OnDied; All.Remove(this); }
 
     void Update()
     {

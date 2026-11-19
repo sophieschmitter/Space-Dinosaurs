@@ -15,8 +15,8 @@ public class OreLayer : MonoBehaviour
     public DestructibleTilemap walls;
 
     [Header("Scatter Ore On Walls")]
-    public OreTile nickel;
-    [Range(0f, 1f)] public float nickelChance = 0.12f;
+    [UnityEngine.Serialization.FormerlySerializedAs("nickel")] public OreTile copper;
+    [UnityEngine.Serialization.FormerlySerializedAs("nickelChance")] [Range(0f, 1f)] public float copperChance = 0.12f;
     public OreTile iridium;
     [Range(0f, 1f)] public float iridiumChance = 0.04f;
 
@@ -62,9 +62,9 @@ public class OreLayer : MonoBehaviour
             if (map.HasTile(oreCell)) continue; // keep ore that's already there
             float roll = Random.value;
             if (iridium != null && roll < iridiumChance) { map.SetTile(oreCell, iridium); ir++; }
-            else if (nickel != null && roll < iridiumChance + nickelChance) { map.SetTile(oreCell, nickel); n++; }
+            else if (copper != null && roll < iridiumChance + copperChance) { map.SetTile(oreCell, copper); n++; }
         }
-        Debug.Log($"OreLayer: scattered {n} nickel and {ir} iridium nodes.");
+        Debug.Log($"OreLayer: scattered {n} copper and {ir} iridium nodes.");
     }
 
     [ContextMenu("Clear All Ore")]
