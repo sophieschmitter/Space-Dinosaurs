@@ -199,6 +199,7 @@ GameObject:
   - component: {fileID: 3065809695302516438}
   - component: {fileID: 5147664190300440779}
   - component: {fileID: 701763386983356663}
+  - component: {fileID: 3200471149054770357}
   m_Layer: 0
   m_Name: Dino
   m_TagString: Untagged
@@ -513,3 +514,19 @@ SortingGroup:
   m_SortingOrder: 5
   m_SortAtRoot: 0
   m_Sort3DAs2D: 0
+--- !u!114 &3200471149054770357
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7618105241104718134}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: de2d592dab96148d1bf5488f5733c7d3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DinoFootsteps
+  clip: {fileID: 8300000, guid: 314822354c756478a974aab186931196, type: 3}
+  volume: 0.35
+  sprintSpeed: 1.25
+  fadeTime: 0.06
