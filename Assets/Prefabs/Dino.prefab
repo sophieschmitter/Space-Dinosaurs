@@ -526,7 +526,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: de2d592dab96148d1bf5488f5733c7d3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DinoFootsteps
-  clip: {fileID: 8300000, guid: 314822354c756478a974aab186931196, type: 3}
+  steps:
+  - {fileID: 8300000, guid: 012d1ead9933e4b9ab0440ed411087b7, type: 3}
+  - {fileID: 8300000, guid: 14f1ad0028c3f4a1eacd57e06418f497, type: 3}
+  - {fileID: 8300000, guid: 1f9567563397a49e6bf8deb558e1086f, type: 3}
+  - {fileID: 8300000, guid: ee39c112e0ae843bda8c78d2f6524eea, type: 3}
+  - {fileID: 8300000, guid: 7e6f6aeafe4334fc1a383255c8ddf786, type: 3}
+  - {fileID: 8300000, guid: 4d496a0b5c07f446285bd89d7e7974d9, type: 3}
+  - {fileID: 8300000, guid: 857ba8b6685ac4e29b52a5d08d3fe58c, type: 3}
+  - {fileID: 8300000, guid: 25e3b587e002b4c8bbc4bbe578a8feed, type: 3}
+  - {fileID: 8300000, guid: 696d4d6a42cce433a8441eda99c4e320, type: 3}
+  - {fileID: 8300000, guid: 2c4bdee8c70894afe893fd29a8bc519d, type: 3}
+  - {fileID: 8300000, guid: 241f139caae8e4086b16a504b5d8bf58, type: 3}
   volume: 0.35
-  sprintSpeed: 1.25
-  fadeTime: 0.06
+  sprintPitch: 1.1
+  pitchJitter: 0.04
+  footfalls:
+  - 0
+  - 0.5
+  backFootfalls:
+  - 0
+  - 0.4

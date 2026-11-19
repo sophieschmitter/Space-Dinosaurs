@@ -1,0 +1,546 @@
+fileFormatVersion: 2
+guid: 01aa815af30e94515a1b317ea8854774
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -6087643040082791788
+    second: Ore Green Tilemap_0
+  - first:
+      213: -5835397983361878749
+    second: Ore Green Tilemap_1
+  - first:
+      213: -4285661851304996690
+    second: Ore Green Tilemap_2
+  - first:
+      213: 1845196801277411678
+    second: Ore Green Tilemap_3
+  - first:
+      213: 1455178522526656301
+    second: Ore Green Tilemap_4
+  - first:
+      213: -4689971543711203178
+    second: Ore Green Tilemap_5
+  - first:
+      213: -6372531300975212481
+    second: Ore Green Tilemap_6
+  - first:
+      213: 8478988067594112738
+    second: Ore Green Tilemap_7
+  - first:
+      213: -665128604675844942
+    second: Ore Green Tilemap_8
+  - first:
+      213: 5443125511901012988
+    second: Ore Green Tilemap_9
+  - first:
+      213: 3448417276442258323
+    second: Ore Green Tilemap_10
+  - first:
+      213: -2547056238534483341
+    second: Ore Green Tilemap_11
+  - first:
+      213: -4240728820075917315
+    second: Ore Green Tilemap_12
+  - first:
+      213: -5118580997999896984
+    second: Ore Green Tilemap_13
+  - first:
+      213: 2725894468810002841
+    second: Ore Green Tilemap_14
+  - first:
+      213: -8634830554488289753
+    second: Ore Green Tilemap_15
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 160
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Ore Green Tilemap_0
+      rect:
+        serializedVersion: 2
+        x: 479
+        y: 1439
+        width: 162
+        height: 162
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4927c74a8e8548ba0800000000000000
+      internalID: -6087643040082791788
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ore Green Tilemap_1
+      rect:
+        serializedVersion: 2
+        x: 799
+        y: 1439
+        width: 162
+        height: 162
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3253fae8370840fa0800000000000000
+      internalID: -5835397983361878749
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ore Green Tilemap_2
+      rect:
+        serializedVersion: 2
+        x: 1119
+        y: 1439
+        width: 162
+        height: 162
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ea0d58da0454684c0800000000000000
+      internalID: -4285661851304996690
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ore Green Tilemap_3
+      rect:
+        serializedVersion: 2
+        x: 1439
+        y: 1439
+        width: 162
+        height: 162
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e51c3d8e6b47b9910800000000000000
+      internalID: 1845196801277411678
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ore Green Tilemap_4
+      rect:
+        serializedVersion: 2
+        x: 159
+        y: 1119
+        width: 162
+        height: 162
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d27aaf70825d13410800000000000000
+      internalID: 1455178522526656301
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ore Green Tilemap_5
+      rect:
+        serializedVersion: 2
+        x: 479
+        y: 1119
+        width: 162
+        height: 162
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6904762cabfd9eeb0800000000000000
+      internalID: -4689971543711203178
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ore Green Tilemap_6
+      rect:
+        serializedVersion: 2
+        x: 799
+        y: 1119
+        width: 162
+        height: 162
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f38805d7b883097a0800000000000000
+      internalID: -6372531300975212481
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ore Green Tilemap_7
+      rect:
+        serializedVersion: 2
+        x: 1119
+        y: 1119
+        width: 162
+        height: 162
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2ee09bf49ba6ba570800000000000000
+      internalID: 8478988067594112738
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ore Green Tilemap_8
+      rect:
+        serializedVersion: 2
+        x: 1439
+        y: 1119
+        width: 162
+        height: 162
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2b4585cde0df4c6f0800000000000000
+      internalID: -665128604675844942
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ore Green Tilemap_9
+      rect:
+        serializedVersion: 2
+        x: 479
+        y: 799
+        width: 162
+        height: 162
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cf3e9bc60ddd98b40800000000000000
+      internalID: 5443125511901012988
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ore Green Tilemap_10
+      rect:
+        serializedVersion: 2
+        x: 799
+        y: 799
+        width: 162
+        height: 162
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 39b29af0e3d3bdf20800000000000000
+      internalID: 3448417276442258323
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ore Green Tilemap_11
+      rect:
+        serializedVersion: 2
+        x: 1119
+        y: 799
+        width: 162
+        height: 162
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 372a53f88d907acd0800000000000000
+      internalID: -2547056238534483341
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ore Green Tilemap_12
+      rect:
+        serializedVersion: 2
+        x: 479
+        y: 479
+        width: 162
+        height: 162
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dff0d924b97e525c0800000000000000
+      internalID: -4240728820075917315
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ore Green Tilemap_13
+      rect:
+        serializedVersion: 2
+        x: 799
+        y: 479
+        width: 162
+        height: 162
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 866d624a3b527f8b0800000000000000
+      internalID: -5118580997999896984
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ore Green Tilemap_14
+      rect:
+        serializedVersion: 2
+        x: 1119
+        y: 479
+        width: 162
+        height: 162
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9915f94b39254d520800000000000000
+      internalID: 2725894468810002841
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ore Green Tilemap_15
+      rect:
+        serializedVersion: 2
+        x: 479
+        y: 159
+        width: 162
+        height: 162
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 72649082c5bea2880800000000000000
+      internalID: -8634830554488289753
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Ore Green Tilemap_0: -6087643040082791788
+      Ore Green Tilemap_1: -5835397983361878749
+      Ore Green Tilemap_10: 3448417276442258323
+      Ore Green Tilemap_11: -2547056238534483341
+      Ore Green Tilemap_12: -4240728820075917315
+      Ore Green Tilemap_13: -5118580997999896984
+      Ore Green Tilemap_14: 2725894468810002841
+      Ore Green Tilemap_15: -8634830554488289753
+      Ore Green Tilemap_2: -4285661851304996690
+      Ore Green Tilemap_3: 1845196801277411678
+      Ore Green Tilemap_4: 1455178522526656301
+      Ore Green Tilemap_5: -4689971543711203178
+      Ore Green Tilemap_6: -6372531300975212481
+      Ore Green Tilemap_7: 8478988067594112738
+      Ore Green Tilemap_8: -665128604675844942
+      Ore Green Tilemap_9: 5443125511901012988
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

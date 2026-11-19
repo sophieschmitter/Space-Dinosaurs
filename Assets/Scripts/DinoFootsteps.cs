@@ -1,66 +1,82 @@
 using UnityEngine;
 
 /// <summary>
-/// The dino's footsteps: a looping clip that plays softly while it walks, a bit faster (and a touch higher)
-/// while it sprints, and pauses when it stops, so the steps carry on from where they left off. Quiet while the
-/// game is paused (menus, dialogue) and once the dino is dead. Fades in and out over a few hundredths of a
-/// second so starting and stopping doesn't click.
+/// The dino's footsteps, in time with its walk animation: each time a foot lands in the animation, one short
+/// step sound plays (picked at random from Steps, never the same one twice in a row). Sprinting plays the walk
+/// animation faster, so the steps speed up with it; they're also pitched up a little. Quiet while the game is
+/// paused and once the dino is dead.
+///
+/// Where the feet land, as a fraction of each walk loop (measured from the art: where the body dips lowest):
+/// side and front walks at 0 and 0.5, walking away (Back) at 0 and 0.4.
 /// </summary>
 [RequireComponent(typeof(DinoController))]
 public class DinoFootsteps : MonoBehaviour
 {
-    [Tooltip("Loops while walking (Assets/SFX/Footsteps Loop.wav: the footsteps with the silence cut off).")]
-    public AudioClip clip;
+    [Tooltip("Single footsteps (Assets/SFX/Footstep Steps: cut from the cleaned recording).")]
+    public AudioClip[] steps;
     [Range(0f, 1f)] public float volume = 0.35f;
-    [Tooltip("Playback speed while sprinting (1 = normal). Also raises the pitch slightly.")]
-    [Range(1f, 2f)] public float sprintSpeed = 1.25f;
-    [Tooltip("Seconds to fade in or out.")]
-    public float fadeTime = 0.06f;
+    [Tooltip("Pitch while sprinting (1 = normal).")]
+    [Range(1f, 1.5f)] public float sprintPitch = 1.1f;
+    [Tooltip("Random pitch change per step, so repeats don't sound identical.")]
+    [Range(0f, 0.15f)] public float pitchJitter = 0.04f;
+
+    [Tooltip("Where the feet land in the side and front walk loops (0-1).")]
+    public float[] footfalls = { 0f, 0.5f };
+    [Tooltip("Where the feet land in the walking-away (Back) loop (0-1).")]
+    public float[] backFootfalls = { 0f, 0.4f };
 
     DinoController dino;
+    Animator animator;
     AudioSource source;
-    float level;  // 0-1 fade
-    bool sounding; // started (or resumed) and not paused since: kept here rather than asking isPlaying,
-                   // which also reads false while the editor or the audio is paused
+    int lastState;
+    float lastTime = -1f;   // walk loop position last frame (unwrapped normalized time)
+    int lastStep = -1;
 
     void Awake()
     {
         dino = GetComponent<DinoController>();
+        animator = GetComponentInChildren<Animator>();
         source = gameObject.AddComponent<AudioSource>();
-        source.clip = clip;
-        source.loop = true;
         source.playOnAwake = false;
+        source.loop = false;
         source.spatialBlend = 0f; // plain 2D sound: the camera follows the dino anyway
-        source.volume = 0f;
     }
 
     void Update()
     {
-        if (clip == null) return;
-        bool paused = Time.timeScale == 0f;
-        bool walking = !paused && !dino.IsDead && dino.IsMoving;
+        if (steps == null || steps.Length == 0 || animator == null) return;
+        bool active = Time.timeScale > 0f && !dino.IsDead && dino.IsMoving;
+        var info = animator.GetCurrentAnimatorStateInfo(0);
+        var clips = animator.GetCurrentAnimatorClipInfo(0);
+        string clipName = clips.Length > 0 && clips[0].clip != null ? clips[0].clip.name : "";
+        bool walking = active && clipName.Contains("Walk");
+        if (!walking) { lastTime = -1f; return; }
 
-        float step = fadeTime > 0f ? Time.unscaledDeltaTime / fadeTime : 1f;
-        level = Mathf.MoveTowards(level, walking ? 1f : 0f, step);
-        source.volume = level * volume;
-        source.pitch = dino.IsSprinting ? sprintSpeed : 1f;
-
-        if (level > 0f && !sounding)
+        float now = info.normalizedTime;
+        if (info.fullPathHash != lastState || lastTime < 0f)
         {
-            if (source.time > 0f) source.UnPause(); else source.Play(); // carry on the steps where they stopped
-            sounding = true;
+            // just started walking (or turned): the first foot is down straight away
+            lastState = info.fullPathHash;
+            lastTime = Mathf.Floor(now) - 0.0001f;
         }
-        else if (level <= 0f && sounding)
-        {
-            source.Pause();
-            sounding = false;
-        }
+        var marks = clipName.Contains("Back") ? backFootfalls : footfalls;
+        // Every footfall passed since last frame (normalized time keeps counting up across loops).
+        for (float loop = Mathf.Floor(lastTime); loop <= Mathf.Floor(now); loop++)
+            foreach (float m in marks)
+            {
+                float t = loop + m;
+                if (t > lastTime && t <= now) { Step(); goto done; } // at most one step per frame
+            }
+        done:
+        lastTime = now;
     }
 
-    void OnDisable()
+    void Step()
     {
-        if (source != null) source.Pause();
-        sounding = false;
-        level = 0f;
+        int i = Random.Range(0, steps.Length);
+        if (steps.Length > 1 && i == lastStep) i = (i + 1) % steps.Length;
+        lastStep = i;
+        source.pitch = (dino.IsSprinting ? sprintPitch : 1f) * (1f + Random.Range(-pitchJitter, pitchJitter));
+        source.PlayOneShot(steps[i], volume);
     }
 }
