@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 861459457199598381}
   - component: {fileID: 1244851796701878476}
+  - component: {fileID: 5414777221230150975}
   m_Layer: 0
   m_Name: Timer
   m_TagString: Untagged
@@ -62,6 +63,27 @@ MonoBehaviour:
     fill: {fileID: -1783096912, guid: 2006f7b5ddcb6477db3491973f0a307d, type: 3}
     cap: {fileID: 1378770689, guid: 2006f7b5ddcb6477db3491973f0a307d, type: 3}
     icon: {fileID: 0}
+--- !u!114 &5414777221230150975
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8722413090049990}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 072b462f8ba554a58b168ad2218c30d5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::WaveMarkers
+  timer: {fileID: 1178365305091168733}
+  bar: {fileID: 1244851796701878476}
+  upcoming: {r: 0.8784314, g: 0.2784314, b: 0.61960787, a: 1}
+  passed: {r: 0.41960785, g: 0.39215687, b: 0.5019608, a: 1}
+  outline: {r: 0.11764706, g: 0.101960786, b: 0.2, a: 1}
+  warnTime: 8
+  blinkRate: 3
+  gapBelow: 2
+  mergeWithin: 1
 --- !u!1 &233007976381213851
 GameObject:
   m_ObjectHideFlags: 0
@@ -822,6 +844,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LevelTimer
   levelLength: 30
+  heavyAttackers: 5
+  heavyAttackSpeed: 0.5
+  speedChangeTime: 1
+  slowedTint: {r: 1, g: 0.55, b: 0.75, a: 1}
   fill: {fileID: 2476940900735513654}
   timerBar: {fileID: 1244851796701878476}
   completePanel: {fileID: 7463419645951569216}
@@ -829,6 +855,15 @@ MonoBehaviour:
   loseText: {fileID: 4800718319238527333}
   loseHint: R to restart, E to exit
   exitScene: 
+  useDialogueBox: 1
+  dialogueBoxPrefab: {fileID: 8457085438597965517, guid: 547733b4b509746139088d679fc05d42, type: 3}
+  endSpeaker: 
+  endPortrait: {fileID: 0}
+  winText: Congratulations! You've protected the drill and acquired the necessary
+    resources.
+  winHint: '[Press R to restart or Enter to proceed to the next level.]'
+  nextScene: Level Select
+  loseBoxHint: '[Press R to restart or E to exit.]'
   pauseOnComplete: 1
   onLevelComplete:
     m_PersistentCalls:

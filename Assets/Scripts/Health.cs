@@ -11,6 +11,11 @@ public class Health : MonoBehaviour
 {
     [Min(1)] public int maxHealth = 3;
 
+    [Tooltip("Starts with this much health (0 = full). E.g. the training level starts the dino hurt.")]
+    [Min(0)] public int startHealth = 0;
+    [Tooltip("Hits never take it below this (1 = can't die, e.g. in training).")]
+    [Min(0)] public int minHealth = 0;
+
     [Tooltip("Seconds after a hit during which further hits are ignored.")]
     [Min(0f)] public float invulnerableTime = 0;
 
@@ -30,7 +35,7 @@ public class Health : MonoBehaviour
 
     float invulnerableUntil;
 
-    void Awake() => Current = maxHealth;
+    void Awake() => Current = startHealth > 0 ? Mathf.Min(startHealth, maxHealth) : maxHealth;
 
     /// <summary>What dealt the last hit that landed, e.g. "A hunter tracked you down." (null if not given).
     /// The dino's lose screen shows this when it dies.</summary>
@@ -45,7 +50,7 @@ public class Health : MonoBehaviour
         if (IsDead || IsInvulnerable || amount <= 0) return false;
         LastHitCause = cause;
 
-        Current = Mathf.Max(0, Current - amount);
+        Current = Mathf.Max(minHealth, Current - amount);
         invulnerableUntil = Time.time + invulnerableTime;
         Changed?.Invoke(Current, maxHealth);
         Damaged?.Invoke(amount, from);

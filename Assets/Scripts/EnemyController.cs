@@ -290,6 +290,7 @@ public class EnemyController : MonoBehaviour
         var goal = collision.collider.GetComponentInParent<EnemyGoal>();
         if (goal != null)
         {
+            goal.ReportAttack(this); // counts towards the robot being under heavy attack (slows the timer)
             if (goal.TryGetComponent(out Health goalHealth) && goalHealth.TakeDamage(contactDamage, body.position, goal.destroyedMessage))
                 pauseTimer = hitPause;
             return;
@@ -311,12 +312,52 @@ public class EnemyController : MonoBehaviour
         chasing = player != null; // getting hit makes it come after the dino
     }
 
+    [Header("Death sound")]
+    [Tooltip("One of these plays when it dies (picked at random, or in turn with Take Turns). Empty = silent.")]
+    public AudioClip[] deathSounds;
+    [Range(0f, 1f)] public float deathVolume = 0.3f;
+    [Tooltip("Only every Nth death of this kind of enemy makes the sound (2 = every other one).")]
+    [Min(1)] public int deathSoundEvery = 1;
+    [Tooltip("Use the death sounds in turn (1, 2, 1, 2...) instead of at random.")]
+    public bool takeTurnsWithDeathSounds = false;
+
+    // Per kind of enemy (keyed by its first death sound): how many have died, and how many sounds have played.
+    static readonly Dictionary<AudioClip, int> deathsSoFar = new(), soundsSoFar = new();
+
+    void PlayDeathSound()
+    {
+        if (deathSounds == null || deathSounds.Length == 0 || deathSounds[0] == null) return;
+        var key = deathSounds[0];
+        deathsSoFar.TryGetValue(key, out int deaths);
+        deathsSoFar[key] = ++deaths;
+        if (deaths % Mathf.Max(1, deathSoundEvery) != 0) return; // not this one
+        if (!takeTurnsWithDeathSounds) { PlayOneOf(deathSounds, deathVolume); return; }
+        soundsSoFar.TryGetValue(key, out int played);
+        soundsSoFar[key] = played + 1;
+        PlayOneOf(new[] { deathSounds[played % deathSounds.Length] }, deathVolume);
+    }
+
     void OnDied()
     {
+        PlayDeathSound();
         dead = true;
         foreach (var c in colliders) c.enabled = false;
         body.linearVelocity = Vector2.zero;
         StartCoroutine(Die());
+    }
+
+    // A 2D one-shot that outlives this enemy (it's removed after its death animation).
+    static void PlayOneOf(AudioClip[] clips, float volume)
+    {
+        if (clips == null || clips.Length == 0) return;
+        var clip = clips[Random.Range(0, clips.Length)];
+        if (clip == null) return;
+        var go = new GameObject("Death Sound");
+        var src = go.AddComponent<AudioSource>();
+        src.spatialBlend = 0f;
+        src.pitch = 1f + Random.Range(-0.05f, 0.05f);
+        src.PlayOneShot(clip, volume);
+        Object.Destroy(go, clip.length + 0.1f);
     }
 
     IEnumerator Die()

@@ -338,6 +338,53 @@ public static class AudioCleanup
         return (onsets, files);
     }
 
+    // ---------- lining each step up with its footfall ----------
+
+    /// <summary>Re-cuts every single-step file so its main thump starts right at the beginning (5 ms in), and
+    /// keeps at most maxLength after it, fading out, so nothing from the next step tags along. A step whose hit
+    /// came late in its file (the cut started on some noise before it) would otherwise sound behind the foot.
+    /// Returns, per file, where the hit was before and the new length.</summary>
+    public static string TrimSteps(float maxLength = 0.3f)
+    {
+        var report = new System.Text.StringBuilder();
+        foreach (var path in Directory.GetFiles(StepFolder, "Step *.wav"))
+        {
+            string p = path.Replace('\\', '/');
+            var clip = AssetDatabase.LoadAssetAtPath<AudioClip>(p);
+            int ch = clip.channels, rate = clip.frequency, n = clip.samples;
+            var data = new float[n * ch];
+            clip.GetData(data, 0);
+
+            // Loudness in 5 ms steps; the hit is the loudest one, and it starts where the level last rose
+            // from under a fifth of that peak.
+            int hop = rate / 200;
+            var env = new List<double>();
+            for (int i = 0; i + hop <= n; i += hop) env.Add(Rms(data, ch, i, i + hop));
+            int peak = 0;
+            for (int k = 1; k < env.Count; k++) if (env[k] > env[peak]) peak = k;
+            int start = peak;
+            while (start > 0 && env[start - 1] > env[peak] * 0.2) start--;
+
+            int a = Math.Max(0, start * hop - rate / 200);           // 5 ms before the hit
+            int b = Math.Min(n, a + (int)(maxLength * rate));
+            int len = b - a;
+            var piece = new float[len * ch];
+            Array.Copy(data, a * ch, piece, 0, len * ch);
+            int fadeIn = rate / 1000, fadeOut = Math.Min(len / 3, rate * 6 / 100);   // 1 ms in, 60 ms out
+            for (int i = 0; i < len; i++)
+            {
+                float g = 1f;
+                if (i < fadeIn) g *= i / (float)fadeIn;
+                if (i >= len - fadeOut) g *= (len - 1 - i) / (float)fadeOut;
+                for (int c = 0; c < ch; c++) piece[i * ch + c] *= g;
+            }
+            WriteWav(p, piece, ch, rate);
+            AssetDatabase.ImportAsset(p, ImportAssetOptions.ForceUpdate);
+            report.Append($"{Path.GetFileNameWithoutExtension(p)}: hit was at {a * 1000 / rate} ms -> 5 ms, {len * 1000 / rate} ms long; ");
+        }
+        return report.ToString();
+    }
+
     // ---------- helpers ----------
 
     static double Rms(float[] d, int ch, int from, int to)

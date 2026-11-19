@@ -10,8 +10,8 @@ using UnityEngine.Tilemaps;
 /// Between waves it trickles: every Spawn Interval seconds it puts an enemy on a free tile next to itself, as
 /// long as fewer than Max Alive of its enemies are still around.
 /// Waves: add entries to Waves (one per wave, each with how many enemies it sends). The first wave comes
-/// First Wave Delay seconds in, each later one Time Between Waves after the previous finished (or its own
-/// Delay). A wave sends all its enemies a short gap apart, ignoring Max Alive; trickling pauses meanwhile and
+/// First Wave Delay seconds in, each later one Time Between Waves after the previous one started (or its own
+/// Delay), so wave times are fixed and the timer bar can mark them (WaveMarkers). A wave sends all its enemies a short gap apart, ignoring Max Alive; trickling pauses meanwhile and
 /// carries on after. With no waves it only trickles.
 /// It has no Health, so the drill can't hurt it, and it isn't a wall tile, so it can't be broken either.
 ///
@@ -29,17 +29,26 @@ public class EnemySpawner : MonoBehaviour
     {
         [Tooltip("How many enemies this wave sends.")]
         [Min(1)] public int enemies = 5;
-        [Tooltip("Seconds to wait before this wave (after the previous one finished, or from the start for the first). 0 = use First Wave Delay / Time Between Waves.")]
+        [Tooltip("Seconds after the previous wave started (or from the start, for the first) before this wave. 0 = use First Wave Delay / Time Between Waves.")]
         [Min(0f)] public float delay = 0f;
+        [Tooltip("Other enemies this wave also sends (after its usual ones), e.g. 1 tall crab.")]
+        public Extra[] extras = new Extra[0];
+    }
+
+    [System.Serializable]
+    public class Extra
+    {
+        public GameObject prefab;
+        [Min(1)] public int count = 1;
     }
 
     [Header("Waves")]
     [Tooltip("One entry per wave, in order. Leave empty to only trickle.")]
     public Wave[] waves = new Wave[0];
     [Tooltip("Seconds into the level before the first wave.")]
-    [Min(0f)] public float firstWaveDelay = 20f;
-    [Tooltip("Seconds between the end of one wave and the start of the next.")]
-    [Min(0f)] public float timeBetweenWaves = 25f;
+    [Min(0f)] public float firstWaveDelay = 30f;
+    [Tooltip("Seconds from the start of one wave to the start of the next.")]
+    [Min(0f)] public float timeBetweenWaves = 40f;
     [Tooltip("Seconds between enemies within a wave.")]
     [Min(0.05f)] public float waveSpawnGap = 0.6f;
     [Tooltip("Called with the wave number (1 = first) when a wave starts (for a warning sound or message).")]
@@ -105,14 +114,34 @@ public class EnemySpawner : MonoBehaviour
         }
     }
 
+    /// <summary>When each wave starts, in seconds from the start of the level.</summary>
+    public float[] WaveTimes()
+    {
+        var times = new float[waves != null ? waves.Length : 0];
+        float t = 0f;
+        for (int w = 0; w < times.Length; w++)
+        {
+            var wave = waves[w];
+            float wait = wave != null && wave.delay > 0f ? wave.delay : w == 0 ? firstWaveDelay : timeBetweenWaves;
+            t += wait;
+            times[w] = t;
+        }
+        return times;
+    }
+
     IEnumerator WaveLoop()
     {
+        float start = Time.time;
+        var times = WaveTimes();
+        var timer = FindFirstObjectByType<LevelTimer>(); // waves follow the level timer (it slows when the robot is swarmed)
         for (int w = 0; w < waves.Length; w++)
         {
             var wave = waves[w];
             if (wave == null) continue;
-            float wait = wave.delay > 0f ? wave.delay : w == 0 ? firstWaveDelay : timeBetweenWaves;
-            yield return new WaitForSeconds(wait);
+            // On time even if the last wave took a while to send.
+            if (timer != null) { while (timer.Elapsed < times[w] && !timer.IsOver) yield return null; }
+            else { float wait = times[w] - (Time.time - start); if (wait > 0f) yield return new WaitForSeconds(wait); }
+            if (timer != null && timer.IsOver) yield break;
 
             inWave = true;
             CurrentWave = w + 1;
@@ -125,6 +154,18 @@ public class EnemySpawner : MonoBehaviour
                 if (TrySpawn()) sent++;
                 yield return new WaitForSeconds(waveSpawnGap);
             }
+            if (wave.extras != null)
+                foreach (var extra in wave.extras)
+                {
+                    if (extra == null || extra.prefab == null) continue;
+                    int made = 0, attempts = 0;
+                    while (made < extra.count && attempts < extra.count * 20)
+                    {
+                        attempts++;
+                        if (TrySpawn(extra.prefab)) made++;
+                        yield return new WaitForSeconds(waveSpawnGap);
+                    }
+                }
             inWave = false;
         }
     }
@@ -132,9 +173,15 @@ public class EnemySpawner : MonoBehaviour
     // One enemy on a free tile next to the spawner. False if it couldn't right now.
     bool TrySpawn()
     {
-        if (!isActiveAndEnabled || enemyPrefab == null || !PlayerAllows() || !TryFindSpot(out Vector2 spot)) return false;
-        var enemy = Instantiate(enemyPrefab, spot, Quaternion.identity);
-        enemy.name = $"{enemyPrefab.name} ({name})";
+        return TrySpawn(enemyPrefab);
+    }
+
+    // One of these on a free tile next to the spawner. False if it couldn't right now.
+    bool TrySpawn(GameObject prefab)
+    {
+        if (!isActiveAndEnabled || prefab == null || !PlayerAllows() || !TryFindSpot(out Vector2 spot)) return false;
+        var enemy = Instantiate(prefab, spot, Quaternion.identity);
+        enemy.name = $"{prefab.name} ({name})";
         alive.Add(enemy);
         if (pathToGoal && enemy.TryGetComponent(out EnemyController ai)) ai.GoTo(EnemyGoal.Find());
         Play("Spawn");

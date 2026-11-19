@@ -53,11 +53,18 @@ public class DinoFootsteps : MonoBehaviour
         if (!walking) { lastTime = -1f; return; }
 
         float now = info.normalizedTime;
-        if (info.fullPathHash != lastState || lastTime < 0f)
+        if (lastTime < 0f)
         {
-            // just started walking (or turned): the first foot is down straight away
+            // just started walking: the first foot is down straight away
             lastState = info.fullPathHash;
             lastTime = Mathf.Floor(now) - 0.0001f;
+        }
+        else if (info.fullPathHash != lastState)
+        {
+            lastState = info.fullPathHash;
+            // Turned: the new walk starts from its first frame, where a foot lands. Swapped to the gun's recoil
+            // version of the same walk: it carries on from the same frame, so no extra step.
+            lastTime = now < 0.05f ? Mathf.Floor(now) - 0.0001f : now;
         }
         var marks = clipName.Contains("Back") ? backFootfalls : footfalls;
         // Every footfall passed since last frame (normalized time keeps counting up across loops).
@@ -71,8 +78,14 @@ public class DinoFootsteps : MonoBehaviour
         lastTime = now;
     }
 
+    [Tooltip("Never two steps closer together than this (seconds), e.g. turning just after a footfall.")]
+    public float minGap = 0.12f;
+    float lastStepTime = -1f;
+
     void Step()
     {
+        if (Time.time - lastStepTime < minGap) return;
+        lastStepTime = Time.time;
         int i = Random.Range(0, steps.Length);
         if (steps.Length > 1 && i == lastStep) i = (i + 1) % steps.Length;
         lastStep = i;

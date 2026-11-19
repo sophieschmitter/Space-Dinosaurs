@@ -42,10 +42,14 @@ public class CraftButton : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
     bool held;
     float flashTimer;
 
+    [Tooltip("Locked: shown as unaffordable and can't be used (the training level unlocks one at a time).")]
+    public bool locked;
+
     public bool CanAfford
     {
         get
         {
+            if (locked) return false;
             var inv = ResourceInventory.Instance;
             if (inv == null) return copperCost <= 0 && iridiumCost <= 0;
             return inv.Get(ResourceType.Copper) >= copperCost && inv.Get(ResourceType.Iridium) >= iridiumCost;

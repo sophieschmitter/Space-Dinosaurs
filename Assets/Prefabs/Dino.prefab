@@ -428,6 +428,11 @@ MonoBehaviour:
   leftDamage: LDamage
   rightDeath: RDeath
   leftDeath: LDeath
+  gunVictoryState: Gun_Victory
+  drillVictoryState: Drill_Victory
+  victorySound: {fileID: 8300000, guid: c9a428cf5684349788d2079f40a8435b, type: 3}
+  victoryVolume: 0.5
+  canSwapWeapons: 1
 --- !u!70 &1558368566172448437
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -478,6 +483,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Health
   maxHealth: 100
+  startHealth: 0
+  minHealth: 0
   invulnerableTime: 1
   onDamaged:
     m_PersistentCalls:
@@ -549,6 +556,7 @@ MonoBehaviour:
   backFootfalls:
   - 0
   - 0.4
+  minGap: 0.12
 --- !u!114 &706304984746820595
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -27,6 +27,9 @@ public class TrainingIntro : MonoBehaviour
     [Tooltip("Seconds the camera takes to reach the dino after the dialogue.")]
     public float cameraCatchUp = 0.6f;
 
+    /// <summary>True once the walk-in (and its dialogue, if any) is over and the player has control.</summary>
+    public bool Done { get; private set; }
+
     PixelCameraFollow cam;
     Vector2 introView;
 
@@ -41,7 +44,7 @@ public class TrainingIntro : MonoBehaviour
     {
         if (holdCamera && cam != null) cam.FocusOn(introView, 0.01f);
         if (dino == null) dino = FindFirstObjectByType<DinoController>();
-        if (dino == null || talkTo == null) yield break;
+        if (dino == null || talkTo == null) { Done = true; yield break; }
         var body = dino.GetComponent<Rigidbody2D>();
         bool hadDrill = dino.hasDrill, hadGun = dino.hasGun;
 
@@ -71,6 +74,7 @@ public class TrainingIntro : MonoBehaviour
 
         if (rearmAfter) dino.SetWeapons(hadDrill, hadGun);
         dino.EndScripted();
+        Done = true;
         if (holdCamera && cam != null && !released) cam.Release(cameraCatchUp);
     }
 

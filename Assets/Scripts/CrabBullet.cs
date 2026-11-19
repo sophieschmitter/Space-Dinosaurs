@@ -72,8 +72,9 @@ public class CrabBullet : MonoBehaviour
             if (c.isTrigger || IsOwner(c) || PassesThrough(c)) continue;
             if (hits[i].distance < nearest) { nearest = hits[i].distance; target = c; point = hits[i].centroid; }
         }
-        // The dino's shots hit crabs where the laser is drawn (Art Height above the flight line), against the
-        // crab's visible body, so a shot that looks like it hits, hits, and one passing over its head misses.
+        // The dino's shots hit a crab's visible body either where the laser is drawn (Art Height above the
+        // flight line), so a shot that looks like it goes through a crab hits it, or along the flight line on the
+        // ground, so a crab standing level with the shooter is hit even when it's shorter than the gun is high.
         if (firedByPlayer)
         {
             Vector2 lift = new Vector2(0f, artHeight);
@@ -82,8 +83,9 @@ public class CrabBullet : MonoBehaviour
             foreach (var e in EnemyController.All)
             {
                 if (e == null || e.IsDead || e.sprite == null) continue;
-                if (SegmentHitsBox(from + lift, d / dist, along, BodyBox(e.sprite), out float t) && t < enemyAt)
-                { enemyAt = t; enemy = e; }
+                var box = BodyBox(e.sprite);
+                if (SegmentHitsBox(from + lift, d / dist, along, box, out float t) && t < enemyAt) { enemyAt = t; enemy = e; }
+                if (SegmentHitsBox(from, d / dist, along, box, out float g) && g < enemyAt) { enemyAt = g; enemy = e; }
             }
             if (enemy != null)
             {
@@ -178,7 +180,11 @@ public class CrabBullet : MonoBehaviour
         var dino = c.GetComponentInParent<DinoController>();
         var goal = dino == null ? c.GetComponentInParent<EnemyGoal>() : null;
         if (dino != null && dino.TryGetComponent(out Health h)) h.TakeDamage(damage, from, killMessage);
-        else if (goal != null && goal.TryGetComponent(out Health gh)) gh.TakeDamage(damage, from, goal.destroyedMessage);
+        else if (goal != null)
+        {
+            if (owner != null) goal.ReportAttack(owner.GetComponent<EnemyController>()); // a tall crab shooting the robot
+            if (goal.TryGetComponent(out Health gh)) gh.TakeDamage(damage, from, goal.destroyedMessage);
+        }
         // Walls (Tilemap) and spawners just stop it.
         Explode();
     }

@@ -35,6 +35,9 @@ public class BuildingPlacer : MonoBehaviour
     public static bool ClickTaken => (instance != null && instance.held != null) || Time.frameCount == lastPlacedFrame;
 
     /// <summary>The craft button whose building is being placed (it shows its pressed picture meanwhile).</summary>
+    /// <summary>The building being placed (following the mouse), if any.</summary>
+    public static Building Held => instance != null ? instance.held : null;
+
     public static CraftButton Placing => instance != null && instance.held != null ? instance.source : null;
 
     public static void Begin(CraftButton button)
@@ -99,6 +102,7 @@ public class BuildingPlacer : MonoBehaviour
         source = null;
         Tint(null);
         placed.Selected = false;
+        placed.PlayPlacedSound();
         spot.Occupy(placed);
         spot = null;
         lastPlacedFrame = Time.frameCount;
@@ -111,7 +115,7 @@ public class BuildingPlacer : MonoBehaviour
     public bool MoveTo(Vector2 p)
     {
         if (held == null) return false;
-        spot = BuildingSpot.NearestFree(p, spotSnapDistance);
+        spot = BuildingSpot.NearestFree(p, spotSnapDistance, held);
         if (spot != null) p = spot.transform.position;
         else
         {
@@ -127,7 +131,7 @@ public class BuildingPlacer : MonoBehaviour
     // On a free Building Spot, with nothing solid (walls, spawners, the robot, crabs, the dino, other buildings) under its base.
     bool Fits(Vector2 at)
     {
-        if (spot == null || !spot.Free || ((Vector2)spot.transform.position - at).sqrMagnitude > 1e-6f) return false; // only on a free spot
+        if (spot == null || !spot.Accepts(held) || ((Vector2)spot.transform.position - at).sqrMagnitude > 1e-6f) return false; // only on a free spot
         if (footprint == null) return true;
         Vector2 center = at + footprint.offset;
         int n = Physics2D.OverlapBoxNonAlloc(center, footprint.size, 0f, overlaps);

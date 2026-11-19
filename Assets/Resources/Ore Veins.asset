@@ -20,7 +20,7 @@ MonoBehaviour:
   - tile: {fileID: 11400000, guid: 504c7d62cbfee4119aa6d6975ba98b79, type: 2}
     resource: 1
     amount: 1
-    hitsToBreak: 3
+    hitsToBreak: 4
   - tile: {fileID: 11400000, guid: 89aab79d3507b48bcb3d8b245d779596, type: 2}
     resource: 0
     amount: 1
@@ -88,64 +88,64 @@ MonoBehaviour:
   - tile: {fileID: 11400000, guid: fe332f387c7724890998dca5c3bbcb3e, type: 2}
     resource: 1
     amount: 1
-    hitsToBreak: 3
+    hitsToBreak: 4
   - tile: {fileID: 11400000, guid: 156d05c8bdb94426c815b541abbfd536, type: 2}
     resource: 1
     amount: 1
-    hitsToBreak: 3
+    hitsToBreak: 4
   - tile: {fileID: 11400000, guid: dae343d1b9c474da68500f3346157f0a, type: 2}
     resource: 1
     amount: 1
-    hitsToBreak: 3
+    hitsToBreak: 4
   - tile: {fileID: 11400000, guid: 865dc3eb6c378420b8fda7026185f466, type: 2}
     resource: 1
     amount: 1
-    hitsToBreak: 3
+    hitsToBreak: 4
   - tile: {fileID: 11400000, guid: c4969f65a2d0640f58ef92a851f43756, type: 2}
     resource: 1
     amount: 1
-    hitsToBreak: 3
+    hitsToBreak: 4
   - tile: {fileID: 11400000, guid: 1ddb611c918d64597b3dad68e8f247a4, type: 2}
     resource: 1
     amount: 1
-    hitsToBreak: 3
+    hitsToBreak: 4
   - tile: {fileID: 11400000, guid: 80ad64c7d0fc84a069018b7a0caf94db, type: 2}
     resource: 1
     amount: 1
-    hitsToBreak: 3
+    hitsToBreak: 4
   - tile: {fileID: 11400000, guid: 191f96d216d144b5ea2e9b0778298db6, type: 2}
     resource: 1
     amount: 1
-    hitsToBreak: 3
+    hitsToBreak: 4
   - tile: {fileID: 11400000, guid: 24d96326962d04c18b288b0d42425b5a, type: 2}
     resource: 1
     amount: 1
-    hitsToBreak: 3
+    hitsToBreak: 4
   - tile: {fileID: 11400000, guid: f16720524f7dd497aabafffaf1519296, type: 2}
     resource: 1
     amount: 1
-    hitsToBreak: 3
+    hitsToBreak: 4
   - tile: {fileID: 11400000, guid: ffa585878a7bf411aa80e291bc9f7f50, type: 2}
     resource: 1
     amount: 1
-    hitsToBreak: 3
+    hitsToBreak: 4
   - tile: {fileID: 11400000, guid: aeda3fb1a61f84681a20f6e8d378d399, type: 2}
     resource: 1
     amount: 1
-    hitsToBreak: 3
+    hitsToBreak: 4
   - tile: {fileID: 11400000, guid: c17e0eb5c4ae34563bafef5fa0127c8a, type: 2}
     resource: 1
     amount: 1
-    hitsToBreak: 3
+    hitsToBreak: 4
   - tile: {fileID: 11400000, guid: fb8bb64ae1e1544d4bfd76364ebe794a, type: 2}
     resource: 1
     amount: 1
-    hitsToBreak: 3
+    hitsToBreak: 4
   - tile: {fileID: 11400000, guid: 6e1e1647b2adf4b85b9c5153a69db83f, type: 2}
     resource: 1
     amount: 1
-    hitsToBreak: 3
+    hitsToBreak: 4
   - tile: {fileID: 11400000, guid: ef6cad34e85fb44f98daf6704636e06c, type: 2}
     resource: 1
     amount: 1
-    hitsToBreak: 3
+    hitsToBreak: 4

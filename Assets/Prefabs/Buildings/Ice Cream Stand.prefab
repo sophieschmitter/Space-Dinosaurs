@@ -195,6 +195,8 @@ MonoBehaviour:
   animator: {fileID: 86918490165901449}
   normalState: Normal
   selectedState: Selected
+  placedSound: {fileID: 8300000, guid: e45f48c4e7c664d288fa30a7e670335b, type: 3}
+  placedVolume: 0.6
 --- !u!114 &93013063431929172
 MonoBehaviour:
   m_ObjectHideFlags: 0

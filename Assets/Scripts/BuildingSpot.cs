@@ -19,6 +19,12 @@ public class BuildingSpot : MonoBehaviour
     [Tooltip("Shown on free spots while a building is being placed.")]
     public Sprite highlighted;
 
+    [Tooltip("Optional: only this building (its item name, e.g. Turret) can go here. Empty = any.")]
+    public string onlyFor = "";
+
+    /// <summary>Can this building go here (free, and the right kind)?</summary>
+    public bool Accepts(Building b) => Free && (string.IsNullOrEmpty(onlyFor) || (b != null && b.itemName == onlyFor));
+
     /// <summary>The building standing on it, if any.</summary>
     public Building Occupant { get; private set; }
     public bool Free => Occupant == null;
@@ -34,18 +40,19 @@ public class BuildingSpot : MonoBehaviour
     {
         if (sprite == null) return;
         sprite.enabled = Free; // hidden under its building (Occupant turns null if the building is destroyed)
-        var want = Free && BuildingPlacer.Placing != null && highlighted != null ? highlighted : normal;
+        var placing = BuildingPlacer.Held;
+        var want = placing != null && Accepts(placing) && highlighted != null ? highlighted : normal;
         if (want != null && sprite.sprite != want) sprite.sprite = want;
     }
 
     /// <summary>The free spot closest to this point, no further than maxDistance; null if there's none.</summary>
-    public static BuildingSpot NearestFree(Vector2 point, float maxDistance)
+    public static BuildingSpot NearestFree(Vector2 point, float maxDistance, Building forBuilding = null)
     {
         BuildingSpot best = null;
         float bestSq = maxDistance * maxDistance;
         foreach (var s in All)
         {
-            if (s == null || !s.Free) continue;
+            if (s == null || !s.Accepts(forBuilding)) continue;
             float d = ((Vector2)s.transform.position - point).sqrMagnitude;
             if (d <= bestSq) { best = s; bestSq = d; }
         }

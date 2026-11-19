@@ -211,8 +211,39 @@ public class DinoController : MonoBehaviour
     }
     void OnDestroy() { move.Dispose(); sprint.Dispose(); attack.Dispose(); click.Dispose(); swapWeapon.Dispose(); }
 
+    /// <summary>Doing the victory dance (the level is won): stands still, no input, the dance loops.</summary>
+    public bool IsCelebrating { get; private set; }
+    [Tooltip("Victory dance states (the gun one when holding the gun, else the drill one).")]
+    public string gunVictoryState = "Gun_Victory", drillVictoryState = "Drill_Victory";
+    [Tooltip("Plays once when the victory dance starts.")]
+    public AudioClip victorySound;
+    [Range(0f, 1f)] public float victoryVolume = 0.5f;
+
+    /// <summary>The level is won: stop and dance. Keeps going while the game is paused for the end screen.</summary>
+    public void Celebrate()
+    {
+        if (IsDead || IsCelebrating) return;
+        IsCelebrating = true;
+        IsMoving = false; IsSprinting = false; input = Vector2.zero;
+        if (body != null) body.linearVelocity = Vector2.zero;
+        if (sweat != null) sweat.enabled = false;
+        if (victorySound != null)
+        {
+            var src = gameObject.AddComponent<AudioSource>();
+            src.spatialBlend = 0f;
+            src.ignoreListenerPause = true;
+            src.PlayOneShot(victorySound, victoryVolume);
+        }
+        if (animator == null) return;
+        animator.updateMode = AnimatorUpdateMode.UnscaledTime;
+        animator.speed = 1f;
+        string state = hasGun ? gunVictoryState : drillVictoryState;
+        if (animator.HasState(0, Animator.StringToHash(state))) { animator.Play(state, 0, 0f); currentState = state; }
+    }
+
     void Update()
     {
+        if (IsCelebrating) return; // dancing: nothing else moves the dino or its animation
         input = Scripted ? scriptedInput : move.ReadValue<Vector2>();
         if (input.sqrMagnitude > 1f) input.Normalize(); // diagonals aren't faster
 
@@ -562,8 +593,12 @@ public class DinoController : MonoBehaviour
     public void EquipGun() => SetWeapon(false, true);
 
     /// <summary>Switch to whichever weapon isn't in hand (Q).</summary>
+    [Tooltip("Off: Q (and the weapon buttons) can't change weapons (the training level hands them out).")]
+    public bool canSwapWeapons = true;
+
     public void SwapWeapon()
     {
+        if (!canSwapWeapons) return;
         if (hasDrill) EquipGun(); else EquipDrill();
     }
 

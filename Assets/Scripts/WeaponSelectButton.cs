@@ -33,6 +33,7 @@ public class WeaponSelectButton : MonoBehaviour
         // Don't leave the button selected: Space/Enter or the controller's A would "click" it again later.
         if (UnityEngine.EventSystems.EventSystem.current != null) UnityEngine.EventSystems.EventSystem.current.SetSelectedGameObject(null);
         if (!FindDino()) return;
+        if (!dino.canSwapWeapons) return;
         if (weapon == Weapon.Gun) dino.EquipGun(); else dino.EquipDrill();
     }
 

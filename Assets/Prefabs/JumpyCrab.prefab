@@ -321,6 +321,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Health
   maxHealth: 2
+  startHealth: 0
+  minHealth: 0
   invulnerableTime: 0
   onDamaged:
     m_PersistentCalls:
@@ -364,6 +366,10 @@ MonoBehaviour:
   flipToFace: 1
   sideArtFacesLeft: 1
   victoryState: victoryDance
+  deathSounds:
+  - {fileID: 8300000, guid: 48b4adf96171645b5bc1b8d9b0a6358b, type: 3}
+  - {fileID: 8300000, guid: 257a04b5b397c4ed589aa98ae048fc9c, type: 3}
+  deathVolume: 0.25
 --- !u!114 &5158543228388561070
 MonoBehaviour:
   m_ObjectHideFlags: 0

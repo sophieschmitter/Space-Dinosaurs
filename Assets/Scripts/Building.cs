@@ -14,6 +14,21 @@ public class Building : MonoBehaviour
     public Animator animator;
     public string normalState = "Normal", selectedState = "Selected";
 
+    [Tooltip("Played when it's put down on a building spot.")]
+    public AudioClip placedSound;
+    [Range(0f, 1f)] public float placedVolume = 0.6f;
+
+    /// <summary>The placed sound (BuildingPlacer calls this when it's put down).</summary>
+    public void PlayPlacedSound()
+    {
+        if (placedSound == null) return;
+        var src = gameObject.AddComponent<AudioSource>();
+        src.spatialBlend = 0f;
+        src.playOnAwake = false;
+        src.PlayOneShot(placedSound, placedVolume);
+        Destroy(src, placedSound.length + 0.1f);
+    }
+
     Collider2D[] colliders;
     string playing;
 

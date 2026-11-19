@@ -32,6 +32,26 @@ PrefabInstance:
       propertyPath: knockbackSpeed
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 490678444310258260, guid: de46bc9578b58450793049795bfc54e2, type: 3}
+      propertyPath: deathSoundEvery
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 490678444310258260, guid: de46bc9578b58450793049795bfc54e2, type: 3}
+      propertyPath: deathSounds.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 490678444310258260, guid: de46bc9578b58450793049795bfc54e2, type: 3}
+      propertyPath: takeTurnsWithDeathSounds
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 490678444310258260, guid: de46bc9578b58450793049795bfc54e2, type: 3}
+      propertyPath: 'deathSounds.Array.data[0]'
+      value: 
+      objectReference: {fileID: 8300000, guid: aa6f0e978a20b4e899e3447726a944f7, type: 3}
+    - target: {fileID: 490678444310258260, guid: de46bc9578b58450793049795bfc54e2, type: 3}
+      propertyPath: 'deathSounds.Array.data[1]'
+      value: 
+      objectReference: {fileID: 8300000, guid: a8ca701d6a9544854bb2b33649b2e28e, type: 3}
     - target: {fileID: 1845865456573550448, guid: de46bc9578b58450793049795bfc54e2, type: 3}
       propertyPath: m_Radius
       value: 0.45
