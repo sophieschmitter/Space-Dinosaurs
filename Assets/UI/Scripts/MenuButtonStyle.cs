@@ -33,10 +33,18 @@ public class MenuButtonStyle : MonoBehaviour,
     public float pressedScale = 0.95f;
 
     string baseText;
+    bool isSelected;
+
+    /// <summary>Change the button's text from a script (keeps the "> <" arrows when highlighted).</summary>
+    public void SetLabel(string text)
+    {
+        baseText = text;
+        Apply(isSelected);
+    }
 
     void Awake()
     {
-        if (label != null) baseText = label.text;
+        if (label != null && baseText == null) baseText = label.text;
         Apply(false);
     }
 
@@ -59,6 +67,7 @@ public class MenuButtonStyle : MonoBehaviour,
 
     void Apply(bool selected)
     {
+        isSelected = selected;
         if (background != null) background.color = selected ? selectedBackground : normalBackground;
         if (border != null) border.effectColor = selected ? selectedBorder : normalBorder;
         if (label != null)
