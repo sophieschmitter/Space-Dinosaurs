@@ -357,6 +357,8 @@ MonoBehaviour:
   gunVolume: 0.5
   fireInterval: 0.35
   gunDamage: 1
+  maxAmmo: 100
+  emptySound: {fileID: 0}
   muzzleRight: {x: 1.43, y: 0.78}
   muzzleFront: {x: -0.59, y: 0.13}
   muzzleBack: {x: 0.81, y: 1.88}
@@ -570,7 +572,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DrillSounds
   hitSound: {fileID: 8300000, guid: 4f569446f08e34a57b528f108af5ad18, type: 3}
-  hitVolume: 0.3
+  hitVolume: 0.45
   hitLength: 0.28
   hitStart: 0
   oreBreakSound: {fileID: 8300000, guid: e772c17884d59494b9dba699eaf3a139, type: 3}

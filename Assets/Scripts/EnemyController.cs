@@ -41,6 +41,9 @@ public class EnemyController : MonoBehaviour
     public float huntSpeed = 3f;
     [Tooltip("Gives up on reaching the robot after this many seconds and goes back to normal behaviour.")]
     public float huntTimeout = 15f;
+    [Tooltip("After a trip to the robot ends (arrived, gave up, or lost the way), wanders for a random number " +
+             "of seconds in this range (min, max), then sets off for the robot again. Chasing the dino pauses the count.")]
+    public Vector2 rehuntDelay = new Vector2(3f, 6f);
     [Tooltip("How often (seconds) the path is recalculated (walls can be drilled away).")]
     public float repathInterval = 0.5f;
 
@@ -131,9 +134,14 @@ public class EnemyController : MonoBehaviour
     /// <summary>Head for the dino along a path around the walls, then return to normal behaviour.</summary>
     EnemyGoal huntGoal;
 
-    /// <summary>Head for the goal (the robot) along a path around the walls, then return to normal behaviour.</summary>
-    public void GoTo(EnemyGoal goal)
+    EnemyGoal returnGoal; // set off for this again after wandering a while (null = don't)
+    float rehuntTimer;
+
+    /// <summary>Head for the goal (the robot) along a path around the walls. Once there (or if it gives up) it
+    /// wanders for a bit, then, if Keep Returning, heads for the goal again (Rehunt Delay).</summary>
+    public void GoTo(EnemyGoal goal, bool keepReturning = true)
     {
+        returnGoal = keepReturning ? goal : null;
         FindPlayer();
         var destructible = FindFirstObjectByType<DestructibleTilemap>();
         walls = destructible != null ? destructible.GetComponent<Tilemap>() : null;
@@ -169,7 +177,12 @@ public class EnemyController : MonoBehaviour
         else
         {
             UpdateChaseState();
-            if (!chasing) UpdateWander();
+            if (!chasing)
+            {
+                UpdateWander();
+                // Wandered for a while after its last trip: back to the robot.
+                if (returnGoal != null && (rehuntTimer -= Time.deltaTime) <= 0f) GoTo(returnGoal);
+            }
         }
         UpdateArt();
     }
@@ -218,6 +231,7 @@ public class EnemyController : MonoBehaviour
     void StopHunting(bool chaseNow)
     {
         hunting = false;
+        rehuntTimer = Random.Range(rehuntDelay.x, rehuntDelay.y);
         path = null;
         chasing = chaseNow;
     }

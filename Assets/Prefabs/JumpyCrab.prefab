@@ -349,8 +349,9 @@ MonoBehaviour:
   wanderPauseTime: {x: 0.5, y: 1.5}
   sightRange: 5
   loseRange: 8
-  huntSpeed: 1
+  huntSpeed: 2.2
   huntTimeout: 15
+  rehuntDelay: {x: 3, y: 6}
   repathInterval: 0.5
   contactDamage: 20
   attackAngle: 30
@@ -370,6 +371,8 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 48b4adf96171645b5bc1b8d9b0a6358b, type: 3}
   - {fileID: 8300000, guid: 257a04b5b397c4ed589aa98ae048fc9c, type: 3}
   deathVolume: 0.25
+  deathSoundEvery: 1
+  takeTurnsWithDeathSounds: 0
 --- !u!114 &5158543228388561070
 MonoBehaviour:
   m_ObjectHideFlags: 0

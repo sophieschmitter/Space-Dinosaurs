@@ -7,6 +7,8 @@ using UnityEngine.InputSystem;
 /// (within Spot Snap Distance of the mouse) it snaps onto it; anywhere else it's tinted red and can't be put
 /// down (also red if something is standing on the spot). Left-click places it and pays its cost; right-click or Escape puts it back for free. Clicking another craft button swaps
 /// to that building. Clicks used for placing never make the dino attack.
+/// A new Building Spot (crafted like a building) is the exception: it goes on open floor anywhere with room
+/// for a building on it (nothing solid under the biggest building's base) and not too close to another spot.
 /// Created by the first craft button that's used, so scenes don't need one.
 /// </summary>
 public class BuildingPlacer : MonoBehaviour
@@ -21,6 +23,8 @@ public class BuildingPlacer : MonoBehaviour
     public int snapPerTile = 16;
     [Tooltip("The held building jumps onto a free Building Spot this close to the mouse (tiles).")]
     public float spotSnapDistance = 1.5f;
+    [Tooltip("A new Building Spot can't go closer than this to another spot (tiles).")]
+    public float minSpotSpacing = 1.75f;
 
     CraftButton source;
     Building held;
@@ -28,6 +32,9 @@ public class BuildingPlacer : MonoBehaviour
     Color[] heldColors;
     BoxCollider2D footprint;
     BuildingSpot spot; // the free spot it's over, if any
+    BuildingSpot newSpot; // set when the held thing is itself a new Building Spot
+    Rect spotRoom;        // room a spot needs around it (the biggest building's base), from the spot's middle
+    UnityEngine.Tilemaps.Tilemap[] solidMaps; // walls, ore, metal (their insides don't show up in overlap tests)
     readonly Collider2D[] overlaps = new Collider2D[8];
 
     /// <summary>True while a building is following the mouse, and on the frame one is put down: the dino
@@ -58,6 +65,16 @@ public class BuildingPlacer : MonoBehaviour
         held = Instantiate(button.building, MouseWorld(), Quaternion.identity);
         held.name = button.building.name;
         held.Selected = true;
+        newSpot = held.GetComponent<BuildingSpot>();
+        if (newSpot != null)
+        {
+            newSpot.enabled = false; // not a spot (for buildings to snap to) until it's put down
+            spotRoom = RoomForBuildings();
+            var maps = new System.Collections.Generic.List<UnityEngine.Tilemaps.Tilemap>();
+            foreach (var m in FindObjectsByType<UnityEngine.Tilemaps.Tilemap>(FindObjectsSortMode.None))
+                if (m.GetComponent<UnityEngine.Tilemaps.TilemapCollider2D>() != null) maps.Add(m);
+            solidMaps = maps.ToArray();
+        }
         footprint = held.GetComponent<BoxCollider2D>();
         heldSprites = held.GetComponentsInChildren<SpriteRenderer>();
         heldColors = new Color[heldSprites.Length];
@@ -70,6 +87,7 @@ public class BuildingPlacer : MonoBehaviour
         if (held != null) Destroy(held.gameObject);
         held = null;
         spot = null;
+        newSpot = null;
         source = null;
     }
 
@@ -103,8 +121,10 @@ public class BuildingPlacer : MonoBehaviour
         Tint(null);
         placed.Selected = false;
         placed.PlayPlacedSound();
-        spot.Occupy(placed);
+        if (newSpot != null) newSpot.enabled = true; // a free spot from now on
+        else spot.Occupy(placed);
         spot = null;
+        newSpot = null;
         lastPlacedFrame = Time.frameCount;
         paidBy.Pay(placed);
         return true;
@@ -115,6 +135,15 @@ public class BuildingPlacer : MonoBehaviour
     public bool MoveTo(Vector2 p)
     {
         if (held == null) return false;
+        if (newSpot != null)
+        {
+            float px = Mathf.Max(1, snapPerTile);
+            p = new Vector2(Mathf.Round(p.x * px) / px, Mathf.Round(p.y * px) / px);
+            held.transform.position = p;
+            bool ok = SpotFits(p);
+            Tint(ok ? (Color?)null : blockedTint);
+            return ok;
+        }
         spot = BuildingSpot.NearestFree(p, spotSnapDistance, held);
         if (spot != null) p = spot.transform.position;
         else
@@ -131,6 +160,7 @@ public class BuildingPlacer : MonoBehaviour
     // On a free Building Spot, with nothing solid (walls, spawners, the robot, crabs, the dino, other buildings) under its base.
     bool Fits(Vector2 at)
     {
+        if (newSpot != null) return SpotFits(at);
         if (spot == null || !spot.Accepts(held) || ((Vector2)spot.transform.position - at).sqrMagnitude > 1e-6f) return false; // only on a free spot
         if (footprint == null) return true;
         Vector2 center = at + footprint.offset;
@@ -138,6 +168,50 @@ public class BuildingPlacer : MonoBehaviour
         for (int i = 0; i < n; i++)
             if (!overlaps[i].isTrigger && !overlaps[i].transform.IsChildOf(held.transform)) return false;
         return true;
+    }
+
+    // A new spot: room for any building on it, and not on top of another spot.
+    bool SpotFits(Vector2 at)
+    {
+        foreach (var other in BuildingSpot.All)
+            if (other != null && other != newSpot && ((Vector2)other.transform.position - at).sqrMagnitude < minSpotSpacing * minSpotSpacing) return false;
+        // Any wall tile under the room (sampled every half tile, edges included).
+        if (solidMaps != null)
+        {
+            Vector2 min = at + spotRoom.min, max = at + spotRoom.max;
+            for (float x = min.x; x <= max.x + 0.001f; x += Mathf.Min(0.5f, spotRoom.width))
+            for (float y = min.y; y <= max.y + 0.001f; y += Mathf.Min(0.5f, spotRoom.height))
+                foreach (var m in solidMaps)
+                    if (m != null && m.HasTile(m.WorldToCell(new Vector3(Mathf.Min(x, max.x - 0.01f), Mathf.Min(y, max.y - 0.01f), 0f)))) return false;
+        }
+        int n = Physics2D.OverlapBoxNonAlloc(at + spotRoom.center, spotRoom.size, 0f, overlaps);
+        for (int i = 0; i < n; i++)
+        {
+            var c = overlaps[i];
+            if (c.isTrigger || c.transform.IsChildOf(held.transform)) continue;
+            if (c.GetComponentInParent<DinoController>() != null || c.GetComponentInParent<EnemyController>() != null) continue; // they move
+            return false;
+        }
+        return true;
+    }
+
+    // The biggest base (footprint) of the buildings in the crafting menu, around a spot's middle.
+    static Rect RoomForBuildings()
+    {
+        Rect room = new Rect(-0.75f, -0.5f, 1.5f, 1f);
+        bool any = false;
+        foreach (var b in FindObjectsByType<CraftButton>(FindObjectsInactive.Include, FindObjectsSortMode.None))
+        {
+            if (b.building == null || b.building.GetComponent<BuildingSpot>() != null) continue;
+            var box = b.building.GetComponent<BoxCollider2D>();
+            if (box == null) continue;
+            var s = Vector2.Scale(box.size, b.building.transform.localScale);
+            var o = Vector2.Scale(box.offset, b.building.transform.localScale);
+            var r = new Rect(o - s * 0.5f, s);
+            if (!any) { room = r; any = true; }
+            else room = Rect.MinMaxRect(Mathf.Min(room.xMin, r.xMin), Mathf.Min(room.yMin, r.yMin), Mathf.Max(room.xMax, r.xMax), Mathf.Max(room.yMax, r.yMax));
+        }
+        return room;
     }
 
     void Tint(Color? tint)

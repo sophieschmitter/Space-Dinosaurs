@@ -60,7 +60,11 @@ public class TrainingDirector : MonoBehaviour
     [Header("What it takes")]
     [Tooltip("Ore to mine in the wall room before moving on (enough for the ice cream stand and the turret). " +
              "The shield room has more for the shield generator.")]
-    public int copperNeeded = 6, iridiumNeeded = 2;
+    public int copperNeeded = 2, iridiumNeeded = 2;
+    [Tooltip("What every building costs in training (cheaper than in the levels).")]
+    [Min(0)] public int trainingCopperCost = 1, trainingIridiumCost = 1;
+    [Tooltip("Craft buttons hidden in training (by item name).")]
+    public string[] hiddenButtons = { "Building Spot" };
     public string iceCreamItem = "Ice Cream Stand", turretItem = "Turret", shieldItem = "Shield Generator";
 
     [Header("Lines")]
@@ -130,7 +134,14 @@ public class TrainingDirector : MonoBehaviour
     {
         if (dino == null) dino = FindFirstObjectByType<DinoController>();
         if (intro == null) intro = FindFirstObjectByType<TrainingIntro>();
-        foreach (var b in FindObjectsByType<CraftButton>(FindObjectsSortMode.None)) { buttons[b.itemName] = b; b.locked = true; }
+        foreach (var b in FindObjectsByType<CraftButton>(FindObjectsSortMode.None))
+        {
+            if (System.Array.IndexOf(hiddenButtons, b.itemName) >= 0) { b.gameObject.SetActive(false); continue; }
+            buttons[b.itemName] = b;
+            b.locked = true;
+            b.copperCost = trainingCopperCost;
+            b.iridiumCost = trainingIridiumCost;
+        }
         dino.canSwapWeapons = false;
 
         // ---------- room 0: welcome ----------
@@ -283,7 +294,7 @@ public class TrainingDirector : MonoBehaviour
         var goal = new GameObject("Training Goal").AddComponent<EnemyGoal>();
         goal.transform.position = to;
         goal.arriveDistance = 0.6f;
-        e.GoTo(goal);
+        e.GoTo(goal, false); // a one-off walk, not the robot
         Destroy(goal.gameObject, 20f);
     }
 

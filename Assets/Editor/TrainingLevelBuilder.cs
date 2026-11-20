@@ -39,10 +39,10 @@ public static class TrainingLevelBuilder
     static Rect Area(int x0, int y0, int x1, int y1) => new Rect(x0, y0, x1 - x0 + 1, y1 - y0 + 1);
 
     static readonly RectInt DrillWall = R(43, -4, 45, 7);
-    // Room 1 (past the wall): enough for the ice cream stand and the turret (6 copper, 2 iridium).
-    // Room 4 (the shield room): enough for the shield generator (3 copper, 1 iridium).
-    static readonly Vector2Int[] Copper = { new(48, 5), new(51, -2), new(54, 6), new(57, -3), new(49, -3), new(58, 5),
-                                            new(153, 5), new(156, 6), new(159, 4) };
+    // Buildings cost 1 copper + 1 iridium each in training (TrainingDirector).
+    // Room 1 (past the wall): enough for the ice cream stand and the turret (2 copper, 2 iridium).
+    // Room 4 (the shield room): enough for the shield generator (1 copper, 1 iridium).
+    static readonly Vector2Int[] Copper = { new(48, 5), new(57, -3), new(156, 6) };
     static readonly Vector2Int[] Iridium = { new(53, 3), new(56, 1), new(155, -2) };
     // Each room's TV, just inside the entrance (in view as you walk in).
     static readonly Vector2[] TvAt = { new(8f, 4.5f), new(34f, 4.5f), new(74f, 4.5f), new(112f, 4.5f), new(143f, 4.5f), new(151f, 21f) };

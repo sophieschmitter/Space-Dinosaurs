@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 3064120419217615509}
   - component: {fileID: 3890792060025646312}
   - component: {fileID: 3258230153109217342}
+  - component: {fileID: 8119188291175420688}
   m_Layer: 0
   m_Name: Building Spot
   m_TagString: Untagged
@@ -107,3 +108,23 @@ MonoBehaviour:
   sprite: {fileID: 3890792060025646312}
   normal: {fileID: 1192876649, guid: 94cdbc23f96b741f79cb5f1e1da662e4, type: 3}
   highlighted: {fileID: 1234378386, guid: 94cdbc23f96b741f79cb5f1e1da662e4, type: 3}
+  onlyFor: 
+--- !u!114 &8119188291175420688
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2714576992393480750}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f81babe0ab684437d9766a37115871c1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Building
+  itemName: Building Spot
+  selected: 0
+  animator: {fileID: 0}
+  normalState: Normal
+  selectedState: Selected
+  placedSound: {fileID: 8300000, guid: e45f48c4e7c664d288fa30a7e670335b, type: 3}
+  placedVolume: 0.6

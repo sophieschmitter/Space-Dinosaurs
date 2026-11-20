@@ -51,6 +51,23 @@ public class DinoController : MonoBehaviour
     [Tooltip("Seconds between shots; holding X keeps firing at this rate.")]
     [Min(0.05f)] public float fireInterval = 0.35f;
     [Min(0)] public int gunDamage = 1;
+    [Tooltip("Shots the gun has for the whole level (0 = unlimited). It starts full each time the level loads.")]
+    [Min(0)] public int maxAmmo = 100;
+    [Tooltip("Played (quietly) when the trigger is pulled with no ammo left. Optional.")]
+    public AudioClip emptySound;
+
+    /// <summary>Shots left this level.</summary>
+    public int Ammo { get; private set; }
+    public bool UnlimitedAmmo => maxAmmo <= 0;
+    /// <summary>(shots left) whenever the ammo changes.</summary>
+    public event System.Action<int> AmmoChanged;
+
+    /// <summary>Refills the gun (e.g. a pickup or a restart).</summary>
+    public void SetAmmo(int amount)
+    {
+        Ammo = Mathf.Clamp(amount, 0, Mathf.Max(0, maxAmmo));
+        AmmoChanged?.Invoke(Ammo);
+    }
     [Tooltip("Where the bullet leaves the gun, in tiles from the feet (x right, y up), for each way the dino faces. " +
              "Measured from the gun art. Left is Right mirrored.")]
     public Vector2 muzzleRight = new Vector2(1.43f, 0.78f);
@@ -171,6 +188,7 @@ public class DinoController : MonoBehaviour
         feet = GetComponent<Collider2D>();
         health = GetComponent<Health>();
         spawnPoint = transform.position;
+        Ammo = maxAmmo;
 
         body.gravityScale = 0f;                                   // top-down: no falling
         body.constraints = RigidbodyConstraints2D.FreezeRotation; // don't spin when bumping walls
@@ -530,6 +548,12 @@ public class DinoController : MonoBehaviour
         if (!(bufferedPress > 0f || AttackHeld)) return;
         bufferedPress = 0f;
         gunTimer = fireInterval;
+        if (!UnlimitedAmmo)
+        {
+            if (Ammo <= 0) { PlayEmptySound(); return; }
+            Ammo--;
+            AmmoChanged?.Invoke(Ammo);
+        }
 
         if (aimWithMouse) FaceTowards(Aim(DrillOrigin()));
         Vector2 dir = Cardinal(Facing);
@@ -570,10 +594,17 @@ public class DinoController : MonoBehaviour
         PlayGunSound();
     }
 
-    AudioSource gunAudio;
-    void PlayGunSound()
+    void PlayEmptySound()
     {
-        if (gunSound == null) return;
+        if (emptySound == null) return;
+        PlayGunSound(emptySound, gunVolume * 0.5f);
+    }
+
+    AudioSource gunAudio;
+    void PlayGunSound() => PlayGunSound(gunSound, gunVolume);
+    void PlayGunSound(AudioClip clip, float volume)
+    {
+        if (clip == null) return;
         if (gunAudio == null)
         {
             gunAudio = gameObject.AddComponent<AudioSource>();
@@ -581,7 +612,7 @@ public class DinoController : MonoBehaviour
             gunAudio.spatialBlend = 0f; // 2D: the camera follows the dino
         }
         gunAudio.pitch = 1f + Random.Range(-0.04f, 0.04f);
-        gunAudio.PlayOneShot(gunSound, gunVolume);
+        gunAudio.PlayOneShot(clip, volume);
     }
 
     // ---------- weapons ----------

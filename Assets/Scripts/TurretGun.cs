@@ -27,6 +27,8 @@ public class TurretGun : MonoBehaviour
     [Tooltip("Played each time it fires (quieter than the dino's gun).")]
     public AudioClip fireSound;
     [Range(0f, 1f)] public float fireVolume = 0.25f;
+    [Tooltip("Pitch of the fire sound (below 1 = lower and longer), so the turret doesn't sound like the dino's gun.")]
+    [Range(0.3f, 2f)] public float firePitch = 0.7f;
 
     Building building;
     CrabBullet current;
@@ -97,7 +99,7 @@ public class TurretGun : MonoBehaviour
                 audioSource.playOnAwake = false;
                 audioSource.spatialBlend = 0f;
             }
-            audioSource.pitch = 1f + Random.Range(-0.04f, 0.04f);
+            audioSource.pitch = firePitch * (1f + Random.Range(-0.04f, 0.04f));
             audioSource.PlayOneShot(fireSound, fireVolume);
         }
     }
